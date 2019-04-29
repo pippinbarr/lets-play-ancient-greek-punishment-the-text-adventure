@@ -4,7 +4,97 @@
     <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
     <item nodeId="node-1002">
         <command xml:space="preserve">lets-play-ancient-greek-punishment-the-text-adventure</command>
-        <result xml:space="preserve"></result>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190429 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Bank of the River Styx
+You are standing on the bank of the River Styx. The water flows sluggishly by.
+
+Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1014"></child>
+            <child nodeId="node-1012"></child>
+            <child nodeId="node-1005"></child>
+            <child nodeId="node-1009"></child>
+            <child nodeId="node-1015"></child>
+        </children>
+    </item>
+    <item nodeId="node-1015">
+        <command xml:space="preserve">x ferry</command>
+        <result xml:space="preserve">Charon's ferry, not totally unlike a small dinghy, is pulled up onto the bank of the river, ready to shove off into the river.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1009">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">You see nothing special about Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1011"></child>
+        </children>
+    </item>
+    <item nodeId="node-1011">
+        <command xml:space="preserve">x clipboard</command>
+        <result xml:space="preserve">You see nothing special about the clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1005">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Example Location
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1006"></child>
+        </children>
+    </item>
+    <item nodeId="node-1006">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1007"></child>
+        </children>
+    </item>
+    <item nodeId="node-1007">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1008"></child>
+        </children>
+    </item>
+    <item nodeId="node-1008">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1012">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  an obolus
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1014">
+        <command xml:space="preserve">get into ferry</command>
+        <result xml:space="preserve">You get into Charon's ferry.
+
+&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
 </Skein>
