@@ -9,48 +9,63 @@
 
 Let's Play: Ancient Greek Punishment: The Text Adventure
 An Interactive Fiction by Pippin Barr
-Release 1 / Serial number 190429 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190430 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Bank of the River Styx
-You are standing on the bank of the River Styx. The water flows sluggishly by.
+Here you are at the famous River Styx. The water flows sluggishly by.
 
-Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl.
+You can see Charon here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1014"></child>
+        <children><child nodeId="node-1110"></child>
+            <child nodeId="node-1092"></child>
+            <child nodeId="node-1103"></child>
+            <child nodeId="node-1107"></child>
+            <child nodeId="node-1094"></child>
+            <child nodeId="node-1037"></child>
+            <child nodeId="node-1062"></child>
+            <child nodeId="node-1036"></child>
+            <child nodeId="node-1031"></child>
+            <child nodeId="node-1029"></child>
+            <child nodeId="node-1022"></child>
+            <child nodeId="node-1018"></child>
+            <child nodeId="node-1014"></child>
+            <child nodeId="node-1082"></child>
+            <child nodeId="node-1074"></child>
+            <child nodeId="node-1066"></child>
+            <child nodeId="node-1084"></child>
+            <child nodeId="node-1078"></child>
+            <child nodeId="node-1111"></child>
             <child nodeId="node-1012"></child>
-            <child nodeId="node-1005"></child>
-            <child nodeId="node-1009"></child>
-            <child nodeId="node-1015"></child>
+            <child nodeId="node-1051"></child>
+            <child nodeId="node-1044"></child>
+            <child nodeId="node-1056"></child>
+            <child nodeId="node-1011"></child>
+            <child nodeId="node-1003"></child>
         </children>
     </item>
-    <item nodeId="node-1015">
-        <command xml:space="preserve">x ferry</command>
-        <result xml:space="preserve">Charon's ferry, not totally unlike a small dinghy, is pulled up onto the bank of the river, ready to shove off into the river.
+    <item nodeId="node-1003">
+        <command xml:space="preserve">x obol</command>
+        <result xml:space="preserve">A small silver coin imprinted with the blurry image of a sleepy man's face.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-    </item>
-    <item nodeId="node-1009">
-        <command xml:space="preserve">x charon</command>
-        <result xml:space="preserve">You see nothing special about Charon.
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1011"></child>
+        <children><child nodeId="node-1004"></child>
         </children>
     </item>
-    <item nodeId="node-1011">
-        <command xml:space="preserve">x clipboard</command>
-        <result xml:space="preserve">You see nothing special about the clipboard.
+    <item nodeId="node-1004">
+        <command xml:space="preserve">x obol</command>
+        <result xml:space="preserve">You see nothing special about the obol.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1005"></child>
+        </children>
     </item>
     <item nodeId="node-1005">
-        <command xml:space="preserve">look</command>
-        <result xml:space="preserve">Example Location
+        <command xml:space="preserve">x clipboard</command>
+        <result xml:space="preserve">A list of names Charon is expecting for the trip across the river.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -58,8 +73,8 @@ Charon is leaning against his ferry. His eyes look sourly out from beneath a cow
         </children>
     </item>
     <item nodeId="node-1006">
-        <command xml:space="preserve">w</command>
-        <result xml:space="preserve">You can't go that way.
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -67,8 +82,8 @@ Charon is leaning against his ferry. His eyes look sourly out from beneath a cow
         </children>
     </item>
     <item nodeId="node-1007">
-        <command xml:space="preserve">e</command>
-        <result xml:space="preserve">You can't go that way.
+        <command xml:space="preserve">l charon</command>
+        <result xml:space="preserve">Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -76,23 +91,685 @@ Charon is leaning against his ferry. His eyes look sourly out from beneath a cow
         </children>
     </item>
     <item nodeId="node-1008">
+        <command xml:space="preserve">x obol</command>
+        <result xml:space="preserve">You see nothing special about the obol.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1009"></child>
+        </children>
+    </item>
+    <item nodeId="node-1009">
+        <command xml:space="preserve">x obol</command>
+        <result xml:space="preserve">You see nothing special about the obol.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1010"></child>
+        </children>
+    </item>
+    <item nodeId="node-1010">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  an obol
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1011">
+        <command xml:space="preserve">x ferry</command>
+        <result xml:space="preserve">Charon's ferry, not totally unlike a small dinghy, is pulled up onto the bank of the river, ready to shove off into the river.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1056">
+        <command xml:space="preserve">x eyes</command>
+        <result xml:space="preserve">Unhappy.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1058"></child>
+        </children>
+    </item>
+    <item nodeId="node-1058">
+        <command xml:space="preserve">get eyes</command>
+        <result xml:space="preserve">That seems to be a part of Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1044">
+        <command xml:space="preserve">x clipboard</command>
+        <result xml:space="preserve">Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1051">
+        <command xml:space="preserve">x clip</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1052"></child>
+        </children>
+    </item>
+    <item nodeId="node-1052">
+        <command xml:space="preserve">x clipboard</command>
+        <result xml:space="preserve">Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river.
+
+-------
+ Sisyphus
+ Tantalus
+ Prometheus
+ Danaids
+ Zeno
+ -------
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1012">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">You see nothing special about Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1013"></child>
+        </children>
+    </item>
+    <item nodeId="node-1013">
+        <command xml:space="preserve">x clipboard</command>
+        <result xml:space="preserve">You see nothing special about the clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1111">
+        <command xml:space="preserve">tell charon about my great new idea</command>
+        <result xml:space="preserve">Charon rolls his eyes. "Who are you, exactly?"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1078">
+        <command xml:space="preserve">talk to charon about dogs</command>
+        <result xml:space="preserve">I only understood you as far as wanting to talk to Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1084">
+        <command xml:space="preserve">talk to charon about cats</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1085"></child>
+        </children>
+    </item>
+    <item nodeId="node-1085">
+        <command xml:space="preserve">talk to charon about ferry</command>
+        <result xml:space="preserve">Charon coughs.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1066">
+        <command xml:space="preserve">talk to charon</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1067"></child>
+            <child nodeId="node-1077"></child>
+            <child nodeId="node-1071"></child>
+            <child nodeId="node-1081"></child>
+        </children>
+    </item>
+    <item nodeId="node-1081">
+        <command xml:space="preserve">talk to charon about myself</command>
+        <result xml:space="preserve">I only understood you as far as wanting to talk to Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1071">
+        <command xml:space="preserve">talk to charon about fish</command>
+        <result xml:space="preserve">I only understood you as far as wanting to talk to Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1072"></child>
+        </children>
+    </item>
+    <item nodeId="node-1072">
+        <command xml:space="preserve">ask charon about fish</command>
+        <result xml:space="preserve">Charon sniffs, "And you are?"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1073"></child>
+        </children>
+    </item>
+    <item nodeId="node-1073">
+        <command xml:space="preserve">tell charon about coin</command>
+        <result xml:space="preserve">Charon rolls his eyes. "Who are you, exactly?"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1077">
+        <command xml:space="preserve">talk to charon about cats</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1089"></child>
+        </children>
+    </item>
+    <item nodeId="node-1089">
+        <command xml:space="preserve">tell charon</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1090"></child>
+        </children>
+    </item>
+    <item nodeId="node-1090">
+        <command xml:space="preserve">tell charon about cats</command>
+        <result xml:space="preserve">Charon rolls his eyes. "Who are you, exactly?"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1067">
+        <command xml:space="preserve">talk charon</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1068"></child>
+        </children>
+    </item>
+    <item nodeId="node-1068">
+        <command xml:space="preserve">tell charon about the yankees</command>
+        <result xml:space="preserve">Charon smirks.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1069"></child>
+        </children>
+    </item>
+    <item nodeId="node-1069">
+        <command xml:space="preserve">talk charon</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1074">
+        <command xml:space="preserve">talk to Charon about ferry</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1082">
+        <command xml:space="preserve">talk  to  charon</command>
+        <result xml:space="preserve">Charon raises an eyebrow.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1083"></child>
+        </children>
+    </item>
+    <item nodeId="node-1083">
+        <command xml:space="preserve">talk to charon about cats</command>
+        <result xml:space="preserve">I only understood you as far as wanting to talk to Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1014">
+        <command xml:space="preserve">ls clipboard</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1015"></child>
+        </children>
+    </item>
+    <item nodeId="node-1015">
+        <command xml:space="preserve">l clipboard</command>
+        <result xml:space="preserve">You see nothing special about the clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1016"></child>
+        </children>
+    </item>
+    <item nodeId="node-1016">
+        <command xml:space="preserve">l charon</command>
+        <result xml:space="preserve">Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1017"></child>
+        </children>
+    </item>
+    <item nodeId="node-1017">
+        <command xml:space="preserve">l clipboard</command>
+        <result xml:space="preserve">You see nothing special about the clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1018">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Example Location
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1019"></child>
+        </children>
+    </item>
+    <item nodeId="node-1019">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1020"></child>
+        </children>
+    </item>
+    <item nodeId="node-1020">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1021"></child>
+        </children>
+    </item>
+    <item nodeId="node-1021">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1012">
-        <command xml:space="preserve">i</command>
-        <result xml:space="preserve">You are carrying:
-  an obolus
+    <item nodeId="node-1022">
+        <command xml:space="preserve">l ferry</command>
+        <result xml:space="preserve">Charon's ferry, not totally unlike a small dinghy, is pulled up onto the bank of the river, ready to shove off into the river.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1023"></child>
+        </children>
+    </item>
+    <item nodeId="node-1023">
+        <command xml:space="preserve">enter ferry</command>
+        <result xml:space="preserve">You get into Charon's ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1024"></child>
+        </children>
+    </item>
+    <item nodeId="node-1024">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">You get out of Charon's ferry.
+
+Bank of the River Styx
+You are standing on the bank of the River Styx. The water flows sluggishly by.
+
+You can see Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1025"></child>
+        </children>
+    </item>
+    <item nodeId="node-1025">
+        <command xml:space="preserve">enter ferry</command>
+        <result xml:space="preserve">You get into Charon's ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1026"></child>
+        </children>
+    </item>
+    <item nodeId="node-1026">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Bank of the River Styx (in Charon's ferry)
+You are standing on the bank of the River Styx. The water flows sluggishly by.
+
+You can see Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1027"></child>
+        </children>
+    </item>
+    <item nodeId="node-1027">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">You get out of Charon's ferry.
+
+Bank of the River Styx
+You are standing on the bank of the River Styx. The water flows sluggishly by.
+
+You can see Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1028"></child>
+        </children>
+    </item>
+    <item nodeId="node-1028">
+        <command xml:space="preserve">get ferry</command>
+        <result xml:space="preserve">That's hardly portable.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1014">
+    <item nodeId="node-1029">
+        <command xml:space="preserve">l clipboard</command>
+        <result xml:space="preserve">Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river.
+
+-------
+ Sisyphus
+ Tantalus
+ Prometheus
+ Danaids
+ Zeno.
+
+-------
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1030"></child>
+            <child nodeId="node-1054"></child>
+        </children>
+    </item>
+    <item nodeId="node-1054">
+        <command xml:space="preserve">x cowl</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1055"></child>
+        </children>
+    </item>
+    <item nodeId="node-1055">
+        <command xml:space="preserve">x eyes</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1030">
+        <command xml:space="preserve">l charon</command>
+        <result xml:space="preserve">Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1031">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  an obol
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1060"></child>
+            <child nodeId="node-1034"></child>
+            <child nodeId="node-1033"></child>
+            <child nodeId="node-1032"></child>
+        </children>
+    </item>
+    <item nodeId="node-1032">
+        <command xml:space="preserve">x obulus</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1033">
+        <command xml:space="preserve">x obol</command>
+        <result xml:space="preserve">A small silver coin imprinted with the blurry image of a sleepy man's face.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1034">
+        <command xml:space="preserve">x mouth</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1035"></child>
+        </children>
+    </item>
+    <item nodeId="node-1035">
+        <command xml:space="preserve">open mouth</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1060">
+        <command xml:space="preserve">x cowl</command>
+        <result xml:space="preserve">It's a standard-issue cowl.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1061"></child>
+        </children>
+    </item>
+    <item nodeId="node-1061">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is leaning against his ferry. His eyes look sourly out from beneath a hoodie. He is holding a clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1036">
         <command xml:space="preserve">get into ferry</command>
         <result xml:space="preserve">You get into Charon's ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1062">
+        <command xml:space="preserve">get eyes</command>
+        <result xml:space="preserve">That seems to be a part of Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1063"></child>
+        </children>
+    </item>
+    <item nodeId="node-1063">
+        <command xml:space="preserve">wear cowl</command>
+        <result xml:space="preserve">(first taking the cowl)
+That seems to belong to Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1064"></child>
+        </children>
+    </item>
+    <item nodeId="node-1064">
+        <command xml:space="preserve">get eyes</command>
+        <result xml:space="preserve">That seems to be a part of Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1037">
+        <command xml:space="preserve">enter ferry</command>
+        <result xml:space="preserve">You get into Charon's ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1038"></child>
+        </children>
+    </item>
+    <item nodeId="node-1038">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Bank of the River Styx (in Charon's ferry)
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1039"></child>
+        </children>
+    </item>
+    <item nodeId="node-1039">
+        <command xml:space="preserve">l ferry</command>
+        <result xml:space="preserve">Charon's ferry, not totally unlike a small dinghy, is pulled up onto the bank of the river, ready to shove off into the river.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1040"></child>
+        </children>
+    </item>
+    <item nodeId="node-1040">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1041"></child>
+        </children>
+    </item>
+    <item nodeId="node-1041">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1094">
+        <command xml:space="preserve">ask charon about the ferry</command>
+        <result xml:space="preserve">Charon sniffs, "And you are?"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1095"></child>
+        </children>
+    </item>
+    <item nodeId="node-1095">
+        <command xml:space="preserve">ask charon about ferry</command>
+        <result xml:space="preserve">Charon looks at you coldly. "None of your business."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1101"></child>
+        </children>
+    </item>
+    <item nodeId="node-1101">
+        <command xml:space="preserve">ask charon about baubles</command>
+        <result xml:space="preserve">There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1107">
+        <command xml:space="preserve">ask charon about the dinghy</command>
+        <result xml:space="preserve">Charon looks at you coldly. "None of your business."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1108"></child>
+        </children>
+    </item>
+    <item nodeId="node-1108">
+        <command xml:space="preserve">ask charon about his dinghy</command>
+        <result xml:space="preserve">Charon looks at you coldly. "None of your business."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1109"></child>
+        </children>
+    </item>
+    <item nodeId="node-1109">
+        <command xml:space="preserve">ask charon about my dinghy</command>
+        <result xml:space="preserve">Charon looks at you coldly. "None of your business."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1103">
+        <command xml:space="preserve">ask charon about his face</command>
+        <result xml:space="preserve">There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1104"></child>
+        </children>
+    </item>
+    <item nodeId="node-1104">
+        <command xml:space="preserve">ask charon about ferry</command>
+        <result xml:space="preserve">Charon looks at you coldly. "None of your business."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1105"></child>
+        </children>
+    </item>
+    <item nodeId="node-1105">
+        <command xml:space="preserve">ask charon about a ferry</command>
+        <result xml:space="preserve">Charon looks at you coldly. "None of your business."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1106"></child>
+        </children>
+    </item>
+    <item nodeId="node-1106">
+        <command xml:space="preserve">ask charon about the boat</command>
+        <result xml:space="preserve">There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1092">
+        <command xml:space="preserve">ask charon about ferry</command>
+        <result xml:space="preserve">Charon sniffs, "And you are?"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1097"></child>
+            <child nodeId="node-1093"></child>
+        </children>
+    </item>
+    <item nodeId="node-1093">
+        <command xml:space="preserve">x ferry</command>
+        <result xml:space="preserve">It's Charon's ferry, not totally unlike a small dinghy.  Right now it is pulled up onto the bank of the river, ready to shove off into the river.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1097">
+        <command xml:space="preserve">ask charon about the ferry</command>
+        <result xml:space="preserve">Charon sniffs, "And you are?"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1110">
+        <command xml:space="preserve">ask charon about cowl</command>
+        <result xml:space="preserve">Charon frowns and tug the cowl a little further over his face.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
