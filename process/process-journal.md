@@ -139,3 +139,47 @@ So IFCOMP doesn't really allow me to release the game until October so I think: 
 ##  Let's go?
 
 Seems like I have thoughts on how to do it all. So I "just"  need to relearn Inform and then I'll start building? I guess I can do the tutorial in the actual project file so as to run into any bullshit it has planned for me in connection with Git? We'll see;
+
+---
+
+# Updates after beginning with Inform (Tuesday, 30 April 2019, 14:09PM)
+
+Okay well I did dig into some work in Inform 7. Did read through documentation, started an Inform project to actually begin building, made some headway, and ran into some walls too.
+
+Key learning: Inform is pretty straightforward at the most basic level of rooms, items, people, all with descriptions. All fine, no problem. As soon as there's the slightest subtlety or anything, though, it becomes really quite difficult. Spent a lot of time trying to get a "talk to" command to work so you could `> talk to charon` and never did make it work. It's undoubtedly possible, but it was very hard. More broadly, even the most simple "conversational" stuff I want to do with Charon is hard and I have no idea how to do it. So that's a big hurdle.
+
+I guess a lot of the nicety stuff is just going to be hard, whether that's getting coverage of weird things that might get typed or offering different default messages or what have you. I _should_ just ignore it and plow through to get the basic game working, but it's hard to let things go.
+
+In many ways it doesn't have to be hard, I guess the big fear with any interpreted game is just that the player will get stranded and not know what to do. That said, all the things are very, very  simple, so maybe not so hard?
+
+Here's a revisit of what I need to do now I've at least touched Inform. I'll just do Charon and Sisyphus because if I can get them both to work I've got a skeleton playthrough. It may be worth testing early.
+
+## Charon (aka the menu system)
+
+On the banks of the Styx. Charon is there with his ferry. You have a coin (ideally in your mouth). You need to read the list of names on his clipboard and then tell him you're one of those people and give him the coin. Then you get into his boat and he transfers you to your punishment. I guess that can be pretty much instantaneous.
+
+So the key tricks here are:
+- Conversation with Charon, specifically how to tell him your name (should this be "say Sisyphus" or should it be multiple choice? Or something else?) then give him the coin then get into the boat. And preventing other stuff - no getting into the boat before telling him your name and giving the coin. Can't tell him your name with a coin in your mouth. Can tell and give in either order? Or maybe force tell then give? Probably.
+- Moving to a new room once in the boat. It's a vehicle so should be able to transition to the new place? May need different descriptions of the boat depending on the player's vantage point (in it or not).
+
+## Sisyphus
+
+A scene at the foot of a hill. There's nowhere else to go. Could be surrounded by water. Maybe you've forgotten how to swim? Ha ha? There's a boulder. There might be a sign or a letter from Zeus that Charon gives to you as you get off the boat. It explains you need to push the boulder to the top of the hill. Do that and you can leave. So then you can push the boulder. It moves between, let's say, three or four rooms leading to the top of the hill, then rolls down.
+
+Doesn't feel like there's a bit trick, but obviously I need to understand
+- Pushing something between rooms, I think there's the idea of something pushable
+- Automatic rolling back in response to no pushing or reaching the top, turn based rolling
+
+Might want that idea you can mysteriously pick the boulder up and put it in your pocket. What are you wearing? And it falls out when you get it to the top etc.
+
+## So?
+
+Ugh. There's no obvious way to just think/design my way out of this. The majority of my problems are simply about not understanding how to express ideas in Inform at the level of syntax and at the language level and at the conceptual level. Oh boy. Oh boy. This is tough. It's probably a  great life lesson about the power of working in systems that you already understand and thus can express yourself in without running into low level operational issues. Reminds me somewhat of activity theory right now. I'm stuck at the level of operations and they're not very interesting to think about?
+
+## Do you guys like anything?
+
+Sounds grim. However, I do think there are interesting things about all of this. Most notably I think the way that Inform 7 is so focused on the idea of building a coherent world is a very interesting and different way of representing the ideas in this game. To take a simple example I noticed while reading the documentation, the fact that I can make the apple in Tantalus `edible` is really interesting to me - such that it has an ontological status despite the fact I'll obviously prevent the player from taking and therefore being able to eat it.
+
+It's funny that there's this extreme "physicality" involved in this totally text-based world. That there's a bunch of simulation that goes on under the hood and it perhaps adds to the authenticity of the whole thing, which I think relates favourably to the overall project.
+
+Something to continue thinking about anyway.
