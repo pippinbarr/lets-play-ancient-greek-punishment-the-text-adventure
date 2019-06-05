@@ -1,38 +1,58 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Pippin Barr - Let's Play: Ancient Greek Punishment: The Text Adventure</title>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <meta name="author" content="Pippin Barr" />
-  <meta name="description" content="A page for the game Let's Play: Ancient Greek Punishment: The Text Adventure by Pippin Barr." />
-  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <title>Pippin Barr - Let's Play: Ancient Greek Punishment: The Text Adventure — Play</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="author" content="Pippin Barr">
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="interpreter/glkote.css" type="text/css">
+<link rel="stylesheet" href="interpreter/dialog.css" type="text/css">
+<script src="interpreter/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="interpreter/glkote.min.js" type="text/javascript"></script>
+<script src="interpreter/quixe.min.js" type="text/javascript"></script>
+
+<script src="interpreter/resourcemap.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+game_options = {
+image_info_map: 'StaticImageInfo',  // image data is here, not in blorb
+use_query_story: false,
+set_page_title: false,
+inspacing: 0,     // gap between windows
+outspacing: 0     // gap between windows and edge of gameport
+};
+</script>
+
+<script src="interpreter/Let's Play- Ancient Greek Punis.gblorb.js" type="text/javascript"></script>
+  
  </head>
-<body>
+<body class="play">
 <div class="container">
 <div class="coverimage"><span><a href="Cover.jpg"><img src="Small Cover.jpg" border="1"></a></span></div>
-<div class="introduction">
-	<h1><span>Let's Play: Ancient Greek Punishment: The Text Adventure</span></h1>
-	<h2><span>Pippin Barr</span></h2>
-	<div class="bibliography"><span>Release 1</span></div>
-</div>
 <div class="links">
-	<ul>
-	<li><div class="download"><a href="Let's Play- Ancient Greek Punis.gblorb">Story File</a> <span class="filetype">(Blorb,&nbsp;610KB)</span></div></li>
-	<div class="auxiliary"><li><a href="play.html">Play In-Browser</a> <span class="filetype">(link)</span></li></div>
-	</ul>
+<div class="smalltitle">Let's Play: Ancient Greek Punishment: The Text Adventure</div>
+<ul>
+<li><a href="index.html">Home page</a></li>
+</ul>
 </div>
 
-<div class="about"><span><p>A work of interactive fiction.</p></span></div>
-
-<div class="playinfo">
-	<p>Let's Play: Ancient Greek Punishment: The Text Adventure was created with <a href="http://inform7.com/">Inform</a> and has IFID 596E9043-0977-49B5-99D7-BD24F02D5998. To play a work like this one, you need an interpreter program: many are available, among them <a href="http://www.logicalshift.demon.co.uk/mac/zoom.html">Zoom
-for Mac OS X</a> and for <a href="http://www.logicalshift.demon.co.uk/unix/zoom/">Unix</a>; <a href="http://freespace.virgin.net/davidk.kinder/frotz.html">Windows Frotz</a> or <a href="http://freespace.virgin.net/davidk.kinder/glulxe.html">Windows Glulxe</a> for Windows.  
-Or you can play without downloading anything by following the 'Play In-Browser'
-link, using the Quixe interpreter. You'll need to have Javascript enabled
-on your web browser.</p>
-</div> 
+<div id="gameport">
+<div id="windowport">
+<noscript><hr>
+<p>You'll need to turn on Javascript in your web browser to play this game.</p>
+<hr></noscript>
+</div>
+<div id="loadingpane">
+<img src="interpreter/waiting.gif" alt="LOADING"><br>
+<em>&nbsp;&nbsp;&nbsp;Loading...</em>
+</div>
+<div id="errorpane" style="display:none;"><div id="errorcontent">...</div></div>
+</div>
 
 </div>
+<div class="interpretercredit"><a href="http://eblong.com/zarf/glulx/quixe/">Quixe for Inform 7 (v. 2.1.2)</a></div>
 </body>
 </html>
 
