@@ -215,3 +215,27 @@ So it's constraining, but nice. It pushes me to think about objects, possession,
 ## And now...
 
 And now I want to get from Charon to Sisyphus and start Sisyphus. Things are getting easier I think. Some of the basic formulas are coming together for me. I believe I might be able to get something shaky together over today?
+
+---
+
+# Sisyphus rolls, Vorple, Exit, Next steps... (Thursday, 6 June 2019, 15:30PM)
+
+## Sisyphus rolls
+
+I've done what I think is the basic structural work required to make Sisyphus work now. You can push the boulder uphill and if you stop pushing (by doing something else, say) it will roll back down. Also if you reach the top of the hill with the boulder it will roll back down on its own. Also you can walk to the top of the hill without the boulder.
+
+That's about all there needs to be right? It's not meant to be a complicated sort of thing? And the rest revolves more around flavour? Smelling the boulder etc.? But not too much flavour because I suspect the more flavoursome the more irritating repeat readings are? This is all pushing into areas of writing fiction that I suppose I'm deeply out of practice with (though I used to fancy myself for this kind of thing).
+
+## Vorple
+
+I read about a more flexible interpreter that might allow some CSS magic and which I'm thus inclined to try just to have a bit of control over how things look. There is some cachet/fun in just having a super bland default, but I do think I might at least like the option?
+
+## Exit
+
+I just realised it's weird if you can restart? Or is that okay? Similar to reloading the page. At the very least it's not saying you escape from the punishment, it's a total reset of the whole system right?
+
+## Next steps...
+
+I think it's probably semi-smart to flesh out Sisyphus next, make sure it holds together well and that it has the right level of entertainment, etc. And then to test it out with a couple of people (e.g. Rilla, my parents) to make sure it's possible to actually get through all this stuff? Basically I'd like a throughline from Charon to Sisyphus that would feel roughly "final" to see how the whole thing lands.
+
+Fleshing out would include identifying all the default verbs in Inform 7 and giving them some flavour I suppose? A light sprinkling of paprika?
