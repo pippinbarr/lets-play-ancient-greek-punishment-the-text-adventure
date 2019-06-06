@@ -29,6 +29,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1252"></child>
             <child nodeId="node-1187"></child>
             <child nodeId="node-1180"></child>
+            <child nodeId="node-2191"></child>
             <child nodeId="node-1168"></child>
             <child nodeId="node-1260"></child>
             <child nodeId="node-1165"></child>
@@ -51,15 +52,22 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1092"></child>
             <child nodeId="node-1088"></child>
             <child nodeId="node-1229"></child>
+            <child nodeId="node-2203"></child>
+            <child nodeId="node-2146"></child>
+            <child nodeId="node-2198"></child>
             <child nodeId="node-1086"></child>
             <child nodeId="node-1085"></child>
             <child nodeId="node-1049"></child>
             <child nodeId="node-1047"></child>
             <child nodeId="node-1046"></child>
+            <child nodeId="node-2145"></child>
+            <child nodeId="node-2218"></child>
             <child nodeId="node-1045"></child>
             <child nodeId="node-1044"></child>
             <child nodeId="node-1311"></child>
             <child nodeId="node-1040"></child>
+            <child nodeId="node-2194"></child>
+            <child nodeId="node-2150"></child>
             <child nodeId="node-1038"></child>
             <child nodeId="node-1036"></child>
             <child nodeId="node-1030"></child>
@@ -68,7 +76,15 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1022"></child>
             <child nodeId="node-1011"></child>
             <child nodeId="node-1003"></child>
+            <child nodeId="node-2252"></child>
         </children>
+    </item>
+    <item nodeId="node-2252">
+        <command xml:space="preserve">xyzzy</command>
+        <result xml:space="preserve">Nothing happens. Magic isn't real.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1003">
         <command xml:space="preserve">x obol</command>
@@ -392,11 +408,12 @@ Zeno
     </item>
     <item nodeId="node-1038">
         <command xml:space="preserve">x charon</command>
-        <result xml:space="preserve">Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
+        <result xml:space="preserve">Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1039"></child>
+        <children><child nodeId="node-2222"></child>
+            <child nodeId="node-1039"></child>
             <child nodeId="node-1543"></child>
         </children>
     </item>
@@ -506,6 +523,350 @@ You can see a worryingly large boulder here.
     <item nodeId="node-1039">
         <command xml:space="preserve">x clipboard</command>
         <result xml:space="preserve">You see nothing special about the clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2222">
+        <command xml:space="preserve">open mouth</command>
+        <result xml:space="preserve">You open your mouth and neatly catch the small coin that drops out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2223"></child>
+        </children>
+    </item>
+    <item nodeId="node-2223">
+        <command xml:space="preserve">x clipboard</command>
+        <result xml:space="preserve">Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2224"></child>
+        </children>
+    </item>
+    <item nodeId="node-2224">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2225"></child>
+        </children>
+    </item>
+    <item nodeId="node-2225">
+        <command xml:space="preserve">talk to charon</command>
+        <result xml:space="preserve">Before you can get a word in, Charon monotones, "And you are?"
+
+Recalling the list of names on the clipboard, you say:
+
+Error: no text for Talk to Charon.
+
+1) "I'm Sisyphus!"
+
+2) "Never mind..." 
+&gt;&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2226"></child>
+        </children>
+    </item>
+    <item nodeId="node-2226">
+        <command xml:space="preserve">1</command>
+        <result xml:space="preserve">Charon raises his eyebrow, "Oh yeah? Sure thing. Give me the coin.". 
+
+He holds out a bony hand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2227"></child>
+        </children>
+    </item>
+    <item nodeId="node-2227">
+        <command xml:space="preserve">pay charon</command>
+        <result xml:space="preserve">You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. "Looks like we're in business. Get in."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2228"></child>
+        </children>
+    </item>
+    <item nodeId="node-2228">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2229"></child>
+        </children>
+    </item>
+    <item nodeId="node-2229">
+        <command xml:space="preserve">get in</command>
+        <result xml:space="preserve">Charon is seemingly at pains not to help you step into the ferry. Once you're established, he climbs in after you.
+
+Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2230"></child>
+        </children>
+    </item>
+    <item nodeId="node-2230">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2231"></child>
+        </children>
+    </item>
+    <item nodeId="node-2231">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. He is sitting at the oars.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2232"></child>
+        </children>
+    </item>
+    <item nodeId="node-2232">
+        <command xml:space="preserve">x ferry</command>
+        <result xml:space="preserve">It's Charon's ferry, not totally unlike a small dinghy. Right now it is pulled up onto the bank of the river, ready to shove off into the river.
+
+In Charon's ferry is Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2150">
+        <command xml:space="preserve">touch me</command>
+        <result xml:space="preserve">No touching!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2151"></child>
+            <child nodeId="node-2153"></child>
+        </children>
+    </item>
+    <item nodeId="node-2153">
+        <command xml:space="preserve">touch charon</command>
+        <result xml:space="preserve">No touching!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2154"></child>
+        </children>
+    </item>
+    <item nodeId="node-2154">
+        <command xml:space="preserve">touch coin</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2155"></child>
+        </children>
+    </item>
+    <item nodeId="node-2155">
+        <command xml:space="preserve">open mouth</command>
+        <result xml:space="preserve">You open your mouth and neatly catch the small coin that drops out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2156"></child>
+        </children>
+    </item>
+    <item nodeId="node-2156">
+        <command xml:space="preserve">touch mouth</command>
+        <result xml:space="preserve">No touching!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2157"></child>
+        </children>
+    </item>
+    <item nodeId="node-2157">
+        <command xml:space="preserve">touch coin</command>
+        <result xml:space="preserve">No touching!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2158"></child>
+        </children>
+    </item>
+    <item nodeId="node-2158">
+        <command xml:space="preserve">x mouth</command>
+        <result xml:space="preserve">You purse your lips and can just make them out while staring strenuously downward. As you do, you feel something in your mouth.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2159"></child>
+        </children>
+    </item>
+    <item nodeId="node-2159">
+        <command xml:space="preserve">smell mouth</command>
+        <result xml:space="preserve">A faint aroma of crushed bones.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2160"></child>
+        </children>
+    </item>
+    <item nodeId="node-2160">
+        <command xml:space="preserve">taste mouth</command>
+        <result xml:space="preserve">Nothing tastes of anything in Hades.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2161"></child>
+        </children>
+    </item>
+    <item nodeId="node-2161">
+        <command xml:space="preserve">eat coin</command>
+        <result xml:space="preserve">That's plainly inedible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2162"></child>
+        </children>
+    </item>
+    <item nodeId="node-2162">
+        <command xml:space="preserve">eat charon</command>
+        <result xml:space="preserve">He's plainly inedible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2163"></child>
+        </children>
+    </item>
+    <item nodeId="node-2163">
+        <command xml:space="preserve">search here</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2164"></child>
+        </children>
+    </item>
+    <item nodeId="node-2164">
+        <command xml:space="preserve">search mouth</command>
+        <result xml:space="preserve">your mouth is empty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2165"></child>
+        </children>
+    </item>
+    <item nodeId="node-2165">
+        <command xml:space="preserve">search charon</command>
+        <result xml:space="preserve">You find nothing of interest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2166"></child>
+        </children>
+    </item>
+    <item nodeId="node-2166">
+        <command xml:space="preserve">search ferry</command>
+        <result xml:space="preserve">Charon's ferry is empty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2167"></child>
+        </children>
+    </item>
+    <item nodeId="node-2167">
+        <command xml:space="preserve">look under ferry</command>
+        <result xml:space="preserve">You find nothing of interest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2168"></child>
+        </children>
+    </item>
+    <item nodeId="node-2168">
+        <command xml:space="preserve">lock ferry</command>
+        <result xml:space="preserve">(with the obol)
+That doesn't seem to be something you can lock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2169"></child>
+        </children>
+    </item>
+    <item nodeId="node-2169">
+        <command xml:space="preserve">open ferry</command>
+        <result xml:space="preserve">It isn't something you can open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2170"></child>
+        </children>
+    </item>
+    <item nodeId="node-2170">
+        <command xml:space="preserve">wear obol</command>
+        <result xml:space="preserve">You can't wear that!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2171"></child>
+        </children>
+    </item>
+    <item nodeId="node-2171">
+        <command xml:space="preserve">show obol to charon</command>
+        <result xml:space="preserve">Charon is unimpressed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2151">
+        <command xml:space="preserve">kiss charon</command>
+        <result xml:space="preserve">Hades has a strict no-kissing policy.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2194">
+        <command xml:space="preserve">tie charon to ferry</command>
+        <result xml:space="preserve">With what?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2195"></child>
+        </children>
+    </item>
+    <item nodeId="node-2195">
+        <command xml:space="preserve">apologize</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2196"></child>
+        </children>
+    </item>
+    <item nodeId="node-2196">
+        <command xml:space="preserve">say sorry</command>
+        <result xml:space="preserve">(to Charon)
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2197"></child>
+        </children>
+    </item>
+    <item nodeId="node-2197">
+        <command xml:space="preserve">sorry</command>
+        <result xml:space="preserve">Oh, don't apologise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1123,6 +1484,38 @@ But you're already in Charon's ferry.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2218">
+        <command xml:space="preserve">taste obol</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2219"></child>
+        </children>
+    </item>
+    <item nodeId="node-2219">
+        <command xml:space="preserve">open mouth</command>
+        <result xml:space="preserve">You open your mouth and neatly catch the small coin that drops out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2220"></child>
+        </children>
+    </item>
+    <item nodeId="node-2220">
+        <command xml:space="preserve">taste obol</command>
+        <result xml:space="preserve">The obol has spent plenty of time in your mouth already.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2145">
+        <command xml:space="preserve">taste me</command>
+        <result xml:space="preserve">Nothing tastes of anything in Hades.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1046">
         <command xml:space="preserve">talk to charon about dogs</command>
         <result xml:space="preserve">I only understood you as far as wanting to talk to Charon.
@@ -1166,7 +1559,8 @@ But you're already in Charon's ferry.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1051"></child>
+        <children><child nodeId="node-2125"></child>
+            <child nodeId="node-1051"></child>
         </children>
     </item>
     <item nodeId="node-1051">
@@ -1191,6 +1585,184 @@ But you're already in Charon's ferry.
     <item nodeId="node-1053">
         <command xml:space="preserve">x obol</command>
         <result xml:space="preserve">A small silver coin imprinted with the blurry image of a sleepy man's face.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2125">
+        <command xml:space="preserve">look in mouth</command>
+        <result xml:space="preserve">You can't see inside, since your mouth is closed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2126"></child>
+        </children>
+    </item>
+    <item nodeId="node-2126">
+        <command xml:space="preserve">open mouth</command>
+        <result xml:space="preserve">You open your mouth and neatly catch the small coin that drops out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2127"></child>
+        </children>
+    </item>
+    <item nodeId="node-2127">
+        <command xml:space="preserve">look in mouth</command>
+        <result xml:space="preserve">your mouth is empty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2128"></child>
+        </children>
+    </item>
+    <item nodeId="node-2128">
+        <command xml:space="preserve">close mouth</command>
+        <result xml:space="preserve">Good idea.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2129"></child>
+        </children>
+    </item>
+    <item nodeId="node-2129">
+        <command xml:space="preserve">open mouth</command>
+        <result xml:space="preserve">Let's not. You shouldn't just stand around with your mouth open, you know.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2130"></child>
+        </children>
+    </item>
+    <item nodeId="node-2130">
+        <command xml:space="preserve">x coin</command>
+        <result xml:space="preserve">A small silver coin imprinted with the blurry image of a sleepy man's face.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2131"></child>
+        </children>
+    </item>
+    <item nodeId="node-2131">
+        <command xml:space="preserve">drop coin</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2132"></child>
+        </children>
+    </item>
+    <item nodeId="node-2132">
+        <command xml:space="preserve">get coin</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2133"></child>
+        </children>
+    </item>
+    <item nodeId="node-2133">
+        <command xml:space="preserve">throw coin</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2134"></child>
+        </children>
+    </item>
+    <item nodeId="node-2134">
+        <command xml:space="preserve">get coin</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2135"></child>
+        </children>
+    </item>
+    <item nodeId="node-2135">
+        <command xml:space="preserve">throw coin at charon</command>
+        <result xml:space="preserve">You lack the nerve when it comes to the crucial moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2136"></child>
+        </children>
+    </item>
+    <item nodeId="node-2136">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">As good-looking as ever.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2137"></child>
+        </children>
+    </item>
+    <item nodeId="node-2137">
+        <command xml:space="preserve">kiss charon</command>
+        <result xml:space="preserve">Charon might not like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2138"></child>
+        </children>
+    </item>
+    <item nodeId="node-2138">
+        <command xml:space="preserve">kiss me</command>
+        <result xml:space="preserve">You don't get much from that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2139"></child>
+        </children>
+    </item>
+    <item nodeId="node-2139">
+        <command xml:space="preserve">get charon</command>
+        <result xml:space="preserve">I don't suppose Charon would care for that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2140"></child>
+        </children>
+    </item>
+    <item nodeId="node-2140">
+        <command xml:space="preserve">get me</command>
+        <result xml:space="preserve">You are always self-possessed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2141"></child>
+        </children>
+    </item>
+    <item nodeId="node-2141">
+        <command xml:space="preserve">drop charon</command>
+        <result xml:space="preserve">Charon is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2142"></child>
+        </children>
+    </item>
+    <item nodeId="node-2142">
+        <command xml:space="preserve">lick charon</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2143"></child>
+        </children>
+    </item>
+    <item nodeId="node-2143">
+        <command xml:space="preserve">taste charon</command>
+        <result xml:space="preserve">You taste nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2144"></child>
+        </children>
+    </item>
+    <item nodeId="node-2144">
+        <command xml:space="preserve">taste me</command>
+        <result xml:space="preserve">You taste nothing unexpected.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1634,6 +2206,90 @@ He gestures impatiently with a bony hand.
     <item nodeId="node-1087">
         <command xml:space="preserve">talk to charon about cats</command>
         <result xml:space="preserve">I only understood you as far as wanting to talk to Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2198">
+        <command xml:space="preserve">sorry</command>
+        <result xml:space="preserve">It's a bit late for that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2199"></child>
+        </children>
+    </item>
+    <item nodeId="node-2199">
+        <command xml:space="preserve">climb</command>
+        <result xml:space="preserve">What do you want to climb?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2200"></child>
+        </children>
+    </item>
+    <item nodeId="node-2200">
+        <command xml:space="preserve">climb charon</command>
+        <result xml:space="preserve">Little is to be achieved by that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2201"></child>
+        </children>
+    </item>
+    <item nodeId="node-2201">
+        <command xml:space="preserve">climb ferry</command>
+        <result xml:space="preserve">Little is to be achieved by that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2202"></child>
+        </children>
+    </item>
+    <item nodeId="node-2202">
+        <command xml:space="preserve">sleep</command>
+        <result xml:space="preserve">You aren't feeling especially drowsy.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2146">
+        <command xml:space="preserve">smell me</command>
+        <result xml:space="preserve">A faint aroma of crushed bones.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2147"></child>
+        </children>
+    </item>
+    <item nodeId="node-2147">
+        <command xml:space="preserve">smell here</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2148"></child>
+        </children>
+    </item>
+    <item nodeId="node-2148">
+        <command xml:space="preserve">smell charon</command>
+        <result xml:space="preserve">A faint aroma of crushed bones.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2149"></child>
+        </children>
+    </item>
+    <item nodeId="node-2149">
+        <command xml:space="preserve">smell ferry</command>
+        <result xml:space="preserve">A faint aroma of crushed bones.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2203">
+        <command xml:space="preserve">sleep</command>
+        <result xml:space="preserve">But there's so much to do!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -2428,12 +3084,9 @@ Nearly the Top of the Hill
 You furrow your brow and heave the boulder forward.
 
 The Top of the Hill
-The view is disappointing, with just the river to the south and everywhere a thick blanket of fog that prevents you seeing far in any direction.
+The view is disappointing, with just the river below and everywhere a thick blanket of fog that prevents you seeing far in any direction.
 
-The boulder slips from your grasp as though it has a mind of its own.
-
-The boulder rolls calmly down the hill.
-
+The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1876"></child>
@@ -4145,7 +4798,9 @@ Charon sighs. "And you are...?".
         <children><child nodeId="node-1132"></child>
             <child nodeId="node-1128"></child>
             <child nodeId="node-1125"></child>
+            <child nodeId="node-2173"></child>
             <child nodeId="node-1115"></child>
+            <child nodeId="node-2234"></child>
             <child nodeId="node-1110"></child>
         </children>
     </item>
@@ -4201,6 +4856,205 @@ He gestures impatiently with a bony hand.
     <item nodeId="node-1114">
         <command xml:space="preserve">get into boat</command>
         <result xml:space="preserve">You get into Charon's ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2234">
+        <command xml:space="preserve">x board</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2235"></child>
+        </children>
+    </item>
+    <item nodeId="node-2235">
+        <command xml:space="preserve">x clipboard</command>
+        <result xml:space="preserve">Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2236"></child>
+        </children>
+    </item>
+    <item nodeId="node-2236">
+        <command xml:space="preserve">talk to charon</command>
+        <result xml:space="preserve">Before you can get a word in, Charon monotones, "And you are?"
+
+Recalling the list of names on the clipboard, you say:
+
+Error: no text for Talk to Charon.
+
+1) "I'm Sisyphus!"
+
+2) "Never mind..." 
+&gt;&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2237"></child>
+        </children>
+    </item>
+    <item nodeId="node-2237">
+        <command xml:space="preserve">1</command>
+        <result xml:space="preserve">Charon raises his eyebrow, "Oh yeah? Sure thing. Give me the coin.". 
+
+He holds out a bony hand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2238"></child>
+        </children>
+    </item>
+    <item nodeId="node-2238">
+        <command xml:space="preserve">pay charon</command>
+        <result xml:space="preserve">You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. "Looks like we're in business. Get in."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2239"></child>
+        </children>
+    </item>
+    <item nodeId="node-2239">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2240"></child>
+        </children>
+    </item>
+    <item nodeId="node-2240">
+        <command xml:space="preserve">get in</command>
+        <result xml:space="preserve">Charon is seemingly at pains not to help you step into the ferry. Once you're established, he climbs in after you.
+
+Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2241"></child>
+        </children>
+    </item>
+    <item nodeId="node-2241">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2242"></child>
+        </children>
+    </item>
+    <item nodeId="node-2242">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. He is sitting at the oars.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2243"></child>
+        </children>
+    </item>
+    <item nodeId="node-2243">
+        <command xml:space="preserve">x charon</command>
+        <result xml:space="preserve">Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. He is sitting at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2244"></child>
+        </children>
+    </item>
+    <item nodeId="node-2244">
+        <command xml:space="preserve">x gerry</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2245"></child>
+        </children>
+    </item>
+    <item nodeId="node-2245">
+        <command xml:space="preserve">x ferry</command>
+        <result xml:space="preserve">It's Charon's ferry, not totally unlike a small dinghy. Right now it is grounded on a gritty beach.
+
+In Charon's ferry is Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2246"></child>
+        </children>
+    </item>
+    <item nodeId="node-2246">
+        <command xml:space="preserve">restartr</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2247"></child>
+        </children>
+    </item>
+    <item nodeId="node-2247">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2248"></child>
+        </children>
+    </item>
+    <item nodeId="node-2248">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190606 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2249"></child>
+        </children>
+    </item>
+    <item nodeId="node-2249">
+        <command xml:space="preserve">read clipboard</command>
+        <result xml:space="preserve">Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2250"></child>
+        </children>
+    </item>
+    <item nodeId="node-2250">
+        <command xml:space="preserve">read obol</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2251"></child>
+        </children>
+    </item>
+    <item nodeId="node-2251">
+        <command xml:space="preserve">read mouth</command>
+        <result xml:space="preserve">You purse your lips and can just make them out while staring strenuously downward. As you do, you feel something in your mouth.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -4319,6 +5173,166 @@ Tantalus
 Prometheus
 Danaids
 Zeno
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2173">
+        <command xml:space="preserve">show obol to charon</command>
+        <result xml:space="preserve">Charon nods, "That's the stuff."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2174"></child>
+        </children>
+    </item>
+    <item nodeId="node-2174">
+        <command xml:space="preserve">pay charon</command>
+        <result xml:space="preserve">Charon looks at you wearily, "There's nothing to pay for until you tell me who you are." (Maybe you should talk to him first?)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2175"></child>
+        </children>
+    </item>
+    <item nodeId="node-2175">
+        <command xml:space="preserve">attack charon</command>
+        <result xml:space="preserve">Violence isn't the answer to this one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2176"></child>
+        </children>
+    </item>
+    <item nodeId="node-2176">
+        <command xml:space="preserve">attack obol</command>
+        <result xml:space="preserve">Violence isn't the answer to this one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2177"></child>
+        </children>
+    </item>
+    <item nodeId="node-2177">
+        <command xml:space="preserve">kill obol</command>
+        <result xml:space="preserve">Violence isn't the answer to this one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2178"></child>
+        </children>
+    </item>
+    <item nodeId="node-2178">
+        <command xml:space="preserve">wave to charon</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2179"></child>
+        </children>
+    </item>
+    <item nodeId="node-2179">
+        <command xml:space="preserve">wave at charon</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2180"></child>
+        </children>
+    </item>
+    <item nodeId="node-2180">
+        <command xml:space="preserve">wave</command>
+        <result xml:space="preserve">You wave.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2181"></child>
+        </children>
+    </item>
+    <item nodeId="node-2181">
+        <command xml:space="preserve">pull charon</command>
+        <result xml:space="preserve">Charon might not like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2182"></child>
+        </children>
+    </item>
+    <item nodeId="node-2182">
+        <command xml:space="preserve">pull obol</command>
+        <result xml:space="preserve">Nothing obvious happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2183"></child>
+        </children>
+    </item>
+    <item nodeId="node-2183">
+        <command xml:space="preserve">squeeze obol</command>
+        <result xml:space="preserve">You achieve nothing by this.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2184"></child>
+        </children>
+    </item>
+    <item nodeId="node-2184">
+        <command xml:space="preserve">squeeze charon</command>
+        <result xml:space="preserve">Charon might not like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2185"></child>
+        </children>
+    </item>
+    <item nodeId="node-2185">
+        <command xml:space="preserve">burn charon</command>
+        <result xml:space="preserve">This dangerous act would achieve little.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2186"></child>
+        </children>
+    </item>
+    <item nodeId="node-2186">
+        <command xml:space="preserve">wake up</command>
+        <result xml:space="preserve">The dreadful truth is, this is not a dream.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2187"></child>
+        </children>
+    </item>
+    <item nodeId="node-2187">
+        <command xml:space="preserve">think</command>
+        <result xml:space="preserve">What a good idea.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2188"></child>
+        </children>
+    </item>
+    <item nodeId="node-2188">
+        <command xml:space="preserve">listen to charon</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2189"></child>
+        </children>
+    </item>
+    <item nodeId="node-2189">
+        <command xml:space="preserve">listen to obol</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2190"></child>
+        </children>
+    </item>
+    <item nodeId="node-2190">
+        <command xml:space="preserve">cut obol</command>
+        <result xml:space="preserve">Cutting it up would achieve little.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -4929,6 +5943,31 @@ You can see Charon here.
     <item nodeId="node-1179">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2191">
+        <command xml:space="preserve">cut charon</command>
+        <result xml:space="preserve">With what?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2192"></child>
+        </children>
+    </item>
+    <item nodeId="node-2192">
+        <command xml:space="preserve">cut charon with obol</command>
+        <result xml:space="preserve">I only understood you as far as wanting to cut Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2193"></child>
+        </children>
+    </item>
+    <item nodeId="node-2193">
+        <command xml:space="preserve">jump</command>
+        <result xml:space="preserve">You jump on the spot.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

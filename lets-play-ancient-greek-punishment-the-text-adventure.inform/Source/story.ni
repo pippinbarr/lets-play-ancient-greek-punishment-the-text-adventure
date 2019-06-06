@@ -18,10 +18,50 @@ Talking to is an action applying to one visible thing.
 Understand "talk to [someone]" as talking to.
 Report talking to: say "You have nothing to say.".
 When play begins: forbid exiting on zero.
+Use scoring.
 
 A name is a kind of value. The names are Nobody, Sisyphus, Prometheus, Tantalus, Danaid, and Zeno.
 The player's name is a name that varies. The player's name is Nobody.
 
+When play begins: 
+	now the left hand status line is "[the player's surroundings]"; 
+	now the right hand status line is "[score]/1 points";
+
+Section 3 - Some basic verb overrides
+
+Instead of tasting something, say "Nothing tastes of anything in Hades.".
+
+Instead of smelling something, say "A faint aroma of crushed bones.".
+
+Instead of kissing something, say "Hades has a strict no-kissing policy.".
+
+Instead of touching something, say "No touching!".
+
+Instead of attacking something, say "Wrong game.".
+
+Instead of burning something, say "You left your lighter in your other pants.".
+
+Instead of waking up, say "Unfortunately you really are in Hades. Tough break.".
+
+Instead of thinking, say "How'd that work out for you?".
+
+Instead of listening to something, say "Nothing is forthcoming.".
+
+Instead of cutting something, say "With what?".
+
+Instead of jumping, say "Boing...".
+
+Instead of tying something to something, say "With what?".
+
+Instead of drinking something, say "Your drinking days are over.".
+
+Instead of eating something, say "Your eating days are over.".
+
+Instead of saying sorry, say "It's a bit late for that.".
+
+Instead of climbing something, say "Nah.".
+
+Instead of sleeping, say "But there's so much to do!".
 
 
 [----------------------------------------------------]
@@ -37,6 +77,9 @@ The obol is an object. The description is "A small silver coin imprinted with th
 Your mouth is part of the player. The description is "You purse your lips and can just make them out while staring strenuously downward. As you do, you feel something in your mouth." Your mouth is a container. Your mouth can be open or closed. Your mouth is closed.
 The obol is in your mouth.
 Understand "coin" or "money" as the obol.
+
+Instead of tasting the obol, say "The obol has spent plenty of time in your mouth already.".
+Instead of eating the obol, say "The obol has spent plenty of time in your mouth already.".
 
 Instead of opening your mouth:
 	if your mouth is open:
@@ -55,22 +98,24 @@ Instead of closing your mouth:
 	otherwise:
 		say "It's closed already.";
 
+Instead of showing the obol to Charon:
+	say "Charon deadpans, 'Good for you.'";
 
 Section 2 - The place
 
 The Bank of the River Styx is a room. The description is "Here you are at the famous River Styx. The water flows sluggishly by."
 
-Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. Right now it is pulled up onto the bank of the river, ready to shove off into the river."
+Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. [if the ferry is in The Bank of the River Styx]Right now it is moored at the bank of the river, ready to shove off.[otherwise]Right now it is grounded on a gritty beach.[end if]".
 Charon's ferry is a vehicle.
-[Charon's ferry is scenery.]
 Understand "boat" or "dinghy" as the ferry.
 
 The clipboard is an object. The description is "Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:[line break][line break]Sisyphus[line break]Tantalus[line break]Prometheus[line break]Danaids[line break]Zeno";
 
 The clipboard can be secret. The clipboard is secret.
 After examining the clipboard, now the clipboard is not secret.
+Understand "board" as the clipboard.
 
-Charon is here. The description is "Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl. He is holding a clipboard."
+Charon is here. The description is "Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. [if Charon is in the ferry]He is sitting at the oars.[otherwise]He is holding a clipboard.[end if]".
 Charon is a man.
 Charon is carrying the clipboard.
 
@@ -105,7 +150,7 @@ Instead of talking to Charon when the clipboard is secret:
 	say "Before you can get a word in, Charon monotones, 'And you are?'[paragraph break]You realise you don't know and fall silent.";
 
 Instead of talking to Charon when the player's name is not Nobody:
-	say "Charon isn't interested in talking to you about anything. Ever.";
+	say "Charon isn't interested in talking to you about anything else.";
 
 Report giving text for Talk to Charon: 
 	say "Before you can get a word in, Charon monotones, 'And you are?'[paragraph break]Recalling the list of names on the clipboard, you say:[paragraph break]";
@@ -118,7 +163,7 @@ Report giving link to My Name Is Sisyphus:
 	Instead say "'I'm Sisyphus!'";
 Report giving text for My Name Is Sisyphus: 
 	Now the player's name is Sisyphus;
-	Instead say "Charon raises his eyebrow, 'Oh yeah? Sure thing. Give me the coin.'. [paragraph break]He holds out a bony hand.";
+	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
 
 Report giving link to Nevermind: 
 	instead say "'Never mind...' ";
@@ -136,9 +181,9 @@ Paying is an action applying to one visible thing.
 Understand "pay [someone]" as paying.
 Instead of paying Charon:
 	If the player's name is Nobody:
-		say "Charon looks at you wearily, 'There's nothing to pay for until you tell me who you are.' (Maybe you should talk to him first?)";
+		say "Charon looks at you wearily, 'No paying until you tell me who you are.' (Maybe you should talk to him first.)";
 	otherwise If the player has the obol:
-		say "You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. 'Looks like we're in business. Get in.'";
+		say "You hand over the small coin. Charon drops it into a pocket and gestures at the ferry.";
 		now Charon has the obol;
 	otherwise:
 		say "You don't have any money.";
@@ -153,7 +198,7 @@ Instead of entering the ferry when the charon does not have the obol:
 	say "You haven't paid.";
 
 Before entering the ferry when the player's name is not Nobody and Charon has the obol and Charon is not in the ferry:
-	say	"Charon is seemingly at pains not to help you step into the ferry. Once you're established, he climbs in after you."
+	say	"Charon takes pains not to help you step into the ferry."
 	
 After entering the ferry:
 	say "Charon sets about unmooring the ferry.";
@@ -161,7 +206,7 @@ After entering the ferry:
 	The ferry departs in two turns from now;
 
 Instead of exiting when the player is in the ferry and the ferry is in The Bank of the River Styx:
-	say "Charon stops you with a look. 'There's no undoing things now.'";
+	say "Charon stops you with a look. 'There's no undo down here.'";
 
 At the time when Charon gets into the ferry:
 	say "Charon steps deftly into the ferry and takes up his position at the oars.";
@@ -190,7 +235,12 @@ Instead of Sisyphus:
 		Remove the obol from play;
 		Now the player is in The Bottom of the Hill;
 	Otherwise:
-		say "Nothing happens. You didn't think escape would be that easy did you?";
+		say "Nothing happens. Surely you didn't think it would be that easy did you?";
+
+Xyzzy is an action applying to nothing.
+Understand "Xyzzy" as Xyzzy.
+Instead of Xyzzy:
+	say "Nothing happens. Magic isn't real.";
 
 
 Section 7 - Tests
@@ -283,6 +333,10 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 		otherwise:
 			say "The boulder settles ponderously back at its starting position.";
 		now the boulder is stationary;
+	If the player is in the Hilltop:
+		If the boulder is in the Hilltop:
+			increase the score by 1;
+
 
 
 [----------------------------------------------------]
