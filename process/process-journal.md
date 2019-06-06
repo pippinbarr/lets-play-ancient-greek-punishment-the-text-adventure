@@ -183,3 +183,35 @@ Sounds grim. However, I do think there are interesting things about all of this.
 It's funny that there's this extreme "physicality" involved in this totally text-based world. That there's a bunch of simulation that goes on under the hood and it perhaps adds to the authenticity of the whole thing, which I think relates favourably to the overall project.
 
 Something to continue thinking about anyway.
+
+---
+
+# Right now, skipping ahead, the ad hoc life, happy times, and now... (Thursday, 6 June 2019, 9:09AM)
+
+## Right now
+
+So at this point I think I've implemented a lot of the bank of the Styx. Notably you are there with Charon, you have a coin in your mouth, you need to look at the clipboard to work out who you can be (the menu system effectively), and then talk to Charon to choose an identity, then pay him the coin, then get in the boat. That's the majority of the sequence, with the "last thing" being to move the boat to a new location for Sisyphus's punishment.
+
+## Skipping ahead
+
+This morning I thought it would make sense to provide a "skip ahead" cheat for players once they've gone through the opening "puzzle" once to just type the name they want and to teleport to the punishment. Think I can do that.
+
+## The Ad Hoc Life with Inform 7
+
+The experience of using Inform 7 has definitely been a major challenge on multiple fronts, notably:
+
+- I find that I don't write to-dos because I don't quite know how to phrase units of work in this environment - quite a weird experience actually, since to-dos are usually really important to me. Here, I'm just totally unclear on what counts as a unit of work. Or at least I'm scrambling so much it doesn't feel valuable to pretend I'm super organized about it?
+
+- I don't quite think through design in as detailed a way - same sort of issue I guess. When you don't quite know what's possible it starts being more of a response to the tool within the parameters of your broader ideas? So I have the broad strokes, but I'm kind of relying on Inform 7 to suggest ways of getting things done (as well as my hazy thoughts about how IF works as well, e.g. puzzles)
+
+## Happy times with Inform 7
+
+A lot of the above can be cast as positive experiences for me. Being a fish out of water means that I'm forced to engage in a pretty detailed way with the technology. As I said earlier, there's a sense of being at the "bottom" of the activity theory division of operations/actions/activities here. Each syntax errors drops me to operations, and then occasionally I'm fluent enough with the syntax that I get to take actions toward goals. Definitely not feeling like a holistic activity though, not integrated, plenty of contradictions. It doesn't _feel_ good, but I think it's likely making me think in different ways.
+
+Because Inform 7 is just such a different representation, and that's a lot of fun. The "infinite possibilities" of text combined with its underlying ontology means you end up with a decent amount of guidance on how to do things (I'm not fighting the system here), while still being pretty free to use it in aid of what you're doing.
+
+So it's constraining, but nice. It pushes me to think about objects, possession, containers, conversations, etc. Many of which I don't ever think about because most of what I do is much more locked together and less systemic. So the comparison to previous "standard" editions of this game should be quite fruitful I think... much more of an "world" than the others.
+
+## And now...
+
+And now I want to get from Charon to Sisyphus and start Sisyphus. Things are getting easier I think. Some of the basic formulas are coming together for me. I believe I might be able to get something shaky together over today?
