@@ -8,6 +8,8 @@ Release along with an interpreter.
 Use the serial comma.
 Use scoring.
 [Use undo prevention.]
+Rule for printing room description details: stop.
+The can't push vertically rule is not listed in any rulebook.
 
 Section 2 - Simple Chat
 
@@ -21,7 +23,9 @@ A name is a kind of value. The names are Nobody, Sisyphus, Prometheus, Tantalus,
 The player's name is a name that varies. The player's name is Nobody.
 
 
+
 [----------------------------------------------------]
+
 
 
 Part 2 - The Bank of the River Styx
@@ -58,7 +62,7 @@ The Bank of the River Styx is a room. The description is "Here you are at the fa
 
 Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. Right now it is pulled up onto the bank of the river, ready to shove off into the river."
 Charon's ferry is a vehicle.
-Charon's ferry is scenery.
+[Charon's ferry is scenery.]
 Understand "boat" or "dinghy" as the ferry.
 
 The clipboard is an object. The description is "Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:[line break][line break]Sisyphus[line break]Tantalus[line break]Prometheus[line break]Danaids[line break]Zeno";
@@ -74,7 +78,6 @@ Charon's eyes are part of Charon. The description is "Unhappy."
 The cowl is wearable. The description is "It's a standard-issue cowl."
 Charon is wearing the cowl.
 Understand "Charon's cowl" as the cowl.
-
 
 
 Section 3 - Talking to Charon
@@ -140,6 +143,7 @@ Instead of paying Charon:
 	otherwise:
 		say "You don't have any money.";
 
+
 Section 5 - The boat
 
 Instead of entering the ferry when the player's name is Nobody:
@@ -148,7 +152,7 @@ Instead of entering the ferry when the player's name is Nobody:
 Instead of entering the ferry when the charon does not have the obol:
 	say "You haven't paid.";
 
-Before entering the ferry when the player's name is not Nobody and Charon has the obol:
+Before entering the ferry when the player's name is not Nobody and Charon has the obol and Charon is not in the ferry:
 	say	"Charon is seemingly at pains not to help you step into the ferry. Once you're established, he climbs in after you."
 	
 After entering the ferry:
@@ -169,9 +173,13 @@ At the time when the ferry departs:
 		Move the ferry to The Bottom of the Hill;
 	
 After exiting when the player was in the ferry:
+	The ferry vanishes in zero turns from now;
+	continue the action;	
+		
+At the time when the ferry vanishes:
 	say "Charon oars away without giving you a second thought.";
 	Move the ferry to the Bank of the River Styx;
-	continue the action;
+
 
 Section 6 - Skip aheads
 
@@ -184,9 +192,15 @@ Instead of Sisyphus:
 	Otherwise:
 		say "Nothing happens. You didn't think escape would be that easy did you?";
 
+
 Section 7 - Tests
 
-Test sisyphus with "open mouth / x clipboard / talk to charon / 1 / pay charon / get into boat / z / z".
+Test sisyphus with "open mouth / x clipboard / talk to charon / 1 / pay charon / get into boat / z / z / get out".
+
+
+
+[----------------------------------------------------]
+
 
 
 Part 3 - Sisyphus
@@ -195,9 +209,83 @@ The Bottom of the Hill is a room. The description is "A grey, gritty beach meets
 
 The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.".
 Understand "rock" or "stone" as the boulder.
+The boulder is pushable between rooms.
+The boulder can be rolling or stationary. The boulder is stationary.
+
 Instead of taking the boulder, say "That would be hilarious, but it's too big, too heavy, and too destined to punish you for that.".
 
+A Little Way Up the Hill is above the Bottom of the Hill. The printed name is "A Little Way Up the Hill".
 
+Partway Up the Hill is above the A Little Way Up the Hill. 
+
+A Fair Way Up the Hill is above Partway Up the Hill. The printed name is "A Fair Way Up the Hill".
+
+Quite Far Up the Hill is above A Fair Way Up the Hill.
+
+Nearly the Top of the Hill is above Quite Far Up the Hill.
+
+The Hilltop is above Nearly the Top of the Hill. The description is "The view is disappointing, with just the river below and everywhere a thick blanket of fog that prevents you seeing far in any direction.". The printed name is "The Top of the Hill".
+
+Instead of pushing the boulder:
+	try pushing the boulder to up;	
+
+Instead of going south with the boulder:
+	say "The hill is to the north. Why would you want to push the boulder anywhere else?";
+
+Instead of going west with the boulder:
+	say "The hill is to the north. Why would you want to push the boulder anywhere else?";
+
+Instead of going east with the boulder:
+	say "The hill is to the north. Why would you want to push the boulder anywhere else?";
+
+Before going up with the boulder:
+	if the boulder is rolling:
+		Say "You go to push the boulder, but it's big, heavy, and on the move so you wisely step aside.";
+		Stop the action;
+	otherwise:
+		Say "You furrow your brow and heave the boulder forward.";
+		Now the player props the boulder;
+		continue the action;
+		
+Instead of going down with the boulder:
+	If the boulder is rolling:
+		Say "The boulder is rolling downhill just fine without your help.";
+		stop the action;
+	otherwise:
+		Say "For reasons known only to you, you give the boulder a little push downhill.";
+		stop the action;
+
+After going up with the boulder:
+	if the player is not in the Hilltop:
+		now the player props the boulder;
+	continue the action;
+	
+Before doing something:	
+	now the player does not prop the boulder;
+
+Propping relates one person to one thing. The verb to prop means the propping relation.
+
+Every turn when the boulder is not in The Bottom of the Hill and the player does not prop the boulder:
+	let next place be the room down from the location of the boulder;
+	now the boulder is rolling;
+	If the player is in the Hilltop:
+		say "The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill";
+	otherwise if the player can see the boulder:	
+		say "The boulder rolls calmly away down the hill.";
+	otherwise if the next place is not the bottom of the hill and the player is not in the next place:
+		say "Below, you see the boulder rolling down the hill.";
+	move the boulder to the next place;
+	If the player can see the boulder:
+		say "The boulder rolls into view.";
+	if the next place is the bottom of the hill:
+		if the player cannot see the boulder:
+			say "[line break]You see the boulder settle into place at the bottom of the hill.";
+		otherwise:
+			say "The boulder settles ponderously back at its starting position.";
+		now the boulder is stationary;
+
+
+[----------------------------------------------------]
 
 
 
@@ -207,11 +295,23 @@ Part 4 - Tantalus
 
 
 
+[----------------------------------------------------]
+
+
+
 Part 5 - Prometheus
 
 
 
+[----------------------------------------------------]
+
+
+
 Part 6 - Danaid
+
+
+
+[----------------------------------------------------]
 
 
 

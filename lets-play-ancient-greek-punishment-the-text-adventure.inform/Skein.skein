@@ -14,7 +14,7 @@ Release 1 / Serial number 190606 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Bank of the River Styx
 Here you are at the famous River Styx. The water flows sluggishly by.
 
-You can see Charon here.
+You can see Charon's ferry and Charon here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -44,6 +44,8 @@ You can see Charon here.
             <child nodeId="node-1109"></child>
             <child nodeId="node-1104"></child>
             <child nodeId="node-1099"></child>
+            <child nodeId="node-1821"></child>
+            <child nodeId="node-1715"></child>
             <child nodeId="node-1095"></child>
             <child nodeId="node-1094"></child>
             <child nodeId="node-1092"></child>
@@ -390,12 +392,116 @@ Zeno
     </item>
     <item nodeId="node-1038">
         <command xml:space="preserve">x charon</command>
-        <result xml:space="preserve">You see nothing special about Charon.
+        <result xml:space="preserve">Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1039"></child>
+            <child nodeId="node-1543"></child>
         </children>
+    </item>
+    <item nodeId="node-1543">
+        <command xml:space="preserve">x ferry</command>
+        <result xml:space="preserve">It's Charon's ferry, not totally unlike a small dinghy. Right now it is pulled up onto the bank of the river, ready to shove off into the river.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1544"></child>
+        </children>
+    </item>
+    <item nodeId="node-1544">
+        <command xml:space="preserve">test sisyphus</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] open mouth
+You open your mouth and neatly catch the small coin that drops out.
+
+&gt;[2] x clipboard
+Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;[3] talk to charon
+Before you can get a word in, Charon monotones, "And you are?"
+
+Recalling the list of names on the clipboard, you say:
+
+Error: no text for Talk to Charon.
+
+1) "I'm Sisyphus!"
+
+2) "Never mind..." 
+&gt;&gt; [4] 1
+Charon raises his eyebrow, "Oh yeah? Sure thing. Give me the coin.". 
+
+He holds out a bony hand.
+
+&gt;[5] pay charon
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. "Looks like we're in business. Get in."
+
+&gt;[6] get into boat
+Charon is seemingly at pains not to help you step into the ferry. Once you're established, he climbs in after you.
+
+Charon sets about unmooring the ferry.
+
+&gt;[7] z
+Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;[8] z
+Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;[9] get out
+You get out of Charon's ferry.
+
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see Charon's ferry (in which is Charon) and a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] open mouth
+[2] x clipboard
+[3] talk to charon
+[4] 1
+[5] pay charon
+[6] get into boat
+[7] z
+[8] z
+[9] get out
+</commentary>
+        <children><child nodeId="node-1554"></child>
+        </children>
+    </item>
+    <item nodeId="node-1554">
+        <command xml:space="preserve">get into ferry</command>
+        <result xml:space="preserve">Charon narrows his eyes and it's enough to stop you in your tracks.
+
+Charon oars away without giving you a second thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1555"></child>
+        </children>
+    </item>
+    <item nodeId="node-1555">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1039">
         <command xml:space="preserve">x clipboard</command>
@@ -455,6 +561,16 @@ With a series of surprisingly muscular pulls on the oars, Charon sends the ferry
 
 Charon looks at you implacably. You intuit that it's time for you to get out.
 
+&gt;[9] get out
+You get out of Charon's ferry.
+
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see Charon's ferry (in which is Charon) and a worryingly large boulder here.
+
+Charon oars away without giving you a second thought.
+
 &gt;</result>
         <commentary xml:space="preserve">[1] open mouth
 [2] x clipboard
@@ -464,10 +580,14 @@ Charon looks at you implacably. You intuit that it's time for you to get out.
 [6] get into boat
 [7] z
 [8] z
+[9] get out
 </commentary>
         <children><child nodeId="node-1041"></child>
+            <child nodeId="node-1541"></child>
             <child nodeId="node-1419"></child>
             <child nodeId="node-1307"></child>
+            <child nodeId="node-1485"></child>
+            <child nodeId="node-1587"></child>
             <child nodeId="node-1365"></child>
         </children>
     </item>
@@ -540,17 +660,196 @@ All aboard!
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-1587">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1588"></child>
+        </children>
+    </item>
+    <item nodeId="node-1588">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1589"></child>
+        </children>
+    </item>
+    <item nodeId="node-1589">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1590"></child>
+        </children>
+    </item>
+    <item nodeId="node-1590">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1591"></child>
+        </children>
+    </item>
+    <item nodeId="node-1591">
+        <command xml:space="preserve">push boulder n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1592"></child>
+        </children>
+    </item>
+    <item nodeId="node-1592">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">Nothing obvious happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1593"></child>
+        </children>
+    </item>
+    <item nodeId="node-1593">
+        <command xml:space="preserve">push boulder up hill</command>
+        <result xml:space="preserve">I only understood you as far as wanting to push the worryingly large boulder up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1485">
+        <command xml:space="preserve">l charon</command>
+        <result xml:space="preserve">Charon is leaning against his ferry. His eyes look sourly out from beneath a cowl. He is holding a clipboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1307">
         <command xml:space="preserve">l</command>
-        <result xml:space="preserve">Bank of the River Styx (in Charon's ferry)
-Here you are at the famous River Styx. The water flows sluggishly by.
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
 
-In Charon's ferry you can see Charon.
+You can see a worryingly large boulder here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1308"></child>
+            <child nodeId="node-1518"></child>
         </children>
+    </item>
+    <item nodeId="node-1518">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1519"></child>
+        </children>
+    </item>
+    <item nodeId="node-1519">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190606 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1520"></child>
+        </children>
+    </item>
+    <item nodeId="node-1520">
+        <command xml:space="preserve">test sisyphus</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] open mouth
+You open your mouth and neatly catch the small coin that drops out.
+
+&gt;[2] x clipboard
+Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;[3] talk to charon
+Before you can get a word in, Charon monotones, "And you are?"
+
+Recalling the list of names on the clipboard, you say:
+
+Error: no text for Talk to Charon.
+
+1) "I'm Sisyphus!"
+
+2) "Never mind..." 
+&gt;&gt; [4] 1
+Charon raises his eyebrow, "Oh yeah? Sure thing. Give me the coin.". 
+
+He holds out a bony hand.
+
+&gt;[5] pay charon
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. "Looks like we're in business. Get in."
+
+&gt;[6] get into boat
+Charon is seemingly at pains not to help you step into the ferry. Once you're established, he climbs in after you.
+
+Charon sets about unmooring the ferry.
+
+&gt;[7] z
+Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;[8] z
+Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;[9] get out
+You get out of Charon's ferry.
+
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] open mouth
+[2] x clipboard
+[3] talk to charon
+[4] 1
+[5] pay charon
+[6] get into boat
+[7] z
+[8] z
+[9] get out
+</commentary>
+        <children><child nodeId="node-1530"></child>
+        </children>
+    </item>
+    <item nodeId="node-1530">
+        <command xml:space="preserve">get into ferry</command>
+        <result xml:space="preserve">Charon is seemingly at pains not to help you step into the ferry. Once you're established, he climbs in after you.
+
+Charon narrows his eyes and it's enough to stop you in your tracks.
+
+Charon oars away without giving you a second thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1308">
         <command xml:space="preserve">i</command>
@@ -639,6 +938,15 @@ You can see a worryingly large boulder here.
         <result xml:space="preserve">It's Charon's ferry, not totally unlike a small dinghy. Right now it is pulled up onto the bank of the river, ready to shove off into the river.
 
 In Charon's ferry is Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1541">
+        <command xml:space="preserve">enter ferry</command>
+        <result xml:space="preserve">Charon narrows his eyes and it's enough to stop you in your tracks.
+
+Charon oars away without giving you a second thought.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1333,7 +1641,7 @@ He gestures impatiently with a bony hand.
     <item nodeId="node-1229">
         <command xml:space="preserve">sisyphus</command>
         <result xml:space="preserve">Bottom of the Hill
-A level area meets the edge of the river, then rises gently upward to the north.
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
 
 You can see a worryingly large boulder here.
 
@@ -1341,6 +1649,13 @@ You can see a worryingly large boulder here.
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1386"></child>
             <child nodeId="node-1379"></child>
+            <child nodeId="node-1595"></child>
+            <child nodeId="node-1842"></child>
+            <child nodeId="node-1618"></child>
+            <child nodeId="node-1738"></child>
+            <child nodeId="node-1731"></child>
+            <child nodeId="node-1709"></child>
+            <child nodeId="node-1788"></child>
             <child nodeId="node-1231"></child>
             <child nodeId="node-1245"></child>
             <child nodeId="node-1381"></child>
@@ -1515,6 +1830,1638 @@ You're standing at the bottom of a low hill. The slope is fairly gentle.
     <item nodeId="node-1235">
         <command xml:space="preserve">sisyphus</command>
         <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1788">
+        <command xml:space="preserve">push boulder up</command>
+        <result xml:space="preserve">You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1789"></child>
+        </children>
+    </item>
+    <item nodeId="node-1789">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+Behind you, you hear the boulder rolling back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1793"></child>
+        </children>
+    </item>
+    <item nodeId="node-1793">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1794"></child>
+        </children>
+    </item>
+    <item nodeId="node-1794">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1795"></child>
+        </children>
+    </item>
+    <item nodeId="node-1795">
+        <command xml:space="preserve">push boulder up</command>
+        <result xml:space="preserve">You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1796"></child>
+        </children>
+    </item>
+    <item nodeId="node-1796">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Unattended, the boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1709">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1743"></child>
+            <child nodeId="node-1710"></child>
+            <child nodeId="node-1751"></child>
+            <child nodeId="node-1769"></child>
+            <child nodeId="node-1782"></child>
+        </children>
+    </item>
+    <item nodeId="node-1782">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Unattended, the boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1783"></child>
+        </children>
+    </item>
+    <item nodeId="node-1783">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1769">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1770"></child>
+        </children>
+    </item>
+    <item nodeId="node-1770">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Unattended, the boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1771"></child>
+        </children>
+    </item>
+    <item nodeId="node-1771">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">It's got too much momentum to stop now!
+
+Unattended, the boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1772"></child>
+        </children>
+    </item>
+    <item nodeId="node-1772">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1773"></child>
+        </children>
+    </item>
+    <item nodeId="node-1773">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1751">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">You'll need to specify which direction you want to push it in, but good job holding it in place
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1752"></child>
+        </children>
+    </item>
+    <item nodeId="node-1752">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1753"></child>
+        </children>
+    </item>
+    <item nodeId="node-1753">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1754"></child>
+        </children>
+    </item>
+    <item nodeId="node-1754">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">You'll need to specify which direction you want to push it in, but good job holding it in place
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1710">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+Meep
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1711"></child>
+        </children>
+    </item>
+    <item nodeId="node-1711">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+Meep
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1712"></child>
+        </children>
+    </item>
+    <item nodeId="node-1712">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Fair Way Up the Hill
+Meep
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1713"></child>
+        </children>
+    </item>
+    <item nodeId="node-1713">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+Meep
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1714"></child>
+        </children>
+    </item>
+    <item nodeId="node-1714">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+You can see a worryingly large boulder here.
+
+Meep
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1743">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Little Way Up the Hill
+You can see a worryingly large boulder here.
+
+The boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1744"></child>
+        </children>
+    </item>
+    <item nodeId="node-1744">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Little Way Up the Hill
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1745"></child>
+        </children>
+    </item>
+    <item nodeId="node-1745">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Little Way Up the Hill
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1731">
+        <command xml:space="preserve">push boulder n</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1776"></child>
+        </children>
+    </item>
+    <item nodeId="node-1776">
+        <command xml:space="preserve">push boulder n</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1777"></child>
+        </children>
+    </item>
+    <item nodeId="node-1777">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+The boulder rolls into view.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1778"></child>
+        </children>
+    </item>
+    <item nodeId="node-1778">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">It's got too much momentum to stop now!
+
+Unattended, the boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1779"></child>
+        </children>
+    </item>
+    <item nodeId="node-1779">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1738">
+        <command xml:space="preserve">push boulder east</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1739"></child>
+        </children>
+    </item>
+    <item nodeId="node-1739">
+        <command xml:space="preserve">push boulder south</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1740"></child>
+        </children>
+    </item>
+    <item nodeId="node-1740">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1618">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1811"></child>
+            <child nodeId="node-1808"></child>
+            <child nodeId="node-1619"></child>
+            <child nodeId="node-1786"></child>
+        </children>
+    </item>
+    <item nodeId="node-1786">
+        <command xml:space="preserve">push boulder up</command>
+        <result xml:space="preserve">The worryingly large boulder cannot be pushed up or down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1619">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">boo
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1735"></child>
+            <child nodeId="node-1805"></child>
+        </children>
+    </item>
+    <item nodeId="node-1805">
+        <command xml:space="preserve">push boulder up</command>
+        <result xml:space="preserve">boo
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1735">
+        <command xml:space="preserve">push boudler south</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1736"></child>
+        </children>
+    </item>
+    <item nodeId="node-1736">
+        <command xml:space="preserve">push rock south</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1808">
+        <command xml:space="preserve">push boulder down</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1811">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1812"></child>
+        </children>
+    </item>
+    <item nodeId="node-1812">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">You can't go that way.
+
+With nothing to prevent it, the boulder rolls down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1813"></child>
+        </children>
+    </item>
+    <item nodeId="node-1813">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+Behind you, you hear the boulder rolling back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1814"></child>
+        </children>
+    </item>
+    <item nodeId="node-1814">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1815"></child>
+        </children>
+    </item>
+    <item nodeId="node-1815">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1816"></child>
+        </children>
+    </item>
+    <item nodeId="node-1816">
+        <command xml:space="preserve">push boulder n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1817"></child>
+        </children>
+    </item>
+    <item nodeId="node-1817">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1818"></child>
+        </children>
+    </item>
+    <item nodeId="node-1818">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1819"></child>
+        </children>
+    </item>
+    <item nodeId="node-1819">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Fair Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1820"></child>
+        </children>
+    </item>
+    <item nodeId="node-1820">
+        <command xml:space="preserve">push boulder down</command>
+        <result xml:space="preserve">For reasons known only to you, you give the boulder a little push back downhill.
+
+With nothing to prevent it, the boulder rolls down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1842">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1843"></child>
+            <child nodeId="node-1897"></child>
+        </children>
+    </item>
+    <item nodeId="node-1897">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+
+Below, you see the boulder settle into place at the bottom of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1843">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1883"></child>
+            <child nodeId="node-1844"></child>
+        </children>
+    </item>
+    <item nodeId="node-1844">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Fair Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1845"></child>
+        </children>
+    </item>
+    <item nodeId="node-1845">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Quite Far Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1846"></child>
+        </children>
+    </item>
+    <item nodeId="node-1846">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Nearly the Top of the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1847"></child>
+        </children>
+    </item>
+    <item nodeId="node-1847">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+The Top of the Hill
+The view is disappointing, with just the river to the south and everywhere a thick blanket of fog that prevents you seeing far in any direction.
+
+The boulder slips from your grasp as though it has a mind of its own.
+
+The boulder rolls calmly down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1876"></child>
+        </children>
+    </item>
+    <item nodeId="node-1876">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+Nearly the Top of the Hill
+You can see a worryingly large boulder here.
+
+The boulder rolls calmly down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1877"></child>
+        </children>
+    </item>
+    <item nodeId="node-1877">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+You can see a worryingly large boulder here.
+
+The boulder rolls calmly down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1878"></child>
+        </children>
+    </item>
+    <item nodeId="node-1878">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+You can see a worryingly large boulder here.
+
+The boulder rolls calmly down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1879"></child>
+        </children>
+    </item>
+    <item nodeId="node-1879">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1883">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+The boulder rolls into view.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1884"></child>
+            <child nodeId="node-2084"></child>
+            <child nodeId="node-1912"></child>
+        </children>
+    </item>
+    <item nodeId="node-1912">
+        <command xml:space="preserve">push boulder down</command>
+        <result xml:space="preserve">The boulder is rolling downhill just fine without your help.
+
+The boulder rolls calmly away down the hill.
+You see the boulder settle into place at the bottom of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1913"></child>
+        </children>
+    </item>
+    <item nodeId="node-1913">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1914"></child>
+        </children>
+    </item>
+    <item nodeId="node-1914">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1915"></child>
+        </children>
+    </item>
+    <item nodeId="node-1915">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1916"></child>
+        </children>
+    </item>
+    <item nodeId="node-1916">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Fair Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1917"></child>
+        </children>
+    </item>
+    <item nodeId="node-1917">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Quite Far Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1918"></child>
+        </children>
+    </item>
+    <item nodeId="node-1918">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The boulder rolls calmly away down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1919"></child>
+        </children>
+    </item>
+    <item nodeId="node-1919">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Below, you see the boulder rolling down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1920"></child>
+        </children>
+    </item>
+    <item nodeId="node-1920">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Below, you see the boulder rolling down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1921"></child>
+        </children>
+    </item>
+    <item nodeId="node-1921">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+You see the boulder settle into place at the bottom of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1950"></child>
+        </children>
+    </item>
+    <item nodeId="node-1950">
+        <command xml:space="preserve">sisyphus</command>
+        <result xml:space="preserve">Nothing happens. You didn't think escape would be that easy did you?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1951"></child>
+        </children>
+    </item>
+    <item nodeId="node-1951">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1952"></child>
+        </children>
+    </item>
+    <item nodeId="node-1952">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190606 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1953"></child>
+        </children>
+    </item>
+    <item nodeId="node-1953">
+        <command xml:space="preserve">sisyphus</command>
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1954"></child>
+        </children>
+    </item>
+    <item nodeId="node-1954">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1955"></child>
+        </children>
+    </item>
+    <item nodeId="node-1955">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1956"></child>
+        </children>
+    </item>
+    <item nodeId="node-1956">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Fair Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1957"></child>
+        </children>
+    </item>
+    <item nodeId="node-1957">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+The boulder rolls calmly away down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1958"></child>
+        </children>
+    </item>
+    <item nodeId="node-1958">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+Below, you see the boulder rolling down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1959"></child>
+        </children>
+    </item>
+    <item nodeId="node-1959">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+You see the boulder settle into place at the bottom of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2008"></child>
+        </children>
+    </item>
+    <item nodeId="node-2008">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2009"></child>
+        </children>
+    </item>
+    <item nodeId="node-2009">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190606 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2010"></child>
+        </children>
+    </item>
+    <item nodeId="node-2010">
+        <command xml:space="preserve">sisyphus</command>
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2011"></child>
+        </children>
+    </item>
+    <item nodeId="node-2011">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2012"></child>
+        </children>
+    </item>
+    <item nodeId="node-2012">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2013"></child>
+        </children>
+    </item>
+    <item nodeId="node-2013">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+The boulder rolls into view.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2014"></child>
+        </children>
+    </item>
+    <item nodeId="node-2014">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You go to push the boulder, but it's big, heavy, and on the move so it pushes you instead.
+The boulder is rolling downhill just fine without your help.
+
+
+The boulder rolls calmly away down the hill.
+You see the boulder settle into place at the bottom of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2015"></child>
+        </children>
+    </item>
+    <item nodeId="node-2015">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2084">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You go to push the boulder, but it's big, heavy, and on the move so you wisely step aside.
+
+The boulder rolls calmly away down the hill.
+
+You see the boulder settle into place at the bottom of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2085"></child>
+        </children>
+    </item>
+    <item nodeId="node-2085">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2098"></child>
+        </children>
+    </item>
+    <item nodeId="node-2098">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2099"></child>
+        </children>
+    </item>
+    <item nodeId="node-2099">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2100"></child>
+        </children>
+    </item>
+    <item nodeId="node-2100">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2101"></child>
+        </children>
+    </item>
+    <item nodeId="node-2101">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2102"></child>
+        </children>
+    </item>
+    <item nodeId="node-2102">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Fair Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2103"></child>
+        </children>
+    </item>
+    <item nodeId="node-2103">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Quite Far Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2104"></child>
+        </children>
+    </item>
+    <item nodeId="node-2104">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Nearly the Top of the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2105"></child>
+        </children>
+    </item>
+    <item nodeId="node-2105">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+The Top of the Hill
+The view is disappointing, with just the river to the south and everywhere a thick blanket of fog that prevents you seeing far in any direction.
+
+The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2106"></child>
+        </children>
+    </item>
+    <item nodeId="node-2106">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Nearly the Top of the Hill
+You can see a worryingly large boulder here.
+
+The boulder rolls calmly away down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2107"></child>
+        </children>
+    </item>
+    <item nodeId="node-2107">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Nearly the Top of the Hill
+Below, you see the boulder rolling down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2108"></child>
+        </children>
+    </item>
+    <item nodeId="node-2108">
+        <command xml:space="preserve">sigh</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2109"></child>
+        </children>
+    </item>
+    <item nodeId="node-2109">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Below, you see the boulder rolling down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2110"></child>
+        </children>
+    </item>
+    <item nodeId="node-2110">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Below, you see the boulder rolling down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2111"></child>
+        </children>
+    </item>
+    <item nodeId="node-2111">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+
+You see the boulder settle into place at the bottom of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2112"></child>
+        </children>
+    </item>
+    <item nodeId="node-2112">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2113"></child>
+        </children>
+    </item>
+    <item nodeId="node-2113">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2114"></child>
+        </children>
+    </item>
+    <item nodeId="node-2114">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2115"></child>
+        </children>
+    </item>
+    <item nodeId="node-2115">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2116"></child>
+        </children>
+    </item>
+    <item nodeId="node-2116">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2117"></child>
+        </children>
+    </item>
+    <item nodeId="node-2117">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2118"></child>
+        </children>
+    </item>
+    <item nodeId="node-2118">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2119"></child>
+        </children>
+    </item>
+    <item nodeId="node-2119">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Fair Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2120"></child>
+        </children>
+    </item>
+    <item nodeId="node-2120">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Quite Far Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2121"></child>
+        </children>
+    </item>
+    <item nodeId="node-2121">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Nearly the Top of the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2122"></child>
+        </children>
+    </item>
+    <item nodeId="node-2122">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+The Top of the Hill
+The view is disappointing, with just the river to the south and everywhere a thick blanket of fog that prevents you seeing far in any direction.
+
+The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1884">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+The boulder rolls into view.
+
+The boulder settles ponderously back at its starting position.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1595">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1611"></child>
+            <child nodeId="node-1601"></child>
+            <child nodeId="node-1596"></child>
+        </children>
+    </item>
+    <item nodeId="node-1596">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1597"></child>
+        </children>
+    </item>
+    <item nodeId="node-1597">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1598"></child>
+        </children>
+    </item>
+    <item nodeId="node-1598">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1601">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1602"></child>
+        </children>
+    </item>
+    <item nodeId="node-1602">
+        <command xml:space="preserve">nn</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1603"></child>
+        </children>
+    </item>
+    <item nodeId="node-1603">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Halfway Up the Hill
+Halfway up the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1604"></child>
+        </children>
+    </item>
+    <item nodeId="node-1604">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1605"></child>
+        </children>
+    </item>
+    <item nodeId="node-1605">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1606"></child>
+        </children>
+    </item>
+    <item nodeId="node-1606">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1607"></child>
+        </children>
+    </item>
+    <item nodeId="node-1607">
+        <command xml:space="preserve">push boulder n</command>
+        <result xml:space="preserve">
+Halfway Up the Hill
+Halfway up the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1608"></child>
+        </children>
+    </item>
+    <item nodeId="node-1608">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Halfway Up the Hill
+Halfway up the hill.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1611">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1612"></child>
+            <child nodeId="node-1626"></child>
+        </children>
+    </item>
+    <item nodeId="node-1626">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1627"></child>
+        </children>
+    </item>
+    <item nodeId="node-1627">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1652"></child>
+        </children>
+    </item>
+    <item nodeId="node-1652">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Nearly the Top of the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1653"></child>
+            <child nodeId="node-1705"></child>
+        </children>
+    </item>
+    <item nodeId="node-1705">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1706"></child>
+        </children>
+    </item>
+    <item nodeId="node-1706">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1707"></child>
+        </children>
+    </item>
+    <item nodeId="node-1707">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+The Top of the Hill
+The top of the hill. The view is disappointing, with just the river to the south and everywhere a thick blanket of fog that prevents you seeing far in any direction.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1653">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+The Top of the Hill
+The top of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1654"></child>
+        </children>
+    </item>
+    <item nodeId="node-1654">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1655"></child>
+        </children>
+    </item>
+    <item nodeId="node-1655">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Nearly the Top of the Hill
+Almost at the top of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1656"></child>
+        </children>
+    </item>
+    <item nodeId="node-1656">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+Almost at the top of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1657"></child>
+        </children>
+    </item>
+    <item nodeId="node-1657">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+Further up the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1658"></child>
+        </children>
+    </item>
+    <item nodeId="node-1658">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+Partway up the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1659"></child>
+        </children>
+    </item>
+    <item nodeId="node-1659">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1612">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Top of the Hill
+The top of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1613"></child>
+        </children>
+    </item>
+    <item nodeId="node-1613">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Halfway Up the Hill
+Halfway up the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1614"></child>
+        </children>
+    </item>
+    <item nodeId="node-1614">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1615"></child>
+        </children>
+    </item>
+    <item nodeId="node-1615">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">Nothing obvious happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1616"></child>
+        </children>
+    </item>
+    <item nodeId="node-1616">
+        <command xml:space="preserve">push boulder n</command>
+        <result xml:space="preserve">
+Halfway Up the Hill
+Halfway up the hill.
+
+&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1379">
@@ -1760,6 +3707,320 @@ There is no reply.
 3) "Uh, bye..." 
 (or 0 to say nothing)
 &gt;&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1715">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1716"></child>
+            <child nodeId="node-1726"></child>
+        </children>
+    </item>
+    <item nodeId="node-1726">
+        <command xml:space="preserve">sisyphus</command>
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1727"></child>
+        </children>
+    </item>
+    <item nodeId="node-1727">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1758"></child>
+        </children>
+    </item>
+    <item nodeId="node-1758">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1759"></child>
+        </children>
+    </item>
+    <item nodeId="node-1759">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Unattended, the boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1760"></child>
+        </children>
+    </item>
+    <item nodeId="node-1760">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">It's got too much momentum to stop now!
+
+Unattended, the boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1761"></child>
+        </children>
+    </item>
+    <item nodeId="node-1761">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1762"></child>
+        </children>
+    </item>
+    <item nodeId="node-1762">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1763"></child>
+        </children>
+    </item>
+    <item nodeId="node-1763">
+        <command xml:space="preserve">push boulder n</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1764"></child>
+        </children>
+    </item>
+    <item nodeId="node-1764">
+        <command xml:space="preserve">push boulder n</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1765"></child>
+        </children>
+    </item>
+    <item nodeId="node-1765">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Unattended, the boulder rolls back down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1766"></child>
+        </children>
+    </item>
+    <item nodeId="node-1766">
+        <command xml:space="preserve">push boulder n</command>
+        <result xml:space="preserve">It's got too much momentum to stop now!
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1716">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1717"></child>
+        </children>
+    </item>
+    <item nodeId="node-1717">
+        <command xml:space="preserve">sisyphus</command>
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1718"></child>
+        </children>
+    </item>
+    <item nodeId="node-1718">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1719"></child>
+        </children>
+    </item>
+    <item nodeId="node-1719">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1720"></child>
+        </children>
+    </item>
+    <item nodeId="node-1720">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1721"></child>
+        </children>
+    </item>
+    <item nodeId="node-1721">
+        <command xml:space="preserve">push boulder north</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1722"></child>
+        </children>
+    </item>
+    <item nodeId="node-1722">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1821">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">What do you want to push?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1822"></child>
+        </children>
+    </item>
+    <item nodeId="node-1822">
+        <command xml:space="preserve">sisyphus</command>
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1823"></child>
+        </children>
+    </item>
+    <item nodeId="node-1823">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1824"></child>
+        </children>
+    </item>
+    <item nodeId="node-1824">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1825"></child>
+        </children>
+    </item>
+    <item nodeId="node-1825">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Fair Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1826"></child>
+        </children>
+    </item>
+    <item nodeId="node-1826">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The boulder rolls calmly down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1827"></child>
+        </children>
+    </item>
+    <item nodeId="node-1827">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+Below, you see the boulder rolling down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1828"></child>
+        </children>
+    </item>
+    <item nodeId="node-1828">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+Below, you see the boulder rolling down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1829"></child>
+        </children>
+    </item>
+    <item nodeId="node-1829">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1830"></child>
+        </children>
+    </item>
+    <item nodeId="node-1830">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1099">
