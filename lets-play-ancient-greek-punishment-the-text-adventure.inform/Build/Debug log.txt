@@ -14,7 +14,7 @@ Reading language definition from </Applications/Inform.app/Contents/Resources/In
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 2601 words long.
+I've now read your source text, which is 3041 words long.
 
 
 -----------------------------------------------------
@@ -54,6 +54,12 @@ Phase VI ... Semantic analysis III
 Phase VII ... First pass through assertions
 -----------------------------------------------------
 
+    Regional: CONSTANT_VNT'the whole hill'-region()(I94'whole hill')
+     == region
+    Regional: CONSTANT_VNT'the whole hill'-region()(I94'whole hill')
+     == region
+    Regional: CONSTANT_VNT'the whole hill'-region()(I94'whole hill')
+     == region
 
 
 -----------------------------------------------------
@@ -108,6 +114,10 @@ Phase XII ... Code generation
 
 ==== Phase XII.6 ... Compiling first block of phrases ====
 
+        Regional: CONSTANT_VNT'the whole hill'-region(I161_whole_hill)(I94'whole hill')
+         == region
+        Regional: CONSTANT_VNT'the whole hill'-region(I161_whole_hill)(I94'whole hill')
+         == region
                             0 = chat node. 1 = activatedness
                     0 = chat node. 1 = activatedness
                             0 = chat node. 1 = activatedness
@@ -183,7 +193,7 @@ Phase XIII ... Compilation now complete
 -----------------------------------------------------
 
 Total of 112 files written as streams.
-CPU time: 191 centiseconds
+CPU time: 222 centiseconds
 
 
 That concludes the debugging log from this run of Inform.

@@ -11,7 +11,12 @@ Use scoring.
 Rule for printing room description details: stop.
 The can't push vertically rule is not listed in any rulebook.
 
-Section 2 - Simple Chat
+The description of the player is "You look deader than you remember looking.".
+Your hand is part of the player. The description is "Dead.".
+The fog is a backdrop. It is everywhere. The description is "It makes you feel distinctly less happy.".
+Instead of taking the fog, say "You try to take some and it goes about as well as expected.".
+
+Section 3 - Simple Chat
 
 Include Simple Chat by Mark Tilford.
 Talking to is an action applying to one visible thing.
@@ -27,7 +32,7 @@ When play begins:
 	now the left hand status line is "[the player's surroundings]"; 
 	now the right hand status line is "[score]/1 points";
 
-Section 3 - Some basic verb overrides
+Section 4 - Some basic verb overrides
 
 Instead of tasting something, say "Nothing tastes of anything in Hades.".
 Instead of smelling something, say "A faint aroma of crushed bones.".
@@ -46,21 +51,25 @@ Instead of eating something, say "Your eating days are over.".
 Instead of saying sorry, say "It's a bit late for that.".
 Instead of climbing something, say "Nah.".
 Instead of sleeping, say "But there's so much to do!".
+Instead of pushing something, say "Stop being so pushy!".
+Instead of pulling something, say "Stop beign so pully!".
 
 
 [----------------------------------------------------]
 
 
 
-Part 2 - The Bank of the River Styx
+Part 2 - Charon and the Ferry
 
 Section 1 - The place
 
 The Bank of the River Styx is a room. The description is "Here you are at the famous River Styx. The water flows sluggishly by."
+The CharonRiver is a backdrop in The Bank of the River Styx. The description is "The river seems to sneer at you.". Understand "water" and "river" as the CharonRiver.
 
 Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. [if the ferry is in The Bank of the River Styx]Right now it is moored at the bank of the river, ready to shove off.[otherwise]Right now it is grounded on a gritty beach.[end if]".
 Charon's ferry is a vehicle.
 Understand "boat" or "dinghy" as the ferry.
+The oars are part of the ferry. The description is "Good, solid oars.".
 
 The clipboard is an object. The description is "Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:[line break][line break]Sisyphus[line break]Tantalus[line break]Prometheus[line break]Danaids[line break]Zeno";
 
@@ -71,8 +80,16 @@ Understand "board" as the clipboard.
 Charon is here. The description is "Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. [if Charon is in the ferry]He is sitting at the oars.[otherwise]He is holding a clipboard.[end if]".
 Charon is a man.
 Charon is carrying the clipboard.
+Understand "man" as Charon.
 
 Charon's eyes are part of Charon. The description is "Unhappy."
+Charon's hand is part of Charon. The description is "Bony.".
+Charon's arm is part of Charon. The description is "It makes thin arms look fat.".
+Charon's pocket is part of Charon. It is a container. The description is "Looks roomy.".
+Instead of searching Charon's pocket, say "Charon's frown is enough to prevent you.".
+Instead of examining Charon's pocket: 
+    say "[description of Charon's pocket][line break]";
+    omit contents in listing.
 The cowl is wearable. The description is "It's a standard-issue cowl."
 Charon is wearing the cowl.
 Understand "Charon's cowl" as the cowl.
@@ -81,6 +98,7 @@ Understand "Charon's cowl" as the cowl.
 Section 2 - The obol
 
 The obol is an object. The description is "A small silver coin imprinted with the blurry image of a sleepy man's face."
+The coin face is part of the obol. The description is "He looks like he's been through a lot.". Understand "coin face" and "face" and "sleepy man" and "sleepy man's face" as the coin face.
 Instead of tasting the obol, say "The obol has spent plenty of time in your mouth already.".
 Instead of eating the obol, say "The obol has spent plenty of time in your mouth already.".
 
@@ -125,7 +143,7 @@ Instead of asking Charon about something:
 	otherwise:
 		say "Charon looks at you with disinterest, then stops looking at you with equal disinterest";
 		
-Talk to Charon, Hello Charon, My Name Is Sisyphus, Nevermind are chat nodes.
+Charon Conversation, My Name Is Sisyphus, Nevermind are chat nodes.
 
 Instead of talking to Charon when the obol is in your mouth:
 	say "You start trying to speak, but there's something in your mouth.";		
@@ -136,10 +154,10 @@ Instead of talking to Charon when the clipboard is secret:
 Instead of talking to Charon when the player's name is not Nobody:
 	say "Charon isn't interested in talking to you about anything else.";
 
-Report giving text for Talk to Charon: 
-	say "Before you can get a word in, Charon monotones, 'And you are?'[paragraph break]Recalling the list of names on the clipboard, you say:[paragraph break]";
+Report giving text for Charon Conversation: 
+	Instead say "Before you can get a word in, Charon monotones, 'And you are?'[paragraph break]Recalling the list of names on the clipboard, you say:[paragraph break]";
     
-Carry out finding responses to Talk to Charon: 
+Carry out finding responses to Charon Conversation: 
 	link to My Name Is Sisyphus; 
 	link to Nevermind.
     
@@ -154,7 +172,7 @@ Report giving link to Nevermind:
 Report giving text for Nevermind: 
 	instead say "You shrug, 'Never mind...'[paragraph break]Charon smirks.";
 
-Instead of talking to Charon: run a conversation from Talk to Charon.
+Instead of talking to Charon: run a conversation from Charon Conversation.
 
 
 Section 4 - Paying Charon
@@ -168,7 +186,7 @@ Instead of paying Charon:
 		say "Charon looks at you wearily, 'No paying until you tell me who you are.' (Maybe you should talk to him first.)";
 	otherwise If the player has the obol:
 		say "You hand over the small coin. Charon drops it into a pocket and gestures at the ferry.";
-		now Charon has the obol;
+		now the obol is in Charon's pocket;
 	otherwise:
 		say "You don't have any money.";
 
@@ -245,23 +263,41 @@ The previous location is a room that varies.
 First carry out going rule: 
     now the previous location is the location.
 
+After deciding the scope of the player: 
+    if the location is in The Whole Hill, place the boulder in scope.
+
+Rule for reaching inside a room: 
+    say "It's too far away."; 
+    deny access.
+
+The Whole Hill is a region. The Bottom of the Hill, A Little Way Up the Hill, Partway Up the Hill, A Fair Way Up the Hill, Quite Far Up the Hill, Nearly the Top of the Hill, and The Hilltop are in The Whole Hill.
+
+The Hillside is a backdrop in The Whole Hill. The description is "It's a good, solid hill. It probably never gets depressed.". Understand "hill" as the hillside.
+The dirt is part of the Hillside. The description is "Not as dirty as you'd have thought.".
+Instead of taking the dirt, say "You're not here to dig holes.".
+
+The Beach is a backdrop in The Whole Hill. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
+
+The SisyphusRiver is a backdrop in The Whole Hill. The description is "The river seems to sneer at you.". Understand "water" and "river" as the SisyphusRiver.
+
 The Bottom of the Hill is a room. The description is "A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.".
 
-The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.".
+The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.[if the player is not in The Bottom of the Hill] At least it looks a bit smaller from up here.[end if]".
 Understand "rock" or "stone" as the boulder.
 The boulder is pushable between rooms.
 The boulder can be rolling or stationary. The boulder is stationary.
 
 Instead of taking the boulder, say "That would be hilarious, but it's too big, too heavy, and too destined to punish you for that.".
 
-A Little Way Up the Hill is above the Bottom of the Hill. The printed name is "A Little Way Up the Hill". The description is "Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional spring of dead grass serves to liven it up.".
+A Little Way Up the Hill is above the Bottom of the Hill. The printed name is "A Little Way Up the Hill". The description is "Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.".
 The dead grass is scenery in A Little Way Up the Hill. The description is "It's dead, Jim.".
 Instead of taking the grass, say "Leave it alone, it's been through enough.".
+Instead of pushing the grass, say "Pick on someone your own size.".
 
 Partway Up the Hill is above the A Little Way Up the Hill. The description is "The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.".
 
 A Fair Way Up the Hill is above Partway Up the Hill. The printed name is "A Fair Way Up the Hill". The description is "A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.".
-The hole is a container in A Fair Way Up the Hill. It is scenery. The description is "A small absence of dirt amonst the dirt.".
+The hole is a container in A Fair Way Up the Hill. It is scenery. The description is "A small absence of dirt amidst the dirt.".
 
 Quite Far Up the Hill is above A Fair Way Up the Hill. The description is "[if the previous location is A Fair Way Up the Hill]Far enough up the hill to be out of breath if you don't get out much. [end if]Like the rest of the hill, this part is made entirely out of dirt.".
 
@@ -275,6 +311,7 @@ Instead of taking the Note to Sisyphus from Zeus:
 	remove the Note to Sisyphus from play;
 	
 The Hilltop is above Nearly the Top of the Hill. The description is "The view is disappointing, with just the river below and everywhere a thick blanket of fog that prevents you seeing far in any direction.[if the boulder is not in The Hilltop] You should really go get the boulder.[end if]". The printed name is "The Top of the Hill".
+
 
 
 Section 2 - Pushing the boulder
