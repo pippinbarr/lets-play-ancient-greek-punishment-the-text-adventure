@@ -30,37 +30,21 @@ When play begins:
 Section 3 - Some basic verb overrides
 
 Instead of tasting something, say "Nothing tastes of anything in Hades.".
-
 Instead of smelling something, say "A faint aroma of crushed bones.".
-
 Instead of kissing something, say "Hades has a strict no-kissing policy.".
-
 Instead of touching something, say "No touching!".
-
 Instead of attacking something, say "Wrong game.".
-
 Instead of burning something, say "You left your lighter in your other pants.".
-
 Instead of waking up, say "Unfortunately you really are in Hades. Tough break.".
-
 Instead of thinking, say "How'd that work out for you?".
-
 Instead of listening to something, say "Nothing is forthcoming.".
-
 Instead of cutting something, say "With what?".
-
 Instead of jumping, say "Boing...".
-
 Instead of tying something to something, say "With what?".
-
 Instead of drinking something, say "Your drinking days are over.".
-
 Instead of eating something, say "Your eating days are over.".
-
 Instead of saying sorry, say "It's a bit late for that.".
-
 Instead of climbing something, say "Nah.".
-
 Instead of sleeping, say "But there's so much to do!".
 
 
@@ -70,38 +54,7 @@ Instead of sleeping, say "But there's so much to do!".
 
 Part 2 - The Bank of the River Styx
 
-Section 1 - The coin
-
-The obol is an object. The description is "A small silver coin imprinted with the blurry image of a sleepy man's face."
-[Eventually  the obol should be in the player's mouth to start with and you should notice it when you talk to Charon.]
-Your mouth is part of the player. The description is "You purse your lips and can just make them out while staring strenuously downward. As you do, you feel something in your mouth." Your mouth is a container. Your mouth can be open or closed. Your mouth is closed.
-The obol is in your mouth.
-Understand "coin" or "money" as the obol.
-
-Instead of tasting the obol, say "The obol has spent plenty of time in your mouth already.".
-Instead of eating the obol, say "The obol has spent plenty of time in your mouth already.".
-
-Instead of opening your mouth:
-	if your mouth is open:
-		say "It's open already, and you've never looked better.";
-	otherwise if the obol is in your mouth:
-		say "You open your mouth and neatly catch the small coin that drops out.";
-		now the player has the obol;
-		now the your mouth is open;
-	otherwise:
-		say "Let's not. You shouldn't just stand around with your mouth open, you know.";
-
-Instead of closing your mouth:
-	if your mouth is open:
-		say "Good idea.";
-		now your mouth is closed;
-	otherwise:
-		say "It's closed already.";
-
-Instead of showing the obol to Charon:
-	say "Charon deadpans, 'Good for you.'";
-
-Section 2 - The place
+Section 1 - The place
 
 The Bank of the River Styx is a room. The description is "Here you are at the famous River Styx. The water flows sluggishly by."
 
@@ -123,6 +76,37 @@ Charon's eyes are part of Charon. The description is "Unhappy."
 The cowl is wearable. The description is "It's a standard-issue cowl."
 Charon is wearing the cowl.
 Understand "Charon's cowl" as the cowl.
+
+
+Section 2 - The obol
+
+The obol is an object. The description is "A small silver coin imprinted with the blurry image of a sleepy man's face."
+Instead of tasting the obol, say "The obol has spent plenty of time in your mouth already.".
+Instead of eating the obol, say "The obol has spent plenty of time in your mouth already.".
+
+Your mouth is part of the player. The description is "You purse your lips and can just make them out while staring strenuously downward. As you do, you feel something in your mouth." Your mouth is a container. Your mouth can be open or closed. Your mouth is closed.
+The obol is in your mouth.
+Understand "coin" or "money" as the obol.
+
+Instead of opening your mouth:
+	if your mouth is open:
+		say "It's open already, and you've never looked better.";
+	otherwise if the obol is in your mouth:
+		say "You open your mouth and neatly catch the small coin that drops out.";
+		now the player has the obol;
+		now the your mouth is open;
+	otherwise:
+		say "Let's not. You shouldn't just stand around with your mouth open, you know.";
+
+Instead of closing your mouth:
+	if your mouth is open:
+		say "Good idea.";
+		now your mouth is closed;
+	otherwise:
+		say "It's closed already.";
+
+Instead of showing the obol to Charon:
+	say "Charon deadpans, 'Good for you.'";
 
 
 Section 3 - Talking to Charon
@@ -255,7 +239,13 @@ Test sisyphus with "open mouth / x clipboard / talk to charon / 1 / pay charon /
 
 Part 3 - Sisyphus
 
-The Bottom of the Hill is a room. The description is "A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.".
+Section 1 - the Hill Rooms
+
+The previous location is a room that varies.
+First carry out going rule: 
+    now the previous location is the location.
+
+The Bottom of the Hill is a room. The description is "A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.".
 
 The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.".
 Understand "rock" or "stone" as the boulder.
@@ -264,29 +254,38 @@ The boulder can be rolling or stationary. The boulder is stationary.
 
 Instead of taking the boulder, say "That would be hilarious, but it's too big, too heavy, and too destined to punish you for that.".
 
-A Little Way Up the Hill is above the Bottom of the Hill. The printed name is "A Little Way Up the Hill".
+A Little Way Up the Hill is above the Bottom of the Hill. The printed name is "A Little Way Up the Hill". The description is "Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional spring of dead grass serves to liven it up.".
+The dead grass is scenery in A Little Way Up the Hill. The description is "It's dead, Jim.".
+Instead of taking the grass, say "Leave it alone, it's been through enough.".
 
-Partway Up the Hill is above the A Little Way Up the Hill. 
+Partway Up the Hill is above the A Little Way Up the Hill. The description is "The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.".
 
-A Fair Way Up the Hill is above Partway Up the Hill. The printed name is "A Fair Way Up the Hill".
+A Fair Way Up the Hill is above Partway Up the Hill. The printed name is "A Fair Way Up the Hill". The description is "A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.".
+The hole is a container in A Fair Way Up the Hill. It is scenery. The description is "A small absence of dirt amonst the dirt.".
 
-Quite Far Up the Hill is above A Fair Way Up the Hill.
+Quite Far Up the Hill is above A Fair Way Up the Hill. The description is "[if the previous location is A Fair Way Up the Hill]Far enough up the hill to be out of breath if you don't get out much. [end if]Like the rest of the hill, this part is made entirely out of dirt.".
 
-Nearly the Top of the Hill is above Quite Far Up the Hill.
+Nearly the Top of the Hill is above Quite Far Up the Hill. The description is "It's so barren up here you can't even imagine something growing, and you have a pretty good imagination.".
+The Note to Sisyphus from Zeus is here. The printed name is "note from Zeus". The description is "The note reads:
 
-The Hilltop is above Nearly the Top of the Hill. The description is "The view is disappointing, with just the river below and everywhere a thick blanket of fog that prevents you seeing far in any direction.". The printed name is "The Top of the Hill".
+lol[line break]
+- Zeus".
+Instead of taking the Note to Sisyphus from Zeus:
+	say "A sudden gust of wind blows it out of your grasp and away into the distance. The wind sounded weirdly like laughter.";
+	remove the Note to Sisyphus from play;
+	
+The Hilltop is above Nearly the Top of the Hill. The description is "The view is disappointing, with just the river below and everywhere a thick blanket of fog that prevents you seeing far in any direction.[if the boulder is not in The Hilltop] You should really go get the boulder.[end if]". The printed name is "The Top of the Hill".
+
+
+Section 2 - Pushing the boulder
 
 Instead of pushing the boulder:
 	try pushing the boulder to up;	
-
-Instead of going south with the boulder:
-	say "The hill is to the north. Why would you want to push the boulder anywhere else?";
-
-Instead of going west with the boulder:
-	say "The hill is to the north. Why would you want to push the boulder anywhere else?";
-
-Instead of going east with the boulder:
-	say "The hill is to the north. Why would you want to push the boulder anywhere else?";
+	
+Instead of going north, say "The only way is up, baby.".
+Instead of going south, say "The only way is up, baby.".
+Instead of going east, say "The only way is up, baby.".
+Instead of going west, say "The only way is up, baby.".
 
 Before going up with the boulder:
 	if the boulder is rolling:
@@ -318,7 +317,7 @@ Propping relates one person to one thing. The verb to prop means the propping re
 Every turn when the boulder is not in The Bottom of the Hill and the player does not prop the boulder:
 	let next place be the room down from the location of the boulder;
 	now the boulder is rolling;
-	If the player is in the Hilltop:
+	If the player is in the Hilltop and the boulder is in the Hilltop:
 		say "The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill";
 	otherwise if the player can see the boulder:	
 		say "The boulder rolls calmly away down the hill.";
@@ -329,9 +328,11 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 		say "The boulder rolls into view.";
 	if the next place is the bottom of the hill:
 		if the player cannot see the boulder:
-			say "[line break]You see the boulder settle into place at the bottom of the hill.";
+			if the player is in the room up from the next place:
+				say "[line break]";
+			say "You see the boulder settle into place at the bottom of the hill.";
 		otherwise:
-			say "The boulder settles ponderously back at its starting position.";
+			say "[line break]The boulder settles ponderously back at its starting position.";
 		now the boulder is stationary;
 	If the player is in the Hilltop:
 		If the boulder is in the Hilltop:
