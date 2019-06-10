@@ -9,3 +9,12 @@
 - Always have items for all first-level nouns (e.g. things mentioned in descriptions)
 - Consider having descriptions for second-level nouns (mentioned in the first-level descriptions, etc.)
 - In outdoor areas think about the visibility of distant objects/scenery
+
+
+## Charon
+
+- Add information about skipping (and make the command "I am X" instead to make it less likely it just gets typed anyway)
+
+## Sisyphus
+
+- Add points (with notifications)

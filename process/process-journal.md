@@ -239,3 +239,44 @@ I just realised it's weird if you can restart? Or is that okay? Similar to reloa
 I think it's probably semi-smart to flesh out Sisyphus next, make sure it holds together well and that it has the right level of entertainment, etc. And then to test it out with a couple of people (e.g. Rilla, my parents) to make sure it's possible to actually get through all this stuff? Basically I'd like a throughline from Charon to Sisyphus that would feel roughly "final" to see how the whole thing lands.
 
 Fleshing out would include identifying all the default verbs in Inform 7 and giving them some flavour I suppose? A light sprinkling of paprika?
+
+---
+
+# IF Cultural Feedback, What if they don't push, Familiarity breeds todos, Next (Monday, 10 June 2019, 9:42AM)
+
+## IF Cultural Feedback from Simon Christiansen
+
+At this point I now have a (relatively) polished version of Charon + Sisyphus scenes. I sent the initial version to Simon Christiansen (one of my favourite IF writers - e.g. PataNoir) who kindly looked at it and gave me some of the wisdom of the IF community. I wrote the key takeaways down in the list of todos but I'll repeat them here:
+
+- Always have a description for `x me`
+- Always have items for all first-level nouns (e.g. things mentioned in descriptions)
+- Consider having descriptions for second-level nouns (mentioned in the first-level descriptions, etc.)
+- In outdoor areas think about the visibility of distant objects/scenery
+
+(He also found my "long drink of stagnant water" description of Charon to be confusing, maybe a cultural thing or maybe just a horrible attempt at a play on a long drink of water.)
+
+It's so helpful to be able to find out about conventions like this, and it's an interesting case for me of genuinely _wanting_ to know about and implement standard elements. Part of me wants to say this is because I'm so edgy and only care about pushing against the boundaries, but the reality is that it's important to be able to put together a convincing version of whatever you're making, even if it's ultimately about making something that with contradict the principles of that genre. For previous games I've been working with forms that I suppose I'm just better informed about (retro-style games, Sierra games, UI design, etc.) and so have implicitly known the kinds of things that mean they hold together properly even as they controvert various things. For IF I simply don't know enough, so it's nice to have some basic rules to follow.
+
+## What if they don't push?
+
+One thing I started to wonder about with Sisyphus is whether it's wrong to allow the player to opt out. Technically you could just wander around indefinitely without pushing the boulder, which is maybe not what the game is meant to be about.
+
+It's not really clear from the myth why Sisyphus does actually push the boulder up the hill? When you see or read portrayals of this, it's just that he's kind of "sentenced" to do it, but there's never any obvious compulsion beyond that? Is it just that he accepts his punishment? Does the word of Zeus mean he can't help but push the boulder? Per Camus, does he just want to push the boulder?
+
+In my previous iterations it's always been a binary situation where the only "real" action in the world is to do the punishing action (e.g. track-and-field the keys or slide the slider), and so opting out looks more like just not playing. In the IF version you can both not push the boulder and kind of wander around.
+
+One response to the freedom issue in this iteration is just to say that this kind of freedom is no neglibible that at some point you'd end up pushing the boulder just to feel like you're accomplishing something.
+
+Another response is to incentivise the punishment (maybe Zeus is implying if Sisyphus is a good guy and does it long enough he gets out or something?). I could give the player a point every time the boulder reaches the top of the hill? That might be pretty funny.
+
+A final response would be to get cute with it and kind of force the issue, having the player suddenly teleport back to the boulder with an implication that they find themselves in position to begin pushing. Maybe eventually even automate their pushing.
+
+I think there's comedy value to that option, and it would be the most intricate to implement, but thinking about it right now I think that the points system is the most nicely balanced. It's an "incentive" in this really trivial bullshitty way that games lead us to do all kinds of Sisyphean tasks after all, so it's fitting that it would be the thing here. In the original game, of course I assigned "failure" points because I was really trying to ram home the sadism of the experience. But here I think it would be legitimate to genuinely award points, even with the standard notification. I think there's something to that.
+
+## Familiarity breeds todos
+
+I notice that as I'm becoming more comfortable with Inform 7 it's proving more possible to think in terms of units of work/design/implementation for the project. Where previously it was a big mess where I just didn't feel like I could predict what would be doable, now it feels like there are specific tasks I can put into practice. Even different forms of work, from implementing things at the level of logic, to fleshing out descriptions, to writing first-order descriptions, and so forth. Good.
+
+## Next
+
+Couple of tweaks to Sisyphus and then I think it's reasonable to start writing the next one. Prometheus seems like a fun challenge.
