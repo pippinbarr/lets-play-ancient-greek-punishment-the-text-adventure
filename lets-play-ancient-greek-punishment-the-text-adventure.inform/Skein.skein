@@ -8543,9 +8543,7 @@ You can see Charon here.
     <item nodeId="node-1937">
         <command xml:space="preserve">i am prometheus</command>
         <result xml:space="preserve">The Rock (chained to the rock)
-A unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
-
-You can see an eagle here.
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8555,7 +8553,363 @@ You can see an eagle here.
             <child nodeId="node-1999"></child>
             <child nodeId="node-2130"></child>
             <child nodeId="node-1939"></child>
+            <child nodeId="node-2398"></child>
         </children>
+    </item>
+    <item nodeId="node-2398">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2405"></child>
+        </children>
+    </item>
+    <item nodeId="node-2405">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+You can see an eagle here.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2406"></child>
+        </children>
+    </item>
+    <item nodeId="node-2406">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+You can see an eagle here.
+
+The eagle is nearly at the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2407"></child>
+        </children>
+    </item>
+    <item nodeId="node-2407">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+You can see an eagle here.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2413"></child>
+        </children>
+    </item>
+    <item nodeId="node-2413">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2414"></child>
+        </children>
+    </item>
+    <item nodeId="node-2414">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Having eaten your entire liver, the eagle nonchalantly flaps its wings and takes to the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2415"></child>
+        </children>
+    </item>
+    <item nodeId="node-2415">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle flies off into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2416"></child>
+        </children>
+    </item>
+    <item nodeId="node-2416">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Night falls.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2417"></child>
+        </children>
+    </item>
+    <item nodeId="node-2417">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2418"></child>
+        </children>
+    </item>
+    <item nodeId="node-2418">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The night ends surprisingly abruptly. You feel a brisk tingling sensation where your liver was pecked out by the eagle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2419"></child>
+        </children>
+    </item>
+    <item nodeId="node-2419">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2420"></child>
+        </children>
+    </item>
+    <item nodeId="node-2420">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2421"></child>
+        </children>
+    </item>
+    <item nodeId="node-2421">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle is nearly at the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2422"></child>
+        </children>
+    </item>
+    <item nodeId="node-2422">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2423"></child>
+        </children>
+    </item>
+    <item nodeId="node-2423">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2440"></child>
+        </children>
+    </item>
+    <item nodeId="node-2440">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2441"></child>
+        </children>
+    </item>
+    <item nodeId="node-2441">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2442"></child>
+        </children>
+    </item>
+    <item nodeId="node-2442">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2443"></child>
+        </children>
+    </item>
+    <item nodeId="node-2443">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2444"></child>
+        </children>
+    </item>
+    <item nodeId="node-2444">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2445"></child>
+        </children>
+    </item>
+    <item nodeId="node-2445">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2446"></child>
+        </children>
+    </item>
+    <item nodeId="node-2446">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2447"></child>
+        </children>
+    </item>
+    <item nodeId="node-2447">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2448"></child>
+        </children>
+    </item>
+    <item nodeId="node-2448">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2449"></child>
+        </children>
+    </item>
+    <item nodeId="node-2449">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Having eaten your entire liver, the eagle nonchalantly flaps its wings and takes to the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2450"></child>
+        </children>
+    </item>
+    <item nodeId="node-2450">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle flies off into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2451"></child>
+        </children>
+    </item>
+    <item nodeId="node-2451">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Night falls.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2452"></child>
+        </children>
+    </item>
+    <item nodeId="node-2452">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2453"></child>
+        </children>
+    </item>
+    <item nodeId="node-2453">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The night ends surprisingly abruptly. You feel a brisk tingling sensation where your liver was pecked out by the eagle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2454"></child>
+        </children>
+    </item>
+    <item nodeId="node-2454">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2455"></child>
+        </children>
+    </item>
+    <item nodeId="node-2455">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2456"></child>
+        </children>
+    </item>
+    <item nodeId="node-2456">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle is nearly at the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1939">
         <command xml:space="preserve">x rock</command>
@@ -8676,7 +9030,7 @@ The eagle eats some of your liver.
         <command xml:space="preserve">z</command>
         <result xml:space="preserve">Time passes.
 
-The eagle eats some of your liver.
+Having eaten your entire liver, the eagle nonchalantly flaps its wings and takes to the air.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8685,9 +9039,104 @@ The eagle eats some of your liver.
     </item>
     <item nodeId="node-2196">
         <command xml:space="preserve">x liver</command>
-        <result xml:space="preserve">It's a bloody mess.
+        <result xml:space="preserve">You can't see any such thing.
 
-The eagle eats some of your liver.
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2221"></child>
+        </children>
+    </item>
+    <item nodeId="node-2221">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle flies off into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2231"></child>
+        </children>
+    </item>
+    <item nodeId="node-2231">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Night falls.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2232"></child>
+        </children>
+    </item>
+    <item nodeId="node-2232">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Dimly lit by what might be a moon somewhere behind the fog, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2255"></child>
+        </children>
+    </item>
+    <item nodeId="node-2255">
+        <command xml:space="preserve">x liver</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2268"></child>
+        </children>
+    </item>
+    <item nodeId="node-2268">
+        <command xml:space="preserve">kill liver</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2269"></child>
+        </children>
+    </item>
+    <item nodeId="node-2269">
+        <command xml:space="preserve">get liver</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2270"></child>
+        </children>
+    </item>
+    <item nodeId="node-2270">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">The use of "undo" is forbidden in this story.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2376"></child>
+        </children>
+    </item>
+    <item nodeId="node-2376">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Dimly lit by what might be a moon somewhere behind the fog, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2377"></child>
+        </children>
+    </item>
+    <item nodeId="node-2377">
+        <command xml:space="preserve">x liver</command>
+        <result xml:space="preserve">You can't see your liver at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2395"></child>
+        </children>
+    </item>
+    <item nodeId="node-2395">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

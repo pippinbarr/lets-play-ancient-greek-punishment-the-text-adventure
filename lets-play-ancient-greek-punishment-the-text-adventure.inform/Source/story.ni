@@ -10,7 +10,7 @@ Section 1 - Basic setup
 Release along with an interpreter.
 Use the serial comma.
 Use scoring.
-[Use undo prevention.]
+Use undo prevention.
 Rule for printing room description details: stop.
 The can't push vertically rule is not listed in any rulebook.
 
@@ -419,15 +419,17 @@ Part 4 - Tantalus
 
 Part 5 - Prometheus
 
-The liver is part of the player. The description is "[if the percentage of the player's liver is 100]You can't see your liver at the moment.[otherwise]It's a bloody mess.[end if]".
-The player's liver has a number called percentage. The percentage of the player's liver is 100.
+The liver is part of the player. The description is "[if the percentage of the player's liver is 100]You can't see your liver at the moment, your flesh is pleasingly intact over the top of it.[otherwise if the percentage of the player's liver is not 0]It's a bloody mess.[otherwise]It's gone.[end if]".
+
+The player's liver has a number called percentage. The percentage of the player's liver is 10.
 
 At the time when the player is chained:
 	Now the player is on the rock;
 	Now the player is chained;
 	Now the right hand status line is "Liver: [percentage of the player's liver]%";
 
-PrometheusRoom is a room. The description is "A unpleasantly jagged black rock rises from the ash colored sand of the beach.[if the player is on the rock] You are chained to said rock.[end if]". The printed name is "The Rock".
+PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach.[if the player is on the rock] You are chained to said rock.[end if]". The printed name is "The Rock".
+PrometheusRoom can be nighttime or daytime.
 
 The rock is scenery in PrometheusRoom. The Rock is a supporter. The description is "It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.".
 
@@ -450,7 +452,8 @@ Instead of jumping when the player is chained:
 Instead of attacking the chains:
 	say "You focus your attention on destroying the chains and come out on the losing end.";
 	
-The eagle is an animal in PrometheusRoom. 
+The eagle is an animal. 
+The eagle is nowhere.
 Flight distance is a kind of value. The flight distances are appearing, distant, approaching, near, perched, and gone.
 The eagle can be coming or departing. The eagle is coming.
 The eagle has a flight distance called proximity. The proximity of the eagle is appearing.
@@ -461,21 +464,45 @@ Every turn when the player is on the rock:
 		if the proximity of the eagle is appearing:
 			Now the proximity of the eagle is distant;
 			say "An eagle appears on the horizon.";
+			now the eagle is in PrometheusRoom;
 		otherwise if the proximity of the eagle is distant:
 			Now the proximity of the eagle is approaching;
 			say "The eagle is getting closer.";
 		otherwise if the proximity of the eagle is approaching:
 			Now the proximity of the eagle is near;
-			say "The eagle is getting closer.";
+			say "The eagle is nearly at the rock.";
 		otherwise if the proximity of the eagle is near:
 			Now the proximity of the eagle is perched;
-			say "The eagle lands heavily on the rock beside you.";
+			say "The eagle lands heavily beside you.";
 		otherwise if the proximity of the eagle is perched:
 			say "The eagle eats some of your liver.";
 			decrease the percentage of the player's liver by 10;
-	otherwise:
-		say "Eagle is going away :(";
-
+			if the percentage of the player's liver is 0:
+				now the eagle is departing;
+				remove the liver from play;
+	otherwise if the eagle is departing:
+		if the proximity of the eagle is perched:
+			say "Having eaten your entire liver, the eagle nonchalantly flaps its wings and takes to the air.";
+			now the proximity of the eagle is near;
+		otherwise if the proximity of the eagle is near:
+			say "The eagle flies off into the distance.";
+			now the proximity of the eagle is gone;
+			now the eagle is nowhere;			
+			Night falls in one turn from now;
+		
+At the time when night falls:
+	say "Night falls.";
+	now PrometheusRoom is nighttime;
+	Night ends in 1 turn from now;
+	
+At the time when the night ends:
+	say "The night ends surprisingly abruptly. You feel a brisk tingling sensation where your liver was pecked out by the eagle.";
+	now PrometheusRoom is daytime;
+	Now the liver is part of the player;
+	Now the percentage of the player's liver is 100;
+	Now the eagle is coming;
+	Now the proximity of the eagle is appearing;
+		
 Writhing is an action applying to nothing.
 Understand "writhe" and "struggle" and "strain" as writhing.
 Instead of writhing:
