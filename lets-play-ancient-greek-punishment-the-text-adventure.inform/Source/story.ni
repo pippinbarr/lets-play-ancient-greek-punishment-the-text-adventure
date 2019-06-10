@@ -30,7 +30,7 @@ The player's name is a name that varies. The player's name is Nobody.
 
 When play begins: 
 	now the left hand status line is "[the player's surroundings]"; 
-	now the right hand status line is "[score]/1 points";
+	now the right hand status line is "[score] points";
 
 Section 4 - Some basic verb overrides
 
@@ -196,7 +196,7 @@ Section 5 - The boat
 Instead of entering the ferry when the player's name is Nobody:
 	say "Charon bars the way with a long, skinny arm. 'Nobody gets in the ferry without talking to me first.'";
 
-Instead of entering the ferry when the charon does not have the obol:
+Instead of entering the ferry when the the obol is not in Charon's pocket:
 	say "You haven't paid.";
 
 Before entering the ferry when the player's name is not Nobody and Charon has the obol and Charon is not in the ferry:
@@ -215,8 +215,8 @@ At the time when Charon gets into the ferry:
 	Now Charon is in the ferry;
 
 At the time when the ferry departs:
+	say "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[paragraph break]Charon looks at you implacably. You intuit that it's time for you to get out.";
 	If the player's name is Sisyphus:
-		say "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[paragraph break]Charon looks at you implacably. You intuit that it's time for you to get out.";
 		Move the ferry to The Bottom of the Hill;
 	
 After exiting when the player was in the ferry:
@@ -224,20 +224,20 @@ After exiting when the player was in the ferry:
 	continue the action;	
 		
 At the time when the ferry vanishes:
-	say "Charon oars away without giving you a second thought.";
+	say "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying 'I am [player's name].' His duty discharged, Charon oars away without giving you a another thought.";
 	Move the ferry to the Bank of the River Styx;
 
 
 Section 6 - Skip aheads
 
-Sisyphus is an action applying to nothing.
-Understand "Sisyphus" as Sisyphus.
-Instead of Sisyphus:
+SkipToSisyphus is an action applying to nothing.
+Understand "I am Sisyphus" as SkipToSisyphus.
+Instead of SkipToSisyphus:
 	if the player is in the Bank of the River Styx:
 		Remove the obol from play;
 		Now the player is in The Bottom of the Hill;
 	Otherwise:
-		say "Nothing happens. Surely you didn't think it would be that easy did you?";
+		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
 
 Xyzzy is an action applying to nothing.
 Understand "Xyzzy" as Xyzzy.
@@ -344,6 +344,8 @@ Instead of going down with the boulder:
 After going up with the boulder:
 	if the player is not in the Hilltop:
 		now the player props the boulder;
+	otherwise:
+		increase the score by 1;
 	continue the action;
 	
 Before doing something:	
@@ -354,7 +356,7 @@ Propping relates one person to one thing. The verb to prop means the propping re
 Every turn when the boulder is not in The Bottom of the Hill and the player does not prop the boulder:
 	let next place be the room down from the location of the boulder;
 	now the boulder is rolling;
-	If the player is in the Hilltop and the boulder is in the Hilltop:
+	If the player is in the Hilltop and the boulder is in the Hilltop:		
 		say "The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill";
 	otherwise if the player can see the boulder:	
 		say "The boulder rolls calmly away down the hill.";
@@ -363,7 +365,7 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 	move the boulder to the next place;
 	If the player can see the boulder:
 		say "The boulder rolls into view.";
-	if the next place is the bottom of the hill:
+	if the next place is the bottom of the hill:		
 		if the player cannot see the boulder:
 			if the player is in the room up from the next place:
 				say "[line break]";

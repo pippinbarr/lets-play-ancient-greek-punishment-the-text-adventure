@@ -43,7 +43,7 @@ Global Story = BC_0;
 Constant Headline BC_1;
 Constant Story_Author BC_2;
 Release 1;
-Serial "190607";
+Serial "190610";
 
 Default Story 0;
 Default Headline 0;
@@ -11582,7 +11582,7 @@ Object -> I173_worryingly_large_boulde ""
     with IK2_Link I174_dead_grass
     with KD_Count 2
     with name 'worryingly' 'large' 'boulder' 'things//p' 'rock' 'stone' 
-    with parse_name Parse_Name_GV106
+    with parse_name Parse_Name_GV105
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_254
     with list_together BC_255
@@ -11770,7 +11770,7 @@ Object I169_hillside ""
     with IK7_Link I171_beach
     with KD_Count 7
     with name 'hillside' 'backdrops//p' 'hill' 
-    with parse_name Parse_Name_GV103
+    with parse_name Parse_Name_GV102
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_308
     with list_together BC_309
@@ -11810,7 +11810,7 @@ Object I171_beach ""
     with IK7_Link I172_sisyphusriver
     with KD_Count 7
     with name 'beach' 'backdrops//p' 'sand' 
-    with parse_name Parse_Name_GV104
+    with parse_name Parse_Name_GV103
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_320
     with list_together BC_321
@@ -11832,7 +11832,7 @@ Object I172_sisyphusriver ""
     with IK7_Link nothing
     with KD_Count 7
     with name 'sisyphusriver' 'backdrops//p' 'water' 'river' 
-    with parse_name Parse_Name_GV105
+    with parse_name Parse_Name_GV104
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_326
     with list_together BC_327
@@ -11935,7 +11935,7 @@ Array Global_Vars -->
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
 Array tab_0_0 table $0664 0 (BC_335) (BC_336) (BC_337) (BC_338) (BC_339) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
-Array tab_0_2 table $2066 2 (Consult_Grammar_107) (Consult_Grammar_108) (Consult_Grammar_109) (Consult_Grammar_110) (Consult_Grammar_111) ;
+Array tab_0_2 table $2066 2 (Consult_Grammar_106) (Consult_Grammar_107) (Consult_Grammar_108) (Consult_Grammar_109) (Consult_Grammar_110) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
@@ -12076,7 +12076,7 @@ Array ActionData table
   ##A80_preparing  $$00001000  54 OBJECT_TY  0 20080
   ##A81_talking_to  $$00001000  OBJECT_TY OBJECT_TY  0 20081
   ##A82_paying  $$00001000  OBJECT_TY OBJECT_TY  0 20082
-  ##A83_sisyphus  $$00000000  OBJECT_TY OBJECT_TY  0 20083
+  ##A83_skiptosisyphus  $$00000000  OBJECT_TY OBJECT_TY  0 20083
   ##A84_xyzzy  $$00000000  OBJECT_TY OBJECT_TY  0 20084
 ;
 Constant AD_RECORDS = 85;
@@ -12228,7 +12228,7 @@ Constant AD_RECORDS = 85;
         ##A80_preparing: print "preparing"; if (for_say ~= 2) { print " "; E68(parsed_number); }
         ##A81_talking_to: print "talking to"; if (for_say ~= 2) { print " "; DA_Name(n); }
         ##A82_paying: print "paying"; if (for_say ~= 2) { print " "; DA_Name(n); }
-        ##A83_sisyphus: print "sisyphus"; 
+        ##A83_skiptosisyphus: print "skiptosisyphus"; 
         ##A84_xyzzy: print "xyzzy"; 
     }
 ];
@@ -12244,7 +12244,7 @@ Array ActionCoding -->
     ##Rub ##SetTo ##WaveHands ##Buy ##Climb ##Sleep ##Quit ##Save
     ##Restore ##Restart ##Verify ##ScriptOn ##ScriptOff ##Version ##Score ##LMode3
     ##LMode2 ##LMode1 ##NotifyOn ##NotifyOff ##Pronouns ##A77_finding_responses_to ##A78_giving_text_for ##A79_giving_link_to
-    ##A80_preparing ##A81_talking_to ##A82_paying ##A83_sisyphus ##A84_xyzzy;
+    ##A80_preparing ##A81_talking_to ##A82_paying ##A83_skiptosisyphus ##A84_xyzzy;
 
 
 Array ActionHappened --> 0 0 0 0 0 0;
@@ -12499,7 +12499,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ A82_payingSub ;
     return GenericVerbSub(377,378,379);
 ];
-[ A83_sisyphusSub ;
+[ A83_skiptosisyphusSub ;
     return GenericVerbSub(380,381,382);
 ];
 [ A84_xyzzySub ;
@@ -12743,7 +12743,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     if (debug_rules) DB_Rule(R_820, 820);
     ! [2: now the left hand status line is ~[the player's surroundings]~]
     BlkValueCopy(left_hand_status_line, (TEXT_TY_ExpandIfPerishable(I7SFRAME,TX_S_141)));
-    ! [3: now the right hand status line is ~[score]/1 points~]
+    ! [3: now the right hand status line is ~[score] points~]
     BlkValueCopy(right_hand_status_line, (TEXT_TY_ExpandIfPerishable((I7SFRAME+WORDSIZE*2),TX_S_142)));
     rfalse;
 ];
@@ -13348,7 +13348,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 !   >>> III.2.1 - Action/Where/Going In Exotic Ways >>>
 ! Rule 2/51 ! Instead of talking to Charon when the player's name is not Nobody:
 !   === equally specific with ===
-! Rule 3/51 ! Instead of entering the ferry when the charon does not have the obol:
+! Rule 3/51 ! Instead of entering the ferry when the the obol is not in Charon's pocket:
 !   >>> III.5.2 - Action/When/Circumstances >>>
 ! Rule 4/51 ! Instead of talking to Charon when the obol is in your mouth:
 !   === equally specific with ===
@@ -13442,7 +13442,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 !   === equally specific with ===
 ! Rule 49/51 ! Instead of sleeping:
 !   === equally specific with ===
-! Rule 50/51 ! Instead of Sisyphus:
+! Rule 50/51 ! Instead of SkipToSisyphus:
 !   === equally specific with ===
 ! Rule 51/51 ! Instead of Xyzzy:
 ! ----------------------------------------------------------------------------------------------------
@@ -13481,9 +13481,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
     rfalse;
 ];
 ! No specific request
-! Instead of entering the ferry when the charon does not have the obol:
+! Instead of entering the ferry when the the obol is not in Charon's pocket:
 [ R_863 ;
-    if ((((action ==##Enter) &&  (actor==player) && ((noun == I146_charon_s_ferry) && (true)) && (self=actor,true) && (((~~((I149_charon == OwnerOf(I155_obol))))))))) { ! Runs only when pattern matches
+    if ((((action ==##Enter) &&  (actor==player) && ((noun == I146_charon_s_ferry) && (true)) && (self=actor,true) && (((~~((I153_charon_s_pocket == ContainerOf(I155_obol))))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_863, 863);
     ! [2: say ~You haven't paid.~]
@@ -14108,9 +14108,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
     rfalse;
 ];
 ! No specific request
-! Instead of Sisyphus:
+! Instead of SkipToSisyphus:
 [ R_871 ;
-    if ((((action ==##A83_sisyphus) &&  (actor==player)))) { ! Runs only when pattern matches
+    if ((((action ==##A83_skiptosisyphus) &&  (actor==player)))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_871, 871);
     ! [2: if the player is in the bank of the river styx]
@@ -14120,9 +14120,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
         ! [4: now the player is in the bottom of the hill]
         MoveObject(player,I162_bottom_of_the_hill);
         } else {
-        ! [5: say ~Nothing happens. Surely you didn't think it would be that easy did you?~]
-        say__p=1;! [6: ~Nothing happens. Surely you didn't think it would be that easy did you?~]
-        ParaContent(); print "Nothing happens. Surely you didn't think it would be that easy did you?"; new_line; .L_Say69; .L_SayX69;}
+        ! [5: say ~Charon told you that would only work on arrival at his ferry. You're stuck here.~]
+        say__p=1;! [6: ~Charon told you that would only work on arrival at his ferry. You're stuck here.~]
+        ParaContent(); print "Charon told you that would only work on arrival at his ferry. You're stuck here."; new_line; .L_Say69; .L_SayX69;}
         RulebookFails(); rtrue;
         } else if (debug_rules > 1) DB_Rule(R_871, 871, 'action');
         rfalse;
@@ -14162,8 +14162,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
     if (((~~((I168_the_hilltop == ContainerOf(player))))))
     {! [3: now the player props the boulder]
         (RGuard_MT_2(player,I173_worryingly_large_boulde));
+        } else {
+        ! [4: increase the score by 1]
+        score = score + 1;;
         }
-    ! [4: continue the action]
+    ! [5: continue the action]
     rfalse;
     RulebookSucceeds(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_888, 888, 'action');
@@ -17262,17 +17265,17 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: if the player is the actor]
         if (((player == actor)))
         {! [4: if the player's command includes ~stand~]
-            if (((matched_text=SnippetIncludes(Consult_Grammar_112,players_command))))
+            if (((matched_text=SnippetIncludes(Consult_Grammar_111,players_command))))
             {! [5: say ~[regarding the noun][They're] not something [we] [can] stand on.~ ( a )]
                 say__p=1;! [6: ~[regarding the noun][They're] not something [we] [can] stand on.~ ( a )]
                 ParaContent(); print (TEXT_TY_Say) (TX_R_223); new_line; .L_Say180; .L_SayX180;} else {
                 ! [7: if the player's command includes ~sit~]
-                if (((matched_text=SnippetIncludes(Consult_Grammar_113,players_command))))
+                if (((matched_text=SnippetIncludes(Consult_Grammar_112,players_command))))
                 {! [8: say ~[regarding the noun][They're] not something [we] [can] sit down on.~ ( b )]
                     say__p=1;! [9: ~[regarding the noun][They're] not something [we] [can] sit down on.~ ( b )]
                     ParaContent(); print (TEXT_TY_Say) (TX_R_224); new_line; .L_Say181; .L_SayX181;} else {
                     ! [10: if the player's command includes ~lie~]
-                    if (((matched_text=SnippetIncludes(Consult_Grammar_114,players_command))))
+                    if (((matched_text=SnippetIncludes(Consult_Grammar_113,players_command))))
                     {! [11: say ~[regarding the noun][They're] not something [we] [can] lie down on.~ ( c )]
                         say__p=1;! [12: ~[regarding the noun][They're] not something [we] [can] lie down on.~ ( c )]
                         ParaContent(); print (TEXT_TY_Say) (TX_R_225); new_line; .L_Say182; .L_SayX182;} else {
@@ -21380,13 +21383,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! At the time when the ferry departs:
 [ R_868 ;
     if (debug_rules) DB_Rule(R_868, 868);
-    ! [2: if the player's name is sisyphus]
+    ! [2: say ~With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[paragraph break]Charon looks at you implacably. You intuit that it's time for you to get out.~]
+    say__p=1;! [3: ~With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.~]
+    ParaContent(); print "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.";! [4: paragraph break]
+    ParaContent(); DivideParagraphPoint(); new_line;! [5: ~Charon looks at you implacably. You intuit that it's time for you to get out.~]
+    ParaContent(); print "Charon looks at you implacably. You intuit that it's time for you to get out."; new_line; .L_Say370; .L_SayX370;! [6: if the player's name is sisyphus]
     if ((((Global_Vars-->14) == I139_sisyphus)))
-    {! [3: say ~With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[paragraph break]Charon looks at you implacably. You intuit that it's time for you to get out.~]
-        say__p=1;! [4: ~With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.~]
-        ParaContent(); print "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.";! [5: paragraph break]
-        ParaContent(); DivideParagraphPoint(); new_line;! [6: ~Charon looks at you implacably. You intuit that it's time for you to get out.~]
-        ParaContent(); print "Charon looks at you implacably. You intuit that it's time for you to get out."; new_line; .L_Say370; .L_SayX370;! [7: move the ferry to the bottom of the hill]
+    {! [7: move the ferry to the bottom of the hill]
         MoveObject(I146_charon_s_ferry, I162_bottom_of_the_hill, 0, false);
         }
         rfalse;
@@ -21395,9 +21398,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! At the time when the ferry vanishes:
 [ R_870 ;
     if (debug_rules) DB_Rule(R_870, 870);
-    ! [2: say ~Charon oars away without giving you a second thought.~]
-    say__p=1;! [3: ~Charon oars away without giving you a second thought.~]
-    ParaContent(); print "Charon oars away without giving you a second thought."; new_line; .L_Say371; .L_SayX371;! [4: move the ferry to the bank of the river styx]
+    ! [2: say ~Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying 'I am [player's name].' His duty discharged, Charon oars away without giving you a another thought.~]
+    say__p=1;! [3: ~Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying 'I am ~]
+    ParaContent(); print "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying ~I am ";! [4: player's name]
+    ParaContent(); E70((Global_Vars-->14));! [5: ~.' His duty discharged, Charon oars away without giving you a another thought.~]
+    ParaContent(); print ".~ His duty discharged, Charon oars away without giving you a another thought."; new_line; .L_Say371; .L_SayX371;! [6: move the ferry to the bank of the river styx]
     MoveObject(I146_charon_s_ferry, I144_bank_of_the_river_styx, 0, false);
     rfalse;
 ];
@@ -23354,7 +23359,7 @@ Array TimedEventTimesTable table 0 0 0 0 0 0 0 0;
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
 
-Array rulebooks_array --> B0_startup B1_turn_sequence B2_shutdown B3_scene_changing B4_when_play_begins B5_when_play_ends B6_when_scene_begins B7_when_scene_ends B8_every_turn B9_action_processing B10_setting_action_variables B11_specific_action_processi B12_player_s_action_awarenes B13_accessibility B14_reaching_inside B15_reaching_outside B16_visibility B17_persuasion B18_unsuccessful_attempt_by B19_before B20_instead B21_check B22_carry_out B23_after B24_report B25_does_the_player_mean B26_multiple_action_processi B27_when_entire_game_begins B28_when_entire_game_ends B29_before_printing_the_name B30_for_printing_the_name B31_after_printing_the_name B32_before_printing_the_plur B33_for_printing_the_plural_ B34_after_printing_the_plura B35_before_printing_a_number B36_for_printing_a_number B37_after_printing_a_number B38_before_printing_room_des B39_for_printing_room_descri B40_after_printing_room_desc B41_before_printing_inventor B42_for_printing_inventory_d B43_after_printing_inventory B44_before_listing_contents B45_for_listing_contents B46_after_listing_contents B47_before_grouping_together B48_for_grouping_together B49_after_grouping_together B50_before_writing_a_paragra B51_for_writing_a_paragraph_ B52_after_writing_a_paragrap B53_before_listing_nondescri B54_for_listing_nondescript_ B55_after_listing_nondescrip B56_before_printing_the_name B57_for_printing_the_name_of B58_after_printing_the_name_ B59_before_printing_the_desc B60_for_printing_the_descrip B61_after_printing_the_descr B62_before_printing_the_anno B63_for_printing_the_announc B64_after_printing_the_annou B65_before_printing_the_anno B66_for_printing_the_announc B67_after_printing_the_annou B68_before_printing_a_refusa B69_for_printing_a_refusal_t B70_after_printing_a_refusal B71_before_constructing_the_ B72_for_constructing_the_sta B73_after_constructing_the_s B74_before_printing_the_bann B75_for_printing_the_banner_ B76_after_printing_the_banne B77_before_reading_a_command B78_for_reading_a_command B79_after_reading_a_command B80_before_deciding_the_scop B81_for_deciding_the_scope B82_after_deciding_the_scope B83_before_deciding_the_conc B84_for_deciding_the_conceal B85_after_deciding_the_conce B86_before_deciding_whether_ B87_for_deciding_whether_all B88_after_deciding_whether_a B89_before_clarifying_the_pa B90_for_clarifying_the_parse B91_after_clarifying_the_par B92_before_asking_which_do_y B93_for_asking_which_do_you_ B94_after_asking_which_do_yo B95_before_printing_a_parser B96_for_printing_a_parser_er B97_after_printing_a_parser_ B98_before_supplying_a_missi B99_for_supplying_a_missing_ B100_after_supplying_a_missi B101_before_supplying_a_miss B102_for_supplying_a_missing B103_after_supplying_a_missi B104_before_implicitly_takin B105_for_implicitly_taking B106_after_implicitly_taking B107_before_starting_the_vir B108_for_starting_the_virtua B109_after_starting_the_virt B110_before_amusing_a_victor B111_for_amusing_a_victoriou B112_after_amusing_a_victori B113_before_printing_the_pla B114_for_printing_the_player B115_after_printing_the_play B116_before_handling_the_fin B117_for_handling_the_final_ B118_after_handling_the_fina B119_before_printing_the_loc B120_for_printing_the_locale B121_after_printing_the_loca B122_before_choosing_notable B123_for_choosing_notable_lo B124_after_choosing_notable_ B125_before_printing_a_local B126_for_printing_a_locale_p B127_after_printing_a_locale B128_before_issuing_the_resp B129_for_issuing_the_respons B130_after_issuing_the_respo B131_check_taking_inventory B132_carry_out_taking_invent B133_report_taking_inventory B134_check_taking B135_carry_out_taking B136_report_taking B137_check_removing_it_from B138_carry_out_removing_it_f B139_report_removing_it_from B140_check_dropping B141_carry_out_dropping B142_report_dropping B143_check_putting_it_on B144_carry_out_putting_it_on B145_report_putting_it_on B146_check_inserting_it_into B147_carry_out_inserting_it_ B148_report_inserting_it_int B149_check_eating B150_carry_out_eating B151_report_eating B152_check_going B153_carry_out_going B154_report_going B155_check_entering B156_carry_out_entering B157_report_entering B158_check_exiting B159_carry_out_exiting B160_report_exiting B161_check_getting_off B162_carry_out_getting_off B163_report_getting_off B164_check_looking B165_carry_out_looking B166_report_looking B167_check_examining B168_carry_out_examining B169_report_examining B170_check_looking_under B171_carry_out_looking_under B172_report_looking_under B173_check_searching B174_carry_out_searching B175_report_searching B176_check_consulting_it_abo B177_carry_out_consulting_it B178_report_consulting_it_ab B179_check_locking_it_with B180_carry_out_locking_it_wi B181_report_locking_it_with B182_check_unlocking_it_with B183_carry_out_unlocking_it_ B184_report_unlocking_it_wit B185_check_switching_on B186_carry_out_switching_on B187_report_switching_on B188_check_switching_off B189_carry_out_switching_off B190_report_switching_off B191_check_opening B192_carry_out_opening B193_report_opening B194_check_closing B195_carry_out_closing B196_report_closing B197_check_wearing B198_carry_out_wearing B199_report_wearing B200_check_taking_off B201_carry_out_taking_off B202_report_taking_off B203_check_giving_it_to B204_carry_out_giving_it_to B205_report_giving_it_to B206_check_showing_it_to B207_carry_out_showing_it_to B208_report_showing_it_to B209_check_waking B210_carry_out_waking B211_report_waking B212_check_throwing_it_at B213_carry_out_throwing_it_a B214_report_throwing_it_at B215_check_attacking B216_carry_out_attacking B217_report_attacking B218_check_kissing B219_carry_out_kissing B220_report_kissing B221_check_answering_it_that B222_carry_out_answering_it_ B223_report_answering_it_tha B224_check_telling_it_about B225_carry_out_telling_it_ab B226_report_telling_it_about B227_check_asking_it_about B228_carry_out_asking_it_abo B229_report_asking_it_about B230_check_asking_it_for B231_carry_out_asking_it_for B232_report_asking_it_for B233_check_waiting B234_carry_out_waiting B235_report_waiting B236_check_touching B237_carry_out_touching B238_report_touching B239_check_waving B240_carry_out_waving B241_report_waving B242_check_pulling B243_carry_out_pulling B244_report_pulling B245_check_pushing B246_carry_out_pushing B247_report_pushing B248_check_turning B249_carry_out_turning B250_report_turning B251_check_pushing_it_to B252_carry_out_pushing_it_to B253_report_pushing_it_to B254_check_squeezing B255_carry_out_squeezing B256_report_squeezing B257_check_saying_yes B258_carry_out_saying_yes B259_report_saying_yes B260_check_saying_no B261_carry_out_saying_no B262_report_saying_no B263_check_burning B264_carry_out_burning B265_report_burning B266_check_waking_up B267_carry_out_waking_up B268_report_waking_up B269_check_thinking B270_carry_out_thinking B271_report_thinking B272_check_smelling B273_carry_out_smelling B274_report_smelling B275_check_listening_to B276_carry_out_listening_to B277_report_listening_to B278_check_tasting B279_carry_out_tasting B280_report_tasting B281_check_cutting B282_carry_out_cutting B283_report_cutting B284_check_jumping B285_carry_out_jumping B286_report_jumping B287_check_tying_it_to B288_carry_out_tying_it_to B289_report_tying_it_to B290_check_drinking B291_carry_out_drinking B292_report_drinking B293_check_saying_sorry B294_carry_out_saying_sorry B295_report_saying_sorry B296_check_swinging B297_carry_out_swinging B298_report_swinging B299_check_rubbing B300_carry_out_rubbing B301_report_rubbing B302_check_setting_it_to B303_carry_out_setting_it_to B304_report_setting_it_to B305_check_waving_hands B306_carry_out_waving_hands B307_report_waving_hands B308_check_buying B309_carry_out_buying B310_report_buying B311_check_climbing B312_carry_out_climbing B313_report_climbing B314_check_sleeping B315_carry_out_sleeping B316_report_sleeping B317_check_quitting_the_game B318_carry_out_quitting_the_ B319_report_quitting_the_gam B320_check_saving_the_game B321_carry_out_saving_the_ga B322_report_saving_the_game B323_check_restoring_the_gam B324_carry_out_restoring_the B325_report_restoring_the_ga B326_check_restarting_the_ga B327_carry_out_restarting_th B328_report_restarting_the_g B329_check_verifying_the_sto B330_carry_out_verifying_the B331_report_verifying_the_st B332_check_switching_the_sto B333_carry_out_switching_the B334_report_switching_the_st B335_check_switching_the_sto B336_carry_out_switching_the B337_report_switching_the_st B338_check_requesting_the_st B339_carry_out_requesting_th B340_report_requesting_the_s B341_check_requesting_the_sc B342_carry_out_requesting_th B343_report_requesting_the_s B344_check_preferring_abbrev B345_carry_out_preferring_ab B346_report_preferring_abbre B347_check_preferring_unabbr B348_carry_out_preferring_un B349_report_preferring_unabb B350_check_preferring_someti B351_carry_out_preferring_so B352_report_preferring_somet B353_check_switching_score_n B354_carry_out_switching_sco B355_report_switching_score_ B356_check_switching_score_n B357_carry_out_switching_sco B358_report_switching_score_ B359_check_requesting_the_pr B360_carry_out_requesting_th B361_report_requesting_the_p B362_check_finding_responses B363_carry_out_finding_respo B364_report_finding_response B365_check_giving_text_for B366_carry_out_giving_text_f B367_report_giving_text_for B368_check_giving_link_to B369_carry_out_giving_link_t B370_report_giving_link_to B371_check_preparing B372_carry_out_preparing B373_report_preparing B374_check_talking_to B375_carry_out_talking_to B376_report_talking_to B377_check_paying B378_carry_out_paying B379_report_paying B380_check_sisyphus B381_carry_out_sisyphus B382_report_sisyphus B383_check_xyzzy B384_carry_out_xyzzy B385_report_xyzzy 0;
+Array rulebooks_array --> B0_startup B1_turn_sequence B2_shutdown B3_scene_changing B4_when_play_begins B5_when_play_ends B6_when_scene_begins B7_when_scene_ends B8_every_turn B9_action_processing B10_setting_action_variables B11_specific_action_processi B12_player_s_action_awarenes B13_accessibility B14_reaching_inside B15_reaching_outside B16_visibility B17_persuasion B18_unsuccessful_attempt_by B19_before B20_instead B21_check B22_carry_out B23_after B24_report B25_does_the_player_mean B26_multiple_action_processi B27_when_entire_game_begins B28_when_entire_game_ends B29_before_printing_the_name B30_for_printing_the_name B31_after_printing_the_name B32_before_printing_the_plur B33_for_printing_the_plural_ B34_after_printing_the_plura B35_before_printing_a_number B36_for_printing_a_number B37_after_printing_a_number B38_before_printing_room_des B39_for_printing_room_descri B40_after_printing_room_desc B41_before_printing_inventor B42_for_printing_inventory_d B43_after_printing_inventory B44_before_listing_contents B45_for_listing_contents B46_after_listing_contents B47_before_grouping_together B48_for_grouping_together B49_after_grouping_together B50_before_writing_a_paragra B51_for_writing_a_paragraph_ B52_after_writing_a_paragrap B53_before_listing_nondescri B54_for_listing_nondescript_ B55_after_listing_nondescrip B56_before_printing_the_name B57_for_printing_the_name_of B58_after_printing_the_name_ B59_before_printing_the_desc B60_for_printing_the_descrip B61_after_printing_the_descr B62_before_printing_the_anno B63_for_printing_the_announc B64_after_printing_the_annou B65_before_printing_the_anno B66_for_printing_the_announc B67_after_printing_the_annou B68_before_printing_a_refusa B69_for_printing_a_refusal_t B70_after_printing_a_refusal B71_before_constructing_the_ B72_for_constructing_the_sta B73_after_constructing_the_s B74_before_printing_the_bann B75_for_printing_the_banner_ B76_after_printing_the_banne B77_before_reading_a_command B78_for_reading_a_command B79_after_reading_a_command B80_before_deciding_the_scop B81_for_deciding_the_scope B82_after_deciding_the_scope B83_before_deciding_the_conc B84_for_deciding_the_conceal B85_after_deciding_the_conce B86_before_deciding_whether_ B87_for_deciding_whether_all B88_after_deciding_whether_a B89_before_clarifying_the_pa B90_for_clarifying_the_parse B91_after_clarifying_the_par B92_before_asking_which_do_y B93_for_asking_which_do_you_ B94_after_asking_which_do_yo B95_before_printing_a_parser B96_for_printing_a_parser_er B97_after_printing_a_parser_ B98_before_supplying_a_missi B99_for_supplying_a_missing_ B100_after_supplying_a_missi B101_before_supplying_a_miss B102_for_supplying_a_missing B103_after_supplying_a_missi B104_before_implicitly_takin B105_for_implicitly_taking B106_after_implicitly_taking B107_before_starting_the_vir B108_for_starting_the_virtua B109_after_starting_the_virt B110_before_amusing_a_victor B111_for_amusing_a_victoriou B112_after_amusing_a_victori B113_before_printing_the_pla B114_for_printing_the_player B115_after_printing_the_play B116_before_handling_the_fin B117_for_handling_the_final_ B118_after_handling_the_fina B119_before_printing_the_loc B120_for_printing_the_locale B121_after_printing_the_loca B122_before_choosing_notable B123_for_choosing_notable_lo B124_after_choosing_notable_ B125_before_printing_a_local B126_for_printing_a_locale_p B127_after_printing_a_locale B128_before_issuing_the_resp B129_for_issuing_the_respons B130_after_issuing_the_respo B131_check_taking_inventory B132_carry_out_taking_invent B133_report_taking_inventory B134_check_taking B135_carry_out_taking B136_report_taking B137_check_removing_it_from B138_carry_out_removing_it_f B139_report_removing_it_from B140_check_dropping B141_carry_out_dropping B142_report_dropping B143_check_putting_it_on B144_carry_out_putting_it_on B145_report_putting_it_on B146_check_inserting_it_into B147_carry_out_inserting_it_ B148_report_inserting_it_int B149_check_eating B150_carry_out_eating B151_report_eating B152_check_going B153_carry_out_going B154_report_going B155_check_entering B156_carry_out_entering B157_report_entering B158_check_exiting B159_carry_out_exiting B160_report_exiting B161_check_getting_off B162_carry_out_getting_off B163_report_getting_off B164_check_looking B165_carry_out_looking B166_report_looking B167_check_examining B168_carry_out_examining B169_report_examining B170_check_looking_under B171_carry_out_looking_under B172_report_looking_under B173_check_searching B174_carry_out_searching B175_report_searching B176_check_consulting_it_abo B177_carry_out_consulting_it B178_report_consulting_it_ab B179_check_locking_it_with B180_carry_out_locking_it_wi B181_report_locking_it_with B182_check_unlocking_it_with B183_carry_out_unlocking_it_ B184_report_unlocking_it_wit B185_check_switching_on B186_carry_out_switching_on B187_report_switching_on B188_check_switching_off B189_carry_out_switching_off B190_report_switching_off B191_check_opening B192_carry_out_opening B193_report_opening B194_check_closing B195_carry_out_closing B196_report_closing B197_check_wearing B198_carry_out_wearing B199_report_wearing B200_check_taking_off B201_carry_out_taking_off B202_report_taking_off B203_check_giving_it_to B204_carry_out_giving_it_to B205_report_giving_it_to B206_check_showing_it_to B207_carry_out_showing_it_to B208_report_showing_it_to B209_check_waking B210_carry_out_waking B211_report_waking B212_check_throwing_it_at B213_carry_out_throwing_it_a B214_report_throwing_it_at B215_check_attacking B216_carry_out_attacking B217_report_attacking B218_check_kissing B219_carry_out_kissing B220_report_kissing B221_check_answering_it_that B222_carry_out_answering_it_ B223_report_answering_it_tha B224_check_telling_it_about B225_carry_out_telling_it_ab B226_report_telling_it_about B227_check_asking_it_about B228_carry_out_asking_it_abo B229_report_asking_it_about B230_check_asking_it_for B231_carry_out_asking_it_for B232_report_asking_it_for B233_check_waiting B234_carry_out_waiting B235_report_waiting B236_check_touching B237_carry_out_touching B238_report_touching B239_check_waving B240_carry_out_waving B241_report_waving B242_check_pulling B243_carry_out_pulling B244_report_pulling B245_check_pushing B246_carry_out_pushing B247_report_pushing B248_check_turning B249_carry_out_turning B250_report_turning B251_check_pushing_it_to B252_carry_out_pushing_it_to B253_report_pushing_it_to B254_check_squeezing B255_carry_out_squeezing B256_report_squeezing B257_check_saying_yes B258_carry_out_saying_yes B259_report_saying_yes B260_check_saying_no B261_carry_out_saying_no B262_report_saying_no B263_check_burning B264_carry_out_burning B265_report_burning B266_check_waking_up B267_carry_out_waking_up B268_report_waking_up B269_check_thinking B270_carry_out_thinking B271_report_thinking B272_check_smelling B273_carry_out_smelling B274_report_smelling B275_check_listening_to B276_carry_out_listening_to B277_report_listening_to B278_check_tasting B279_carry_out_tasting B280_report_tasting B281_check_cutting B282_carry_out_cutting B283_report_cutting B284_check_jumping B285_carry_out_jumping B286_report_jumping B287_check_tying_it_to B288_carry_out_tying_it_to B289_report_tying_it_to B290_check_drinking B291_carry_out_drinking B292_report_drinking B293_check_saying_sorry B294_carry_out_saying_sorry B295_report_saying_sorry B296_check_swinging B297_carry_out_swinging B298_report_swinging B299_check_rubbing B300_carry_out_rubbing B301_report_rubbing B302_check_setting_it_to B303_carry_out_setting_it_to B304_report_setting_it_to B305_check_waving_hands B306_carry_out_waving_hands B307_report_waving_hands B308_check_buying B309_carry_out_buying B310_report_buying B311_check_climbing B312_carry_out_climbing B313_report_climbing B314_check_sleeping B315_carry_out_sleeping B316_report_sleeping B317_check_quitting_the_game B318_carry_out_quitting_the_ B319_report_quitting_the_gam B320_check_saving_the_game B321_carry_out_saving_the_ga B322_report_saving_the_game B323_check_restoring_the_gam B324_carry_out_restoring_the B325_report_restoring_the_ga B326_check_restarting_the_ga B327_carry_out_restarting_th B328_report_restarting_the_g B329_check_verifying_the_sto B330_carry_out_verifying_the B331_report_verifying_the_st B332_check_switching_the_sto B333_carry_out_switching_the B334_report_switching_the_st B335_check_switching_the_sto B336_carry_out_switching_the B337_report_switching_the_st B338_check_requesting_the_st B339_carry_out_requesting_th B340_report_requesting_the_s B341_check_requesting_the_sc B342_carry_out_requesting_th B343_report_requesting_the_s B344_check_preferring_abbrev B345_carry_out_preferring_ab B346_report_preferring_abbre B347_check_preferring_unabbr B348_carry_out_preferring_un B349_report_preferring_unabb B350_check_preferring_someti B351_carry_out_preferring_so B352_report_preferring_somet B353_check_switching_score_n B354_carry_out_switching_sco B355_report_switching_score_ B356_check_switching_score_n B357_carry_out_switching_sco B358_report_switching_score_ B359_check_requesting_the_pr B360_carry_out_requesting_th B361_report_requesting_the_p B362_check_finding_responses B363_carry_out_finding_respo B364_report_finding_response B365_check_giving_text_for B366_carry_out_giving_text_f B367_report_giving_text_for B368_check_giving_link_to B369_carry_out_giving_link_t B370_report_giving_link_to B371_check_preparing B372_carry_out_preparing B373_report_preparing B374_check_talking_to B375_carry_out_talking_to B376_report_talking_to B377_check_paying B378_carry_out_paying B379_report_paying B380_check_skiptosisyphus B381_carry_out_skiptosisyphu B382_report_skiptosisyphus B383_check_xyzzy B384_carry_out_xyzzy B385_report_xyzzy 0;
 
 [ EMPTY_RULEBOOK 
     forbid_breaks ! Implied call parameter
@@ -24584,7 +24589,7 @@ Constant B18_unsuccessful_attempt_by = EMPTY_RULEBOOK;
     } else {
         if (say__p) RulebookParBreak(forbid_breaks);
     }
-    if (action == ##A83_sisyphus) {
+    if (action == ##A83_skiptosisyphus) {
         if (original_deadflag ~= deadflag) return 0;
         if (say__p) RulebookParBreak(forbid_breaks);
         rv = R_871();
@@ -28023,9 +28028,9 @@ Constant B375_carry_out_talking_to = EMPTY_RULEBOOK;
 Constant B377_check_paying = EMPTY_RULEBOOK;
 Constant B378_carry_out_paying = EMPTY_RULEBOOK;
 Constant B379_report_paying = EMPTY_RULEBOOK;
-Constant B380_check_sisyphus = EMPTY_RULEBOOK;
-Constant B381_carry_out_sisyphus = EMPTY_RULEBOOK;
-Constant B382_report_sisyphus = EMPTY_RULEBOOK;
+Constant B380_check_skiptosisyphus = EMPTY_RULEBOOK;
+Constant B381_carry_out_skiptosisyphu = EMPTY_RULEBOOK;
+Constant B382_report_skiptosisyphus = EMPTY_RULEBOOK;
 Constant B383_check_xyzzy = EMPTY_RULEBOOK;
 Constant B384_carry_out_xyzzy = EMPTY_RULEBOOK;
 Constant B385_report_xyzzy = EMPTY_RULEBOOK;
@@ -32363,9 +32368,9 @@ Array RulebookNames -->
     "check Paying rulebook" ! 377
     "carry out Paying rulebook" ! 378
     "report Paying rulebook" ! 379
-    "check Sisyphus rulebook" ! 380
-    "carry out Sisyphus rulebook" ! 381
-    "report Sisyphus rulebook" ! 382
+    "check SkipToSisyphus rulebook" ! 380
+    "carry out SkipToSisyphus rulebook" ! 381
+    "report SkipToSisyphus rulebook" ! 382
     "check Xyzzy rulebook" ! 383
     "carry out Xyzzy rulebook" ! 384
     "report Xyzzy rulebook" ! 385
@@ -32781,7 +32786,7 @@ Array RulebookNames -->
         if (R == R_860) { print "Instead of giving the obol to Charon"; rtrue; } ! rule 399
         if (R == R_861) { print "Instead of paying Charon"; rtrue; } ! rule 400
         if (R == R_862) { print "Instead of entering the ferry when the player's name is Nobody"; rtrue; } ! rule 401
-        if (R == R_863) { print "Instead of entering the ferry when the charon does not have the obol"; rtrue; } ! rule 402
+        if (R == R_863) { print "Instead of entering the ferry when the the obol is not in Charon's pocket"; rtrue; } ! rule 402
         if (R == R_864) { print "Before entering the ferry when the player's name is not Nobody and Charon has the obol and Charon is not in the ferry"; rtrue; } ! rule 403
         if (R == R_865) { print "After entering the ferry"; rtrue; } ! rule 404
         if (R == R_866) { print "Instead of exiting when the player is in the ferry and the ferry is in The Bank of the River Styx"; rtrue; } ! rule 405
@@ -32789,7 +32794,7 @@ Array RulebookNames -->
         if (R == R_868) { print "ferry departs"; rtrue; } ! rule 407
         if (R == R_869) { print "After exiting when the player was in the ferry"; rtrue; } ! rule 408
         if (R == R_870) { print "ferry vanishes"; rtrue; } ! rule 409
-        if (R == R_871) { print "Instead of Sisyphus"; rtrue; } ! rule 410
+        if (R == R_871) { print "Instead of SkipToSisyphus"; rtrue; } ! rule 410
         if (R == R_872) { print "Instead of Xyzzy"; rtrue; } ! rule 411
         if (R == R_873) { print "First carry out going rule"; rtrue; } ! rule 412
         if (R == R_874) { print "After deciding the scope of the player"; rtrue; } ! rule 413
@@ -43792,12 +43797,12 @@ Array TX_R_391 --> CONSTANT_PACKED_TEXT_STORAGE TX_R_391_R;
 ];
 Array TX_S_141 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_141;
 [ R_TX_S_142 ;
-    #ifdef DEBUG; if (suppress_text_substitution) { print "~[score]/1 points~"; rtrue; }
+    #ifdef DEBUG; if (suppress_text_substitution) { print "~[score] points~"; rtrue; }
     #endif; ! DEBUG
-    ! [1: ~[score]/1 points~]
+    ! [1: ~[score] points~]
     say__p=1;! [2: score]
-    ParaContent(); print (say__n=score);! [3: ~/1 points~]
-    ParaContent(); print "/1 points"; .L_Say563; .L_SayX559;rtrue;
+    ParaContent(); print (say__n=score);! [3: ~ points~]
+    ParaContent(); print " points"; .L_Say563; .L_SayX559;rtrue;
 ];
 Array TX_S_142 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_142;
 ! Find next x satisfying:
@@ -52453,6 +52458,60 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
+[ Parse_Name_GV102 
+    original_wn ! first word of text parsed
+    group_wn ! first word matched against A/B/C/... disjunction
+    try_from_wn ! position to try matching from
+    n ! number of words matched
+    f ! flag: sufficiently good match found to justify success
+    w ! for use by individual grammar lines
+    rv ! for use by individual grammar lines
+    g ! temporary: success flag for parsing visibles
+    ss ! temporary: saves 'self' in distinguishing visibles
+    spn ! temporary: saves 'parsed_number' in parsing visibles
+    pass ! pass counter (1 to 3)
+    pass1_n ! value of n recorded during pass 1
+    pass2_n ! value of n recorded during pass 2
+    ;
+    #ifdef DEBUG;
+    if (parser_trace >= 3) print "Parse_name called^";
+    #endif;
+    if (parser_action == ##TheSame) return 0;
+    original_wn = wn;
+    for (pass = 1: pass <= 3: pass++) {
+        wn = original_wn;
+        try_from_wn = wn; f = false; n = 0;
+        while (true) {
+            ! On pass 1 only, advance wn past name property words
+            ! (but do not do this for ##TheSame, when wn is undefined)
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            if (pass == 1 or 2) {
+            }
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            break;
+        } ! End of endless loop
+        while (WordInProperty(NextWordStopped(), self, name)) n++;
+        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
+        if (pass == 1) pass1_n = n;
+        if (pass == 2) pass2_n = n;
+    } ! End of pass loop
+    #ifdef DEBUG;
+    if (parser_trace >= 3)
+        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
+    #endif;
+    if (pass1_n > n) n = pass1_n;
+    if (pass2_n > n) n = pass2_n;
+    wn = original_wn + n;
+    if (n == 0) return -1;
+    DetectPluralWord(original_wn, n);
+    return n;
+];
 [ Parse_Name_GV103 
     original_wn ! first word of text parsed
     group_wn ! first word matched against A/B/C/... disjunction
@@ -52615,61 +52674,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Parse_Name_GV106 
-    original_wn ! first word of text parsed
-    group_wn ! first word matched against A/B/C/... disjunction
-    try_from_wn ! position to try matching from
-    n ! number of words matched
-    f ! flag: sufficiently good match found to justify success
-    w ! for use by individual grammar lines
-    rv ! for use by individual grammar lines
-    g ! temporary: success flag for parsing visibles
-    ss ! temporary: saves 'self' in distinguishing visibles
-    spn ! temporary: saves 'parsed_number' in parsing visibles
-    pass ! pass counter (1 to 3)
-    pass1_n ! value of n recorded during pass 1
-    pass2_n ! value of n recorded during pass 2
-    ;
-    #ifdef DEBUG;
-    if (parser_trace >= 3) print "Parse_name called^";
-    #endif;
-    if (parser_action == ##TheSame) return 0;
-    original_wn = wn;
-    for (pass = 1: pass <= 3: pass++) {
-        wn = original_wn;
-        try_from_wn = wn; f = false; n = 0;
-        while (true) {
-            ! On pass 1 only, advance wn past name property words
-            ! (but do not do this for ##TheSame, when wn is undefined)
-            if ((parser_action ~= ##TheSame) && (pass == 1)) {
-                while (WordInProperty(NextWordStopped(), self, name)) f = true;
-                wn--; try_from_wn = wn;
-            }
-            if (pass == 1 or 2) {
-            }
-            if ((parser_action ~= ##TheSame) && (pass == 1)) {
-                while (WordInProperty(NextWordStopped(), self, name)) f = true;
-                wn--; try_from_wn = wn;
-            }
-            break;
-        } ! End of endless loop
-        while (WordInProperty(NextWordStopped(), self, name)) n++;
-        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
-        if (pass == 1) pass1_n = n;
-        if (pass == 2) pass2_n = n;
-    } ! End of pass loop
-    #ifdef DEBUG;
-    if (parser_trace >= 3)
-        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
-    #endif;
-    if (pass1_n > n) n = pass1_n;
-    if (pass2_n > n) n = pass2_n;
-    wn = original_wn + n;
-    if (n == 0) return -1;
-    DetectPluralWord(original_wn, n);
-    return n;
-];
-[ Consult_Grammar_107 
+[ Consult_Grammar_106 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52689,7 +52694,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_108 
+[ Consult_Grammar_107 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52709,7 +52714,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_109 
+[ Consult_Grammar_108 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52729,7 +52734,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_110 
+[ Consult_Grammar_109 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52749,7 +52754,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_111 
+[ Consult_Grammar_110 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52769,7 +52774,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_112 
+[ Consult_Grammar_111 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52789,7 +52794,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_113 
+[ Consult_Grammar_112 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52809,7 +52814,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_114 
+[ Consult_Grammar_113 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52898,6 +52903,7 @@ Verb 'go' 'walk' 'run'
 ;
 Verb 'inventory' 'i//' 'inv'
     *  -> Inv
+    * 'am' 'sisyphus'  -> A83_skiptosisyphus
 ;
 Verb 'look' 'l//'
     *  -> Look
@@ -53135,9 +53141,6 @@ Verb 'notify'
 ;
 Verb 'talk'
     * 'to' creature  -> A81_talking_to
-;
-Verb 'sisyphus'
-    *  -> A83_sisyphus
 ;
 Verb 'xyzzy'
     *  -> A84_xyzzy

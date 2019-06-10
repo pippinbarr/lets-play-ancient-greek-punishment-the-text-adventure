@@ -13,8 +13,8 @@
 
 ## Charon
 
-- Add information about skipping (and make the command "I am X" instead to make it less likely it just gets typed anyway)
+- ~~Add information about skipping (and make the command "I am X" instead to make it less likely it just gets typed anyway)~~
 
 ## Sisyphus
 
-- Add points (with notifications)
+- ~~Add points (with notifications)~~
