@@ -280,3 +280,23 @@ I notice that as I'm becoming more comfortable with Inform 7 it's proving more p
 ## Next
 
 Couple of tweaks to Sisyphus and then I think it's reasonable to start writing the next one. Prometheus seems like a fun challenge.
+
+---
+
+# Designing Prometheus (Monday, 10 June 2019, 10:28AM)
+
+After my claims of comfort and ease with Inform 7 how about I try to think through how I would put together the Prometheus section?
+
+So the big things are
+
+- The player needs to be chained down to the rock. Clearly we can implement a system where if the player is chained then they can't do anything other than struggle and look. BUT how the heck do they get into the chains? Should it be voluntary? It's not in the myth, it's clearly something that is done _to_ him. Should stick around to help you into your chains? Perhaps so.
+
+- The eagle needs to come and go on a schedule. I know something about scheduling from the Charon stuff with the ferry, but the eagle would be more complex than that. In particular it should only start to arrive when the player is chained (fine if Charon does it as a part of his exit message). It should take some number of turns to get to the player (3? 4?) then land. If the player thrashes it needs to hover for a couple of turns (or a random number?) then land again. When the liver drops to zero it should leave.
+
+- Need a struggle/thrash/writhe command. Hint those by denying all other commands by saying all you can do is x? Could also just allow the player to thrash when they try to do anything physical while chained? Like if you try to move in a direction you writhe in place instead, and it dislodges the eagle. "try writhing instead", ha ha.
+
+- Representing the remaining liver could be done in a couple of ways. It might be funny for the liver to be in your inventory, but it makes almost no sense. You could also look at it (with the liver being a part of the player). Maybe you can crane your neck and see and make a guesstimate of how much is left which will turn out to be correct. Could also have the "points" system be a representation of the liver in the status bar for this level. Makes sense too. Maybe bother.
+
+- When the liver is at zero night should fall which would mean changing the room description. And scheduling the eagle's return and the liver's regeneration. Maybe some "feelings" as the liver comes back? Or instantaneous?
+
+Okay well I guess that's actually kind of it? Have a go?
