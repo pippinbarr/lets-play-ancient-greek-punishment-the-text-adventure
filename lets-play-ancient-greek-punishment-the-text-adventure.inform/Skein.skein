@@ -8542,8 +8542,10 @@ You can see Charon here.
     </item>
     <item nodeId="node-1937">
         <command xml:space="preserve">i am prometheus</command>
-        <result xml:space="preserve">The Rock (on the Rock)
-A unpleasantly jagged black rock rises from the ash colored sand of the beach.
+        <result xml:space="preserve">The Rock (chained to the rock)
+A unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+You can see an eagle here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8551,12 +8553,13 @@ A unpleasantly jagged black rock rises from the ash colored sand of the beach.
             <child nodeId="node-1954"></child>
             <child nodeId="node-1965"></child>
             <child nodeId="node-1999"></child>
+            <child nodeId="node-2130"></child>
             <child nodeId="node-1939"></child>
         </children>
     </item>
     <item nodeId="node-1939">
         <command xml:space="preserve">x rock</command>
-        <result xml:space="preserve">It's very black and very rocky. A set of chains are firmly attached to the rock. They are also firmly attached to you.
+        <result xml:space="preserve">It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8570,10 +8573,121 @@ A unpleasantly jagged black rock rises from the ash colored sand of the beach.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2107"></child>
+        </children>
+    </item>
+    <item nodeId="node-2107">
+        <command xml:space="preserve">break chains</command>
+        <result xml:space="preserve">You focus your attention on destroying the chains and come out on the losing end.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2112"></child>
+        </children>
+    </item>
+    <item nodeId="node-2112">
+        <command xml:space="preserve">attack chains</command>
+        <result xml:space="preserve">You focus your attention on destroying the chains and come out on the losing end.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2113"></child>
+        </children>
+    </item>
+    <item nodeId="node-2113">
+        <command xml:space="preserve">kill chains</command>
+        <result xml:space="preserve">You focus your attention on destroying the chains and come out on the losing end.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2120"></child>
+        </children>
+    </item>
+    <item nodeId="node-2120">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">He looks quite determined.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1945">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">The only way is up, baby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2130">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">He looks quite determined.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2139"></child>
+        </children>
+    </item>
+    <item nodeId="node-2139">
+        <command xml:space="preserve">get up</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2143"></child>
+        </children>
+    </item>
+    <item nodeId="node-2143">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2152"></child>
+        </children>
+    </item>
+    <item nodeId="node-2152">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle lands heavily on the rock beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2153"></child>
+        </children>
+    </item>
+    <item nodeId="node-2153">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2160"></child>
+        </children>
+    </item>
+    <item nodeId="node-2160">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2196"></child>
+        </children>
+    </item>
+    <item nodeId="node-2196">
+        <command xml:space="preserve">x liver</command>
+        <result xml:space="preserve">It's a bloody mess.
+
+The eagle eats some of your liver.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

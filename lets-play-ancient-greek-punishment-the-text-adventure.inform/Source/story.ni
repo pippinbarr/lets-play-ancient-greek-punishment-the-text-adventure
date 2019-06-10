@@ -1,5 +1,8 @@
 "Let's Play: Ancient Greek Punishment: The Text Adventure" by Pippin Barr
 
+Include Room Description Headings by Erwin Genstein.
+Include Simple Chat by Mark Tilford.
+
 Part 1 - Setup
 
 Section 1 - Basic setup
@@ -16,9 +19,8 @@ Your hand is part of the player. The description is "Dead.".
 The fog is a backdrop. It is everywhere. The description is "It makes you feel distinctly less happy.".
 Instead of taking the fog, say "You try to take some and it goes about as well as expected.".
 
-Section 3 - Simple Chat
+Section 2 - Simple Chat
 
-Include Simple Chat by Mark Tilford.
 Talking to is an action applying to one visible thing.
 Understand "talk to [someone]" as talking to.
 Report talking to: say "You have nothing to say.".
@@ -32,7 +34,7 @@ When play begins:
 	now the left hand status line is "[the player's surroundings]"; 
 	now the right hand status line is "[score] points";
 
-Section 4 - Some basic verb overrides
+Section 3 - Some basic verb overrides
 
 Instead of tasting something, say "Nothing tastes of anything in Hades.".
 Instead of smelling something, say "A faint aroma of crushed bones.".
@@ -231,8 +233,7 @@ At the time when the ferry departs:
 After exiting when the player was in the ferry:
 	If the player's name is Prometheus:
 		say "Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and walks back to the ferry.";
-		Now the player is on The Rock;
-		Now the player is chained;
+		The player is chained in zero turns from now;
 		Now Charon is in PrometheusRoom;
 	The ferry vanishes in zero turns from now;
 		
@@ -258,8 +259,7 @@ Understand "I am Prometheus" as SkipToPrometheus.
 Instead of SkipToPrometheus:
 	if the player is in the Bank of the River Styx:
 		Remove the obol from play;
-		Now the player is on The Rock;
-		Now the player is chained;
+		The player is chained in zero turns from now;
 	Otherwise:
 		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
 
@@ -419,15 +419,24 @@ Part 4 - Tantalus
 
 Part 5 - Prometheus
 
-PrometheusRoom is a room. The description is "A unpleasantly jagged black rock rises from the ash colored sand of the beach.[if the player is chained] You are chained to said rock.[end if]". The printed name is "The Rock".
+The liver is part of the player. The description is "[if the percentage of the player's liver is 100]You can't see your liver at the moment.[otherwise]It's a bloody mess.[end if]".
+The player's liver has a number called percentage. The percentage of the player's liver is 100.
 
-The Rock is scenery in PrometheusRoom. The Rock is a supporter. The description is "It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.".
+At the time when the player is chained:
+	Now the player is on the rock;
+	Now the player is chained;
+	Now the right hand status line is "Liver: [percentage of the player's liver]%";
+
+PrometheusRoom is a room. The description is "A unpleasantly jagged black rock rises from the ash colored sand of the beach.[if the player is on the rock] You are chained to said rock.[end if]". The printed name is "The Rock".
+
+The rock is scenery in PrometheusRoom. The Rock is a supporter. The description is "It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.".
 
 The chains are part of the rock. The description is "Heavy iron chains.".
 
 A person can be chained or unchained.
 
-	
+Rule for printing an enclosure preposition when the described enclosure is the player's enclosure and described enclosure is the rock: say "chained to ".
+
 Instead of getting off when the player is chained:
 	say "You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.";
 	stop the action;
@@ -438,6 +447,35 @@ Instead of going when the player is chained:
 Instead of jumping when the player is chained:
 	try getting off the rock;
 	
+Instead of attacking the chains:
+	say "You focus your attention on destroying the chains and come out on the losing end.";
+	
+The eagle is an animal in PrometheusRoom. 
+Flight distance is a kind of value. The flight distances are appearing, distant, approaching, near, perched, and gone.
+The eagle can be coming or departing. The eagle is coming.
+The eagle has a flight distance called proximity. The proximity of the eagle is appearing.
+The description of the eagle is "[if the proximity of the eagle is distant]He's quite far away, but he looks determined.[otherwise]He looks quite determined.[end if]".
+
+Every turn when the player is on the rock:
+	if the eagle is coming:
+		if the proximity of the eagle is appearing:
+			Now the proximity of the eagle is distant;
+			say "An eagle appears on the horizon.";
+		otherwise if the proximity of the eagle is distant:
+			Now the proximity of the eagle is approaching;
+			say "The eagle is getting closer.";
+		otherwise if the proximity of the eagle is approaching:
+			Now the proximity of the eagle is near;
+			say "The eagle is getting closer.";
+		otherwise if the proximity of the eagle is near:
+			Now the proximity of the eagle is perched;
+			say "The eagle lands heavily on the rock beside you.";
+		otherwise if the proximity of the eagle is perched:
+			say "The eagle eats some of your liver.";
+			decrease the percentage of the player's liver by 10;
+	otherwise:
+		say "Eagle is going away :(";
+
 Writhing is an action applying to nothing.
 Understand "writhe" and "struggle" and "strain" as writhing.
 Instead of writhing:

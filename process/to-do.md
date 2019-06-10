@@ -27,7 +27,9 @@
 - ~~Add description to Charon departure that includes him getting out and chaining you to the rock~~
 - ~~Add idea of chains and restricted movement~~
 - ~~Add writhing and synonyms + hint attached to other forms of movement (jump, go, etc)~~
-- Add eagle arrival, pecking, and departure
+- ~~Add eagle arrival~~
+- ~~Add eagle pecking and reducing of liver~~
+- Add eagle departure
 - Add idea of making the eagle hover
 - Add nightfall (room description) and liver regen
 - Consider adding other stuff to look at while you're being pecked? Some kind of sub activity as with the note and hole etc.? Do I want to sprinkle this kind of thing liberally or not?
