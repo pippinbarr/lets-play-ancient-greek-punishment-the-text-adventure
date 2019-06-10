@@ -79,11 +79,13 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1084"></child>
             <child nodeId="node-1078"></child>
             <child nodeId="node-1073"></child>
+            <child nodeId="node-2536"></child>
             <child nodeId="node-1071"></child>
             <child nodeId="node-1070"></child>
             <child nodeId="node-1058"></child>
             <child nodeId="node-1051"></child>
             <child nodeId="node-1046"></child>
+            <child nodeId="node-2510"></child>
             <child nodeId="node-1038"></child>
             <child nodeId="node-1027"></child>
             <child nodeId="node-1020"></child>
@@ -91,7 +93,54 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1010"></child>
             <child nodeId="node-1004"></child>
             <child nodeId="node-1003"></child>
+            <child nodeId="node-2548"></child>
         </children>
+    </item>
+    <item nodeId="node-2548">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2549"></child>
+        </children>
+    </item>
+    <item nodeId="node-2549">
+        <command xml:space="preserve">i am prometheus</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2550"></child>
+        </children>
+    </item>
+    <item nodeId="node-2550">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2551"></child>
+        </children>
+    </item>
+    <item nodeId="node-2551">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">Bee bah boo bah
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2552"></child>
+        </children>
+    </item>
+    <item nodeId="node-2552">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve"></result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1003">
         <command xml:space="preserve">xyzzy</command>
@@ -484,6 +533,13 @@ Recalling the list of names on the clipboard, you say:
 &gt;&gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2510">
+        <command xml:space="preserve">x liver</command>
+        <result xml:space="preserve">You can't see your liver at the moment, your flesh is pleasingly intact over the top of it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1046">
         <command xml:space="preserve">x hilly</command>
         <result xml:space="preserve">You can't see any such thing.
@@ -719,6 +775,72 @@ You can see a worryingly large boulder here.
     <item nodeId="node-1072">
         <command xml:space="preserve">get eyes</command>
         <result xml:space="preserve">That seems to be a part of Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2536">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2537"></child>
+        </children>
+    </item>
+    <item nodeId="node-2537">
+        <command xml:space="preserve">i am prometheus</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2538"></child>
+        </children>
+    </item>
+    <item nodeId="node-2538">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2539"></child>
+        </children>
+    </item>
+    <item nodeId="node-2539">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2540"></child>
+        </children>
+    </item>
+    <item nodeId="node-2540">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2541"></child>
+        </children>
+    </item>
+    <item nodeId="node-2541">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2542"></child>
+        </children>
+    </item>
+    <item nodeId="node-2542">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">Bee bah boo bah
+
+The eagle is getting closer.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8550,6 +8672,7 @@ Beneath what passes for daylight here, an unpleasantly jagged black rock rises f
         <children><child nodeId="node-2016"></child>
             <child nodeId="node-2458"></child>
             <child nodeId="node-1954"></child>
+            <child nodeId="node-2512"></child>
             <child nodeId="node-1965"></child>
             <child nodeId="node-1999"></child>
             <child nodeId="node-2130"></child>
@@ -8566,7 +8689,423 @@ An eagle appears on the horizon.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2405"></child>
+            <child nodeId="node-2545"></child>
+            <child nodeId="node-2630"></child>
         </children>
+    </item>
+    <item nodeId="node-2630">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2631"></child>
+        </children>
+    </item>
+    <item nodeId="node-2631">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">It's close enough to look quite alarming.
+
+The eagle is nearly at the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2632"></child>
+        </children>
+    </item>
+    <item nodeId="node-2632">
+        <command xml:space="preserve">x</command>
+        <result xml:space="preserve">(the eagle)
+It is way too close for comfort.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2633"></child>
+        </children>
+    </item>
+    <item nodeId="node-2633">
+        <command xml:space="preserve">x eagle's eye</command>
+        <result xml:space="preserve">That is one cold and uncaring eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2634"></child>
+        </children>
+    </item>
+    <item nodeId="node-2634">
+        <command xml:space="preserve">struggle</command>
+        <result xml:space="preserve">You strain in place desperately. It's enough to disturb the eagle, which flaps up into the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2635"></child>
+        </children>
+    </item>
+    <item nodeId="node-2635">
+        <command xml:space="preserve">x eagles eye</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2636"></child>
+        </children>
+    </item>
+    <item nodeId="node-2636">
+        <command xml:space="preserve">x eagle's eye</command>
+        <result xml:space="preserve">You can't make out the eagle's eye from here.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2646"></child>
+        </children>
+    </item>
+    <item nodeId="node-2646">
+        <command xml:space="preserve">x eagle's eye</command>
+        <result xml:space="preserve">That is one cold and uncaring eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2647"></child>
+        </children>
+    </item>
+    <item nodeId="node-2647">
+        <command xml:space="preserve">sneeze</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2648"></child>
+        </children>
+    </item>
+    <item nodeId="node-2648">
+        <command xml:space="preserve">shout</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2649"></child>
+        </children>
+    </item>
+    <item nodeId="node-2649">
+        <command xml:space="preserve">scream</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2650"></child>
+        </children>
+    </item>
+    <item nodeId="node-2650">
+        <command xml:space="preserve">tell the eagle to get off</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2651"></child>
+        </children>
+    </item>
+    <item nodeId="node-2651">
+        <command xml:space="preserve">tell the eagle about fucking off</command>
+        <result xml:space="preserve">This provokes no reaction.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2652"></child>
+        </children>
+    </item>
+    <item nodeId="node-2652">
+        <command xml:space="preserve">kill the eagle</command>
+        <result xml:space="preserve">Wrong game.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2653"></child>
+        </children>
+    </item>
+    <item nodeId="node-2653">
+        <command xml:space="preserve">struggle</command>
+        <result xml:space="preserve">You writhe in place desperately. It's enough to disturb the eagle, which flaps up into the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2654"></child>
+        </children>
+    </item>
+    <item nodeId="node-2654">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2655"></child>
+        </children>
+    </item>
+    <item nodeId="node-2655">
+        <command xml:space="preserve">strain</command>
+        <result xml:space="preserve">You writhe in place desperately. It's enough to disturb the eagle, which flaps up into the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2656"></child>
+        </children>
+    </item>
+    <item nodeId="node-2656">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2657"></child>
+        </children>
+    </item>
+    <item nodeId="node-2657">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2679"></child>
+        </children>
+    </item>
+    <item nodeId="node-2679">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+You can see an eagle here.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2680"></child>
+        </children>
+    </item>
+    <item nodeId="node-2680">
+        <command xml:space="preserve">sigh</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2681"></child>
+        </children>
+    </item>
+    <item nodeId="node-2681">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2682"></child>
+        </children>
+    </item>
+    <item nodeId="node-2682">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2683"></child>
+        </children>
+    </item>
+    <item nodeId="node-2683">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2684"></child>
+        </children>
+    </item>
+    <item nodeId="node-2684">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2685"></child>
+        </children>
+    </item>
+    <item nodeId="node-2685">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+Having eaten your entire liver, the eagle nonchalantly flaps its wings and takes to the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2686"></child>
+        </children>
+    </item>
+    <item nodeId="node-2686">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle flies off into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2687"></child>
+        </children>
+    </item>
+    <item nodeId="node-2687">
+        <command xml:space="preserve">x liver</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2688"></child>
+        </children>
+    </item>
+    <item nodeId="node-2688">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2689"></child>
+        </children>
+    </item>
+    <item nodeId="node-2689">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Night falls.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2690"></child>
+        </children>
+    </item>
+    <item nodeId="node-2690">
+        <command xml:space="preserve">x rock</command>
+        <result xml:space="preserve">It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2691"></child>
+        </children>
+    </item>
+    <item nodeId="node-2691">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2692"></child>
+        </children>
+    </item>
+    <item nodeId="node-2692">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+The night ends surprisingly abruptly. You feel a brisk tingling sensation where your liver was pecked out by the eagle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2693"></child>
+        </children>
+    </item>
+    <item nodeId="node-2693">
+        <command xml:space="preserve">x liver</command>
+        <result xml:space="preserve">You can't see your liver, your flesh is concealing it in the usual way.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2694"></child>
+        </children>
+    </item>
+    <item nodeId="node-2694">
+        <command xml:space="preserve">x chains</command>
+        <result xml:space="preserve">Heavy iron chains.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2695"></child>
+        </children>
+    </item>
+    <item nodeId="node-2695">
+        <command xml:space="preserve">x chain</command>
+        <result xml:space="preserve">Heavy iron chains.
+
+The eagle is nearly at the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2734"></child>
+        </children>
+    </item>
+    <item nodeId="node-2734">
+        <command xml:space="preserve">attack chains</command>
+        <result xml:space="preserve">You focus your attention on destroying the chains and come out on the losing end.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2545">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">Bee bah boo bah
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2546"></child>
+        </children>
+    </item>
+    <item nodeId="node-2546">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">Bee bah boo bah
+
+The eagle is nearly at the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2547"></child>
+        </children>
+    </item>
+    <item nodeId="node-2547">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">Bee bah boo bah
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-2405">
         <command xml:space="preserve">l</command>
@@ -8974,14 +9513,196 @@ The eagle is nearly at the rock.
     </item>
     <item nodeId="node-2130">
         <command xml:space="preserve">x eagle</command>
-        <result xml:space="preserve">He looks quite determined.
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2139"></child>
+            <child nodeId="node-2555"></child>
+        </children>
+    </item>
+    <item nodeId="node-2555">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
 
 An eagle appears on the horizon.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2139"></child>
+        <children><child nodeId="node-2556"></child>
         </children>
+    </item>
+    <item nodeId="node-2556">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">It's too far away to see much more than some flapping wings.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2557"></child>
+        </children>
+    </item>
+    <item nodeId="node-2557">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">It's close enough to look quite alarming.
+
+The eagle is nearly at the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2558"></child>
+        </children>
+    </item>
+    <item nodeId="node-2558">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">It is way too close for comfort.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2559"></child>
+        </children>
+    </item>
+    <item nodeId="node-2559">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2560"></child>
+        </children>
+    </item>
+    <item nodeId="node-2560">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2561"></child>
+        </children>
+    </item>
+    <item nodeId="node-2561">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2562"></child>
+        </children>
+    </item>
+    <item nodeId="node-2562">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2563"></child>
+        </children>
+    </item>
+    <item nodeId="node-2563">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2564"></child>
+        </children>
+    </item>
+    <item nodeId="node-2564">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2565"></child>
+        </children>
+    </item>
+    <item nodeId="node-2565">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2566"></child>
+        </children>
+    </item>
+    <item nodeId="node-2566">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2567"></child>
+        </children>
+    </item>
+    <item nodeId="node-2567">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2568"></child>
+        </children>
+    </item>
+    <item nodeId="node-2568">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2569"></child>
+        </children>
+    </item>
+    <item nodeId="node-2569">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">A majestic creature. Terrifying, too It has a determined look in its eye.
+
+Having eaten your entire liver, the eagle nonchalantly flaps its wings and takes to the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2570"></child>
+        </children>
+    </item>
+    <item nodeId="node-2570">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">It looks like an eagle that's eaten a full liver for dinner.
+
+The eagle flies off into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2589"></child>
+        </children>
+    </item>
+    <item nodeId="node-2589">
+        <command xml:space="preserve">x eagle</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-2139">
         <command xml:space="preserve">get up</command>
@@ -9236,6 +9957,73 @@ Beneath what passes for daylight here, an unpleasantly jagged black rock rises f
     <item nodeId="node-1968">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2512">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2513"></child>
+        </children>
+    </item>
+    <item nodeId="node-2513">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You writhe experimentally. Nothing obvious happens.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2517"></child>
+        </children>
+    </item>
+    <item nodeId="node-2517">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You thrash experimentally. Nothing obvious happens.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2518"></child>
+        </children>
+    </item>
+    <item nodeId="node-2518">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You strain experimentally. Nothing obvious happens.
+
+The eagle is nearly at the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2519"></child>
+        </children>
+    </item>
+    <item nodeId="node-2519">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You squirm in place desperately. It's enough to disturb the eagle, which flaps up into the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2520"></child>
+        </children>
+    </item>
+    <item nodeId="node-2520">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You struggle in place desperately. It's enough to disturb the eagle, which flaps up into the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2535"></child>
+        </children>
+    </item>
+    <item nodeId="node-2535">
+        <command xml:space="preserve">struggle</command>
+        <result xml:space="preserve">You thrash in place desperately. It's enough to disturb the eagle, which flaps up into the air.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

@@ -233,7 +233,7 @@ At the time when the ferry departs:
 After exiting when the player was in the ferry:
 	If the player's name is Prometheus:
 		say "Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and walks back to the ferry.";
-		The player is chained in zero turns from now;
+		The player is chained down in zero turns from now;
 		Now Charon is in PrometheusRoom;
 	The ferry vanishes in zero turns from now;
 		
@@ -259,7 +259,7 @@ Understand "I am Prometheus" as SkipToPrometheus.
 Instead of SkipToPrometheus:
 	if the player is in the Bank of the River Styx:
 		Remove the obol from play;
-		The player is chained in zero turns from now;
+		The player is chained down in zero turns from now;
 	Otherwise:
 		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
 
@@ -419,21 +419,21 @@ Part 4 - Tantalus
 
 Part 5 - Prometheus
 
-The liver is part of the player. The description is "[if the percentage of the player's liver is 100]You can't see your liver at the moment, your flesh is pleasingly intact over the top of it.[otherwise if the percentage of the player's liver is not 0]It's a bloody mess.[otherwise]It's gone.[end if]".
+The liver is part of the player. The description is "[if the percentage of the player's liver is 100]You can't see your liver, your flesh is concealing it in the usual way.[otherwise if the percentage of the player's liver is not 0]Frankly, it's a mess.[otherwise]It's gone.[end if]".
 
 The player's liver has a number called percentage. The percentage of the player's liver is 100.
 
-At the time when the player is chained:
+At the time when the player is chained down:
 	Now the player is on the rock;
 	Now the player is chained;
 	Now the right hand status line is "Liver: [percentage of the player's liver]%";
 
-PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach.[if the player is on the rock] You are chained to said rock.[end if]". The printed name is "The Rock".
+PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.". The printed name is "The Rock".
 PrometheusRoom can be nighttime or daytime.
 
 The rock is scenery in PrometheusRoom. The Rock is a supporter. The description is "It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.".
 
-The chains are part of the rock. The description is "Heavy iron chains.".
+The chains are part of the rock. The description is "Heavy iron chains.". Understand "chain" as the chains.
 
 A person can be chained or unchained.
 
@@ -454,10 +454,22 @@ Instead of attacking the chains:
 	
 The eagle is an animal. 
 The eagle is nowhere.
-Flight distance is a kind of value. The flight distances are appearing, distant, approaching, near, perched, hovering, and gone.
+Flight distance is a kind of value. The flight distances are appearing, distant, approaching, near, perched, hovering, leaving, and gone.
 The eagle can be coming or departing. The eagle is coming.
 The eagle has a flight distance called proximity. The proximity of the eagle is appearing.
-The description of the eagle is "[if the proximity of the eagle is distant]He's quite far away, but he looks determined.[otherwise]He looks quite determined.[end if]".
+
+Table of eagle descriptions
+proximity_entry			reply
+distant			"It's too far away to see much more than some flapping wings."
+approaching			"It's close enough to look quite alarming."
+near			"It is way too close for comfort."
+perched			"A majestic creature. Terrifying, too. It has a determined look in its eye."
+hovering			"It looks irritable."
+leaving			"It looks like an eagle that's eaten a full liver for dinner."
+gone			"It's gone."
+
+The description of the eagle is "[the reply corresponding to a proximity_entry of the proximity of the eagle in the table of eagle descriptions]".
+The eagle's eye is part of the eagle. The description is "[if the proximity of the eagle is perched]That is one cold and uncaring eye.[otherwise]You can't make out the eagle's eye from here.[end if]".
 
 Every turn when the player is on the rock:
 	if the eagle is coming:
@@ -467,10 +479,10 @@ Every turn when the player is on the rock:
 			now the eagle is in PrometheusRoom;
 		otherwise if the proximity of the eagle is distant:
 			Now the proximity of the eagle is approaching;
-			say "The eagle is getting closer.";
+			say "The eagle is getting close.";
 		otherwise if the proximity of the eagle is approaching:
 			Now the proximity of the eagle is near;
-			say "The eagle is nearly at the rock.";
+			say "The eagle is right above you.";
 		otherwise if the proximity of the eagle is near or the proximity of the eagle is hovering:
 			if the player is not struggling:
 				Now the proximity of the eagle is perched;
@@ -484,9 +496,9 @@ Every turn when the player is on the rock:
 				remove the liver from play;
 	otherwise if the eagle is departing:
 		if the proximity of the eagle is perched:
-			say "Having eaten your entire liver, the eagle nonchalantly flaps its wings and takes to the air.";
-			now the proximity of the eagle is near;
-		otherwise if the proximity of the eagle is near:
+			say "Having eaten your liver, the eagle nonchalantly flaps its wings and takes to the air.";
+			now the proximity of the eagle is leaving;
+		otherwise if the proximity of the eagle is leaving:
 			say "The eagle flies off into the distance.";
 			now the proximity of the eagle is gone;
 			now the eagle is nowhere;			
@@ -505,19 +517,21 @@ At the time when the night ends:
 	Now the eagle is coming;
 	Now the proximity of the eagle is appearing;
 		
+Writhe verb is a kind of value. The writhe verbs are struggle, writhe, strain, twist, thrash.
+
 Writhing is an action applying to nothing.
-Understand "writhe" and "struggle" and "strain" as writhing.
+Understand "writhe" and "struggle" and "strain" and "twist" and "thrash" as writhing.
 A person can be struggling. The player is not struggling.
 After writhing:
 	Now the player is struggling;
 	if the proximity of the eagle is perched:
-		say "You writhe in place desperately.[paragraph break]The eagle is disturbed by your wriggling and flaps up into the air.";
+		say "You [a random writhe verb] in place desperately. It's enough to disturb the eagle, which flaps up into the air.";
 		Now the proximity of the eagle is hovering;
 	otherwise if the proximity of the eagle is hovering or the proximity of the eagle is near:
-		say "You writhe in place desperately.[paragraph break]The eagle is disturbed by your wriggling and remains airborne.";
+		say "You [a random writhe verb] in place desperately. It's enough to disturb the eagle, which flaps up into the air.";
 		now the proximity of the eagle is hovering;
 	otherwise:
-		say "You writhe experimentally. No obvious results.";
+		say "You [a random writhe verb] experimentally. Nothing obvious happens.";
 	
 
 
