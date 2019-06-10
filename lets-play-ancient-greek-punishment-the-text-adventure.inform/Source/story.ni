@@ -421,7 +421,7 @@ Part 5 - Prometheus
 
 The liver is part of the player. The description is "[if the percentage of the player's liver is 100]You can't see your liver at the moment, your flesh is pleasingly intact over the top of it.[otherwise if the percentage of the player's liver is not 0]It's a bloody mess.[otherwise]It's gone.[end if]".
 
-The player's liver has a number called percentage. The percentage of the player's liver is 10.
+The player's liver has a number called percentage. The percentage of the player's liver is 100.
 
 At the time when the player is chained:
 	Now the player is on the rock;
@@ -454,7 +454,7 @@ Instead of attacking the chains:
 	
 The eagle is an animal. 
 The eagle is nowhere.
-Flight distance is a kind of value. The flight distances are appearing, distant, approaching, near, perched, and gone.
+Flight distance is a kind of value. The flight distances are appearing, distant, approaching, near, perched, hovering, and gone.
 The eagle can be coming or departing. The eagle is coming.
 The eagle has a flight distance called proximity. The proximity of the eagle is appearing.
 The description of the eagle is "[if the proximity of the eagle is distant]He's quite far away, but he looks determined.[otherwise]He looks quite determined.[end if]".
@@ -471,9 +471,11 @@ Every turn when the player is on the rock:
 		otherwise if the proximity of the eagle is approaching:
 			Now the proximity of the eagle is near;
 			say "The eagle is nearly at the rock.";
-		otherwise if the proximity of the eagle is near:
-			Now the proximity of the eagle is perched;
-			say "The eagle lands heavily beside you.";
+		otherwise if the proximity of the eagle is near or the proximity of the eagle is hovering:
+			if the player is not struggling:
+				Now the proximity of the eagle is perched;
+				say "The eagle lands heavily beside you.";
+			now the player is not struggling;
 		otherwise if the proximity of the eagle is perched:
 			say "The eagle eats some of your liver.";
 			decrease the percentage of the player's liver by 10;
@@ -505,12 +507,18 @@ At the time when the night ends:
 		
 Writhing is an action applying to nothing.
 Understand "writhe" and "struggle" and "strain" as writhing.
-Instead of writhing:
-	say "You writhe in place desperately.";
-	The player writhes in zero turns from now;
+A person can be struggling. The player is not struggling.
+After writhing:
+	Now the player is struggling;
+	if the proximity of the eagle is perched:
+		say "You writhe in place desperately.[paragraph break]The eagle is disturbed by your wriggling and flaps up into the air.";
+		Now the proximity of the eagle is hovering;
+	otherwise if the proximity of the eagle is hovering or the proximity of the eagle is near:
+		say "You writhe in place desperately.[paragraph break]The eagle is disturbed by your wriggling and remains airborne.";
+		now the proximity of the eagle is hovering;
+	otherwise:
+		say "You writhe experimentally. No obvious results.";
 	
-At the time when the player writhes:
-	say "*Writhe*";
 
 
 [----------------------------------------------------]

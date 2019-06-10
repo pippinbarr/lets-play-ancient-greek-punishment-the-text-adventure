@@ -8548,6 +8548,7 @@ Beneath what passes for daylight here, an unpleasantly jagged black rock rises f
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2016"></child>
+            <child nodeId="node-2458"></child>
             <child nodeId="node-1954"></child>
             <child nodeId="node-1965"></child>
             <child nodeId="node-1999"></child>
@@ -9331,6 +9332,152 @@ You can see Charon's ferry and Charon here.
     <item nodeId="node-1986">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2458">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2459"></child>
+        </children>
+    </item>
+    <item nodeId="node-2459">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+You can see an eagle here.
+
+The eagle is getting closer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2460"></child>
+        </children>
+    </item>
+    <item nodeId="node-2460">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+You can see an eagle here.
+
+The eagle is nearly at the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2465"></child>
+        </children>
+    </item>
+    <item nodeId="node-2465">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You writhe in place desperately.
+
+The eagle is disturbed by your wriggling and remains airborne.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2471"></child>
+        </children>
+    </item>
+    <item nodeId="node-2471">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You writhe in place desperately.
+
+The eagle is disturbed by your wriggling and remains airborne.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2502"></child>
+        </children>
+    </item>
+    <item nodeId="node-2502">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2503"></child>
+        </children>
+    </item>
+    <item nodeId="node-2503">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You writhe in place desperately.
+
+The eagle is disturbed by your wriggling and flaps up into the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2504"></child>
+        </children>
+    </item>
+    <item nodeId="node-2504">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle lands heavily beside you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2505"></child>
+        </children>
+    </item>
+    <item nodeId="node-2505">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle eats some of your liver.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2506"></child>
+        </children>
+    </item>
+    <item nodeId="node-2506">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Having eaten your entire liver, the eagle nonchalantly flaps its wings and takes to the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2507"></child>
+        </children>
+    </item>
+    <item nodeId="node-2507">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle flies off into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2508"></child>
+        </children>
+    </item>
+    <item nodeId="node-2508">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Night falls.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2509"></child>
+        </children>
+    </item>
+    <item nodeId="node-2509">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You writhe experimentally.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

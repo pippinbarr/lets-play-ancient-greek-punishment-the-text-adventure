@@ -31,5 +31,6 @@
 - ~~Add eagle pecking and reducing of liver~~
 - ~~Add eagle departure~~
 - ~~Add nightfall (room description) and liver regen~~
-- Add effective writhing and corresponding eagle dislodging
+- ~~Add effective writhing and corresponding eagle dislodging~~
+
 - Consider adding other stuff to look at while you're being pecked? Some kind of sub activity as with the note and hole etc.? Do I want to sprinkle this kind of thing liberally or not?
