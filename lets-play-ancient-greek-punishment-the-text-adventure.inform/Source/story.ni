@@ -143,7 +143,7 @@ Instead of asking Charon about something:
 	otherwise:
 		say "Charon looks at you with disinterest, then stops looking at you with equal disinterest";
 		
-Charon Conversation, My Name Is Sisyphus, Nevermind are chat nodes.
+Charon Conversation, My Name Is Sisyphus, My Name Is Prometheus, Nevermind are chat nodes.
 
 Instead of talking to Charon when the obol is in your mouth:
 	say "You start trying to speak, but there's something in your mouth.";		
@@ -159,12 +159,19 @@ Report giving text for Charon Conversation:
     
 Carry out finding responses to Charon Conversation: 
 	link to My Name Is Sisyphus; 
+	link to My Name Is Prometheus;
 	link to Nevermind.
     
 Report giving link to My Name Is Sisyphus: 
 	Instead say "'I'm Sisyphus!'";
 Report giving text for My Name Is Sisyphus: 
 	Now the player's name is Sisyphus;
+	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
+	
+Report giving link to My Name Is Prometheus: 
+	Instead say "'I'm Prometheus!'";
+Report giving text for My Name Is Prometheus: 
+	Now the player's name is Prometheus;
 	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
 
 Report giving link to Nevermind: 
@@ -218,13 +225,20 @@ At the time when the ferry departs:
 	say "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[paragraph break]Charon looks at you implacably. You intuit that it's time for you to get out.";
 	If the player's name is Sisyphus:
 		Move the ferry to The Bottom of the Hill;
+	otherwise if the player's name is Prometheus:
+		Move the ferry to PrometheusRoom;
 	
 After exiting when the player was in the ferry:
+	If the player's name is Prometheus:
+		say "Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and walks back to the ferry.";
+		Now the player is on The Rock;
+		Now the player is chained;
+		Now Charon is in PrometheusRoom;
 	The ferry vanishes in zero turns from now;
-	continue the action;	
 		
 At the time when the ferry vanishes:
 	say "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying 'I am [player's name].' His duty discharged, Charon oars away without giving you a another thought.";
+	Now Charon is in the ferry;
 	Move the ferry to the Bank of the River Styx;
 
 
@@ -239,6 +253,16 @@ Instead of SkipToSisyphus:
 	Otherwise:
 		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
 
+SkipToPrometheus is an action applying to nothing.
+Understand "I am Prometheus" as SkipToPrometheus.
+Instead of SkipToPrometheus:
+	if the player is in the Bank of the River Styx:
+		Remove the obol from play;
+		Now the player is on The Rock;
+		Now the player is chained;
+	Otherwise:
+		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+
 Xyzzy is an action applying to nothing.
 Understand "Xyzzy" as Xyzzy.
 Instead of Xyzzy:
@@ -249,7 +273,7 @@ Section 7 - Tests
 
 Test sisyphus with "open mouth / x clipboard / talk to charon / 1 / pay charon / get into boat / z / z / get out".
 
-
+Test prometheus with "open mouth / x clipboard / talk to charon / 2 / pay charon / get into boat / z / z / get out".
 
 [----------------------------------------------------]
 
@@ -319,10 +343,10 @@ Section 2 - Pushing the boulder
 Instead of pushing the boulder:
 	try pushing the boulder to up;	
 	
-Instead of going north, say "The only way is up, baby.".
-Instead of going south, say "The only way is up, baby.".
-Instead of going east, say "The only way is up, baby.".
-Instead of going west, say "The only way is up, baby.".
+Instead of going north from the Whole Hill, say "The only way is up, baby.".
+Instead of going south from the Whole Hill, say "The only way is up, baby.".
+Instead of going east from the Whole Hill, say "The only way is up, baby.".
+Instead of going west from the Whole Hill, say "The only way is up, baby.".
 
 Before going up with the boulder:
 	if the boulder is rolling:
@@ -395,6 +419,33 @@ Part 4 - Tantalus
 
 Part 5 - Prometheus
 
+PrometheusRoom is a room. The description is "A unpleasantly jagged black rock rises from the ash colored sand of the beach.[if the player is chained] You are chained to said rock.[end if]". The printed name is "The Rock".
+
+The Rock is scenery in PrometheusRoom. The Rock is a supporter. The description is "It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.".
+
+The chains are part of the rock. The description is "Heavy iron chains.".
+
+A person can be chained or unchained.
+
+	
+Instead of getting off when the player is chained:
+	say "You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.";
+	stop the action;
+	
+Instead of going when the player is chained:
+	try getting off the rock;
+
+Instead of jumping when the player is chained:
+	try getting off the rock;
+	
+Writhing is an action applying to nothing.
+Understand "writhe" and "struggle" and "strain" as writhing.
+Instead of writhing:
+	say "You writhe in place desperately.";
+	The player writhes in zero turns from now;
+	
+At the time when the player writhes:
+	say "*Writhe*";
 
 
 [----------------------------------------------------]

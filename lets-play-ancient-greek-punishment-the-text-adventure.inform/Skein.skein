@@ -37,6 +37,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1741"></child>
             <child nodeId="node-1736"></child>
             <child nodeId="node-1729"></child>
+            <child nodeId="node-1937"></child>
             <child nodeId="node-1726"></child>
             <child nodeId="node-1724"></child>
             <child nodeId="node-1720"></child>
@@ -44,6 +45,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1709"></child>
             <child nodeId="node-1707"></child>
             <child nodeId="node-1703"></child>
+            <child nodeId="node-1946"></child>
             <child nodeId="node-1634"></child>
             <child nodeId="node-1629"></child>
             <child nodeId="node-1624"></child>
@@ -66,6 +68,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1182"></child>
             <child nodeId="node-1181"></child>
             <child nodeId="node-1180"></child>
+            <child nodeId="node-2025"></child>
             <child nodeId="node-1174"></child>
             <child nodeId="node-1141"></child>
             <child nodeId="node-1137"></child>
@@ -2039,6 +2042,87 @@ But you're already in Charon's ferry.
 [6] get into boat
 </commentary>
         <children></children>
+    </item>
+    <item nodeId="node-2025">
+        <command xml:space="preserve">test prometheus</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] open mouth
+You open your mouth and neatly catch the small coin that drops out.
+
+&gt;[2] x clipboard
+Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;[3] talk to charon
+Before you can get a word in, Charon monotones, "And you are?"
+
+Recalling the list of names on the clipboard, you say:
+
+1) "I'm Sisyphus!"
+
+2) "I'm Prometheus!"
+
+3) "Never mind..." 
+&gt;&gt; [4] 2
+Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;[5] pay charon
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry.
+
+&gt;[6] get into boat
+Charon sets about unmooring the ferry.
+
+&gt;[7] z
+Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;[8] z
+Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;[9] get out
+Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and walks back to the ferry.
+
+The Rock (on the Rock)
+A unpleasantly jagged black rock rises from the ash colored sand of the beach.
+
+You can see Charon's ferry (in which is Charon) here.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "I am Prometheus." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] open mouth
+[2] x clipboard
+[3] talk to charon
+[4] 2
+[5] pay charon
+[6] get into boat
+[7] z
+[8] z
+[9] get out
+</commentary>
+        <children><child nodeId="node-2065"></child>
+        </children>
+    </item>
+    <item nodeId="node-2065">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (on the Rock)
+A unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1180">
         <command xml:space="preserve">tell charon about poops</command>
@@ -7340,11 +7424,159 @@ Recalling the list of names on the clipboard, you say:
 
 1) "I'm Sisyphus!"
 
-2) "Never mind..." 
+2) "I'm Prometheus!"
+
+3) "Never mind..." 
 &gt;&gt; </result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1905"></child>
+            <child nodeId="node-1926"></child>
         </children>
+    </item>
+    <item nodeId="node-1926">
+        <command xml:space="preserve">2</command>
+        <result xml:space="preserve">Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1927"></child>
+            <child nodeId="node-2004"></child>
+        </children>
+    </item>
+    <item nodeId="node-2004">
+        <command xml:space="preserve">pay charon</command>
+        <result xml:space="preserve">You hand over the small coin. Charon drops it into a pocket and gestures at the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2005"></child>
+        </children>
+    </item>
+    <item nodeId="node-2005">
+        <command xml:space="preserve">get in</command>
+        <result xml:space="preserve">Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2006"></child>
+        </children>
+    </item>
+    <item nodeId="node-2006">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2007"></child>
+        </children>
+    </item>
+    <item nodeId="node-2007">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2008"></child>
+        </children>
+    </item>
+    <item nodeId="node-2008">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock (in Charon's ferry)
+A unpleasantly jagged black rock rises from the ash colored sand of the beach.
+
+In Charon's ferry you can see Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2009"></child>
+        </children>
+    </item>
+    <item nodeId="node-2009">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and walks back to the ferry.
+
+You get out of Charon's ferry.
+
+The Rock
+A unpleasantly jagged black rock rises from the ash colored sand of the beach.
+
+You can see Charon's ferry (in which is Charon) here.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "I am Prometheus." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2010"></child>
+        </children>
+    </item>
+    <item nodeId="node-2010">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2011"></child>
+        </children>
+    </item>
+    <item nodeId="node-2011">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">The Rock
+A unpleasantly jagged black rock rises from the ash colored sand of the beach.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2012"></child>
+        </children>
+    </item>
+    <item nodeId="node-2012">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2013"></child>
+        </children>
+    </item>
+    <item nodeId="node-2013">
+        <command xml:space="preserve">get off</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1927">
+        <command xml:space="preserve">pay charo</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1928"></child>
+        </children>
+    </item>
+    <item nodeId="node-1928">
+        <command xml:space="preserve">pay charon</command>
+        <result xml:space="preserve">You hand over the small coin. Charon drops it into a pocket and gestures at the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1929"></child>
+        </children>
+    </item>
+    <item nodeId="node-1929">
+        <command xml:space="preserve">i am prometheus</command>
+        <result xml:space="preserve">The Rock
+A unpleasantly jagged black rock rises from the ash colored sand of the beach.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1905">
         <command xml:space="preserve">1</command>
@@ -8005,6 +8237,68 @@ Zeno
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-1946">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1947"></child>
+        </children>
+    </item>
+    <item nodeId="node-1947">
+        <command xml:space="preserve">i am prometheus</command>
+        <result xml:space="preserve">The Rock
+A unpleasantly jagged black rock rises from the ash colored sand of the beach.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1948"></child>
+        </children>
+    </item>
+    <item nodeId="node-1948">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1949"></child>
+        </children>
+    </item>
+    <item nodeId="node-1949">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">The only way is up, baby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1950"></child>
+        </children>
+    </item>
+    <item nodeId="node-1950">
+        <command xml:space="preserve">i am promtheus</command>
+        <result xml:space="preserve">I only understood you as far as wanting to take inventory.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1951"></child>
+        </children>
+    </item>
+    <item nodeId="node-1951">
+        <command xml:space="preserve">i am sisyphus</command>
+        <result xml:space="preserve">Charon told you that would only work on arrival at his ferry. You're stuck here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1952"></child>
+        </children>
+    </item>
+    <item nodeId="node-1952">
+        <command xml:space="preserve">i am prometheus</command>
+        <result xml:space="preserve">Charon told you that would only work on arrival at his ferry. You're stuck here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1703">
         <command xml:space="preserve">ls clipboard</command>
         <result xml:space="preserve">That's not a verb I recognise.
@@ -8242,6 +8536,263 @@ You can see Charon here.
     <item nodeId="node-1728">
         <command xml:space="preserve">open mouth</command>
         <result xml:space="preserve">You open your mouth and neatly catch the small coin that drops out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1937">
+        <command xml:space="preserve">i am prometheus</command>
+        <result xml:space="preserve">The Rock (on the Rock)
+A unpleasantly jagged black rock rises from the ash colored sand of the beach.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2016"></child>
+            <child nodeId="node-1954"></child>
+            <child nodeId="node-1965"></child>
+            <child nodeId="node-1999"></child>
+            <child nodeId="node-1939"></child>
+        </children>
+    </item>
+    <item nodeId="node-1939">
+        <command xml:space="preserve">x rock</command>
+        <result xml:space="preserve">It's very black and very rocky. A set of chains are firmly attached to the rock. They are also firmly attached to you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1945"></child>
+            <child nodeId="node-1940"></child>
+        </children>
+    </item>
+    <item nodeId="node-1940">
+        <command xml:space="preserve">x chains</command>
+        <result xml:space="preserve">Heavy iron chains.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1945">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">The only way is up, baby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1999">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You writhe in place desperately.
+
+*Writhe*
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2090"></child>
+        </children>
+    </item>
+    <item nodeId="node-2090">
+        <command xml:space="preserve">jump</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2097"></child>
+        </children>
+    </item>
+    <item nodeId="node-2097">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2098"></child>
+        </children>
+    </item>
+    <item nodeId="node-2098">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2099"></child>
+        </children>
+    </item>
+    <item nodeId="node-2099">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2100"></child>
+        </children>
+    </item>
+    <item nodeId="node-2100">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You writhe in place desperately.
+
+*Writhe*
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2101"></child>
+        </children>
+    </item>
+    <item nodeId="node-2101">
+        <command xml:space="preserve">struggle</command>
+        <result xml:space="preserve">You writhe in place desperately.
+
+*Writhe*
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1965">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1966"></child>
+        </children>
+    </item>
+    <item nodeId="node-1966">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1967"></child>
+        </children>
+    </item>
+    <item nodeId="node-1967">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1968"></child>
+        </children>
+    </item>
+    <item nodeId="node-1968">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1954">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1955"></child>
+        </children>
+    </item>
+    <item nodeId="node-1955">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1972"></child>
+        </children>
+    </item>
+    <item nodeId="node-1972">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1973"></child>
+        </children>
+    </item>
+    <item nodeId="node-1973">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1974"></child>
+        </children>
+    </item>
+    <item nodeId="node-1974">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1975"></child>
+        </children>
+    </item>
+    <item nodeId="node-1975">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1983"></child>
+        </children>
+    </item>
+    <item nodeId="node-1983">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1984"></child>
+        </children>
+    </item>
+    <item nodeId="node-1984">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190610 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1985"></child>
+        </children>
+    </item>
+    <item nodeId="node-1985">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1986"></child>
+        </children>
+    </item>
+    <item nodeId="node-1986">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2016">
+        <command xml:space="preserve">get off</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2019"></child>
+        </children>
+    </item>
+    <item nodeId="node-2019">
+        <command xml:space="preserve">get onto rock</command>
+        <result xml:space="preserve">But you're already on the Rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2020"></child>
+        </children>
+    </item>
+    <item nodeId="node-2020">
+        <command xml:space="preserve">x rock</command>
+        <result xml:space="preserve">It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
