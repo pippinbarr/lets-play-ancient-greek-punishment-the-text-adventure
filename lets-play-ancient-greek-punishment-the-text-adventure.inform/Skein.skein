@@ -36,6 +36,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1969"></child>
             <child nodeId="node-1968"></child>
             <child nodeId="node-1963"></child>
+            <child nodeId="node-2520"></child>
             <child nodeId="node-2107"></child>
             <child nodeId="node-1956"></child>
             <child nodeId="node-1798"></child>
@@ -47,7 +48,9 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1778"></child>
             <child nodeId="node-1776"></child>
             <child nodeId="node-1772"></child>
+            <child nodeId="node-2702"></child>
             <child nodeId="node-2137"></child>
+            <child nodeId="node-2413"></child>
             <child nodeId="node-1765"></child>
             <child nodeId="node-1650"></child>
             <child nodeId="node-1645"></child>
@@ -77,6 +80,8 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1150"></child>
             <child nodeId="node-1129"></child>
             <child nodeId="node-1121"></child>
+            <child nodeId="node-2522"></child>
+            <child nodeId="node-2788"></child>
             <child nodeId="node-1118"></child>
             <child nodeId="node-1099"></child>
             <child nodeId="node-1097"></child>
@@ -1358,6 +1363,519 @@ You can see a worryingly large boulder here.
     <item nodeId="node-1120">
         <command xml:space="preserve">x beach</command>
         <result xml:space="preserve">Apparently death is a beach too.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2788">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2789"></child>
+        </children>
+    </item>
+    <item nodeId="node-2789">
+        <command xml:space="preserve">my name is zeno</command>
+        <result xml:space="preserve">A Flat Beach (at the starting line)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2790"></child>
+        </children>
+    </item>
+    <item nodeId="node-2790">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2791"></child>
+        </children>
+    </item>
+    <item nodeId="node-2791">
+        <command xml:space="preserve">walk south</command>
+        <result xml:space="preserve">You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2792"></child>
+        </children>
+    </item>
+    <item nodeId="node-2792">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2803"></child>
+        </children>
+    </item>
+    <item nodeId="node-2803">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (at the starting line)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2804"></child>
+        </children>
+    </item>
+    <item nodeId="node-2804">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2805"></child>
+        </children>
+    </item>
+    <item nodeId="node-2805">
+        <command xml:space="preserve">walk north walk</command>
+        <result xml:space="preserve">I only understood you as far as wanting to walk north.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2806"></child>
+        </children>
+    </item>
+    <item nodeId="node-2806">
+        <command xml:space="preserve">walk walk north</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2816"></child>
+        </children>
+    </item>
+    <item nodeId="node-2816">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2817"></child>
+        </children>
+    </item>
+    <item nodeId="node-2817">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are half-way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2818"></child>
+        </children>
+    </item>
+    <item nodeId="node-2818">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are three-quarters of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2819"></child>
+        </children>
+    </item>
+    <item nodeId="node-2819">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are seven-eighths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2820"></child>
+        </children>
+    </item>
+    <item nodeId="node-2820">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are fifteen-sixteenths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2821"></child>
+        </children>
+    </item>
+    <item nodeId="node-2821">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are thirty-one thirty-seconds of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2822"></child>
+        </children>
+    </item>
+    <item nodeId="node-2822">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are sixty-three sixty-fourths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2823"></child>
+        </children>
+    </item>
+    <item nodeId="node-2823">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are a hundred and twenty-seven hundred and twenty-eighths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2522">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2523"></child>
+            <child nodeId="node-2642"></child>
+        </children>
+    </item>
+    <item nodeId="node-2642">
+        <command xml:space="preserve">walk charon</command>
+        <result xml:space="preserve">He's not something you can enter.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2643"></child>
+        </children>
+    </item>
+    <item nodeId="node-2643">
+        <command xml:space="preserve">my name is zeno</command>
+        <result xml:space="preserve">A Flat Beach (at the starting line)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2644"></child>
+        </children>
+    </item>
+    <item nodeId="node-2644">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2645"></child>
+        </children>
+    </item>
+    <item nodeId="node-2645">
+        <command xml:space="preserve">walk s</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2646"></child>
+        </children>
+    </item>
+    <item nodeId="node-2646">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2647"></child>
+        </children>
+    </item>
+    <item nodeId="node-2647">
+        <command xml:space="preserve">walk east</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2648"></child>
+        </children>
+    </item>
+    <item nodeId="node-2648">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2649"></child>
+        </children>
+    </item>
+    <item nodeId="node-2649">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2650"></child>
+        </children>
+    </item>
+    <item nodeId="node-2650">
+        <command xml:space="preserve">north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2651"></child>
+        </children>
+    </item>
+    <item nodeId="node-2651">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2674"></child>
+        </children>
+    </item>
+    <item nodeId="node-2674">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2675"></child>
+        </children>
+    </item>
+    <item nodeId="node-2675">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190611 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+The Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2676"></child>
+        </children>
+    </item>
+    <item nodeId="node-2676">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2677"></child>
+        </children>
+    </item>
+    <item nodeId="node-2677">
+        <command xml:space="preserve">walk east</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2678"></child>
+        </children>
+    </item>
+    <item nodeId="node-2678">
+        <command xml:space="preserve">my name is sisyphus</command>
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2679"></child>
+        </children>
+    </item>
+    <item nodeId="node-2679">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2680"></child>
+        </children>
+    </item>
+    <item nodeId="node-2680">
+        <command xml:space="preserve">walk up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2523">
+        <command xml:space="preserve">go</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2524"></child>
+        </children>
+    </item>
+    <item nodeId="node-2524">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2534"></child>
+        </children>
+    </item>
+    <item nodeId="node-2534">
+        <command xml:space="preserve">my name is zen</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2535"></child>
+        </children>
+    </item>
+    <item nodeId="node-2535">
+        <command xml:space="preserve">my name is zeno</command>
+        <result xml:space="preserve">A Flat Beach (at the starting line)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2536"></child>
+        </children>
+    </item>
+    <item nodeId="node-2536">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2537"></child>
+        </children>
+    </item>
+    <item nodeId="node-2537">
+        <command xml:space="preserve">walk south</command>
+        <result xml:space="preserve">You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2538"></child>
+        </children>
+    </item>
+    <item nodeId="node-2538">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2555"></child>
+        </children>
+    </item>
+    <item nodeId="node-2555">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2592"></child>
+        </children>
+    </item>
+    <item nodeId="node-2592">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2593"></child>
+        </children>
+    </item>
+    <item nodeId="node-2593">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190611 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+The Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2594"></child>
+        </children>
+    </item>
+    <item nodeId="node-2594">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2619"></child>
+        </children>
+    </item>
+    <item nodeId="node-2619">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2620"></child>
+        </children>
+    </item>
+    <item nodeId="node-2620">
+        <command xml:space="preserve">my name is zeno</command>
+        <result xml:space="preserve">A Flat Beach (at the starting line)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2621"></child>
+        </children>
+    </item>
+    <item nodeId="node-2621">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2622"></child>
+        </children>
+    </item>
+    <item nodeId="node-2622">
+        <command xml:space="preserve">walk south</command>
+        <result xml:space="preserve">You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2623"></child>
+        </children>
+    </item>
+    <item nodeId="node-2623">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8520,6 +9038,405 @@ A unpleasantly jagged black rock rises from the ash colored sand of the beach.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2413">
+        <command xml:space="preserve">my name is zeno</command>
+        <result xml:space="preserve">A Flat Beach (at the starting line)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2421"></child>
+            <child nodeId="node-2700"></child>
+            <child nodeId="node-2825"></child>
+            <child nodeId="node-2759"></child>
+            <child nodeId="node-2416"></child>
+        </children>
+    </item>
+    <item nodeId="node-2416">
+        <command xml:space="preserve">x flag</command>
+        <result xml:space="preserve">A muted green triangle of fabric attached to a pole jammed into the sand at the end of the track.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2417"></child>
+        </children>
+    </item>
+    <item nodeId="node-2417">
+        <command xml:space="preserve">touch flag</command>
+        <result xml:space="preserve">No touching!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2418"></child>
+        </children>
+    </item>
+    <item nodeId="node-2418">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">(first getting off the starting line)
+You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2419"></child>
+        </children>
+    </item>
+    <item nodeId="node-2419">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2759">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2760"></child>
+        </children>
+    </item>
+    <item nodeId="node-2760">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2776"></child>
+        </children>
+    </item>
+    <item nodeId="node-2776">
+        <command xml:space="preserve">walk south</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2777"></child>
+        </children>
+    </item>
+    <item nodeId="node-2777">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2778"></child>
+        </children>
+    </item>
+    <item nodeId="node-2778">
+        <command xml:space="preserve">fuck</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2785"></child>
+        </children>
+    </item>
+    <item nodeId="node-2785">
+        <command xml:space="preserve">north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2786"></child>
+        </children>
+    </item>
+    <item nodeId="node-2786">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2787"></child>
+        </children>
+    </item>
+    <item nodeId="node-2787">
+        <command xml:space="preserve">go north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2825">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2826"></child>
+        </children>
+    </item>
+    <item nodeId="node-2826">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are half-way to the flag.
+
+You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2700">
+        <command xml:space="preserve">run east</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2701"></child>
+        </children>
+    </item>
+    <item nodeId="node-2701">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2421">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2422"></child>
+        </children>
+    </item>
+    <item nodeId="node-2422">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2470"></child>
+            <child nodeId="node-2426"></child>
+        </children>
+    </item>
+    <item nodeId="node-2426">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">Boo too!!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2427"></child>
+        </children>
+    </item>
+    <item nodeId="node-2427">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">Boo too!!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2428"></child>
+        </children>
+    </item>
+    <item nodeId="node-2428">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">Boo too!!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2429"></child>
+        </children>
+    </item>
+    <item nodeId="node-2429">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2437"></child>
+        </children>
+    </item>
+    <item nodeId="node-2437">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can run in all kinds of directions once you've finished for the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2438"></child>
+        </children>
+    </item>
+    <item nodeId="node-2438">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can run in all kinds of directions once you've finished for the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2439"></child>
+        </children>
+    </item>
+    <item nodeId="node-2439">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can run in all kinds of directions once you've finished for the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2440"></child>
+        </children>
+    </item>
+    <item nodeId="node-2440">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can run in all kinds of directions once you've finished for the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2452"></child>
+        </children>
+    </item>
+    <item nodeId="node-2452">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2470">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are three-quarters of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2475"></child>
+        </children>
+    </item>
+    <item nodeId="node-2475">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2476"></child>
+        </children>
+    </item>
+    <item nodeId="node-2476">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are seven-eighths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2477"></child>
+        </children>
+    </item>
+    <item nodeId="node-2477">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2478"></child>
+        </children>
+    </item>
+    <item nodeId="node-2478">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are fifteen-sixteenths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2479"></child>
+        </children>
+    </item>
+    <item nodeId="node-2479">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2480"></child>
+        </children>
+    </item>
+    <item nodeId="node-2480">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are thirty-one thirty-seconds of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2481"></child>
+        </children>
+    </item>
+    <item nodeId="node-2481">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2482"></child>
+        </children>
+    </item>
+    <item nodeId="node-2482">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are sixty-three sixty-fourths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2483"></child>
+        </children>
+    </item>
+    <item nodeId="node-2483">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2484"></child>
+        </children>
+    </item>
+    <item nodeId="node-2484">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are a hundred and twenty-seven hundred and twenty-eighths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2485"></child>
+        </children>
+    </item>
+    <item nodeId="node-2485">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2486"></child>
+        </children>
+    </item>
+    <item nodeId="node-2486">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are extremely close to the flag, You are so close the flag you can taste it, You are practically standing on the flag, but not quite, You have very nearly finished the race, You are incredibly close to finishing the race.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2519"></child>
+        </children>
+    </item>
+    <item nodeId="node-2519">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-2137">
         <command xml:space="preserve">my name is tantalus</command>
         <result xml:space="preserve">A Desolate Beach (in the pool)
@@ -9126,6 +10043,231 @@ You're feeling thirsty.
         <result xml:space="preserve">Nothing tastes of anything in Hades.
 
 You wish you had something to eat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2702">
+        <command xml:space="preserve">my name is sisyphus</command>
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2703"></child>
+        </children>
+    </item>
+    <item nodeId="node-2703">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2704"></child>
+        </children>
+    </item>
+    <item nodeId="node-2704">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2705"></child>
+        </children>
+    </item>
+    <item nodeId="node-2705">
+        <command xml:space="preserve">go up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2706"></child>
+        </children>
+    </item>
+    <item nodeId="node-2706">
+        <command xml:space="preserve">run down</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2707"></child>
+        </children>
+    </item>
+    <item nodeId="node-2707">
+        <command xml:space="preserve">walk down</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2708"></child>
+        </children>
+    </item>
+    <item nodeId="node-2708">
+        <command xml:space="preserve">my name is zeno</command>
+        <result xml:space="preserve">Charon told you that would only work on arrival at his ferry. You're stuck here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2709"></child>
+        </children>
+    </item>
+    <item nodeId="node-2709">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2710"></child>
+        </children>
+    </item>
+    <item nodeId="node-2710">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190611 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+The Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2711"></child>
+        </children>
+    </item>
+    <item nodeId="node-2711">
+        <command xml:space="preserve">my name is zeno</command>
+        <result xml:space="preserve">A Flat Beach (at the starting line)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2712"></child>
+        </children>
+    </item>
+    <item nodeId="node-2712">
+        <command xml:space="preserve">walk south</command>
+        <result xml:space="preserve">You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2713"></child>
+        </children>
+    </item>
+    <item nodeId="node-2713">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. You are at the start line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2714"></child>
+        </children>
+    </item>
+    <item nodeId="node-2714">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2715"></child>
+        </children>
+    </item>
+    <item nodeId="node-2715">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">What do you want to walk?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2730"></child>
+        </children>
+    </item>
+    <item nodeId="node-2730">
+        <command xml:space="preserve">walk south</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2731"></child>
+        </children>
+    </item>
+    <item nodeId="node-2731">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2732"></child>
+        </children>
+    </item>
+    <item nodeId="node-2732">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190611 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+The Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2733"></child>
+        </children>
+    </item>
+    <item nodeId="node-2733">
+        <command xml:space="preserve">walk south</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2734"></child>
+        </children>
+    </item>
+    <item nodeId="node-2734">
+        <command xml:space="preserve">my name is sisyphus</command>
+        <result xml:space="preserve">Bottom of the Hill
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2735"></child>
+        </children>
+    </item>
+    <item nodeId="node-2735">
+        <command xml:space="preserve">walk up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2736"></child>
+        </children>
+    </item>
+    <item nodeId="node-2736">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -11116,6 +12258,22 @@ You can see Charon's ferry and Charon here.
     <item nodeId="node-2109">
         <command xml:space="preserve">x water</command>
         <result xml:space="preserve">The river seems to sneer at you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2520">
+        <command xml:space="preserve">go</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2521"></child>
+        </children>
+    </item>
+    <item nodeId="node-2521">
+        <command xml:space="preserve">walk</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

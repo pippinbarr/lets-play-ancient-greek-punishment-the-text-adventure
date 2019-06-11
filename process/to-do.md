@@ -48,3 +48,19 @@
 - ~~Add hunger and thirst system~~
 
 - Add flavour texts
+- Zeus lol?
+
+## Zeno
+
+- ~~Create room (a track, a flag, maybe all just in the sand I think?)~~
+- ~~Add Charon pointing you over to the start line, maybe firing a starter pistol~~
+- ~~Supporters for starting line and the track itself~~
+- ~~A table of descriptions for how far along the track you are~~
+- ~~Track runs north away from the river let's say, so you can run north (can you walk? No. But you can "go" and it assumes running?) but no other directions.~~
+- ~~Fix the frustrations of walking~~
+
+- Fix the frustrations of the first run command not changing the description to be off the start line
+- Fix the frustrations of the fractional descriptions
+- Jumping should have a specific meaning, as should touching, anything that involves (obvious) physical movement
+- Flavours
+- Archimedes lol?

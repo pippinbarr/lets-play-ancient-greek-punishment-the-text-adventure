@@ -147,7 +147,7 @@ Instead of asking Charon about something:
 	otherwise:
 		say "Charon looks at you with disinterest, then stops looking at you with equal disinterest";
 		
-Charon Conversation, My Name Is Sisyphus, My Name Is Tantalus, My Name Is Prometheus, Nevermind are chat nodes.
+Charon Conversation, My Name Is Sisyphus, My Name Is Tantalus, My Name Is Prometheus, My Name Is Zeno, Nevermind are chat nodes.
 
 Instead of talking to Charon when the obol is in your mouth:
 	say "You start trying to speak, but there's something in your mouth.";		
@@ -165,6 +165,7 @@ Carry out finding responses to Charon Conversation:
 	link to My Name Is Sisyphus; 
 	link to My Name Is Tantalus; 
 	link to My Name Is Prometheus;
+	link to My Name Is Zeno;
 	link to Nevermind.
     
 Report giving link to My Name Is Sisyphus: 
@@ -173,6 +174,12 @@ Report giving text for My Name Is Sisyphus:
 	Now the player's name is Sisyphus;
 	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
 	
+Report giving link to My Name Is Zeno: 
+	Instead say "'I'm Zeno!'";
+Report giving text for My Name Is Zeno: 
+	Now the player's name is Zeno;
+	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
+
 Report giving link to My Name Is Tantalus: 
 	Instead say "'I'm Tantalus!'";
 Report giving text for My Name Is Tantalus: 
@@ -240,6 +247,8 @@ At the time when the ferry departs:
 		Move the ferry to PrometheusRoom;
 	otherwise if the player's name is Tantalus:
 		Move the ferry to TantalusRoom;
+	otherwise if the player's name is Zeno:
+		Move the ferry to ZenoRoom;
 
 	
 After exiting when the player was in the ferry:
@@ -251,6 +260,9 @@ After exiting when the player was in the ferry:
 		say "Charon hops out of the ferry behind you and leads to you the pool a little way up the beach. He points and you find yourself wading into the centre of the pool. Satisfied you're in position, Charon turns and walks back to the ferry.";
 		now the player is in the pool;
 		Now Charon is in TantalusRoom;
+	otherwise if the player's name is Zeno:
+		say "Charon points you toward the starting line drawn in the sand and you walk obediently over to it.";
+		now the player is on the starting line;
 	The ferry vanishes in zero turns from now;
 		
 At the time when the ferry vanishes:
@@ -287,6 +299,16 @@ Instead of SkipToTantalus:
 		Now the player is in the pool;
 	Otherwise:
 		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+
+SkipToZeno is an action applying to nothing.
+Understand "My name is Zeno" as SkipToZeno.
+Instead of SkipToZeno:
+	if the player is in The Starting Place:
+		Remove the obol from play;
+		Now the player is on the starting line;
+	Otherwise:
+		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+
 
 Xyzzy is an action applying to nothing.
 Understand "Xyzzy" as Xyzzy.
@@ -431,8 +453,6 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 
 
 Part 4 - Tantalus
-
-[The apple is an object. It is edible. <- e.g. it's funny to have ontological properties applied to things, even though can never carry out the associated action.]
 
 TantalusRoom is a room. The description is "An apple tree extends its branches above a clear pool of water set back a little way from the river's edge. A single apple hangs from a single branch.". The printed name is "A Desolate Beach".
 
@@ -624,3 +644,47 @@ Part 6 - Danaid
 
 
 Part 7 - Zeno
+
+The player has a number called runs. The runs of the player is 0.
+
+ZenoRoom is a room. The description is "The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. [the description corresponding to a depth of the runs of the player in the table of fractional distance descriptions for Zeno].". The printed name is "A Flat Beach".
+
+The ZenoBeach is a backdrop in ZenoRoom. The description is "Apparently death is a beach too. The running track adds a little something to it, though.". Understand "beach" and "sand" as the beach when the player is in ZenoRoom.
+
+The starting line is a supporter in the ZenoRoom. It is scenery. The description is "A line drawn in the sand.". Understand "start" as the starting line when the player is in ZenoRoom.
+Rule for printing an enclosure preposition when the described enclosure is the player's enclosure and described enclosure is the starting line: say "at ".
+
+The track is a supporter in the ZenoRoom. It is scenery. The description is "It looks like someone used a stick of driftwood to draw the crude boundaries that lead north to the finishing flag.".
+
+The flag is in the ZenoRoom. It is scenery. The description is "A muted green triangle of fabric attached to a pole jammed into the sand at the northern end of the track.". Understand "pole" as the flag.
+
+Instead of going when the player is on the starting line or the player is on the track:
+	say "You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.";
+	
+Table of fractional distance descriptions for Zeno
+depth				description
+0 				"You are at the start line"
+1				"You are half-way to the flag"
+2				"You are three-quarters of the way to the flag"
+3				"You are seven-eighths of the way to the flag"
+4				"You are fifteen-sixteenths of the way to the flag"
+5				"You are thirty-one thirty-seconds of the way to the flag"
+6				"You are sixty-three sixty-fourths of the way to the flag"
+7				"You are a hundred and twenty-seven hundred and twenty-eighths of the way to the flag"
+8				"[a description in the table of tiny distance descriptions for Zeno]"
+
+Table of tiny distance descriptions for Zeno
+description
+"You are extremely close to the flag"
+"You are so close the flag you can taste it"
+"You are practically standing on the flag, but not quite"
+"You have very nearly finished the race"
+"You are incredibly close to finishing the race"
+
+Instead of going north when the player is on the starting line or the player is on the track:
+	if the player's command includes "walk":
+		say "Races are for running![paragraph break]";
+	otherwise:
+		say "You run furiously and cover half the distance to the flag!";
+		now the player is on the track;
+		increase the runs of the player by 1;
