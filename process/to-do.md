@@ -14,8 +14,10 @@
 ## Charon
 
 - ~~Add information about skipping (and make the command "I am X" instead to make it less likely it just gets typed anyway)~~
+- ~~Add Prometheus option~~
 
-- Add Prometheus option
+- Add spit
+- Obol falls out on talking to Charon
 
 ## Sisyphus
 
@@ -33,4 +35,14 @@
 - ~~Add nightfall (room description) and liver regen~~
 - ~~Add effective writhing and corresponding eagle dislodging~~
 
-- Consider adding other stuff to look at while you're being pecked? Some kind of sub activity as with the note and hole etc.? Do I want to sprinkle this kind of thing liberally or not?
+- Add things to look at (more about the eagle, the chains, the rock, the beach, the river, and further orders of nouns so there's a kind of exploration of the eye, graffiti on the rock with a lol?)
+
+## Tantalus
+
+- Create room (pool and tree up the beach)
+- Add Charon showing you to the pool
+- Have "in the pool" going
+- No movement from the pool
+- Add the tree and the apple
+- Replace get and drink etc. for the water and the apple
+- Add flavour texts

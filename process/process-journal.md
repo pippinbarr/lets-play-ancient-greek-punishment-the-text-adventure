@@ -300,3 +300,53 @@ So the big things are
 - When the liver is at zero night should fall which would mean changing the room description. And scheduling the eagle's return and the liver's regeneration. Maybe some "feelings" as the liver comes back? Or instantaneous?
 
 Okay well I guess that's actually kind of it? Have a go?
+
+---
+
+# User flailing, Prometheus and flavour texts, Tantalus and the unattainable edible apple, Tantalus design thinking (Tuesday, 11 June 2019, 10:01AM)
+
+## User flailing
+
+My mother tried out the version I created with a Charon and Sisyphus slice of the game. It did not go well. Other than somehow mysteriously finding the note from Zeus despite never intentionally leaving the starting level, she fell at the first hurdle and couldn't get the coin out of her mouth. Looking at the transcript is pretty instructive in terms of a vision of how a person might react to being told there's something in their mouth. `spit` was the first reaction which is great and should work. `open mouth` was never even close, and points out that the reason `open mouth` seems "obvious" is more to do with IF culture and particularly with the idea of seeing things as "containers" such that if something is in something else you always `open` it to get at it, despite the fact this isn't always very natural language, perhaps particularly for bodies?
+
+I'm not totally sure what to do with it as I do think my mother's probably not the target audience, but the idea of people flailing around in the opening area and never making it onto the ferry is dispiriting for sure. I think I definitely need a 'help' command that could at least profile the sorts of commands you can expect to use in the game (OPEN, UP, PUSH, GIVE, TALK TO, LOOK, LOOK AT, etc.). That would give some direction - the game isn't remotely about parser fighting.
+
+So I think for now a `help` is the way to go and then just hope for the best? I think you have to assume some level of willing enculturation into IF world to play these things, rather than providing every plausible verb?
+
+Also the coin could fall out when you go to talk to Charon? That would also be amusing, though then no longer remotely a puzzle and more like a flavour? I think that would be okay.
+
+## Prometheus and flavour texts
+
+I implemented pretty much exactly what I wrote about above and it was pretty much as straightforward as I could hope for. It feels somehow more bland than Sisyphus did, I suppose just because there's literally nothing you're really doing as a player? The most obvious thing would be to add a bunch of stuff to look at. So you can kill time. The main thing you can look at would be the eagle and the rock, and then the scenery which might include the river and the beach.
+
+It's weird thinking about this whole flavour text thing - I clearly have a drive to make the experience "interesting" in a way that has never been a priority in the other forms at all, they've always had their one trick/idea and then that's that, you don't get finer details or things to think about beyond the main proposition. In IF it feels like you can't do that, like the most basic simulation would effectively not be a use of the form at all, and so you need to lean into the writing at least a bit.
+
+That feels necessary for Prometheus to be complete.
+
+## Tantalus and the unattainable edible apple
+
+I feel inclined to move to Tantalus next just because it's been vaguely in my mind in terms of the whole idea of an edible unattainable object being quite nicely expressible in Inform 7. I really like the idea that the apple _is edible_ despite the fact you cannot eat it. This feels really distinct from the games prior to this where the apple is effectively a red square and either is or is not included in an animation sequence representing you getting it, as such there's no reasonable sense in which that apply is edible. (If I'd thought more deeply about these facets of the game I might have though to have an animation of eating the apply but make it impossible to trigger, effectively what I'll be doing here. But this is the thing that Inform 7 bring to the table in a lot of ways right? Thinking about the properties of objects rather than just the representations and actions.)
+
+As such I think that's next.
+
+## Tantalus design thinking
+
+So what do we need for Tantalus?
+
+- Well the thing that weirds me out right now is the question of why he stays standing in the pool of water? What do online sources have to say about this? Here's quote from the Odyssey via https://www.ancient.eu/Tantalus/
+
+> I also saw the awful agonies that Tantalus has to bear. The old man was standing in a pool of water which nearly reached his chin, and his thirst drove him to unceasing efforts; but he could never reach the water to drink it. For whenever he stooped in his eagerness to drink, it disappeared. The pool was swallowed up, and all there was at his feet was the dark earth, which some mysterious power had drained dry. Trees spread their foliage high over the pool and dangled fruits above his head – pear-trees and pomegranates, apple-trees with their glossy burden, sweet figs and luxuriant olives. But whenever the old man made to grasp them in his hands, the wind would toss them up towards the shadowy clouds. (Odyssey, 11:582-593)
+
+- So basically Tantalus stands in the pool because he has to stand in the pool, he might as well be chained there, he is _compelled_ by the will of the gods, etc. As such in the IF version there can simply be no exit - could consider explaining it when the movement fails (e.g. you don't feel like it, or you feel you shouldn't) or could consider just a literal "You can't go that way" default response which is kind of apropos and I do like leveraging the materials to hand.
+
+- Given he's in a pool we'll need a similar thing to Prometheus with Charon guiding the player to the pool I suppose to get them situated in the place they cannot leave. The tree can just be on the beach, so seen from the boat. On getting out you end up in the pool and that's that.
+
+- Note that in the Odyssey the water is up to the chin which is higher than in my games previously (to the waist). I suppose I can go with the imagery from my game rather than the Odyssey? Interesting question though because I really went with certain choices in part because of graphical limitations which I don't have in this form. There's only one apple originally just to be graphically clear, but there's no reason there couldn't be many now. _That_ said, I do think the conceptual clarity given by the single apple is probably appropriate here too? You know what you're mean to try to do.
+
+- I like the detail that the wind blows with the branch out of the way, that can be included.
+
+- Most basically: you're trying `get apple` and `eat apple` and `get water` and `drink water` repeatedly and they never work. Beyond that you can look around and perhaps try things like jumping and climbing the tree.
+
+- Details include the tree, the apple, the water, maybe a note carved on the tree lolling at you, the beach, the river, ...
+
+It doesn't seem overly complex, feels like I can get this one done today?
