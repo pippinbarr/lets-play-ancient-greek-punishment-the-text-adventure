@@ -350,3 +350,36 @@ So what do we need for Tantalus?
 - Details include the tree, the apple, the water, maybe a note carved on the tree lolling at you, the beach, the river, ...
 
 It doesn't seem overly complex, feels like I can get this one done today?
+
+---
+
+# (Tuesday, 11 June 2019, 14:30PM)
+
+## Tantalus-ed
+
+So Tantalus is largely implemented and is pretty satisfying. I still need to make it more fun and interesting, but that mostly involves writing stuff and finding ways to include more detail and depth in the whole thing which I believe I can do in a different pass (that would also help with consistency of writing potentially).
+
+## Zeno?
+
+Zeno seems like a weird one to do well. How would you create this kind of impossible space in a way that feels relatively true to the way that Inform 7 works?
+
+- You could have a series of rooms of course, culminating in a looping set of "nearly there" kinds of things.
+- For one thing it seems fair to express distances linguistically rather than numerically, which frees me up from floating point precision.
+- Another way to display distance/proximity to the flag would be in the room title parenthetical? This would be an "enclosure preoposition" which is kiiiind of weird and wrong? But maybe you could vary the text in there as a way of indicating it. The iffiness would come from the representation below being that you're... in the flag? On the flag? All these things are bad. Oh but maybe there could be a track, you could be on the track, that would be fair. So you're "half-way along" the track and then "three quarters of the way along" and on until we break down into poetic descriptions of tiny distances?
+
+All of this would be controlled by saying something like `run north` I suppose?
+
+What if they want to then `run south`? You'd be trapped in the same scenario right? Except you'd be running back to the start line. So would I have `A stony beach (running toward the start line, half-way along the track)`? That won't work because "the track" is a single big thing, so if you reverse could you would get half-way to your destination but not half-way along the track. It would be much easier if you could just arbitrarily set a parenthetical text.
+
+- So failing that room title parenthetical the other option is to just do it in the room description itself, with it telling you how close you are to the flag. Has the same issues around running in a different direction, so perhaps the sensible thing is to demand that the player runs to the flag first and foremost and then they could hypothetically run wherever they want after they've finished the race?
+- Maybe we can at least have "at the start position" and "on the track" at the top, they can both be supporters.
+
+There are shades of Alice in Wonderland here it feels like, or rather Through the Looking Glass I think? Where they're running furiously just to stay still.
+
+> Now, here, you see, it takes all the running you can do, to keep in the same place. If you want to get somewhere else, you must run at least twice as fast as that!
+
+And as per usual I suppose it's good to have a few things to look at, ideally including a lol somewhere in there (this one from Archimedes).
+
+I mean, I think there's enough to try and do this. Probably I need a table of description inserts to describe the proximity to the flag. Maybe a number tracking how many times they've run that way, and at a certain max it just randomises "nearly theres".
+
+I'll try it out.
