@@ -45,6 +45,6 @@
 - ~~No movement from the pool~~
 - ~~Add the tree and the apple~~
 - ~~Replace get and drink etc. for the water and the apple~~
+- ~~Add hunger and thirst system~~
 
-- Add hunger and thirst system
 - Add flavour texts

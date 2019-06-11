@@ -8525,9 +8525,12 @@ A unpleasantly jagged black rock rises from the ash colored sand of the beach.
         <result xml:space="preserve">A Desolate Beach (in the pool)
 An apple tree extends its branches above a clear pool of water set back a little way from the river's edge. A single apple hangs from a single branch.
 
+You're thirsty.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2260"></child>
+            <child nodeId="node-2400"></child>
             <child nodeId="node-2138"></child>
         </children>
     </item>
@@ -8703,9 +8706,71 @@ A gnarled tree extends its branches above a clear pool of water set back a littl
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2400">
+        <command xml:space="preserve">look at apple</command>
+        <result xml:space="preserve">A shiny, delicious apple just begging to be eaten.
+
+You're so thirsty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2401"></child>
+        </children>
+    </item>
+    <item nodeId="node-2401">
+        <command xml:space="preserve">look at water</command>
+        <result xml:space="preserve">Crystal clear, eminently drinkable water.
+
+You're feeling really thirsty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2402"></child>
+        </children>
+    </item>
+    <item nodeId="node-2402">
+        <command xml:space="preserve">the pool</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2403"></child>
+        </children>
+    </item>
+    <item nodeId="node-2403">
+        <command xml:space="preserve">drink water</command>
+        <result xml:space="preserve">You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. On standing, the water rushes back in up to your waist.
+
+You need to drink.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2404"></child>
+        </children>
+    </item>
+    <item nodeId="node-2404">
+        <command xml:space="preserve">the pool</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2405"></child>
+        </children>
+    </item>
+    <item nodeId="node-2405">
+        <command xml:space="preserve">drink pool</command>
+        <result xml:space="preserve">You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. On standing, the water rushes back in up to your waist.
+
+You're hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-2260">
         <command xml:space="preserve">jump</command>
         <result xml:space="preserve">You jump up toward the apple on its branch, but a gust of wind blows it just as far out of reach as always and all you manage to do is make a splash.
+
+You wish you had something to drink.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8734,6 +8799,8 @@ A gnarled tree extends its branches above a clear pool of water set back a littl
         <command xml:space="preserve">l hands</command>
         <result xml:space="preserve">Cold. Dead.
 
+You're feeling thirsty.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2267"></child>
@@ -8742,6 +8809,8 @@ A gnarled tree extends its branches above a clear pool of water set back a littl
     <item nodeId="node-2267">
         <command xml:space="preserve">l hand</command>
         <result xml:space="preserve">Cold. Dead.
+
+You wish you had something to eat.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8752,6 +8821,8 @@ A gnarled tree extends its branches above a clear pool of water set back a littl
         <command xml:space="preserve">taste hand</command>
         <result xml:space="preserve">Nothing tastes of anything in Hades.
 
+You wish you had something to eat.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2275"></child>
@@ -8761,6 +8832,8 @@ A gnarled tree extends its branches above a clear pool of water set back a littl
         <command xml:space="preserve">eat hand</command>
         <result xml:space="preserve">Your eating days are over.
 
+You're feeling thirsty.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2276"></child>
@@ -8769,6 +8842,8 @@ A gnarled tree extends its branches above a clear pool of water set back a littl
     <item nodeId="node-2276">
         <command xml:space="preserve">drink hand</command>
         <result xml:space="preserve">Your drinking days are over.
+
+You're feeling hungry.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8917,6 +8992,8 @@ An apple tree extends its branches above a clear pool of water set back a little
 
 You can see Charon's ferry (in which is Charon) here.
 
+You wish you had something to eat.
+
 Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Tantalus." His duty discharged, Charon oars away without giving you a another thought.
 
 &gt;</result>
@@ -8937,6 +9014,8 @@ Before he departs, Charon mentions you can get to your punishment faster by just
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">You would have to get out of the pool first.
 
+You're hungry.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2356"></child>
@@ -8946,6 +9025,8 @@ Before he departs, Charon mentions you can get to your punishment faster by just
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">You would have to get out of the pool first.
 
+You're feeling really hungry.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2357"></child>
@@ -8954,6 +9035,8 @@ Before he departs, Charon mentions you can get to your punishment faster by just
     <item nodeId="node-2357">
         <command xml:space="preserve">drink pool</command>
         <result xml:space="preserve">You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. On standing, the water rushes back in up to your waist.
+
+You're thirsty.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8965,6 +9048,8 @@ Before he departs, Charon mentions you can get to your punishment faster by just
         <result xml:space="preserve">A Desolate Beach (in the pool)
 An apple tree extends its branches above a clear pool of water set back a little way from the river's edge. A single apple hangs from a single branch.
 
+You're thirsty.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2359"></child>
@@ -8973,6 +9058,8 @@ An apple tree extends its branches above a clear pool of water set back a little
     <item nodeId="node-2359">
         <command xml:space="preserve">x tree</command>
         <result xml:space="preserve">Gnarly, man.
+
+You're so thirsty.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8983,6 +9070,8 @@ An apple tree extends its branches above a clear pool of water set back a little
         <command xml:space="preserve">x apple</command>
         <result xml:space="preserve">A shiny, delicious apple just begging to be eaten.
 
+You're feeling hungry.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2361"></child>
@@ -8991,6 +9080,8 @@ An apple tree extends its branches above a clear pool of water set back a little
     <item nodeId="node-2361">
         <command xml:space="preserve">get apple</command>
         <result xml:space="preserve">You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again.
+
+You're so thirsty.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -9001,6 +9092,8 @@ An apple tree extends its branches above a clear pool of water set back a little
         <command xml:space="preserve">jump</command>
         <result xml:space="preserve">You jump up toward the apple on its branch, but a gust of wind blows it just as far out of reach as always and all you manage to do is make a splash.
 
+You wish you had something to drink.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2363"></child>
@@ -9009,6 +9102,8 @@ An apple tree extends its branches above a clear pool of water set back a little
     <item nodeId="node-2363">
         <command xml:space="preserve">eat apple</command>
         <result xml:space="preserve">You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again.
+
+You're thirsty.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -9019,6 +9114,8 @@ An apple tree extends its branches above a clear pool of water set back a little
         <command xml:space="preserve">push apple</command>
         <result xml:space="preserve">Stop being so pushy!
 
+You're feeling thirsty.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2365"></child>
@@ -9027,6 +9124,8 @@ An apple tree extends its branches above a clear pool of water set back a little
     <item nodeId="node-2365">
         <command xml:space="preserve">taste apple</command>
         <result xml:space="preserve">Nothing tastes of anything in Hades.
+
+You wish you had something to eat.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

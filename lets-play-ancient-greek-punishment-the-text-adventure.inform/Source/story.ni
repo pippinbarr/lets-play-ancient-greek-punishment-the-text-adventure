@@ -67,7 +67,7 @@ Part 2 - Charon and the Ferry
 Section 1 - The place
 
 The Starting Place is a room. The description is "Here you are at the famous River Styx. The water flows sluggishly by.". The printed name is "The Bank of the River Styx".
-The River Styx is a backdrop. The description is "The river seems to sneer at you.". Understand "water" and "river" as the River Styx.
+The River Styx is a backdrop. The description is "The river seems to sneer at you.". Understand "water" as the River Styx when the player is not in the pool.
 The River Styx is everywhere.
 
 Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. [if the ferry is in The Starting Place]Right now it is moored at the bank of the river, ready to shove off.[otherwise]Right now it is grounded on a gritty beach.[end if]".
@@ -461,6 +461,31 @@ Instead of taking the pool when the player is in the pool:
 	
 Instead of eating the apple, try taking the apple;
 
+Every turn when the player is in the pool: 
+    choose a random row in the Table of Sustenance Complaints; 
+    say "[sustenance entry][paragraph break]".
+
+Table of Sustenance Complaints 
+sustenance 
+"You're feeling really hungry." 
+"You're feeling really thirsty." 
+"You're so hungry."
+"You're so thirsty."
+"You're hungry."
+"You're thirsty."
+"You're feeling hungry."
+"You're feeling thirsty."
+"You wish you had something to drink."
+"You wish you had something to eat."
+"You need to eat something."
+"You need to drink something."
+"Your stomach gurgles."
+"You're parched."
+"Your mouth is so dry."
+"You haven't eaten in forever."
+"Your stomach hurts with hunger."
+"You feel terribly dehydrated."
+"You're starving."
 
 [----------------------------------------------------]
 
