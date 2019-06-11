@@ -2,6 +2,7 @@
 
 Include Room Description Headings by Erwin Genstein.
 Include Simple Chat by Mark Tilford.
+[Include Basic Help Menu by Emily Short.]
 
 Part 1 - Setup
 
@@ -15,7 +16,7 @@ Rule for printing room description details: stop.
 The can't push vertically rule is not listed in any rulebook.
 
 The description of the player is "You look deader than you remember looking.".
-Your hand is part of the player. The description is "Dead.".
+Your hand is part of the player. The description is "Cold. Dead.". Understand "hands" as your hand.
 The fog is a backdrop. It is everywhere. The description is "It makes you feel distinctly less happy.".
 Instead of taking the fog, say "You try to take some and it goes about as well as expected.".
 
@@ -65,10 +66,11 @@ Part 2 - Charon and the Ferry
 
 Section 1 - The place
 
-The Bank of the River Styx is a room. The description is "Here you are at the famous River Styx. The water flows sluggishly by."
-The CharonRiver is a backdrop in The Bank of the River Styx. The description is "The river seems to sneer at you.". Understand "water" and "river" as the CharonRiver.
+The Starting Place is a room. The description is "Here you are at the famous River Styx. The water flows sluggishly by.". The printed name is "The Bank of the River Styx".
+The River Styx is a backdrop. The description is "The river seems to sneer at you.". Understand "water" and "river" as the River Styx.
+The River Styx is everywhere.
 
-Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. [if the ferry is in The Bank of the River Styx]Right now it is moored at the bank of the river, ready to shove off.[otherwise]Right now it is grounded on a gritty beach.[end if]".
+Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. [if the ferry is in The Starting Place]Right now it is moored at the bank of the river, ready to shove off.[otherwise]Right now it is grounded on a gritty beach.[end if]".
 Charon's ferry is a vehicle.
 Understand "boat" or "dinghy" as the ferry.
 The oars are part of the ferry. The description is "Good, solid oars.".
@@ -145,7 +147,7 @@ Instead of asking Charon about something:
 	otherwise:
 		say "Charon looks at you with disinterest, then stops looking at you with equal disinterest";
 		
-Charon Conversation, My Name Is Sisyphus, My Name Is Prometheus, Nevermind are chat nodes.
+Charon Conversation, My Name Is Sisyphus, My Name Is Tantalus, My Name Is Prometheus, Nevermind are chat nodes.
 
 Instead of talking to Charon when the obol is in your mouth:
 	say "You start trying to speak, but there's something in your mouth.";		
@@ -161,6 +163,7 @@ Report giving text for Charon Conversation:
     
 Carry out finding responses to Charon Conversation: 
 	link to My Name Is Sisyphus; 
+	link to My Name Is Tantalus; 
 	link to My Name Is Prometheus;
 	link to Nevermind.
     
@@ -168,6 +171,12 @@ Report giving link to My Name Is Sisyphus:
 	Instead say "'I'm Sisyphus!'";
 Report giving text for My Name Is Sisyphus: 
 	Now the player's name is Sisyphus;
+	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
+	
+Report giving link to My Name Is Tantalus: 
+	Instead say "'I'm Tantalus!'";
+Report giving text for My Name Is Tantalus: 
+	Now the player's name is Tantalus;
 	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
 	
 Report giving link to My Name Is Prometheus: 
@@ -216,7 +225,7 @@ After entering the ferry:
 	Charon gets into the ferry in one turn from now;
 	The ferry departs in two turns from now;
 
-Instead of exiting when the player is in the ferry and the ferry is in The Bank of the River Styx:
+Instead of exiting when the player is in the ferry and the ferry is in The The Starting Place:
 	say "Charon stops you with a look. 'There's no undo down here.'";
 
 At the time when Charon gets into the ferry:
@@ -229,37 +238,53 @@ At the time when the ferry departs:
 		Move the ferry to The Bottom of the Hill;
 	otherwise if the player's name is Prometheus:
 		Move the ferry to PrometheusRoom;
+	otherwise if the player's name is Tantalus:
+		Move the ferry to TantalusRoom;
+
 	
 After exiting when the player was in the ferry:
 	If the player's name is Prometheus:
 		say "Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and walks back to the ferry.";
 		The player is chained down in zero turns from now;
 		Now Charon is in PrometheusRoom;
+	otherwise if the player's name is Tantalus:
+		say "Charon hops out of the ferry behind you and leads to you the pool a little way up the beach. He points and you find yourself wading into the centre of the pool. Satisfied you're in position, Charon turns and walks back to the ferry.";
+		now the player is in the pool;
+		Now Charon is in TantalusRoom;
 	The ferry vanishes in zero turns from now;
 		
 At the time when the ferry vanishes:
-	say "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying 'I am [player's name].' His duty discharged, Charon oars away without giving you a another thought.";
+	say "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying 'My name is [player's name].' His duty discharged, Charon oars away without giving you a another thought.";
 	Now Charon is in the ferry;
-	Move the ferry to the Bank of the River Styx;
+	Move the ferry to The Starting Place;
 
 
 Section 6 - Skip aheads
 
 SkipToSisyphus is an action applying to nothing.
-Understand "I am Sisyphus" as SkipToSisyphus.
+Understand "My name is Sisyphus" as SkipToSisyphus.
 Instead of SkipToSisyphus:
-	if the player is in the Bank of the River Styx:
+	if the player is in The Starting Place:
 		Remove the obol from play;
 		Now the player is in The Bottom of the Hill;
 	Otherwise:
 		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
 
 SkipToPrometheus is an action applying to nothing.
-Understand "I am Prometheus" as SkipToPrometheus.
+Understand "My name is Prometheus" as SkipToPrometheus.
 Instead of SkipToPrometheus:
-	if the player is in the Bank of the River Styx:
+	if the player is in The Starting Place:
 		Remove the obol from play;
 		The player is chained down in zero turns from now;
+	Otherwise:
+		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+
+SkipToTantalus is an action applying to nothing.
+Understand "My name is Tantalus" as SkipToTantalus.
+Instead of SkipToTantalus:
+	if the player is in The Starting Place:
+		Remove the obol from play;
+		Now the player is in the pool;
 	Otherwise:
 		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
 
@@ -300,9 +325,7 @@ The Hillside is a backdrop in The Whole Hill. The description is "It's a good, s
 The dirt is part of the Hillside. The description is "Not as dirty as you'd have thought.".
 Instead of taking the dirt, say "You're not here to dig holes.".
 
-The Beach is a backdrop in The Whole Hill. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
-
-The SisyphusRiver is a backdrop in The Whole Hill. The description is "The river seems to sneer at you.". Understand "water" and "river" as the SisyphusRiver.
+The beach is a backdrop in The Whole Hill. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
 
 The Bottom of the Hill is a room. The description is "A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.".
 
@@ -411,6 +434,32 @@ Part 4 - Tantalus
 
 [The apple is an object. It is edible. <- e.g. it's funny to have ontological properties applied to things, even though can never carry out the associated action.]
 
+TantalusRoom is a room. The description is "An apple tree extends its branches above a clear pool of water set back a little way from the river's edge. A single apple hangs from a single branch.". The printed name is "A Desolate Beach".
+
+The beach is a backdrop in TantalusRoom. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
+
+The tree is a supporter in TantalusRoom. The description is "Gnarly, man.". The tree is scenery.
+
+The apple is on the tree. The apple is edible. The description is "A shiny, delicious apple just begging to be eaten.". The apple is scenery.
+
+The pool is a container in TantalusRoom. The description is "Crystal clear, eminently drinkable water.". Understand "water" as the pool. The pool is scenery. 
+
+Instead of exiting when the player is in the pool:
+	say "Somehow that's not an option.";
+
+Instead of drinking the pool:
+	say "You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. On standing, the water rushes back in up to your waist.";
+	
+Instead of taking the apple:
+	say "You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again.";
+	
+Instead of jumping when the player is in the pool:
+	say "You jump up toward the apple on its branch, but a gust of wind blows it just as far out of reach as always and all you manage to do is make a splash.";
+	
+Instead of taking the pool when the player is in the pool:
+	say "You cup your hands to gather up some water to drink, but the pool quickly drains before you're able to get anything. Your hands somehow remain bone dry.";
+	
+Instead of eating the apple, try taking the apple;
 
 
 [----------------------------------------------------]
@@ -430,6 +479,8 @@ At the time when the player is chained down:
 
 PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.". The printed name is "The Rock".
 PrometheusRoom can be nighttime or daytime.
+
+The beach is a backdrop in PrometheusRoom. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
 
 The rock is scenery in PrometheusRoom. The Rock is a supporter. The description is "It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.".
 

@@ -39,10 +39,12 @@
 
 ## Tantalus
 
-- Create room (pool and tree up the beach)
-- Add Charon showing you to the pool
-- Have "in the pool" going
-- No movement from the pool
-- Add the tree and the apple
-- Replace get and drink etc. for the water and the apple
+- ~~Create room (pool and tree up the beach)~~
+- ~~Add Charon showing you to the pool~~
+- ~~Have "in the pool" going~~
+- ~~No movement from the pool~~
+- ~~Add the tree and the apple~~
+- ~~Replace get and drink etc. for the water and the apple~~
+
+- Add hunger and thirst system
 - Add flavour texts
