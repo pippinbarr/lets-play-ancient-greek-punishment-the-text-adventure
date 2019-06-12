@@ -18,6 +18,7 @@
 
 - Add spit
 - Obol falls out on talking to Charon
+- Hint about looking at Charon's clipboard when you try to pay
 
 ## Sisyphus
 
@@ -58,9 +59,9 @@
 - ~~A table of descriptions for how far along the track you are~~
 - ~~Track runs north away from the river let's say, so you can run north (can you walk? No. But you can "go" and it assumes running?) but no other directions.~~
 - ~~Fix the frustrations of walking~~
+- ~~Fix the frustrations of the first run command not changing the description to be off the start line~~
+- ~~Fix the frustrations of the fractional descriptions~~
+- ~~Jumping should have a specific meaning, as should touching, anything that involves (obvious) physical movement~~
 
-- Fix the frustrations of the first run command not changing the description to be off the start line
-- Fix the frustrations of the fractional descriptions
-- Jumping should have a specific meaning, as should touching, anything that involves (obvious) physical movement
 - Flavours
 - Archimedes lol?

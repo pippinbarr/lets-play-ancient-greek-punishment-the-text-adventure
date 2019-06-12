@@ -647,7 +647,7 @@ Part 7 - Zeno
 
 The player has a number called runs. The runs of the player is 0.
 
-ZenoRoom is a room. The description is "The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. [the description corresponding to a depth of the runs of the player in the table of fractional distance descriptions for Zeno].". The printed name is "A Flat Beach".
+ZenoRoom is a room. The description is "The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. [if the runs of the player is less than 8][the description corresponding to a depth of the runs of the player in the table of fractional distance descriptions for Zeno].[otherwise][one of]You are extremely close to the flag[or]You are so close the flag you can taste it[or]You are practically standing on the flag, but not quite[or]You have very nearly finished the race[or]You are incredibly close to finishing the race[purely at random].[end if]". The printed name is "A Flat Beach".
 
 The ZenoBeach is a backdrop in ZenoRoom. The description is "Apparently death is a beach too. The running track adds a little something to it, though.". Understand "beach" and "sand" as the beach when the player is in ZenoRoom.
 
@@ -661,6 +661,20 @@ The flag is in the ZenoRoom. It is scenery. The description is "A muted green tr
 Instead of going when the player is on the starting line or the player is on the track:
 	say "You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.";
 	
+Instead of jumping when the player is on the starting line or the player is on the track:
+	say "Let's not even think about jumping.";
+	
+Instead of touching something when the player is on the starting line or the player is on the track:
+	say "You think about reaching for[if the noun is the player][otherwise if the noun is part of the player][otherwise] the[end if] [noun], but you really need to focus on this footrace for now.";
+
+Instead of taking the flag when the player is on the starting line or the player is on the track, try touching the flag.
+
+Instead of exiting when the player is on the starting line:
+	say "The best way to get off the starting line would be to run north down the track."; 
+
+Instead of exiting when the player is on the track:
+	say "You can leave when you've finished the race."; 
+	
 Table of fractional distance descriptions for Zeno
 depth				description
 0 				"You are at the start line"
@@ -671,15 +685,9 @@ depth				description
 5				"You are thirty-one thirty-seconds of the way to the flag"
 6				"You are sixty-three sixty-fourths of the way to the flag"
 7				"You are a hundred and twenty-seven hundred and twenty-eighths of the way to the flag"
-8				"[a description in the table of tiny distance descriptions for Zeno]"
 
-Table of tiny distance descriptions for Zeno
-description
-"You are extremely close to the flag"
-"You are so close the flag you can taste it"
-"You are practically standing on the flag, but not quite"
-"You have very nearly finished the race"
-"You are incredibly close to finishing the race"
+Before going north when the player  is on the starting line or the player is on the track:
+	increase the runs of the player by 1;
 
 Instead of going north when the player is on the starting line or the player is on the track:
 	if the player's command includes "walk":
@@ -687,4 +695,3 @@ Instead of going north when the player is on the starting line or the player is 
 	otherwise:
 		say "You run furiously and cover half the distance to the flag!";
 		now the player is on the track;
-		increase the runs of the player by 1;
