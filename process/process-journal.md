@@ -383,3 +383,39 @@ And as per usual I suppose it's good to have a few things to look at, ideally in
 I mean, I think there's enough to try and do this. Probably I need a table of description inserts to describe the proximity to the flag. Maybe a number tracking how many times they've run that way, and at a certain max it just randomises "nearly theres".
 
 I'll try it out.
+
+---
+
+# Zeno-ed, IF niche, Danaid? (Wednesday, 12 June 2019, 13:55PM)
+
+## Zeno-ed
+
+So Zeno is "done" now. It feels pretty bare bones, and each subsequent level feels less exciting to some extent as I get more and more used to writing things in Inform 7's weird language, you start to develop a kind of blindness to the workings of the tool the more comfortable you are with it (this is the whole operations > actions > activities thing happening live in this process). As such these things are feeling slightly bland. That said, I think a lot of that is also because I'm focusing on getting the core mechanical aspects working properly before I try to make the game entertaining. (Not to mention that game isn't really ever going to be that entertaining anyway. It's punishment, right?)
+
+## IF niche
+
+Have definitely been thinking and worrying about the potetially extremely niche nature of this project. Somehow it seems more niche than chess to me, I guess just because at least most people know what chess is and have some faint understanding of its objectives, hopefully enough to get the jokes in that game. With IF it's like a whole other world that demands really different skills and thinkings from activities people are comfortable with.
+
+This has had me revisiting the idea of delaying the release of this game to coincide with IFCOMP instead at least as a way to get some insiders to play it. I fear that otherwise maybe nobody will play it? On the other hand, delaying sucks I hate delaying.
+
+## Danaid?
+
+The final level to put together is for the Danaid. Some design-ish observations:
+
+- There's whole thing of which Danaid you are, maybe I can make something of which of the 49 you are? At least just assign a random one to the player at some point? Or maybe just not bother being cute when it won't impact the play?
+
+- This one involves some reasonable "serious" manipulation of stuff in the game, notably multiple receptacles to move water from one place to another, with it draining out on a timer. It's probably not _that_ complicated in reality, but it seems lightly daunting. Not least because I don't have a super clear vision of how to present it (maybe sticking with the earlier game depiction is smarter - a fountain/faucet, a container, a bath)
+
+- Again has the opportunity to have "true"(ish) underpinnings in terms of substances in containers moving around
+
+- Only seems to need the one room
+
+- Should be able to get into the bath etc. for hilarious non-bathing messages
+
+- I guess this is the least clear of all the punihsments now I think about it? How are you supposed to intuit that you need to get water and put it in the bath and then bathe? That's a lot to take in. But I haven't had instructions to this point. Maybe you're just told to take a bath (Charon) and from there the various failure methods will do the job to guide you toward your futile task (e.g. there's no water in the bath to start with).
+
+- Looking on line there's basically no evidence that the Danaids are trying to bathe! Yikes, where did that come from then? Instead it's just that they're meant to fill a vessel that has holes. Jugs to fill a basin apparently. That's it. Maybe there can even just be a note on the basic "Fill me. Lol. Zeus"? Heh. And then there's just a jug and a water source handy.
+
+- A HHGTTG babelfish joke is plausible if someone tries to do anything to the holes in the basic?
+
+I think I can proceed with this.
