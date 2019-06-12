@@ -65,3 +65,16 @@
 
 - Flavours
 - Archimedes lol?
+
+## Danaid
+
+- ~~Create room (just the place as the other elements should be actual objects I think?)~~
+- ~~Create objects (jug is a container, basin is a container, fountain is just a thing)~~
+- ~~Put a note on the basin (lol)~~
+- ~~Add actions for filling the jug (take it first)~~
+
+- Deal with the fiddly life of dealing with specialist verbs. Maybe it's better not to have fill at all. Just "get water" is enough. But "drop" seems pretty shit to get water into the basin? Does feel like we want a pour.
+- Maybe make the water reall be in the fountain, jug, basin as an object?
+- Add actions for pouring the jug (anywhere I guess, but ideally into the basin)
+- Make the basin empty the turn after you fill it
+- Don't bother with incremental filling states? Not that interesting?

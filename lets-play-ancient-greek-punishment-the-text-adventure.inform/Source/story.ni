@@ -67,7 +67,7 @@ Part 2 - Charon and the Ferry
 Section 1 - The place
 
 The Starting Place is a room. The description is "Here you are at the famous River Styx. The water flows sluggishly by.". The printed name is "The Bank of the River Styx".
-The River Styx is a backdrop. The description is "The river seems to sneer at you.". Understand "water" as the River Styx when the player is not in the pool.
+The River Styx is a backdrop. The description is "The river seems to sneer at you.". Understand "water" as the River Styx when the player is in The Starting Place.
 The River Styx is everywhere.
 
 Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. [if the ferry is in The Starting Place]Right now it is moored at the bank of the river, ready to shove off.[otherwise]Right now it is grounded on a gritty beach.[end if]".
@@ -147,7 +147,7 @@ Instead of asking Charon about something:
 	otherwise:
 		say "Charon looks at you with disinterest, then stops looking at you with equal disinterest";
 		
-Charon Conversation, My Name Is Sisyphus, My Name Is Tantalus, My Name Is Prometheus, My Name Is Zeno, Nevermind are chat nodes.
+Charon Conversation, My Name Is Sisyphus, My Name Is Tantalus, My Name Is Danaid, My Name Is Prometheus, My Name Is Zeno, Nevermind are chat nodes.
 
 Instead of talking to Charon when the obol is in your mouth:
 	say "You start trying to speak, but there's something in your mouth.";		
@@ -165,6 +165,7 @@ Carry out finding responses to Charon Conversation:
 	link to My Name Is Sisyphus; 
 	link to My Name Is Tantalus; 
 	link to My Name Is Prometheus;
+	link to My Name Is Danaid;
 	link to My Name Is Zeno;
 	link to Nevermind.
     
@@ -190,6 +191,12 @@ Report giving link to My Name Is Prometheus:
 	Instead say "'I'm Prometheus!'";
 Report giving text for My Name Is Prometheus: 
 	Now the player's name is Prometheus;
+	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
+
+Report giving link to My Name Is Danaid: 
+	Instead say "'I'm a Danaid!'";
+Report giving text for My Name Is Danaid: 
+	Now the player's name is Danaid;
 	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
 
 Report giving link to Nevermind: 
@@ -249,6 +256,8 @@ At the time when the ferry departs:
 		Move the ferry to TantalusRoom;
 	otherwise if the player's name is Zeno:
 		Move the ferry to ZenoRoom;
+	otherwise if the player's name is Danaid:
+		Move the ferry to DanaidRoom;
 
 	
 After exiting when the player was in the ferry:
@@ -288,6 +297,15 @@ Instead of SkipToPrometheus:
 	if the player is in The Starting Place:
 		Remove the obol from play;
 		The player is chained down in zero turns from now;
+	Otherwise:
+		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+
+SkipToDanaid is an action applying to nothing.
+Understand "My name is Danaid" as SkipToDanaid.
+Instead of SkipToDanaid:
+	if the player is in The Starting Place:
+		Remove the obol from play;
+		Now the player is in DanaidRoom;
 	Otherwise:
 		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
 
@@ -637,6 +655,67 @@ After writhing:
 
 Part 6 - Danaid
 
+DanaidRoom is a room. The description is "A place where you can do stuff.". The printed name is "An Arid Beach".
+
+A basin is here. It is a container. The description is "A wide basin intended for holding liquid. Let's say water. There is a note stuck to its rim.".
+The note from zeus to the danaid is part of the basin. The printed name is "note". The description 
+is "'Fill me.
+
+lol,
+Zeus'".
+Instead of taking the note from zeus to the danaid:
+	say "You pluck the note from the basin.[paragraph break]";
+	Now the player has the note from zeus to the danaid;
+
+After examining the note from zeus to the danaid:
+	say "Just as you finish reading it, the note blows [if the player has the note from zeus to the danaid]out of your hand[otherwise]off the rim of the basin[end if] on a mysterious gust of wind and vanishes into the distance.";
+
+A fountain is here. The description is "A small fountain perpetually shooting water a short way up into the air before it cascades down into a shallow bowl and drains out.".
+The bowl is part of the fountain. The description is "It is etched with images of frowning faces.".
+The frowning faces are part of the bowl. The description is "They don't look happy with you. Somehow you know it's you.".
+
+The fountain water is here. It is scenery. The description is "Cool, clear water.".
+Understand "water" as the fountain water when the player is in DanaidRoom.
+
+Instead of putting the fountain water on the jug:
+	try taking the fountain water;
+	stop the action.
+
+Instead of taking the fountain water:
+	if the jug is full:
+		say "There's already water in the jug.";
+	otherwise if the player has the jug: 
+		now the jug is full;
+		say "You fill the jug with water.";
+	otherwise:
+		say "You need some kind of receptacle.";
+
+A jug is here. It is a container. The description is "An earthenware jug with a handle.[if the jug is full] It's filled with water.[otherwise]It's empty.[end if]".
+The handle is part of the jug. The description is "[if the player has the jug]It fits your hand perfectly.[otherwise]Looks sturdy.[end if]".
+The jug can be full.
+
+Filling is an action applying to one carried thing.
+Understand "fill [something]" as filling.
+Instead of filling the jug:
+	try taking the fountain water;
+
+Pouring is an action applying to one carried thing.
+Understand "pour [something]" as pouring.
+Instead of pouring the jug:
+	if the jug is full:
+		say "You unceremoniously pour the jug of water onto the ground.";
+		now the jug is not full;
+	otherwise:
+		say "You tip the empty jug and pour pretend water out of it. It's still empty afterwards.";
+
+Pouring into is an action applying to one carried thing and one visible thing.
+Understand "pour [something] into [something]" as pouring into.
+Instead of pouring into the jug:
+	if the jug is full:
+		say "You unceremoniously pour the jug of water onto the ground.";
+		now the jug is not full;
+	otherwise:
+		say "You tip the empty jug and pour pretend water out of it. It's still empty afterwards.";
 
 
 [----------------------------------------------------]

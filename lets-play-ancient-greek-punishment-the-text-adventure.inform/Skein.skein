@@ -32,6 +32,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-2800"></child>
             <child nodeId="node-2797"></child>
             <child nodeId="node-2784"></child>
+            <child nodeId="node-3330"></child>
             <child nodeId="node-2781"></child>
             <child nodeId="node-2778"></child>
             <child nodeId="node-2777"></child>
@@ -48,6 +49,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-2579"></child>
             <child nodeId="node-2577"></child>
             <child nodeId="node-2573"></child>
+            <child nodeId="node-3159"></child>
             <child nodeId="node-2552"></child>
             <child nodeId="node-2494"></child>
             <child nodeId="node-2452"></child>
@@ -10565,6 +10567,780 @@ Just above the beach the grit-sand turns into a packed dirt of the same colour. 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-3159">
+        <command xml:space="preserve">my name is danaid</command>
+        <result xml:space="preserve">An Arid Beach
+A place where you can do stuff.
+
+You can see a basin, a fountain, and a jug here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3376"></child>
+            <child nodeId="node-3235"></child>
+            <child nodeId="node-3298"></child>
+            <child nodeId="node-3160"></child>
+            <child nodeId="node-3406"></child>
+            <child nodeId="node-3341"></child>
+            <child nodeId="node-3244"></child>
+            <child nodeId="node-3197"></child>
+        </children>
+    </item>
+    <item nodeId="node-3197">
+        <command xml:space="preserve">x basin</command>
+        <result xml:space="preserve">A wide basin intended for holding liquid. There is a note stuck to its rim.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3200"></child>
+        </children>
+    </item>
+    <item nodeId="node-3200">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">Fill me.
+
+lol, Zeus
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3204"></child>
+        </children>
+    </item>
+    <item nodeId="node-3204">
+        <command xml:space="preserve">x fountain</command>
+        <result xml:space="preserve">A small fountain perpetually shooting water a short way up into the air before it cascades down into a shallow bowl and drains out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3209"></child>
+        </children>
+    </item>
+    <item nodeId="node-3209">
+        <command xml:space="preserve">x basin</command>
+        <result xml:space="preserve">A wide basin intended for holding liquid. There is a note stuck to its rim.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3210"></child>
+        </children>
+    </item>
+    <item nodeId="node-3210">
+        <command xml:space="preserve">x bowl</command>
+        <result xml:space="preserve">It is etched with images of frowning faces.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3211"></child>
+        </children>
+    </item>
+    <item nodeId="node-3211">
+        <command xml:space="preserve">x face</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3219"></child>
+        </children>
+    </item>
+    <item nodeId="node-3219">
+        <command xml:space="preserve">x faces</command>
+        <result xml:space="preserve">They don't look happy with you. Somehow you know it's you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3220"></child>
+        </children>
+    </item>
+    <item nodeId="node-3220">
+        <command xml:space="preserve">x frowning</command>
+        <result xml:space="preserve">They don't look happy with you. Somehow you know it's you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3230"></child>
+        </children>
+    </item>
+    <item nodeId="node-3230">
+        <command xml:space="preserve">x jug</command>
+        <result xml:space="preserve">An earthenware jug with a handle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3231"></child>
+        </children>
+    </item>
+    <item nodeId="node-3231">
+        <command xml:space="preserve">x handle</command>
+        <result xml:space="preserve">Looks sturdy.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3232"></child>
+        </children>
+    </item>
+    <item nodeId="node-3232">
+        <command xml:space="preserve">get jug</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3233"></child>
+        </children>
+    </item>
+    <item nodeId="node-3233">
+        <command xml:space="preserve">x handle</command>
+        <result xml:space="preserve">It fits your hand perfectly.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3244">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">"Fill me.
+
+lol, Zeus"
+
+Just as you finish reading it, the note blows off the rim of the basin on a mysterious gust of wind and vanishes into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3341">
+        <command xml:space="preserve">put water in jug</command>
+        <result xml:space="preserve">(first taking the fountain water)
+You need some kind of receptacle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3342"></child>
+        </children>
+    </item>
+    <item nodeId="node-3342">
+        <command xml:space="preserve">take water</command>
+        <result xml:space="preserve">You need some kind of receptacle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3349"></child>
+        </children>
+    </item>
+    <item nodeId="node-3349">
+        <command xml:space="preserve">get jug</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3350"></child>
+        </children>
+    </item>
+    <item nodeId="node-3350">
+        <command xml:space="preserve">put water in jug</command>
+        <result xml:space="preserve">(first taking the fountain water)
+You fill the jug with water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3351"></child>
+        </children>
+    </item>
+    <item nodeId="node-3351">
+        <command xml:space="preserve">get water with jug</command>
+        <result xml:space="preserve">I only understood you as far as wanting to get the fountain water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3352"></child>
+        </children>
+    </item>
+    <item nodeId="node-3352">
+        <command xml:space="preserve">get water in jug</command>
+        <result xml:space="preserve">I only understood you as far as wanting to get the fountain water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3353"></child>
+        </children>
+    </item>
+    <item nodeId="node-3353">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">There's already water in the jug.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3354"></child>
+        </children>
+    </item>
+    <item nodeId="node-3354">
+        <command xml:space="preserve">fill jug</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3364"></child>
+        </children>
+    </item>
+    <item nodeId="node-3364">
+        <command xml:space="preserve">fill</command>
+        <result xml:space="preserve">(the jug)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3406">
+        <command xml:space="preserve">pour water into jug</command>
+        <result xml:space="preserve">(first taking the fountain water)
+You need some kind of receptacle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3407"></child>
+        </children>
+    </item>
+    <item nodeId="node-3407">
+        <command xml:space="preserve">put water into jig</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3408"></child>
+        </children>
+    </item>
+    <item nodeId="node-3408">
+        <command xml:space="preserve">put water into jug</command>
+        <result xml:space="preserve">(first taking the fountain water)
+You need some kind of receptacle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3409"></child>
+        </children>
+    </item>
+    <item nodeId="node-3409">
+        <command xml:space="preserve">get jug</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3410"></child>
+        </children>
+    </item>
+    <item nodeId="node-3410">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">You fill the jug with water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3411"></child>
+        </children>
+    </item>
+    <item nodeId="node-3411">
+        <command xml:space="preserve">pour jug</command>
+        <result xml:space="preserve">You unceremoniously pour the jug of water onto the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3419"></child>
+        </children>
+    </item>
+    <item nodeId="node-3419">
+        <command xml:space="preserve">pour water</command>
+        <result xml:space="preserve">(first taking the fountain water)
+You fill the jug with water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3420"></child>
+        </children>
+    </item>
+    <item nodeId="node-3420">
+        <command xml:space="preserve">pour water</command>
+        <result xml:space="preserve">(first taking the fountain water)
+There's already water in the jug.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3421"></child>
+        </children>
+    </item>
+    <item nodeId="node-3421">
+        <command xml:space="preserve">pour water into basin</command>
+        <result xml:space="preserve">(first taking the fountain water)
+There's already water in the jug.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3160">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">An Arid Beach
+A place where you can do stuff.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3161"></child>
+        </children>
+    </item>
+    <item nodeId="node-3161">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3162"></child>
+        </children>
+    </item>
+    <item nodeId="node-3162">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3163"></child>
+        </children>
+    </item>
+    <item nodeId="node-3163">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3164"></child>
+        </children>
+    </item>
+    <item nodeId="node-3164">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3165"></child>
+        </children>
+    </item>
+    <item nodeId="node-3165">
+        <command xml:space="preserve">leave</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3166"></child>
+        </children>
+    </item>
+    <item nodeId="node-3166">
+        <command xml:space="preserve">exit</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3167"></child>
+        </children>
+    </item>
+    <item nodeId="node-3167">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3168"></child>
+        </children>
+    </item>
+    <item nodeId="node-3168">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190612 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+The Bank of the River Styx
+Here you are at the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3169"></child>
+        </children>
+    </item>
+    <item nodeId="node-3169">
+        <command xml:space="preserve">open mouth</command>
+        <result xml:space="preserve">You open your mouth and neatly catch the small coin that drops out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3170"></child>
+        </children>
+    </item>
+    <item nodeId="node-3170">
+        <command xml:space="preserve">x board</command>
+        <result xml:space="preserve">Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3171"></child>
+        </children>
+    </item>
+    <item nodeId="node-3171">
+        <command xml:space="preserve">talk to charon</command>
+        <result xml:space="preserve">Before you can get a word in, Charon monotones, "And you are?"
+
+Recalling the list of names on the clipboard, you say:
+
+1) "I'm Sisyphus!"
+
+2) "I'm Tantalus!"
+
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
+&gt;&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3185"></child>
+        </children>
+    </item>
+    <item nodeId="node-3185">
+        <command xml:space="preserve">4</command>
+        <result xml:space="preserve">Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3186"></child>
+        </children>
+    </item>
+    <item nodeId="node-3186">
+        <command xml:space="preserve">pay charon</command>
+        <result xml:space="preserve">You hand over the small coin. Charon drops it into a pocket and gestures at the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3187"></child>
+        </children>
+    </item>
+    <item nodeId="node-3187">
+        <command xml:space="preserve">get in</command>
+        <result xml:space="preserve">Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3188"></child>
+        </children>
+    </item>
+    <item nodeId="node-3188">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3189"></child>
+        </children>
+    </item>
+    <item nodeId="node-3189">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3190"></child>
+        </children>
+    </item>
+    <item nodeId="node-3190">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">An Arid Beach (in Charon's ferry)
+A place where you can do stuff.
+
+In Charon's ferry you can see Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3191"></child>
+        </children>
+    </item>
+    <item nodeId="node-3191">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Danaid." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3192"></child>
+        </children>
+    </item>
+    <item nodeId="node-3192">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">An Arid Beach
+A place where you can do stuff.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3298">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">You need some kind of receptacle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3299"></child>
+        </children>
+    </item>
+    <item nodeId="node-3299">
+        <command xml:space="preserve">fountain</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3300"></child>
+        </children>
+    </item>
+    <item nodeId="node-3300">
+        <command xml:space="preserve">get jug</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3301"></child>
+        </children>
+    </item>
+    <item nodeId="node-3301">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">You fill the jug with water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3302"></child>
+        </children>
+    </item>
+    <item nodeId="node-3302">
+        <command xml:space="preserve">fountain</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3321"></child>
+        </children>
+    </item>
+    <item nodeId="node-3321">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">There's already water in the jug.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3329"></child>
+        </children>
+    </item>
+    <item nodeId="node-3329">
+        <command xml:space="preserve">fill</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3235">
+        <command xml:space="preserve">get note</command>
+        <result xml:space="preserve">You pluck the note from the basin.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3236"></child>
+        </children>
+    </item>
+    <item nodeId="node-3236">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a note
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3237"></child>
+        </children>
+    </item>
+    <item nodeId="node-3237">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">"Fill me.
+
+lol, Zeus"
+
+Just as you finish reading it, the note blows out of your hand on a mysterious gust of wind and vanishes into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3242"></child>
+            <child nodeId="node-3267"></child>
+        </children>
+    </item>
+    <item nodeId="node-3267">
+        <command xml:space="preserve">x water</command>
+        <result xml:space="preserve">Which do you mean, the River Styx or the fountain water?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3268"></child>
+        </children>
+    </item>
+    <item nodeId="node-3268">
+        <command xml:space="preserve">x fountain water</command>
+        <result xml:space="preserve">Cool, clear water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3269"></child>
+        </children>
+    </item>
+    <item nodeId="node-3269">
+        <command xml:space="preserve">x fountain</command>
+        <result xml:space="preserve">(the fountain)
+A small fountain perpetually shooting water a short way up into the air before it cascades down into a shallow bowl and drains out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3284"></child>
+        </children>
+    </item>
+    <item nodeId="node-3284">
+        <command xml:space="preserve">put water in jug</command>
+        <result xml:space="preserve">Which do you mean, the River Styx or the fountain water?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3285"></child>
+        </children>
+    </item>
+    <item nodeId="node-3285">
+        <command xml:space="preserve">fountain</command>
+        <result xml:space="preserve">(first taking the fountain water)
+You need some kind of receptacle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3286"></child>
+        </children>
+    </item>
+    <item nodeId="node-3286">
+        <command xml:space="preserve">get jug</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3242">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  an a note
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3376">
+        <command xml:space="preserve">fill jug</command>
+        <result xml:space="preserve">(first taking the jug)
+You fill the jug with water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3377"></child>
+        </children>
+    </item>
+    <item nodeId="node-3377">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a jug
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3378"></child>
+        </children>
+    </item>
+    <item nodeId="node-3378">
+        <command xml:space="preserve">x jug</command>
+        <result xml:space="preserve">An earthenware jug with a handle. It's filled with water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3383"></child>
+        </children>
+    </item>
+    <item nodeId="node-3383">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">There's already water in the jug.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3384"></child>
+        </children>
+    </item>
+    <item nodeId="node-3384">
+        <command xml:space="preserve">empty</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3391"></child>
+        </children>
+    </item>
+    <item nodeId="node-3391">
+        <command xml:space="preserve">pour water</command>
+        <result xml:space="preserve">(first taking the fountain water)
+There's already water in the jug.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3392"></child>
+        </children>
+    </item>
+    <item nodeId="node-3392">
+        <command xml:space="preserve">pour jug</command>
+        <result xml:space="preserve">You unceremoniously pour the jug of water onto the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3401"></child>
+        </children>
+    </item>
+    <item nodeId="node-3401">
+        <command xml:space="preserve">pour jug</command>
+        <result xml:space="preserve">You tip the empty jug and pour pretend water out of it. It's still empty afterwards.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3402"></child>
+        </children>
+    </item>
+    <item nodeId="node-3402">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">You fill the jug with water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3403"></child>
+        </children>
+    </item>
+    <item nodeId="node-3403">
+        <command xml:space="preserve">x jug</command>
+        <result xml:space="preserve">An earthenware jug with a handle. It's filled with water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3404"></child>
+        </children>
+    </item>
+    <item nodeId="node-3404">
+        <command xml:space="preserve">x water</command>
+        <result xml:space="preserve">Cool, clear water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-2573">
         <command xml:space="preserve">ls clipboard</command>
         <result xml:space="preserve">That's not a verb I recognise.
@@ -12671,6 +13447,100 @@ That seems to belong to Charon.
         <command xml:space="preserve">test</command>
         <result xml:space="preserve">&gt;--&gt; The following tests are available:
 'test garden'
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3330">
+        <command xml:space="preserve">fill charon</command>
+        <result xml:space="preserve">I only understood you as far as wanting to fill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3331"></child>
+        </children>
+    </item>
+    <item nodeId="node-3331">
+        <command xml:space="preserve">fill</command>
+        <result xml:space="preserve">You must supply a noun.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3332"></child>
+        </children>
+    </item>
+    <item nodeId="node-3332">
+        <command xml:space="preserve">fill me</command>
+        <result xml:space="preserve">I only understood you as far as wanting to fill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3333"></child>
+        </children>
+    </item>
+    <item nodeId="node-3333">
+        <command xml:space="preserve">open mouth</command>
+        <result xml:space="preserve">You open your mouth and neatly catch the small coin that drops out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3334"></child>
+        </children>
+    </item>
+    <item nodeId="node-3334">
+        <command xml:space="preserve">fill obol</command>
+        <result xml:space="preserve">I only understood you as far as wanting to fill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3335"></child>
+        </children>
+    </item>
+    <item nodeId="node-3335">
+        <command xml:space="preserve">put</command>
+        <result xml:space="preserve">(on the obol)
+You can't wear that!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3336"></child>
+        </children>
+    </item>
+    <item nodeId="node-3336">
+        <command xml:space="preserve">my name is danaid</command>
+        <result xml:space="preserve">An Arid Beach
+A place where you can do stuff.
+
+You can see a basin, a fountain, and a jug here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3337"></child>
+        </children>
+    </item>
+    <item nodeId="node-3337">
+        <command xml:space="preserve">put water in jug</command>
+        <result xml:space="preserve">(first taking the fountain water)
+You need some kind of receptacle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3338"></child>
+        </children>
+    </item>
+    <item nodeId="node-3338">
+        <command xml:space="preserve">get jug</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3339"></child>
+        </children>
+    </item>
+    <item nodeId="node-3339">
+        <command xml:space="preserve">put water in jug</command>
+        <result xml:space="preserve">(first taking the fountain water)
+You fill the jug with water.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
