@@ -27,6 +27,7 @@ Section 2 - Simple Chat
 Talking to is an action applying to one visible thing.
 Understand "talk to [someone]" as talking to.
 Report talking to: say "You have nothing to say.".
+
 When play begins: forbid exiting on zero.
 Use scoring.
 
@@ -657,10 +658,15 @@ After writhing:
 
 Part 6 - Danaid
 
-DanaidRoom is a room. The description is "A place where you can do stuff.". The printed name is "An Arid Beach".
+DanaidRoom is a room. The description is "The sand here is bone dry.". The printed name is "An Arid Beach".
+The sand is here. It is scenery. The description is "Is this literally crushed up bones?".
 
-A basin is here. It is a container. The description is "A wide basin intended for holding liquid. Let's say water. [if the note from zeus to danaid is on the rim of the basin]There is a note stuck to its rim.[end if]".
+A basin is here. It is a container. The description is "A wide basin intended for holding liquid. Let's say water.[if the holes are revealed] It turns out there are holes drilled in the bottom of the basin.[end if][if the note from zeus to danaid is on the rim of the basin] There is a note stuck to the rim.[end if]".
 The rim of the basin is part of the basin. It is a supporter. The description is "That's a quality rim.".
+The holes in the basin are part of the basin. The description is "A set of neatly drilled holes perforate the lower part of the basin, providing handy drainage of any liquids placed inside it.".
+The holes can be revealed. The holes are not revealed.
+After examining the holes, now the holes are revealed.
+Instead of taking the basin, say "It's far too heavy.".
 The note from zeus to the danaid is on the rim of the basin. The printed name is "note". The description 
 is "'Fill me.
 
@@ -674,6 +680,7 @@ After examining the note from zeus to the danaid:
 A fountain is here. It is a container. The description is "A small fountain perpetually shooting water a short way up into the air before it cascades down into a shallow bowl and drains out.".
 The bowl is part of the fountain. The description is "It is etched with images of frowning faces.".
 The frowning faces are part of the bowl. The description is "They don't look happy with you. Somehow you know it's you.".
+Instead of taking the fountain, say "It's firmly attached.".
 
 A fountain water is in the fountain. The description is "Cool, clear water.". The printed name is "water". The indefinite article of the fountain water is "some".
 Understand "water" as the fountain water when the player is in DanaidRoom.
@@ -687,7 +694,7 @@ Instead of taking the fountain water:
 		say "There's already water in the jug.";
 	otherwise if the player has the jug: 
 		now the fountain water is in the jug;
-		say "You fill the jug with water.";
+		say "You fill the jug with water from the fountain.";
 	otherwise:
 		say "You need some kind of receptacle.";
 
@@ -704,7 +711,7 @@ Rule for printing the name of the fountain while not inserting or removing:
 
 Pouring is an action applying to one visible thing.
 Understand "pour [something]" as pouring.
-	
+Instead of pouring something, say "Don't think you'll be needing to pour that here in Hades.".	
 Instead of pouring the fountain water:
 	if the fountain water is in the jug:
 		say "You unceremoniously pour the jug of water onto the ground.";
@@ -716,26 +723,56 @@ Instead of pouring the jug, try pouring the fountain water.
 
 Emptying is an action applying to one carried thing.
 Understand "empty [something]" as emptying.
+Instead of emptying something, say "That's not something you need to do.".
 Instead of emptying the jug, try pouring the jug.
 
-Filling is an action applying to one carried thing.
+Filling is an action applying to one visible thing.
 Understand "fill [something]" as filling.
+Instead of filling something, say "You don't need to fill that.".
 Instead of filling the jug:
 	try taking the fountain water;
+Instead of filling the basin:
+	try inserting the fountain water into the basin;
+Instead of filling the fountain:
+	try inserting the fountain water into the fountain;
 
 Instead of inserting the fountain water into the basin:
 	if the player has the jug and the fountain water is in the jug:
 		say "You carefully pour the water in the jug into the basin. It streams in nicely, catching what little light there is.";
 		now the fountain water is in the basin;
+		the basin empties in 1 turn from now;
 	otherwise if the player has the jug:
 		say "The jug is empty.";
 	otherwise:
-		say "You don't have it.";
+		say "You don't have any water.";
 
-[Pouring into is an action applying to two visible things.
-Understand "pour [something] into [something]" as pouring into.
-Instead of pouring something into something else, try inserting.]
+Instead of inserting the fountain water into the fountain:
+	if the player has the jug and the fountain water is in the jug:
+		say "You carefully pour the water in the jug into the fountain, thereby achieving slightly less than nothing.";
+		now the fountain water is in the fountain;
+	otherwise if the player has the jug:
+		say "The jug is empty.";
+	otherwise:
+		say "You don't have any water.";
 
+Pouring it into is an action applying to two visible things.
+Understand "pour [something] into [something]" as pouring it into.
+Instead of pouring something into something:
+	say "You won't be needing to do that.";
+Instead of pouring the fountain water into the basin:
+	try inserting the fountain water into the basin;
+Instead of pouring the jug into the basin:
+	try inserting the fountain water into the basin;
+Instead of pouring the fountain water into the fountain:
+	try inserting the fountain water into the fountain;
+Instead of pouring the jug into the fountain:
+	try inserting the fountain water into the fountain;
+	
+At the time when the basin empties:
+	say "The water in the basin drains out through several holes, dissapating into the sand.";
+	now the holes are revealed;
+	if the fountain water is in the basin:
+		now the fountain water is in the fountain;
 
 [----------------------------------------------------]
 
