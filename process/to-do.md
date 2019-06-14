@@ -10,6 +10,12 @@
 - Consider having descriptions for second-level nouns (mentioned in the first-level descriptions, etc.)
 - In outdoor areas think about the visibility of distant objects/scenery
 
+## General things to fix
+
+- Laws of writing, above
+- Bold key active nouns
+- Suggest key verbs as hints (e.g. talk to charon etc) bolded
+- Go through testers and find extra verbs to include to help out (e.g. spit)
 
 ## Charon
 
@@ -78,5 +84,6 @@
 - ~~Add actions for pouring the jug (anywhere I guess, but ideally into the basin)~~
 - ~~Make the basin empty the turn after you fill it~~
 - ~~__NOPE__ Don't bother with incremental filling states? Not that interesting?~~
+- ~~Still some bullshit around having the water show up in the container description...~~
 
-- Still some bullshit around having the water show up in the container description...
+- Plenty of nicenesses to do

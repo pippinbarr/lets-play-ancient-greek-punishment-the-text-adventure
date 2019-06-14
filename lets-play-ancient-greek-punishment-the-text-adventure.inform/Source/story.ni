@@ -2,6 +2,7 @@
 
 Include Room Description Headings by Erwin Genstein.
 Include Simple Chat by Mark Tilford.
+[Include Mentioned In Room Description by Ron Newcomb.]
 [Include Supplemental Actions by Al Golden.]
 [Include Liquid Handling by Al Golden.]
 [Include Basic Help Menu by Emily Short.]
@@ -658,10 +659,11 @@ After writhing:
 
 Part 6 - Danaid
 
-DanaidRoom is a room. The description is "The sand here is bone dry.". The printed name is "An Arid Beach".
-The sand is here. It is scenery. The description is "Is this literally crushed up bones?".
+DanaidRoom is a room. The description is "The sand here is bone dry. Rising out of the ground is a [bold type]fountain[roman type] and a little distance from it is a [bold type]basin[roman type].". The printed name is "An Arid Beach".
 
-A basin is here. It is a container. The description is "A wide basin intended for holding liquid. Let's say water.[if the holes are revealed] It turns out there are holes drilled in the bottom of the basin.[end if][if the note from zeus to danaid is on the rim of the basin] There is a note stuck to the rim.[end if]".
+The sand is here. It is scenery. The description is "Is this literally crushed up bones?". Understand "ground" as the sand.
+
+A basin is here. It is a container. The description is "A wide basin intended for holding liquid.[if the fountain water is in the basin] About a jug's-worth of water is in it right now.[otherwise] Let's say water.[end if][if the holes are revealed] There are holes drilled in the bottom.[end if][if the note from zeus to danaid is on the rim of the basin] There is a [bold type]note[roman type] stuck to the rim.[end if]".
 The rim of the basin is part of the basin. It is a supporter. The description is "That's a quality rim.".
 The holes in the basin are part of the basin. The description is "A set of neatly drilled holes perforate the lower part of the basin, providing handy drainage of any liquids placed inside it.".
 The holes can be revealed. The holes are not revealed.
@@ -673,17 +675,22 @@ is "'Fill me.
 lol,
 Zeus'".
 
+Before listing nondescript items of DanaidRoom: 
+	now the basin is not marked for listing; 
+	now the fountain is not marked for listing;
+
 After examining the note from zeus to the danaid:
 	say "Just as you finish reading it, the note blows [if the player has the note from zeus to the danaid]out of your hand[otherwise]off the rim of the basin[end if] on a mysterious gust of wind and vanishes into the distance.";
 	now the note from zeus to the danaid is nowhere;
 
-A fountain is here. It is a container. The description is "A small fountain perpetually shooting water a short way up into the air before it cascades down into a shallow bowl and drains out.".
+A fountain is here. It is a container. The description is "A small fountain perpetually shooting [bold type]water[roman type] a short way up into the air before it cascades down into a shallow bowl and drains out.".
 The bowl is part of the fountain. The description is "It is etched with images of frowning faces.".
 The frowning faces are part of the bowl. The description is "They don't look happy with you. Somehow you know it's you.".
 Instead of taking the fountain, say "It's firmly attached.".
 
-A fountain water is in the fountain. The description is "Cool, clear water.". The printed name is "water". The indefinite article of the fountain water is "some".
+The fountain water is in the fountain. The description is "Cool, clear water.". The printed name is "water". The indefinite article of the fountain water is "some".
 Understand "water" as the fountain water when the player is in DanaidRoom.
+The fountain water is scenery.
 
 Instead of putting the fountain water on the jug:
 	try taking the fountain water;
@@ -696,9 +703,9 @@ Instead of taking the fountain water:
 		now the fountain water is in the jug;
 		say "You fill the jug with water from the fountain.";
 	otherwise:
-		say "You need some kind of receptacle.";
+		say "Maybe you should pick up the jug first.";
 
-A jug is here. It is a portable container. The description is "An earthenware jug with a handle.".
+A jug is here. It is a portable container. The description is "An earthenware jug with a handle.[if the fountain water is in the jug] It's filled with water.[otherwise] It's empty.[end if]".
 The handle is part of the jug. The description is "[if the player has the jug]It fits your hand perfectly.[otherwise]Looks sturdy.[end if]".
 
 Rule for printing the name of the jug while not inserting or removing: 
