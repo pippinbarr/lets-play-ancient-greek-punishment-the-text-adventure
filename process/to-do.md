@@ -16,6 +16,7 @@
 - Bold key active nouns
 - Suggest key verbs as hints (e.g. talk to charon etc) bolded
 - Go through testers and find extra verbs to include to help out (e.g. spit)
+- Write a simple tutorial/hint thing at the top (also triggerable with "help")
 
 ## Charon
 

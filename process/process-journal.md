@@ -419,3 +419,23 @@ The final level to put together is for the Danaid. Some design-ish observations:
 - A HHGTTG babelfish joke is plausible if someone tries to do anything to the holes in the basic?
 
 I think I can proceed with this.
+
+---
+
+# Skeleton exists, help needed, editing (Friday, 14 June 2019, 19:18PM)
+
+## Skeleton exists
+
+Perhaps it's too modest to say it's a skeleton, but I have essentially a working throughline for all scenes in the game that work and do what I think I want them to do. It's been a hell of a hard time getting to understand Inform, and the more I use it the more clear it is to me that there are much, much cleaner and better ways to use it to the effect I want - but I just don't think I want to invest the energy required to achieve a more impressive mastery? Do I want to make any more text adventures? It's possible I do of course, but gee it's really pretty hard stuff.
+
+## Help needed
+
+Really the next thing is fleshing out the world with first and second order nouns everywhere, checking for stupid behaviours (especially with any new actions I've introduced), ideally having all special actions just translate back to standard actions. And adding much more help and facilitation with hints, bolding of important objects and verbs, and probably automating certain things where reasonable to avoid as much interpreter guessing as possible.
+
+I think there are probably interesting questions around agency here. The more hinting there is the more it may end up feeling more like a Twine? But I think so long as the main throughline is super easy to follow but there are nice asides if people want to take the time, we're good?
+
+## Editing
+
+In the end I think it feels like this is perhaps closer to finishing than I'd quite imagined, particularly now that I'm more "editing" than creating. Should be less resistant to change hopefully.
+
+(I'm reminded I should make a Twine version of this game.)
