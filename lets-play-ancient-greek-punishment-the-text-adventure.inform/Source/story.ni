@@ -33,9 +33,13 @@ To say v:
 To say lb:
 	say "[line break]";
 	
+To say pb:
+	say "[paragraph break]";
+
+	
 To say basic instructions:
 	say "This is a work of interactive fiction and tries to follow standard ways of existing in a textual world:
-	[paragraph break]
+	[pb]
 	To look at where you are type [b]LOOK[r]. [lb]
 	To look at something type [b]LOOK AT THING[r] or [b]EXAMINE THING[r]. [lb]
 	To pick something up type [b]GET THING[r] or [b]TAKE THING[r]. [lb]
@@ -50,7 +54,7 @@ Instead of asking for help:
 	say "[basic instructions]";
 	
 After printing the banner text:
-	say "[paragraph break]Type [b]HELP[r] for help.";
+	say "[pb]Type [b]HELP[r] for help.";
 
 The description of the player is "You look deader than you remember looking.".
 Your hand is part of the player. The description is "Cold. Dead.". Understand "hands" as your hand.
@@ -120,7 +124,7 @@ Instead of taking the ferry, say "Good one.".
 Instead of taking the oars, say "Charon throws you a look that very clearly communicates 'do not take those oars.'".
 Instead of going when the player is in the ferry, say "You're still in the ferry. You should [b]get out[r] first.".
 
-The clipboard is an object. The description is "Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:[line break][line break]Sisyphus[line break]Tantalus[line break]Prometheus[line break]Danaids[line break]Zeno";
+The clipboard is an object. The description is "Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:[lb][lb]Sisyphus[lb]Tantalus[lb]Prometheus[lb]Danaids[lb]Zeno";
 
 The clipboard can be secret. The clipboard is secret.
 After examining the clipboard, now the clipboard is not secret.
@@ -137,7 +141,7 @@ Charon's arm is part of Charon. The description is "It makes thin arms look fat.
 Charon's pocket is part of Charon. It is a container. The description is "Looks roomy.".
 Instead of searching Charon's pocket, say "Charon's frown is enough to prevent you.".
 Instead of examining Charon's pocket: 
-    say "[description of Charon's pocket][line break]";
+    say "[description of Charon's pocket][lb]";
     omit contents in listing.
 The cowl is wearable. The description is "It's a standard-issue cowl."
 Charon is wearing the cowl.
@@ -217,7 +221,7 @@ Instead of talking to Charon when the player's name is not Nobody:
 	say "Charon isn't interested in talking to you about anything else.";
 
 Report giving text for Charon Conversation: 
-	Instead say "Before you can get a word in, Charon monotones, 'And you are?'[paragraph break]Recalling the list of names on the clipboard, you say:[paragraph break]";
+	Instead say "Before you can get a word in, Charon monotones, 'And you are?'[pb]Recalling the list of names on the clipboard, you say:[pb]";
     
 Carry out finding responses to Charon Conversation: 
 	link to My Name Is Sisyphus; 
@@ -228,7 +232,7 @@ Carry out finding responses to Charon Conversation:
 	link to Nevermind.
     
 To say pay me:
-	say "Charon looks at you blankly, 'Sure. [b]Pay[r] me.'. [paragraph break]He holds out a bony hand.";
+	say "Charon looks at you blankly, 'Sure. [b]Pay[r] me.'. [pb]He holds out a bony hand.";
 
 Report giving link to My Name Is Sisyphus: 
 	Instead say "'I'm Sisyphus!'";
@@ -263,7 +267,7 @@ Report giving text for My Name Is Danaid:
 Report giving link to Nevermind: 
 	instead say "'Never mind...' ";
 Report giving text for Nevermind: 
-	instead say "You shrug, 'Never mind...'[paragraph break]Charon smirks.";
+	instead say "You shrug, 'Never mind...'[pb]Charon smirks.";
 
 Instead of talking to Charon: run a conversation from Charon Conversation.
 
@@ -308,7 +312,7 @@ At the time when Charon gets into the ferry:
 	Now Charon is in the ferry;
 
 At the time when the ferry departs:
-	say "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[paragraph break]Charon looks at you implacably. You intuit that it's time for you to [b]get out[r].";
+	say "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[pb]Charon looks at you implacably. You intuit that it's time for you to [b]get out[r].";
 	If the player's name is Sisyphus:
 		Move the ferry to The Bottom of the Hill;
 	otherwise if the player's name is Prometheus:
@@ -344,7 +348,7 @@ At the time when the ferry vanishes:
 Section 6 - Skip aheads
 
 To say you're stuck:
-	say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+	say "Charon told you that would only work on arrival at his ferry. You're stuck here. If you want to get out so bad you can always [b]restart[r] or [b]quit[r].";
 
 SkipToSisyphus is an action applying to nothing.
 Understand "My name is Sisyphus" as SkipToSisyphus.
@@ -352,6 +356,9 @@ Instead of SkipToSisyphus:
 	if the player is in The Starting Place:
 		Remove the obol from play;
 		Now the player is in The Bottom of the Hill;
+		Now the player's name is Sisyphus;
+	Otherwise if the player's name is Sisyphus:
+		say "It sure is.";
 	Otherwise:
 		say "[you're stuck]";
 
@@ -359,8 +366,11 @@ SkipToPrometheus is an action applying to nothing.
 Understand "My name is Prometheus" as SkipToPrometheus.
 Instead of SkipToPrometheus:
 	if the player is in The Starting Place:
+		Now the player's name is Prometheus;
 		Remove the obol from play;
 		The player is chained down in zero turns from now;
+	Otherwise if the player's name is Prometheus:
+		say "It sure is.";
 	Otherwise:
 		say "[you're stuck]";
 
@@ -370,6 +380,9 @@ Instead of SkipToDanaid:
 	if the player is in The Starting Place:
 		Remove the obol from play;
 		Now the player is in DanaidRoom;
+		Now the player's name is Danaid;
+	otherwise if the player's name is Danaid:
+		say "It sure is.";
 	Otherwise:
 		say "[you're stuck]";
 
@@ -379,6 +392,9 @@ Instead of SkipToTantalus:
 	if the player is in The Starting Place:
 		Remove the obol from play;
 		Now the player is in the pool;
+		Now the player's name is Tantalus;
+	otherwise if the player's name is Tantalus:
+		say "It sure is.";
 	Otherwise:
 		say "[you're stuck]";
 
@@ -388,6 +404,9 @@ Instead of SkipToZeno:
 	if the player is in The Starting Place:
 		Remove the obol from play;
 		Now the player is on the starting line;
+		Now the player's name is Zeno;
+	otherwise if the player's name is Zeno:
+		say "It sure is.";
 	Otherwise:
 		say "[you're stuck]";
 
@@ -433,10 +452,14 @@ The beach is a backdrop in The Whole Hill. The description is "Apparently death 
 
 The Bottom of the Hill is a room. The description is "A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.".
 
-The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.[if the player is not in The Bottom of the Hill] At least it looks a bit smaller from up here.[end if]".
+The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.[if the location of the player is not the location of the boulder] At least it looks a bit smaller from up here.[otherwise if the post-it note is part of the boulder] There is a [b]post-it note[r] stuck to the boulder at eye-level.[end if]".
 Understand "rock" or "stone" as the boulder.
 The boulder is pushable between rooms.
 The boulder can be rolling or stationary. The boulder is stationary.
+The post-it note on the boulder is part of the boulder. The description is "The note just says[pb][f]Push me.[v]".
+After examining the post-it note on the boulder:
+	say "The post-it note suddenly tears off the boulder in a gust of wind and loops madly away into the distance.";
+	remove the post-it note on the boulder from play;
 
 Instead of taking the boulder, say "That would be hilarious, but it's too big, too heavy, and too destined to punish you for that.".
 
@@ -453,10 +476,7 @@ The hole is a container in A Fair Way Up the Hill. It is scenery. The descriptio
 Quite Far Up the Hill is above A Fair Way Up the Hill. The description is "[if the previous location is A Fair Way Up the Hill]Far enough up the hill to be out of breath if you don't get out much. [end if]Like the rest of the hill, this part is made entirely out of dirt.".
 
 Nearly the Top of the Hill is above Quite Far Up the Hill. The description is "It's so barren up here you can't even imagine something growing, and you have a pretty good imagination.".
-The Note to Sisyphus from Zeus is here. The printed name is "note from Zeus". The description is "The note reads:
-
-lol[line break]
-- Zeus".
+The Note to Sisyphus from Zeus is here. The printed name is "note from Zeus". The description is "The note says[pb][f]lol[pb]Yours sincerely,[lb]Zeus[v]".
 Instead of taking the Note to Sisyphus from Zeus:
 	say "A sudden gust of wind blows it out of your grasp and away into the distance. The wind sounded weirdly like laughter.";
 	remove the Note to Sisyphus from play;
@@ -469,6 +489,10 @@ Section 2 - Pushing the boulder
 
 Instead of pushing the boulder:
 	try pushing the boulder to up;	
+	
+After going up with the boulder when the post-it note on the boulder is part of the boulder:
+	say "The post-it note that was attached to the boulder is dislodged and blows away in a sudden gust of wind.";
+	now the post-it note on the boulder is nowhere;
 	
 To say the only way is up:
 	say "The only way is [b]up[r], baby.";
@@ -517,15 +541,13 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 	otherwise if the next place is not the bottom of the hill and the player is not in the next place:
 		say "Below, you see the boulder rolling down the hill.";
 	move the boulder to the next place;
-	If the player can see the boulder:
+	if the player can see the boulder:
 		say "The boulder rolls into view.";
 	if the next place is the bottom of the hill:		
 		if the player cannot see the boulder:
-			if the player is in the room up from the next place:
-				say "[line break]";
-			say "You see the boulder settle into place at the bottom of the hill.";
+			say "[pb]You see the boulder settle into place at the bottom of the hill.";
 		otherwise:
-			say "[line break]The boulder settles ponderously back at its starting position.";
+			say "[pb]The boulder settles ponderously back at its starting position.";
 		now the boulder is stationary;
 	If the player is in the Hilltop:
 		If the boulder is in the Hilltop:
@@ -545,24 +567,37 @@ The beach is a backdrop in TantalusRoom. The description is "Apparently death is
 
 The tree is a supporter in TantalusRoom. The description is "Its bark is worse than its bite.". The tree is scenery.
 
-The apple is on the tree. The apple is edible. The description is "A shiny, delicious apple just begging to be eaten.". The apple is scenery.
+The apple is on the tree. The apple is edible. The description is "A shiny, delicious apple just begging to be eaten.[if the red post-it note is part of the apple] There is a [b]red post-it note[r] stuck to the apple.[end if]". The apple is scenery.
+The red post-it note is part of the apple. The description is "The note says[pb][f]Eat me.[v]".
 
-The pool is a container in TantalusRoom. The description is "Crystal clear, eminently drinkable water.". Understand "water" as the pool. The pool is scenery. 
+After examining the red post-it note:
+	say "Just after you finish reading it, the post-it note blows off the apple and away into the distance.";
+	now the red post-it note is nowhere;
+	
+Instead of taking the red post-it note, say "Maybe you should try to [b]read[r] it instead.".
+
+The pool is a container in TantalusRoom. The description is "Crystal clear, eminently drinkable water. There is a [b]blue post-it note[r] floating on the surface.". Understand "water" as the pool. The pool is scenery. 
+The blue post-it note is part of the pool. The description is "The note says[pb][f]Drink me.[v]".
+
+After examining the blue post-it note:
+	say "After you read it, the post-it note is plucked from the water by a gust of wind and flaps wetly into the distance.";
+	
+Instead of taking the blue post-it note, say "Maybe you should try to [b]read[r] it instead.".
 
 Instead of exiting when the player is in the pool:
 	say "Somehow that's not an option.";
 
 Instead of drinking the pool:
-	say "You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. Upon standing, the water rushes back in up to your waist.";
+	say "You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. Upon standing, the water rushes back in up to your waist. The gurgling sound it make sounds oddly like laughter.";
 	
 Instead of taking the apple:
-	say "You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again.";
+	say "You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again. The wind made a sound oddly like laughter.";
 	
 Instead of jumping when the player is in the pool:
-	say "You jump up toward the apple on its branch, but a gust of wind blows it just as far out of reach as always and all you manage to do is make a splash.";
+	say "You jump up toward the apple on its branch, but a gust of wind blows it just as far out of reach as always and all you manage to do is make a splash. The wind made a sound oddly like laughter.";
 	
 Instead of taking the pool when the player is in the pool:
-	say "You cup your hands to gather up some water to drink, but the pool quickly drains before you're able to get anything. Your hands somehow remain bone dry.";
+	say "You cup your hands to gather up some water to drink, but the pool quickly drains before you're able to get anything. Your hands somehow remain bone dry and the pool refills once you've given up. The gurgling sound it makes is oddly like laughter.";
 	
 Instead of eating the apple, try taking the apple;
 

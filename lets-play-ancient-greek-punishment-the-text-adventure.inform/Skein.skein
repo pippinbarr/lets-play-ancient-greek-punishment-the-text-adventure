@@ -56,6 +56,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-2298"></child>
             <child nodeId="node-2010"></child>
             <child nodeId="node-1985"></child>
+            <child nodeId="node-2815"></child>
             <child nodeId="node-1964"></child>
             <child nodeId="node-1906"></child>
             <child nodeId="node-1835"></child>
@@ -10579,11 +10580,12 @@ The beach extends off into the fog. A straight running track of about 100 meters
         <result xml:space="preserve">A Desolate Beach (in the pool)
 An apple tree extends its branches above a clear pool of water set back a little way from the river's edge. A single apple hangs from a single branch.
 
-You're thirsty.
+Your stomach hurts with hunger.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1932"></child>
+        <children><child nodeId="node-2931"></child>
+            <child nodeId="node-1932"></child>
             <child nodeId="node-1926"></child>
             <child nodeId="node-1907"></child>
         </children>
@@ -10762,14 +10764,28 @@ A gnarled tree extends its branches above a clear pool of water set back a littl
     </item>
     <item nodeId="node-1926">
         <command xml:space="preserve">look at apple</command>
-        <result xml:space="preserve">A shiny, delicious apple just begging to be eaten.
+        <result xml:space="preserve">A shiny, delicious apple just begging to be eaten. There is a bright red post-it note stuck to the apple.
 
-You're so thirsty.
+You need to drink something.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1927"></child>
+            <child nodeId="node-2926"></child>
         </children>
+    </item>
+    <item nodeId="node-2926">
+        <command xml:space="preserve">read post-it</command>
+        <result xml:space="preserve">The note says
+
+Eat me.
+
+Just after you finish reading it, the post-it note blows off the apple and away into the distance.
+
+You need to eat something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1927">
         <command xml:space="preserve">look at water</command>
@@ -11184,6 +11200,63 @@ You wish you had something to eat.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2931">
+        <command xml:space="preserve">get post-it</command>
+        <result xml:space="preserve">Which do you mean, the red post-it note or the blue post-it note?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2932"></child>
+        </children>
+    </item>
+    <item nodeId="node-2932">
+        <command xml:space="preserve">read post-it note</command>
+        <result xml:space="preserve">Which do you mean, the red post-it note or the blue post-it note?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2936"></child>
+        </children>
+    </item>
+    <item nodeId="node-2936">
+        <command xml:space="preserve">read red</command>
+        <result xml:space="preserve">The note says
+
+Eat me.
+
+Just after you finish reading it, the post-it note blows off the apple and away into the distance.
+
+Your stomach gurgles.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2937"></child>
+        </children>
+    </item>
+    <item nodeId="node-2937">
+        <command xml:space="preserve">x pool</command>
+        <result xml:space="preserve">Crystal clear, eminently drinkable water. There is a blue post-it note floating on the surface.
+
+You're starving.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2938"></child>
+        </children>
+    </item>
+    <item nodeId="node-2938">
+        <command xml:space="preserve">read blue note</command>
+        <result xml:space="preserve">The note says
+
+Drink me.
+
+After you read it, the post-it note it plucked from the water by a gust of wind and flaps wetly into the distance.
+
+You're parched.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1964">
         <command xml:space="preserve">my name is sisyphus</command>
         <result xml:space="preserve">Bottom of the Hill
@@ -11193,8 +11266,393 @@ You can see a worryingly large boulder here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1965"></child>
+        <children><child nodeId="node-2814"></child>
+            <child nodeId="node-1965"></child>
+            <child nodeId="node-2888"></child>
+            <child nodeId="node-2829"></child>
+            <child nodeId="node-2823"></child>
+            <child nodeId="node-2891"></child>
         </children>
+    </item>
+    <item nodeId="node-2891">
+        <command xml:space="preserve">x note</command>
+        <result xml:space="preserve">The note just says
+
+Push me.
+
+The post-it note suddenly tears off the boulder in a gust of wind and loops madly away into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2894"></child>
+        </children>
+    </item>
+    <item nodeId="node-2894">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2895"></child>
+        </children>
+    </item>
+    <item nodeId="node-2895">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2896"></child>
+        </children>
+    </item>
+    <item nodeId="node-2896">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2897"></child>
+        </children>
+    </item>
+    <item nodeId="node-2897">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+Far enough up the hill to be out of breath if you don't get out much. Like the rest of the hill, this part is made entirely out of dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2898"></child>
+        </children>
+    </item>
+    <item nodeId="node-2898">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Nearly the Top of the Hill
+It's so barren up here you can't even imagine something growing, and you have a pretty good imagination.
+
+You can see a note from Zeus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2899"></child>
+        </children>
+    </item>
+    <item nodeId="node-2899">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">The note says
+
+lol
+
+Yours sincerely,
+Zeus
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2823">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+That really is a lot of rock. There is a post-it note stuck to the boulder at eye-level.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2861"></child>
+            <child nodeId="node-2855"></child>
+            <child nodeId="node-2824"></child>
+        </children>
+    </item>
+    <item nodeId="node-2824">
+        <command xml:space="preserve">x note</command>
+        <result xml:space="preserve">The note just says "Push me."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2855">
+        <command xml:space="preserve">read post-it</command>
+        <result xml:space="preserve">The note just says "Push me."
+
+The post-it note suddenly tears off the boulder in a gust of wind and loops madly away into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2856"></child>
+        </children>
+    </item>
+    <item nodeId="node-2856">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">That really is a lot of rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2857"></child>
+        </children>
+    </item>
+    <item nodeId="node-2857">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2858"></child>
+        </children>
+    </item>
+    <item nodeId="node-2858">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">That really is a lot of rock. At least it looks a bit smaller from up here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2861">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+The post-it note that was attached to the boulder is dislodged and blows away in a sudden gust of wind.
+
+The boulder rolls calmly away down the hill.
+The boulder rolls into view.
+
+The boulder settles ponderously back at its starting position.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2868"></child>
+        </children>
+    </item>
+    <item nodeId="node-2868">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">That really is a lot of rock. At least it looks a bit smaller from up here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2869"></child>
+        </children>
+    </item>
+    <item nodeId="node-2869">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2870"></child>
+        </children>
+    </item>
+    <item nodeId="node-2870">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">That really is a lot of rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2829">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2873"></child>
+            <child nodeId="node-2830"></child>
+        </children>
+    </item>
+    <item nodeId="node-2830">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">That really is a lot of rock. At least it looks a bit smaller from up here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2834"></child>
+        </children>
+    </item>
+    <item nodeId="node-2834">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2835"></child>
+        </children>
+    </item>
+    <item nodeId="node-2835">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">That really is a lot of rock. At least it looks a bit smaller from up here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2836"></child>
+        </children>
+    </item>
+    <item nodeId="node-2836">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2837"></child>
+        </children>
+    </item>
+    <item nodeId="node-2837">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2838"></child>
+        </children>
+    </item>
+    <item nodeId="node-2838">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">That really is a lot of rock.There is a post-it note on the boulder.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2839"></child>
+        </children>
+    </item>
+    <item nodeId="node-2839">
+        <command xml:space="preserve">push boulder</command>
+        <result xml:space="preserve">You furrow your brow and heave the boulder forward.
+
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2840"></child>
+        </children>
+    </item>
+    <item nodeId="node-2840">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+The boulder rolls calmly away down the hill.
+The boulder rolls into view.
+
+The boulder settles ponderously back at its starting position.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2841"></child>
+        </children>
+    </item>
+    <item nodeId="node-2841">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">That really is a lot of rock.There is a post-it note on the boulder.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2873">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2874"></child>
+        </children>
+    </item>
+    <item nodeId="node-2874">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2875"></child>
+        </children>
+    </item>
+    <item nodeId="node-2875">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+Far enough up the hill to be out of breath if you don't get out much. Like the rest of the hill, this part is made entirely out of dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2876"></child>
+        </children>
+    </item>
+    <item nodeId="node-2876">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Nearly the Top of the Hill
+It's so barren up here you can't even imagine something growing, and you have a pretty good imagination.
+
+You can see a note from Zeus here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2877"></child>
+        </children>
+    </item>
+    <item nodeId="node-2877">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">(the note from Zeus)
+The note reads:
+
+lol 
+
+-Zeus
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2878"></child>
+        </children>
+    </item>
+    <item nodeId="node-2878">
+        <command xml:space="preserve">get note</command>
+        <result xml:space="preserve">(the note from Zeus)
+A sudden gust of wind blows it out of your grasp and away into the distance. The wind sounded weirdly like laughter.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2888">
+        <command xml:space="preserve">read post-it</command>
+        <result xml:space="preserve">The note just says "Push me."
+
+The post-it note suddenly tears off the boulder in a gust of wind and loops madly away into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2889"></child>
+        </children>
+    </item>
+    <item nodeId="node-2889">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1965">
         <command xml:space="preserve">n</command>
@@ -11407,6 +11865,57 @@ Just above the beach the grit-sand turns into a packed dirt of the same colour. 
         <result xml:space="preserve">You'll have to say which compass direction to go in.
 
 &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2814">
+        <command xml:space="preserve">my name is prometheus</command>
+        <result xml:space="preserve">Charon told you that would only work on arrival at his ferry. You're stuck here. If you want to get out so bad you can always restart or quit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2815">
+        <command xml:space="preserve">my name is prometheus</command>
+        <result xml:space="preserve">The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to the rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2816"></child>
+        </children>
+    </item>
+    <item nodeId="node-2816">
+        <command xml:space="preserve">my name is prometheus</command>
+        <result xml:space="preserve">It sure is.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2819"></child>
+        </children>
+    </item>
+    <item nodeId="node-2819">
+        <command xml:space="preserve">my name is zeno</command>
+        <result xml:space="preserve">Charon told you that would only work on arrival at his ferry. You're stuck here. If you want to get out so bad you can always restart or quit.
+
+The eagle is getting close.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2820"></child>
+        </children>
+    </item>
+    <item nodeId="node-2820">
+        <command xml:space="preserve">quit</command>
+        <result xml:space="preserve">Are you sure you want to quit? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2821"></child>
+        </children>
+    </item>
+    <item nodeId="node-2821">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve"></result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1985">

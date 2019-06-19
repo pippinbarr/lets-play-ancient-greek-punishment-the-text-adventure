@@ -18,7 +18,7 @@
 - ~~Suggest key verbs as hints (e.g. talk to charon etc) bolded~~
 
 - Laws of writing, above
-- Go through tester transcripts and find extra verbs to include to help out (e.g. spit) + bugs
+- Go through tester transcripts and find extra verbs to include to help out + bugs
 - Change it so all activities have notes + a separate lol somehow (at the very least this can communicate the key actions the player needs to perform)
 
 ## Charon
@@ -32,6 +32,9 @@
 ## Sisyphus
 
 - ~~Add points (with notifications)~~
+- ~~Add post-it to the boulder~~
+
+- Boulder pushing stuff is broken
 
 ## Prometheus
 
@@ -56,9 +59,9 @@
 - ~~Add the tree and the apple~~
 - ~~Replace get and drink etc. for the water and the apple~~
 - ~~Add hunger and thirst system~~
+- ~~Zeus lol?~~
 
 - Add flavour texts
-- Zeus lol?
 
 ## Zeno
 
