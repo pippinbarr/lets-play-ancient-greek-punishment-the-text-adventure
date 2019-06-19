@@ -439,3 +439,11 @@ I think there are probably interesting questions around agency here. The more hi
 In the end I think it feels like this is perhaps closer to finishing than I'd quite imagined, particularly now that I'm more "editing" than creating. Should be less resistant to change hopefully.
 
 (I'm reminded I should make a Twine version of this game.)
+
+---
+
+# Rambling about almost being done (Wednesday, 19 June 2019, 16:23PM)
+
+Have added a bunch of niceties today after a longish feeling gap (actually only two working days, but you know). It's getting close to something that's probably releasable? How will I know when it's done? Remaining things are mostly around making a few things more consistent and generally adding greater depths of description as a way of making the whole thing more "fractal" and thus more sustaining even while the frame is utterly repetitive. If I do a serious push on this tomorrow morning maybe I'll have something I could consider finished? I send it to Simon and my parents again maybe?
+
+I don't know.
