@@ -19,6 +19,7 @@
 
 - Laws of writing, above
 - Go through tester transcripts and find extra verbs to include to help out (e.g. spit) + bugs
+- Change it so all activities have notes + a separate lol somehow (at the very least this can communicate the key actions the player needs to perform)
 
 ## Charon
 
