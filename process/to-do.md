@@ -12,20 +12,21 @@
 
 ## General things to fix
 
+- ~~Write a simple tutorial/hint thing at the top (also triggerable with "help")~~
+- ~~Stop dragging the ferry around~~
+- ~~Bold key active nouns~~
+- ~~Suggest key verbs as hints (e.g. talk to charon etc) bolded~~
+
 - Laws of writing, above
-- Bold key active nouns
-- Suggest key verbs as hints (e.g. talk to charon etc) bolded
-- Go through testers and find extra verbs to include to help out (e.g. spit)
-- Write a simple tutorial/hint thing at the top (also triggerable with "help")
+- Go through tester transcripts and find extra verbs to include to help out (e.g. spit) + bugs
 
 ## Charon
 
 - ~~Add information about skipping (and make the command "I am X" instead to make it less likely it just gets typed anyway)~~
 - ~~Add Prometheus option~~
-
-- Add spit
-- Obol falls out on talking to Charon
-- Hint about looking at Charon's clipboard when you try to pay
+- ~~Add spit~~
+- ~~Obol falls out on talking to Charon~~
+- ~~Hint about looking at Charon's clipboard when you try to pay~~
 
 ## Sisyphus
 

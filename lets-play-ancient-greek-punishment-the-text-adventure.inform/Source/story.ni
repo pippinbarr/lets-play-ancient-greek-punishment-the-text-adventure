@@ -18,6 +18,40 @@ Use undo prevention.
 Rule for printing room description details: stop.
 The can't push vertically rule is not listed in any rulebook.
 
+To say b:
+	say "[bold type]";
+	
+To say r:
+	say "[roman type]";
+	
+To say f: 
+	say "[fixed letter spacing]";
+
+To say v: 
+	say "[variable letter spacing]";	
+
+To say lb:
+	say "[line break]";
+	
+To say basic instructions:
+	say "This is a work of interactive fiction and tries to follow standard ways of existing in a textual world:
+	[paragraph break]
+	To look at where you are type [b]LOOK[r]. [lb]
+	To look at something type [b]LOOK AT THING[r] or [b]EXAMINE THING[r]. [lb]
+	To pick something up type [b]GET THING[r] or [b]TAKE THING[r]. [lb]
+	To talk to someone type [b]TALK TO PERSON[r]. [lb]
+	To go somewhere type a compass direction.
+	
+	Generally speaking, look at everything you can and then work out what to do from there.";
+
+Asking for help is an action applying to nothing.
+Understand "help" and "instructions" as asking for help.
+Instead of asking for help:
+	say "[basic instructions]";
+	
+After printing the banner text:
+	say "[paragraph break]Type [b]HELP[r] for help.";
+
 The description of the player is "You look deader than you remember looking.".
 Your hand is part of the player. The description is "Cold. Dead.". Understand "hands" as your hand.
 The fog is a backdrop. It is everywhere. The description is "It makes you feel distinctly less happy.".
@@ -73,11 +107,18 @@ Section 1 - The place
 The Starting Place is a room. The description is "Here you are at the famous River Styx. The water flows sluggishly by.". The printed name is "The Bank of the River Styx".
 The River Styx is a backdrop. The description is "The river seems to sneer at you.". Understand "water" as the River Styx when the player is in The Starting Place.
 The River Styx is everywhere.
+Instead of taking the river styx, say "It is neither portable nor potable.".
+The sneer is part of the river styx. The description is "What an unpleasant river.".
+Instead of drinking the river styx, say "It's not a nice river.".
 
 Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. [if the ferry is in The Starting Place]Right now it is moored at the bank of the river, ready to shove off.[otherwise]Right now it is grounded on a gritty beach.[end if]".
 Charon's ferry is a vehicle.
 Understand "boat" or "dinghy" as the ferry.
 The oars are part of the ferry. The description is "Good, solid oars.".
+
+Instead of taking the ferry, say "Good one.".
+Instead of taking the oars, say "Charon throws you a look that very clearly communicates 'do not take those oars.'".
+Instead of going when the player is in the ferry, say "You're still in the ferry. You should [b]get out[r] first.".
 
 The clipboard is an object. The description is "Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:[line break][line break]Sisyphus[line break]Tantalus[line break]Prometheus[line break]Danaids[line break]Zeno";
 
@@ -85,7 +126,7 @@ The clipboard can be secret. The clipboard is secret.
 After examining the clipboard, now the clipboard is not secret.
 Understand "board" as the clipboard.
 
-Charon is here. The description is "Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. [if Charon is in the ferry]He is sitting at the oars.[otherwise]He is holding a clipboard.[end if]".
+Charon is here. The description is "Charon is one tall drink of stagnant water. His eyes look sourly out from beneath a cowl. [if Charon is in the ferry]He is sitting at the oars.[otherwise]He is holding a [b]clipboard[r].[end if]".
 Charon is a man.
 Charon is carrying the clipboard.
 Understand "man" as Charon.
@@ -118,7 +159,7 @@ Instead of opening your mouth:
 	if your mouth is open:
 		say "It's open already, and you've never looked better.";
 	otherwise if the obol is in your mouth:
-		say "You open your mouth and neatly catch the small coin that drops out.";
+		say "You open your mouth and neatly catch the small [b]coin[r] that drops out.";
 		now the player has the obol;
 		now the your mouth is open;
 	otherwise:
@@ -131,6 +172,19 @@ Instead of closing your mouth:
 	otherwise:
 		say "It's closed already.";
 
+Spitting is an action applying to nothing.
+Understand "spit" as spitting.
+Instead of spitting:
+	if the obol is in your mouth:
+		say "You spit a small coin into your hand.";
+		now the player has the obol;
+	otherwise:
+		say "Rude.";
+		
+Spitting out is an action applying to one visible thing.
+Understand "spit [something]" and "spit out [something]" as spitting out.
+Instead of spitting out, try spitting.
+
 Instead of showing the obol to Charon:
 	say "Charon deadpans, 'Good for you.'";
 
@@ -139,9 +193,9 @@ Section 3 - Talking to Charon
 
 Instead of telling Charon about something:
 	if the obol is in your mouth: 
-		say "You start trying to speak, but there's something in your mouth.";		
+		say "You start trying to speak, but there's something in your [b]mouth[r]. Perhaps you should [b]spit[r] it out first.";		
 	otherwise if the player's name is Nobody:
-		say "Charon rolls his eyes. 'Who are you, exactly?'";
+		say "Charon rolls his eyes. 'Who are you, exactly?' He glances down at his [b]clipboard[r]. You realise you don't know.";
 	otherwise:
 		say "Charon holds up a palm. 'Save it.'";
 	
@@ -154,10 +208,10 @@ Instead of asking Charon about something:
 Charon Conversation, My Name Is Sisyphus, My Name Is Tantalus, My Name Is Danaid, My Name Is Prometheus, My Name Is Zeno, Nevermind are chat nodes.
 
 Instead of talking to Charon when the obol is in your mouth:
-	say "You start trying to speak, but there's something in your mouth.";		
+	say "You start trying to speak, but there's something in your [b]mouth[r].";		
 
 Instead of talking to Charon when the clipboard is secret:
-	say "Before you can get a word in, Charon monotones, 'And you are?'[paragraph break]You realise you don't know and fall silent.";
+		say "Charon rolls his eyes. 'Who are you, exactly?' He glances down at his [b]clipboard[r]. You realise you don't know.";
 
 Instead of talking to Charon when the player's name is not Nobody:
 	say "Charon isn't interested in talking to you about anything else.";
@@ -173,35 +227,38 @@ Carry out finding responses to Charon Conversation:
 	link to My Name Is Zeno;
 	link to Nevermind.
     
+To say pay me:
+	say "Charon looks at you blankly, 'Sure. [b]Pay[r] me.'. [paragraph break]He holds out a bony hand.";
+
 Report giving link to My Name Is Sisyphus: 
 	Instead say "'I'm Sisyphus!'";
 Report giving text for My Name Is Sisyphus: 
 	Now the player's name is Sisyphus;
-	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
+	Instead say "[pay me]";
 	
 Report giving link to My Name Is Zeno: 
 	Instead say "'I'm Zeno!'";
 Report giving text for My Name Is Zeno: 
 	Now the player's name is Zeno;
-	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
+	Instead say "[pay me]";
 
 Report giving link to My Name Is Tantalus: 
 	Instead say "'I'm Tantalus!'";
 Report giving text for My Name Is Tantalus: 
 	Now the player's name is Tantalus;
-	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
+	Instead say "[pay me]";
 	
 Report giving link to My Name Is Prometheus: 
 	Instead say "'I'm Prometheus!'";
 Report giving text for My Name Is Prometheus: 
 	Now the player's name is Prometheus;
-	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
+	Instead say "[pay me]";
 
 Report giving link to My Name Is Danaid: 
 	Instead say "'I'm a Danaid!'";
 Report giving text for My Name Is Danaid: 
 	Now the player's name is Danaid;
-	Instead say "Charon looks at you blankly, 'Sure. Pay me.'. [paragraph break]He holds out a bony hand.";
+	Instead say "[pay me]";
 
 Report giving link to Nevermind: 
 	instead say "'Never mind...' ";
@@ -219,9 +276,9 @@ Paying is an action applying to one visible thing.
 Understand "pay [someone]" as paying.
 Instead of paying Charon:
 	If the player's name is Nobody:
-		say "Charon looks at you wearily, 'No paying until you tell me who you are.' (Maybe you should talk to him first.)";
+		say "Charon looks at you wearily, 'No paying until you tell me who you are.' (Maybe you should [b]talk to[r] him first.)";
 	otherwise If the player has the obol:
-		say "You hand over the small coin. Charon drops it into a pocket and gestures at the ferry.";
+		say "You hand over the small coin. Charon drops it into a pocket and gestures at the [b]ferry[r]. You should probably [b]get in[r].";
 		now the obol is in Charon's pocket;
 	otherwise:
 		say "You don't have any money.";
@@ -230,10 +287,10 @@ Instead of paying Charon:
 Section 5 - The boat
 
 Instead of entering the ferry when the player's name is Nobody:
-	say "Charon bars the way with a long, skinny arm. 'Nobody gets in the ferry without talking to me first.'";
+	say "Charon bars the way with a long, skinny arm. You should probably [b]talk to[r] him before presuming to get into his ferry.";
 
 Instead of entering the ferry when the the obol is not in Charon's pocket:
-	say "You haven't paid.";
+	say "You need to [b]pay[r] Charon before you can get in.";
 
 Before entering the ferry when the player's name is not Nobody and Charon has the obol and Charon is not in the ferry:
 	say	"Charon takes pains not to help you step into the ferry."
@@ -244,14 +301,14 @@ After entering the ferry:
 	The ferry departs in two turns from now;
 
 Instead of exiting when the player is in the ferry and the ferry is in The The Starting Place:
-	say "Charon stops you with a look. 'There's no undo down here.'";
+	say "Charon stops you with a look. 'There's no undoing down here.'";
 
 At the time when Charon gets into the ferry:
 	say "Charon steps deftly into the ferry and takes up his position at the oars.";
 	Now Charon is in the ferry;
 
 At the time when the ferry departs:
-	say "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[paragraph break]Charon looks at you implacably. You intuit that it's time for you to get out.";
+	say "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[paragraph break]Charon looks at you implacably. You intuit that it's time for you to [b]get out[r].";
 	If the player's name is Sisyphus:
 		Move the ferry to The Bottom of the Hill;
 	otherwise if the player's name is Prometheus:
@@ -279,12 +336,15 @@ After exiting when the player was in the ferry:
 	The ferry vanishes in zero turns from now;
 		
 At the time when the ferry vanishes:
-	say "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying 'My name is [player's name].' His duty discharged, Charon oars away without giving you a another thought.";
+	say "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying '[b]My name is [player's name][r].' His duty discharged, Charon oars away without giving you a another thought.";
 	Now Charon is in the ferry;
 	Move the ferry to The Starting Place;
 
 
 Section 6 - Skip aheads
+
+To say you're stuck:
+	say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
 
 SkipToSisyphus is an action applying to nothing.
 Understand "My name is Sisyphus" as SkipToSisyphus.
@@ -293,7 +353,7 @@ Instead of SkipToSisyphus:
 		Remove the obol from play;
 		Now the player is in The Bottom of the Hill;
 	Otherwise:
-		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+		say "[you're stuck]";
 
 SkipToPrometheus is an action applying to nothing.
 Understand "My name is Prometheus" as SkipToPrometheus.
@@ -302,7 +362,7 @@ Instead of SkipToPrometheus:
 		Remove the obol from play;
 		The player is chained down in zero turns from now;
 	Otherwise:
-		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+		say "[you're stuck]";
 
 SkipToDanaid is an action applying to nothing.
 Understand "My name is Danaid" as SkipToDanaid.
@@ -311,7 +371,7 @@ Instead of SkipToDanaid:
 		Remove the obol from play;
 		Now the player is in DanaidRoom;
 	Otherwise:
-		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+		say "[you're stuck]";
 
 SkipToTantalus is an action applying to nothing.
 Understand "My name is Tantalus" as SkipToTantalus.
@@ -320,7 +380,7 @@ Instead of SkipToTantalus:
 		Remove the obol from play;
 		Now the player is in the pool;
 	Otherwise:
-		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+		say "[you're stuck]";
 
 SkipToZeno is an action applying to nothing.
 Understand "My name is Zeno" as SkipToZeno.
@@ -329,13 +389,13 @@ Instead of SkipToZeno:
 		Remove the obol from play;
 		Now the player is on the starting line;
 	Otherwise:
-		say "Charon told you that would only work on arrival at his ferry. You're stuck here.";
+		say "[you're stuck]";
 
 
 Xyzzy is an action applying to nothing.
 Understand "Xyzzy" as Xyzzy.
 Instead of Xyzzy:
-	say "Nothing happens. Magic isn't real.";
+	say "Nothing happens. Magic isn't real. You could swear you can hear Zeus chuckling somewhere just out of view.";
 
 
 Section 7 - Tests
@@ -410,10 +470,13 @@ Section 2 - Pushing the boulder
 Instead of pushing the boulder:
 	try pushing the boulder to up;	
 	
-Instead of going north from the Whole Hill, say "The only way is up, baby.".
-Instead of going south from the Whole Hill, say "The only way is up, baby.".
-Instead of going east from the Whole Hill, say "The only way is up, baby.".
-Instead of going west from the Whole Hill, say "The only way is up, baby.".
+To say the only way is up:
+	say "The only way is [b]up[r], baby.";
+
+Instead of going north from the Whole Hill, say "[the only way is up]".
+Instead of going south from the Whole Hill, say "[the only way is up]".
+Instead of going east from the Whole Hill, say "[the only way is up]".
+Instead of going west from the Whole Hill, say "[the only way is up]".
 
 Before going up with the boulder:
 	if the boulder is rolling:
@@ -476,11 +539,11 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 
 Part 4 - Tantalus
 
-TantalusRoom is a room. The description is "An apple tree extends its branches above a clear pool of water set back a little way from the river's edge. A single apple hangs from a single branch.". The printed name is "A Desolate Beach".
+TantalusRoom is a room. The description is "An apple tree extends its branches above a clear [b]pool of water[r] set back a little way from the river's edge. A single [b]apple[r] hangs from a single branch.". The printed name is "A Desolate Beach".
 
 The beach is a backdrop in TantalusRoom. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
 
-The tree is a supporter in TantalusRoom. The description is "Gnarly, man.". The tree is scenery.
+The tree is a supporter in TantalusRoom. The description is "Its bark is worse than its bite.". The tree is scenery.
 
 The apple is on the tree. The apple is edible. The description is "A shiny, delicious apple just begging to be eaten.". The apple is scenery.
 
@@ -490,7 +553,7 @@ Instead of exiting when the player is in the pool:
 	say "Somehow that's not an option.";
 
 Instead of drinking the pool:
-	say "You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. On standing, the water rushes back in up to your waist.";
+	say "You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. Upon standing, the water rushes back in up to your waist.";
 	
 Instead of taking the apple:
 	say "You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again.";
@@ -544,7 +607,7 @@ At the time when the player is chained down:
 	Now the player is chained;
 	Now the right hand status line is "Liver: [percentage of the player's liver]%";
 
-PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.". The printed name is "The Rock".
+PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to the rock.". The printed name is "The Rock".
 PrometheusRoom can be nighttime or daytime.
 
 The beach is a backdrop in PrometheusRoom. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
@@ -558,7 +621,7 @@ A person can be chained or unchained.
 Rule for printing an enclosure preposition when the described enclosure is the player's enclosure and described enclosure is the rock: say "chained to ".
 
 Instead of getting off when the player is chained:
-	say "You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.";
+	say "You are tightly chained to the rock, you're not going anywhere. At best you could [b]writhe[r], [b]struggle[r], [b]strain[r], or something like that.";
 	stop the action;
 	
 Instead of going when the player is chained:
@@ -587,37 +650,37 @@ leaving			"It looks like an eagle that's eaten a full liver for dinner."
 gone			"It's gone."
 
 The description of the eagle is "[the reply corresponding to a proximity_entry of the proximity of the eagle in the table of eagle descriptions]".
-The eagle's eye is part of the eagle. The description is "[if the proximity of the eagle is perched]That is one cold and uncaring eye.[otherwise]You can't make out the eagle's eye from here.[end if]".
+The eagle's eye is part of the eagle. The description is "[if the proximity of the eagle is perched]It is staring at your liver.[otherwise]You can't make out the eagle's eye from here.[end if]".
 
 Every turn when the player is on the rock:
 	if the eagle is coming:
 		if the proximity of the eagle is appearing:
 			Now the proximity of the eagle is distant;
-			say "An eagle appears on the horizon.";
+			say "An [b]eagle[r] appears on the horizon.";
 			now the eagle is in PrometheusRoom;
 		otherwise if the proximity of the eagle is distant:
 			Now the proximity of the eagle is approaching;
-			say "The eagle is getting close.";
+			say "The [b]eagle[r] is getting close.";
 		otherwise if the proximity of the eagle is approaching:
 			Now the proximity of the eagle is near;
-			say "The eagle is right above you.";
+			say "The [b]eagle[r] is right above you.";
 		otherwise if the proximity of the eagle is near or the proximity of the eagle is hovering:
 			if the player is not struggling:
 				Now the proximity of the eagle is perched;
-				say "The eagle lands heavily beside you.";
+				say "The [b]eagle[r] lands heavily beside you. You feel an urge to [one of][b]writhe[r][or][b]struggle[r][or][b]strain[r][or][b]twist[r][or][b]thrash[r][purely at random].";
 			now the player is not struggling;
 		otherwise if the proximity of the eagle is perched:
-			say "The eagle eats some of your liver.";
+			say "The eagle eats some of your [b]liver[r].";
 			decrease the percentage of the player's liver by 10;
 			if the percentage of the player's liver is 0:
 				now the eagle is departing;
 				remove the liver from play;
 	otherwise if the eagle is departing:
 		if the proximity of the eagle is perched:
-			say "Having eaten your liver, the eagle nonchalantly flaps its wings and takes to the air.";
+			say "Having eaten your liver, the [b]eagle[r] nonchalantly flaps its wings and takes to the air.";
 			now the proximity of the eagle is leaving;
 		otherwise if the proximity of the eagle is leaving:
-			say "The eagle flies off into the distance.";
+			say "The [b]eagle[r] flies off into the distance.";
 			now the proximity of the eagle is gone;
 			now the eagle is nowhere;			
 			Night falls in one turn from now;
@@ -628,7 +691,7 @@ At the time when night falls:
 	Night ends in 1 turn from now;
 	
 At the time when the night ends:
-	say "The night ends surprisingly abruptly. You feel a brisk tingling sensation where your liver was pecked out by the eagle.";
+	say "The night ends surprisingly abruptly. You feel a brisk tingling sensation where your [b]liver[r] was pecked out by the [b]eagle[r].";
 	now PrometheusRoom is daytime;
 	Now the liver is part of the player;
 	Now the percentage of the player's liver is 100;
@@ -659,9 +722,9 @@ After writhing:
 
 Part 6 - Danaid
 
-DanaidRoom is a room. The description is "The sand here is bone dry. Rising out of the ground is a [bold type]fountain[roman type] and a little distance from it is a [bold type]basin[roman type].". The printed name is "An Arid Beach".
+DanaidRoom is a room. The description is "The sand here is bone dry. Rising out of the ground is a [b]fountain[r] and a little distance from it is a [b]basin[r].". The printed name is "An Arid Beach".
 
-The sand is here. It is scenery. The description is "Is this literally crushed up bones?". Understand "ground" as the sand.
+The sand is here. It is scenery. The description is "Coulr this be literally crushed up bones?". Understand "ground" as the sand.
 
 A basin is here. It is a container. The description is "A wide basin intended for holding liquid.[if the fountain water is in the basin] About a jug's-worth of water is in it right now.[otherwise] Let's say water.[end if][if the holes are revealed] There are holes drilled in the bottom.[end if][if the note from zeus to danaid is on the rim of the basin] There is a [bold type]note[roman type] stuck to the rim.[end if]".
 The rim of the basin is part of the basin. It is a supporter. The description is "That's a quality rim.".
@@ -683,7 +746,7 @@ After examining the note from zeus to the danaid:
 	say "Just as you finish reading it, the note blows [if the player has the note from zeus to the danaid]out of your hand[otherwise]off the rim of the basin[end if] on a mysterious gust of wind and vanishes into the distance.";
 	now the note from zeus to the danaid is nowhere;
 
-A fountain is here. It is a container. The description is "A small fountain perpetually shooting [bold type]water[roman type] a short way up into the air before it cascades down into a shallow bowl and drains out.".
+A fountain is here. It is a container. The description is "A small fountain perpetually shooting [b]water[r] a short way up into the air before it cascades down into a shallow bowl and drains out.".
 The bowl is part of the fountain. The description is "It is etched with images of frowning faces.".
 The frowning faces are part of the bowl. The description is "They don't look happy with you. Somehow you know it's you.".
 Instead of taking the fountain, say "It's firmly attached.".
@@ -703,7 +766,7 @@ Instead of taking the fountain water:
 		now the fountain water is in the jug;
 		say "You fill the jug with water from the fountain.";
 	otherwise:
-		say "Maybe you should pick up the jug first.";
+		say "Maybe you should pick up the [b]jug[r] first.";
 
 A jug is here. It is a portable container. The description is "An earthenware jug with a handle.[if the fountain water is in the jug] It's filled with water.[otherwise] It's empty.[end if]".
 The handle is part of the jug. The description is "[if the player has the jug]It fits your hand perfectly.[otherwise]Looks sturdy.[end if]".
@@ -789,30 +852,32 @@ Part 7 - Zeno
 
 The player has a number called runs. The runs of the player is 0.
 
-ZenoRoom is a room. The description is "The beach extends off into the fog. A straight running track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. In the distance at the end of the track, a limp green flag is visible. [if the runs of the player is less than 8][the description corresponding to a depth of the runs of the player in the table of fractional distance descriptions for Zeno].[otherwise][one of]You are extremely close to the flag[or]You are so close the flag you can taste it[or]You are practically standing on the flag, but not quite[or]You have very nearly finished the race[or]You are incredibly close to finishing the race[purely at random].[end if]". The printed name is "A Flat Beach".
+ZenoRoom is a room. The description is "The beach extends off into the fog. A straight [b]track[r] of about 100 meters has been sketched into the sand leading [b]north[r] away from the river with the [b]starting line[r] closest to the water. In the distance at the end of the track, a limp green [b]flag[r] is visible. [if the runs of the player is less than 8][the description corresponding to a depth of the runs of the player in the table of fractional distance descriptions for Zeno].[otherwise][one of]You are extremely close to the flag[or]You are so close the flag you can taste it[or]You are practically standing on the flag, but not quite[or]You have very nearly finished the race[or]You are incredibly close to finishing the race[purely at random].[end if]". The printed name is "A Flat Beach".
 
 The ZenoBeach is a backdrop in ZenoRoom. The description is "Apparently death is a beach too. The running track adds a little something to it, though.". Understand "beach" and "sand" as the beach when the player is in ZenoRoom.
 
 The starting line is a supporter in the ZenoRoom. It is scenery. The description is "A line drawn in the sand.". Understand "start" as the starting line when the player is in ZenoRoom.
 Rule for printing an enclosure preposition when the described enclosure is the player's enclosure and described enclosure is the starting line: say "at ".
 
-The track is a supporter in the ZenoRoom. It is scenery. The description is "It looks like someone used a stick of driftwood to draw the crude boundaries that lead north to the finishing flag.".
+The finish line is in the ZenoRoom. It is scenery. The description is "A line drawn in the sand.".
+
+The track is a supporter in the ZenoRoom. It is scenery. The description is "It looks like someone used a stick of driftwood to draw the crude boundaries that lead [b]north[r] to the flag at the finish line.".
 
 The flag is in the ZenoRoom. It is scenery. The description is "A muted green triangle of fabric attached to a pole jammed into the sand at the northern end of the track.". Understand "pole" as the flag.
 
 Instead of going when the player is on the starting line or the player is on the track:
-	say "You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is north of where you are now.";
+	say "You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is [b]north[r] of where you are now.";
 	
 Instead of jumping when the player is on the starting line or the player is on the track:
 	say "Let's not even think about jumping.";
 	
 Instead of touching something when the player is on the starting line or the player is on the track:
-	say "You think about reaching for[if the noun is the player][otherwise if the noun is part of the player][otherwise] the[end if] [noun], but you really need to focus on this footrace for now.";
+	say "You think about reaching for[if the noun is the player][otherwise if the noun is part of the player][otherwise] the[end if] [noun], but you really need to focus on this sprint for now.";
 
 Instead of taking the flag when the player is on the starting line or the player is on the track, try touching the flag.
 
 Instead of exiting when the player is on the starting line:
-	say "The best way to get off the starting line would be to run north down the track."; 
+	say "The best way to get off the starting line would be to [b]run north[r] down the track."; 
 
 Instead of exiting when the player is on the track:
 	say "You can leave when you've finished the race."; 
