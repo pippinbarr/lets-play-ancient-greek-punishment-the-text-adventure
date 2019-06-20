@@ -13,7 +13,7 @@ Section 1 - Basic setup
 
 Release along with an interpreter.
 Use the serial comma.
-Use scoring.
+[Use scoring.]
 Use undo prevention.
 Rule for printing room description details: stop.
 The can't push vertically rule is not listed in any rulebook.
@@ -41,10 +41,10 @@ To say basic instructions:
 	say "This is a work of interactive fiction and tries to follow standard ways of existing in a textual world:
 	[pb]
 	To look at where you are type [b]LOOK[r]. [lb]
-	To look at something type [b]LOOK AT THING[r] or [b]EXAMINE THING[r]. [lb]
+	To look at something specific type [b]LOOK AT THING[r] or [b]EXAMINE THING[r]. [lb]
 	To pick something up type [b]GET THING[r] or [b]TAKE THING[r]. [lb]
 	To talk to someone type [b]TALK TO PERSON[r]. [lb]
-	To go somewhere type a compass direction.
+	To go somewhere type a direction like [b]NORTH[r] or [b]UP[r].
 	
 	Generally speaking, look at everything you can and then work out what to do from there.";
 
@@ -73,9 +73,12 @@ Use scoring.
 A name is a kind of value. The names are Nobody, Sisyphus, Prometheus, Tantalus, Danaid, and Zeno.
 The player's name is a name that varies. The player's name is Nobody.
 
+points is a number that varies.
+
 When play begins: 
+	now points is 0;
 	now the left hand status line is "[the player's surroundings]"; 
-	now the right hand status line is "[score] points";
+	now the right hand status line is "[points] points";
 
 Section 3 - Some basic verb overrides
 
@@ -89,15 +92,15 @@ Instead of waking up, say "Unfortunately you really are in Hades. Tough break.".
 Instead of thinking, say "How'd that work out for you?".
 Instead of listening to something, say "Nothing is forthcoming.".
 Instead of cutting something, say "With what?".
-Instead of jumping, say "Boing...".
+Instead of jumping, say "You're too dead to be so jumpy.".
 Instead of tying something to something, say "With what?".
 Instead of drinking something, say "Your drinking days are over.".
 Instead of eating something, say "Your eating days are over.".
 Instead of saying sorry, say "It's a bit late for that.".
-Instead of climbing something, say "Nah.".
+Instead of climbing something, say "Leave climbing for the living.".
 Instead of sleeping, say "But there's so much to do!".
 Instead of pushing something, say "Stop being so pushy!".
-Instead of pulling something, say "Stop beign so pully!".
+Instead of pulling something, say "Stop being so pully!".
 
 
 [----------------------------------------------------]
@@ -452,14 +455,14 @@ The beach is a backdrop in The Whole Hill. The description is "Apparently death 
 
 The Bottom of the Hill is a room. The description is "A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.".
 
-The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.[if the location of the player is not the location of the boulder] At least it looks a bit smaller from up here.[otherwise if the post-it note is part of the boulder] There is a [b]post-it note[r] stuck to the boulder at eye-level.[end if]".
+The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.[if the location of the player is not the location of the boulder] At least it looks a bit smaller from up here.[otherwise if the post-it note is part of the boulder] There is a [b]grey post-it note[r] stuck to the boulder at eye-level.[end if]".
 Understand "rock" or "stone" as the boulder.
 The boulder is pushable between rooms.
 The boulder can be rolling or stationary. The boulder is stationary.
-The post-it note on the boulder is part of the boulder. The description is "The note just says[pb][f]Push me.[v]".
-After examining the post-it note on the boulder:
+The grey post-it note is part of the boulder. The description is "The note just says[pb][f]Push me.[v]".
+After examining the grey post-it note:
 	say "The post-it note suddenly tears off the boulder in a gust of wind and loops madly away into the distance.";
-	remove the post-it note on the boulder from play;
+	remove the grey post-it note from play;
 
 Instead of taking the boulder, say "That would be hilarious, but it's too big, too heavy, and too destined to punish you for that.".
 
@@ -476,12 +479,12 @@ The hole is a container in A Fair Way Up the Hill. It is scenery. The descriptio
 Quite Far Up the Hill is above A Fair Way Up the Hill. The description is "[if the previous location is A Fair Way Up the Hill]Far enough up the hill to be out of breath if you don't get out much. [end if]Like the rest of the hill, this part is made entirely out of dirt.".
 
 Nearly the Top of the Hill is above Quite Far Up the Hill. The description is "It's so barren up here you can't even imagine something growing, and you have a pretty good imagination.".
-The Note to Sisyphus from Zeus is here. The printed name is "note from Zeus". The description is "The note says[pb][f]lol[pb]Yours sincerely,[lb]Zeus[v]".
+[The Note to Sisyphus from Zeus is here. The printed name is "note from Zeus". The description is "The note says[pb][f]lol[pb]Yours sincerely,[lb]Zeus[v]".
 Instead of taking the Note to Sisyphus from Zeus:
 	say "A sudden gust of wind blows it out of your grasp and away into the distance. The wind sounded weirdly like laughter.";
-	remove the Note to Sisyphus from play;
+	remove the Note to Sisyphus from play;]
 	
-The Hilltop is above Nearly the Top of the Hill. The description is "The view is disappointing, with just the river below and everywhere a thick blanket of fog that prevents you seeing far in any direction.[if the boulder is not in The Hilltop] You should really go get the boulder.[end if]". The printed name is "The Top of the Hill".
+The Hilltop is above Nearly the Top of the Hill. The description is "The view is disappointing, with just the river below and everywhere a thick blanket of fog that prevents you seeing far in any direction.[if the location of the boulder is not The Hilltop] You should really go get the boulder.[otherwise] The boulder is here at last![end if]". The printed name is "The Top of the Hill".
 
 
 
@@ -490,9 +493,10 @@ Section 2 - Pushing the boulder
 Instead of pushing the boulder:
 	try pushing the boulder to up;	
 	
-After going up with the boulder when the post-it note on the boulder is part of the boulder:
+After going up with the boulder when the grey post-it note is part of the boulder:
 	say "The post-it note that was attached to the boulder is dislodged and blows away in a sudden gust of wind.";
-	now the post-it note on the boulder is nowhere;
+	now the grey post-it note is nowhere;
+	now the player props the boulder;
 	
 To say the only way is up:
 	say "The only way is [b]up[r], baby.";
@@ -522,8 +526,6 @@ Instead of going down with the boulder:
 After going up with the boulder:
 	if the player is not in the Hilltop:
 		now the player props the boulder;
-	otherwise:
-		increase the score by 1;
 	continue the action;
 	
 Before doing something:	
@@ -532,26 +534,30 @@ Before doing something:
 Propping relates one person to one thing. The verb to prop means the propping relation.
 
 Every turn when the boulder is not in The Bottom of the Hill and the player does not prop the boulder:
-	let next place be the room down from the location of the boulder;
-	now the boulder is rolling;
-	If the player is in the Hilltop and the boulder is in the Hilltop:		
-		say "The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill";
-	otherwise if the player can see the boulder:	
-		say "The boulder rolls calmly away down the hill.";
-	otherwise if the next place is not the bottom of the hill and the player is not in the next place:
-		say "Below, you see the boulder rolling down the hill.";
-	move the boulder to the next place;
-	if the player can see the boulder:
-		say "The boulder rolls into view.";
-	if the next place is the bottom of the hill:		
-		if the player cannot see the boulder:
-			say "[pb]You see the boulder settle into place at the bottom of the hill.";
+	let the next place be the room down from the location of the boulder;
+	if the boulder is not rolling:
+		if the player is in the Hilltop and the boulder is in the Hilltop:
+			increase the points by 1;
+			say "[bracket]Your score has gone up by 1 point.[close bracket][pb]";		
+			say "The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill. The rumbling sounds it makes is suspiciously like Zeus's laughter.";			
+		otherwise:	
+			say "Obeying gravity, the boulder rolls calmly down the hill.";
+		now the boulder is rolling;
+		move the boulder to the next place;
+		If the location of the player is the location of the boulder:
+			say "[lb]The boulder rolls into view.";
+	otherwise:
+		move the boulder to the next place;
+		If the location of the player is not the location of the boulder:
+			say "The boulder rolls down the hill.";
 		otherwise:
-			say "[pb]The boulder settles ponderously back at its starting position.";
+			say "The boulder rolls into view.";
+	If the next place is the bottom of the hill:		
+		if the location of the player is not the location of the boulder:
+			say "[lb]Below, you see the boulder settle into place at the bottom of the hill.";
+		otherwise:
+			say "[lb]The boulder settles ponderously back at its starting position.";
 		now the boulder is stationary;
-	If the player is in the Hilltop:
-		If the boulder is in the Hilltop:
-			increase the score by 1;
 
 
 
@@ -568,6 +574,7 @@ The beach is a backdrop in TantalusRoom. The description is "Apparently death is
 The tree is a supporter in TantalusRoom. The description is "Its bark is worse than its bite.". The tree is scenery.
 
 The apple is on the tree. The apple is edible. The description is "A shiny, delicious apple just begging to be eaten.[if the red post-it note is part of the apple] There is a [b]red post-it note[r] stuck to the apple.[end if]". The apple is scenery.
+
 The red post-it note is part of the apple. The description is "The note says[pb][f]Eat me.[v]".
 
 After examining the red post-it note:
@@ -581,6 +588,7 @@ The blue post-it note is part of the pool. The description is "The note says[pb]
 
 After examining the blue post-it note:
 	say "After you read it, the post-it note is plucked from the water by a gust of wind and flaps wetly into the distance.";
+	now the blue post-it note is nowhere;
 	
 Instead of taking the blue post-it note, say "Maybe you should try to [b]read[r] it instead.".
 
@@ -588,16 +596,16 @@ Instead of exiting when the player is in the pool:
 	say "Somehow that's not an option.";
 
 Instead of drinking the pool:
-	say "You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. Upon standing, the water rushes back in up to your waist. The gurgling sound it make sounds oddly like laughter.";
+	say "You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the bool is completely dry. Upon standing, the water rushes back in up to your waist. The gurgling sound it make sounds oddly like Zeus's laughter.";
 	
 Instead of taking the apple:
-	say "You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again. The wind made a sound oddly like laughter.";
+	say "You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again. The wind made a sound oddly like Zeus's laughter.";
 	
 Instead of jumping when the player is in the pool:
-	say "You jump up toward the apple on its branch, but a gust of wind blows it just as far out of reach as always and all you manage to do is make a splash. The wind made a sound oddly like laughter.";
+	say "You jump up toward the apple on its branch, but a gust of wind blows it just as far out of reach as always and all you manage to do is make a splash. The wind made a sound oddly like Zeus's laughter.";
 	
 Instead of taking the pool when the player is in the pool:
-	say "You cup your hands to gather up some water to drink, but the pool quickly drains before you're able to get anything. Your hands somehow remain bone dry and the pool refills once you've given up. The gurgling sound it makes is oddly like laughter.";
+	say "You cup your hands to gather up some water to drink, but the pool quickly drains before you're able to get anything. Your hands somehow remain bone dry and the pool refills once you've given up. The gurgling sound it makes is oddly like Zeus's laughter.";
 	
 Instead of eating the apple, try taking the apple;
 
@@ -642,12 +650,20 @@ At the time when the player is chained down:
 	Now the player is chained;
 	Now the right hand status line is "Liver: [percentage of the player's liver]%";
 
-PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to the rock.". The printed name is "The Rock".
+PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to the rock.[if the yellow post-it note is part of the rock] There is a grey post-it note stuck just next to your head.[end if]". The printed name is "The Rock".
 PrometheusRoom can be nighttime or daytime.
 
 The beach is a backdrop in PrometheusRoom. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
 
 The rock is scenery in PrometheusRoom. The Rock is a supporter. The description is "It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.".
+
+The yellow post-it note is part of the rock. The description is "The note says[pb][f]Wait.[v]".
+
+After examining the yellow post-it note:
+	say "Just after you finish reading it, the post-it note blows off the rock and away into the distance.";
+	now the yellow post-it note is nowhere;
+	
+Instead of taking the yellow post-it note, say "You're a bit too chained-to-a-rock for that. You could try to [b]read[r] it instead.".
 
 The chains are part of the rock. The description is "Heavy iron chains.". Understand "chain" as the chains.
 
@@ -715,7 +731,7 @@ Every turn when the player is on the rock:
 			say "Having eaten your liver, the [b]eagle[r] nonchalantly flaps its wings and takes to the air.";
 			now the proximity of the eagle is leaving;
 		otherwise if the proximity of the eagle is leaving:
-			say "The [b]eagle[r] flies off into the distance.";
+			say "The [b]eagle[r] flies off into the distance, emitting a call that sounds like a high-pitched version of Zeus's laughter.";
 			now the proximity of the eagle is gone;
 			now the eagle is nowhere;			
 			Night falls in one turn from now;
@@ -761,25 +777,24 @@ DanaidRoom is a room. The description is "The sand here is bone dry. Rising out 
 
 The sand is here. It is scenery. The description is "Coulr this be literally crushed up bones?". Understand "ground" as the sand.
 
-A basin is here. It is a container. The description is "A wide basin intended for holding liquid.[if the fountain water is in the basin] About a jug's-worth of water is in it right now.[otherwise] Let's say water.[end if][if the holes are revealed] There are holes drilled in the bottom.[end if][if the note from zeus to danaid is on the rim of the basin] There is a [bold type]note[roman type] stuck to the rim.[end if]".
-The rim of the basin is part of the basin. It is a supporter. The description is "That's a quality rim.".
+A basin is here. It is a container. The description is "A wide basin intended for holding liquid.[if the fountain water is in the basin] About a jug's-worth of water is in it right now.[otherwise] Let's say water.[end if][if the holes are revealed] There are holes drilled in the bottom.[end if][if the white post-it note is part of the rim of the basin] There is a [b]white post-it note[r] stuck to the rim.[end if]".
+The rim of the basin is part of the basin. It is a supporter. The description is "That's a quality rim.[if the white post-it note is part of the rim of the basin] There is a [b]white post-it note[r] stuck on it.[end if]".
 The holes in the basin are part of the basin. The description is "A set of neatly drilled holes perforate the lower part of the basin, providing handy drainage of any liquids placed inside it.".
 The holes can be revealed. The holes are not revealed.
 After examining the holes, now the holes are revealed.
 Instead of taking the basin, say "It's far too heavy.".
-The note from zeus to the danaid is on the rim of the basin. The printed name is "note". The description 
-is "'Fill me.
 
-lol,
-Zeus'".
+The white post-it note is part of the rim of the basin. The description is "The note says[pb][f]Fill me.[v]".
+
+After examining the white post-it note:
+	say "Just after you finish reading it, the post-it note blows off the rim of the basin and away into the distance.";
+	now the white post-it note is nowhere;
+	
+Instead of taking the white post-it note, say "Why not just [b]read[r] it instead?".
 
 Before listing nondescript items of DanaidRoom: 
 	now the basin is not marked for listing; 
 	now the fountain is not marked for listing;
-
-After examining the note from zeus to the danaid:
-	say "Just as you finish reading it, the note blows [if the player has the note from zeus to the danaid]out of your hand[otherwise]off the rim of the basin[end if] on a mysterious gust of wind and vanishes into the distance.";
-	now the note from zeus to the danaid is nowhere;
 
 A fountain is here. It is a container. The description is "A small fountain perpetually shooting [b]water[r] a short way up into the air before it cascades down into a shallow bowl and drains out.".
 The bowl is part of the fountain. The description is "It is etched with images of frowning faces.".
@@ -874,7 +889,7 @@ Instead of pouring the jug into the fountain:
 	try inserting the fountain water into the fountain;
 	
 At the time when the basin empties:
-	say "The water in the basin drains out through several holes, dissapating into the sand.";
+	say "The water in the basin drains out through several holes with a bubbling noise that sounds like Zeus's laughter. The escaped water immediately dissapates into the sand.";
 	now the holes are revealed;
 	if the fountain water is in the basin:
 		now the fountain water is in the fountain;
@@ -887,21 +902,33 @@ Part 7 - Zeno
 
 The player has a number called runs. The runs of the player is 0.
 
-ZenoRoom is a room. The description is "The beach extends off into the fog. A straight [b]track[r] of about 100 meters has been sketched into the sand leading [b]north[r] away from the river with the [b]starting line[r] closest to the water. In the distance at the end of the track, a limp green [b]flag[r] is visible. [if the runs of the player is less than 8][the description corresponding to a depth of the runs of the player in the table of fractional distance descriptions for Zeno].[otherwise][one of]You are extremely close to the flag[or]You are so close the flag you can taste it[or]You are practically standing on the flag, but not quite[or]You have very nearly finished the race[or]You are incredibly close to finishing the race[purely at random].[end if]". The printed name is "A Flat Beach".
+ZenoRoom is a room. The description is "The beach extends off into the fog. A straight [b]track[r] of about 100 meters has been sketched into the sand leading [b]north[r] away from the river with the [b]starting line[r] closest to the water. You can see a [b]green flag[r] in the distance at the end of the track. [if the runs of the player < the number of rows in the table of fractional distance descriptions for Zeno][the description corresponding to a depth of the runs of the player in the table of fractional distance descriptions for Zeno].[otherwise][one of]You are extremely close to the flag[or]You are so close the flag you can taste it[or]You are practically standing on the flag, but not quite[or]You have very nearly finished the race[or]You are incredibly close to finishing the race[purely at random].[end if]". The printed name is "A Flat Beach".
 
 The ZenoBeach is a backdrop in ZenoRoom. The description is "Apparently death is a beach too. The running track adds a little something to it, though.". Understand "beach" and "sand" as the beach when the player is in ZenoRoom.
 
-The starting line is a supporter in the ZenoRoom. It is scenery. The description is "A line drawn in the sand.". Understand "start" as the starting line when the player is in ZenoRoom.
+The starting line is a supporter in the ZenoRoom. It is scenery. The description is "A line drawn in the sand.[if the green post-it note is part of the starting line] A [b]green post-it note[r] rests on the sand near the line.[end if]". Understand "start" as the starting line when the player is in ZenoRoom.
 Rule for printing an enclosure preposition when the described enclosure is the player's enclosure and described enclosure is the starting line: say "at ".
+
+The green post-it note is part of the starting line. The description is "The note says[pb][f]Fill me.[v]".
+
+After examining the green post-it note:
+	say "Just after you finish reading it, a gust of wind blows the post-it note along the beach and cartwheeling into the distance.";
+	now the green post-it note is nowhere;
+	
+Instead of taking the green post-it note, say "Why not just [b]read[r] it instead?".
 
 The finish line is in the ZenoRoom. It is scenery. The description is "A line drawn in the sand.".
 
 The track is a supporter in the ZenoRoom. It is scenery. The description is "It looks like someone used a stick of driftwood to draw the crude boundaries that lead [b]north[r] to the flag at the finish line.".
 
-The flag is in the ZenoRoom. It is scenery. The description is "A muted green triangle of fabric attached to a pole jammed into the sand at the northern end of the track.". Understand "pole" as the flag.
+The flag is in the ZenoRoom. It is scenery. The description is "A green triangle of fabric attached to a pole jammed into the sand at the northern end of the track. It flaps gentle in the wind, making a sound not unlike Archimedes's laughter.". Understand "pole" as the flag.
+Instead of listening to the flag, say "That guy, eh?".
 
 Instead of going when the player is on the starting line or the player is on the track:
 	say "You can run in all kinds of directions once you've finished the race. For now focus on getting to the flag, which is [b]north[r] of where you are now.";
+
+Instead of going south when the player is on the track:
+	say "That would be very counterproductive. The finish line is to the [b]north[r] of where you are now.";
 	
 Instead of jumping when the player is on the starting line or the player is on the track:
 	say "Let's not even think about jumping.";
@@ -927,6 +954,7 @@ depth				description
 5				"You are thirty-one thirty-seconds of the way to the flag"
 6				"You are sixty-three sixty-fourths of the way to the flag"
 7				"You are a hundred and twenty-seven hundred and twenty-eighths of the way to the flag"
+8				"You are a two hundred and fifty-five two hundred and fifty-sixths of the way to the flag"
 
 Before going north when the player  is on the starting line or the player is on the track:
 	increase the runs of the player by 1;

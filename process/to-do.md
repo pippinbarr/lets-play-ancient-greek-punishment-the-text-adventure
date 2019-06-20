@@ -16,10 +16,11 @@
 - ~~Stop dragging the ferry around~~
 - ~~Bold key active nouns~~
 - ~~Suggest key verbs as hints (e.g. talk to charon etc) bolded~~
+- ~~Change it so all activities have notes + a separate lol somehow (at the very least this can communicate the key actions the player needs to perform)~~
 
 - Laws of writing, above
 - Go through tester transcripts and find extra verbs to include to help out + bugs
-- Change it so all activities have notes + a separate lol somehow (at the very least this can communicate the key actions the player needs to perform)
+
 
 ## Charon
 
@@ -33,8 +34,7 @@
 
 - ~~Add points (with notifications)~~
 - ~~Add post-it to the boulder~~
-
-- Boulder pushing stuff is broken
+- ~~Boulder pushing stuff is broken~~
 
 ## Prometheus
 
@@ -74,9 +74,10 @@
 - ~~Fix the frustrations of the first run command not changing the description to be off the start line~~
 - ~~Fix the frustrations of the fractional descriptions~~
 - ~~Jumping should have a specific meaning, as should touching, anything that involves (obvious) physical movement~~
+- ~~Archimedes lol?~~
 
 - Flavours
-- Archimedes lol?
+
 
 ## Danaid
 
