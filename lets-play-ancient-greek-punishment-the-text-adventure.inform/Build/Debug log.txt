@@ -14,7 +14,7 @@ Reading language definition from </Applications/Inform.app/Contents/Resources/In
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 7982 words long.
+I've now read your source text, which is 8474 words long.
 
 
 -----------------------------------------------------
@@ -55,9 +55,7 @@ Phase VI ... Semantic analysis III
 Phase VII ... First pass through assertions
 -----------------------------------------------------
 
-    Regional: CONSTANT_VNT'the whole hill'-region()(I99'whole hill')
-     == region
-    Regional: CONSTANT_VNT'the whole hill'-region()(I99'whole hill')
+    Regional: CONSTANT_VNT'the whole hill'-region()(I103'whole hill')
      == region
 
 
@@ -113,9 +111,9 @@ Phase XII ... Code generation
 
 ==== Phase XII.6 ... Compiling first block of phrases ====
 
-        Regional: CONSTANT_VNT'the whole hill'-region(I166_whole_hill)(I99'whole hill')
+        Regional: CONSTANT_VNT'the whole hill'-region(I170_whole_hill)(I103'whole hill')
          == region
-        Regional: CONSTANT_VNT'the whole hill'-region(I166_whole_hill)(I99'whole hill')
+        Regional: CONSTANT_VNT'the whole hill'-region(I170_whole_hill)(I103'whole hill')
          == region
                             0 = chat node. 1 = activatedness
                     0 = chat node. 1 = activatedness
@@ -191,7 +189,7 @@ Providing for a total heap of 8192, given requirement of 8192
 Phase XIII ... Compilation now complete
 -----------------------------------------------------
 
-Total of 128 files written as streams.
+Total of 131 files written as streams.
 CPU time: 231 centiseconds
 
 

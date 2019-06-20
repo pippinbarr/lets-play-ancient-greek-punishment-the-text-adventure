@@ -15,7 +15,7 @@ Release 1 / Serial number 190620 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type HELP for help.
 
 The Bank of the River Styx
-Here you are at the famous River Styx. The water flows sluggishly by.
+Here you are on the gritty beach at the edge of the famous River Styx. The water flows sluggishly by.
 
 You can see Charon's ferry and Charon here.
 
@@ -41,6 +41,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-2635"></child>
             <child nodeId="node-2632"></child>
             <child nodeId="node-2631"></child>
+            <child nodeId="node-3305"></child>
             <child nodeId="node-2626"></child>
             <child nodeId="node-2624"></child>
             <child nodeId="node-2622"></child>
@@ -74,6 +75,8 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1681"></child>
             <child nodeId="node-1677"></child>
             <child nodeId="node-1367"></child>
+            <child nodeId="node-3387"></child>
+            <child nodeId="node-3416"></child>
             <child nodeId="node-1366"></child>
             <child nodeId="node-1362"></child>
             <child nodeId="node-1357"></child>
@@ -104,6 +107,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1098"></child>
             <child nodeId="node-1091"></child>
             <child nodeId="node-1089"></child>
+            <child nodeId="node-3445"></child>
             <child nodeId="node-1088"></child>
             <child nodeId="node-1076"></child>
             <child nodeId="node-1069"></child>
@@ -115,6 +119,7 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1029"></child>
             <child nodeId="node-1027"></child>
             <child nodeId="node-1017"></child>
+            <child nodeId="node-3444"></child>
             <child nodeId="node-1009"></child>
             <child nodeId="node-1008"></child>
             <child nodeId="node-1003"></child>
@@ -244,6 +249,13 @@ Just above the beach the grit-sand turns into a packed dirt of the same colour. 
     <item nodeId="node-1016">
         <command xml:space="preserve">x river</command>
         <result xml:space="preserve">little.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3444">
+        <command xml:space="preserve">x seats</command>
+        <result xml:space="preserve">The seats don't look especially comfortable, but this is Hades.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -429,12 +441,20 @@ An eagle appears on the horizon.
     </item>
     <item nodeId="node-1037">
         <command xml:space="preserve">x oars</command>
-        <result xml:space="preserve">Good, solid oars.
+        <result xml:space="preserve">Oarn't you glad you looked?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1038"></child>
+            <child nodeId="node-3382"></child>
         </children>
+    </item>
+    <item nodeId="node-3382">
+        <command xml:space="preserve">x ferry</command>
+        <result xml:space="preserve">It's Charon's ferry, not totally unlike a small dinghy. Right now it is moored at the bank of the river, ready to shove off.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1038">
         <command xml:space="preserve">get oars</command>
@@ -894,7 +914,96 @@ You can see a worryingly large boulder here.
     </item>
     <item nodeId="node-1088">
         <command xml:space="preserve">x ferry</command>
-        <result xml:space="preserve">It's Charon's ferry, not totally unlike a small dinghy. Right now it is moored at the bank of the river, ready to shove off.
+        <result xml:space="preserve">It's Charon's ferry, not totally unlike a small dinghy. Right now it is moored at the bank of the river, its oars lying lengthwise along the bench seats, ready to shove off.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3384"></child>
+        </children>
+    </item>
+    <item nodeId="node-3384">
+        <command xml:space="preserve">x seats</command>
+        <result xml:space="preserve">The seats in the ferry don't look especially comfortable, but that seems about par for the course.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3385"></child>
+        </children>
+    </item>
+    <item nodeId="node-3385">
+        <command xml:space="preserve">sit</command>
+        <result xml:space="preserve">What do you want to sit on?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3386"></child>
+        </children>
+    </item>
+    <item nodeId="node-3386">
+        <command xml:space="preserve">seats</command>
+        <result xml:space="preserve">That's not something you can sit down on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3445">
+        <command xml:space="preserve">x face</command>
+        <result xml:space="preserve">Only partially visible, but completely disdainful.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3446"></child>
+        </children>
+    </item>
+    <item nodeId="node-3446">
+        <command xml:space="preserve">spit</command>
+        <result xml:space="preserve">You spit a small coin into your hand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3447"></child>
+        </children>
+    </item>
+    <item nodeId="node-3447">
+        <command xml:space="preserve">x face</command>
+        <result xml:space="preserve">Which do you mean, Charon's face or the coin face?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3448"></child>
+        </children>
+    </item>
+    <item nodeId="node-3448">
+        <command xml:space="preserve">x coin face</command>
+        <result xml:space="preserve">He looks like he's been through a lot.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3449"></child>
+        </children>
+    </item>
+    <item nodeId="node-3449">
+        <command xml:space="preserve">spit</command>
+        <result xml:space="preserve">Rude.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3450"></child>
+        </children>
+    </item>
+    <item nodeId="node-3450">
+        <command xml:space="preserve">show coin to charon</command>
+        <result xml:space="preserve">(the obol to Charon)
+Charon deadpans, "Good for you."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3451"></child>
+        </children>
+    </item>
+    <item nodeId="node-3451">
+        <command xml:space="preserve">x fog</command>
+        <result xml:space="preserve">It makes you feel distinctly less happy.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1593,12 +1702,20 @@ In Charon's ferry is Charon.
     </item>
     <item nodeId="node-1144">
         <command xml:space="preserve">x beach</command>
-        <result xml:space="preserve">You can't see any such thing.
+        <result xml:space="preserve">Apparently death is a beach, too. Not much of a beach day.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1145"></child>
+            <child nodeId="node-3380"></child>
         </children>
+    </item>
+    <item nodeId="node-3380">
+        <command xml:space="preserve">x sand</command>
+        <result xml:space="preserve">Apparently death is a beach, too. Not much of a beach day.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1145">
         <command xml:space="preserve">sisyphus</command>
@@ -2454,47 +2571,27 @@ Zeno
 &gt;[3] talk to charon
 Before you can get a word in, Charon monotones, "And you are?"
 
-Recalling the list of names on the clipboard, you say:
 
-Error: no text for Talk to Charon.
+Recalling the list of names on the clipboard, you say:
 
 1) "I'm Sisyphus!"
 
-2) "Never mind..." 
+2) "I'm Tantalus!"
+
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
 &gt;&gt; [4] 1
-Charon raises his eyebrow, "Oh yeah? Sure thing. Give me the coin.". 
+Charon looks at you blankly, "Sure. Pay me.". 
 
 He holds out a bony hand.
 
 &gt;[5] pay charon
-You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. "Looks like we're in business. Get in."
-
-&gt;[6] get into boat
-Charon is seemingly at pains not to help you step into the ferry. Once you're established, he climbs in after you.
-
-Charon sets about unmooring the ferry.
-
-&gt;[7] z
-Time passes.
-
-Charon steps deftly into the ferry and takes up his position at the oars.
-
-&gt;[8] z
-Time passes.
-
-With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
-
-Charon looks at you implacably. You intuit that it's time for you to get out.
-
-&gt;[9] get out
-You get out of Charon's ferry.
-
-Bottom of the Hill
-A grey, gritty beach meets the edge of the river. To the north a low, bare hill rises gently upward.
-
-You can see Charon's ferry (in which is Charon) and a worryingly large boulder here.
-
-Charon oars away without giving you a second thought.
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. You should probably get in.
 
 &gt;</result>
         <commentary xml:space="preserve">[1] open mouth
@@ -2502,17 +2599,16 @@ Charon oars away without giving you a second thought.
 [3] talk to charon
 [4] 1
 [5] pay charon
-[6] get into boat
-[7] z
-[8] z
-[9] get out
 </commentary>
         <children><child nodeId="node-1261"></child>
             <child nodeId="node-1260"></child>
+            <child nodeId="node-3458"></child>
             <child nodeId="node-1254"></child>
             <child nodeId="node-1246"></child>
             <child nodeId="node-1245"></child>
+            <child nodeId="node-3551"></child>
             <child nodeId="node-1238"></child>
+            <child nodeId="node-3372"></child>
             <child nodeId="node-1232"></child>
         </children>
     </item>
@@ -2585,6 +2681,86 @@ All aboard!
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-3372">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3373"></child>
+        </children>
+    </item>
+    <item nodeId="node-3373">
+        <command xml:space="preserve">get in</command>
+        <result xml:space="preserve">Charon takes pains not to help you step into the ferry, but you make it in alright.
+
+Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3374"></child>
+        </children>
+    </item>
+    <item nodeId="node-3374">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You're still in the ferry. You should get out first.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3375"></child>
+        </children>
+    </item>
+    <item nodeId="node-3375">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You're still in the ferry. You should get out first.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3376"></child>
+        </children>
+    </item>
+    <item nodeId="node-3376">
+        <command xml:space="preserve">run n</command>
+        <result xml:space="preserve">You're still in the ferry. You should get out first.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3377"></child>
+        </children>
+    </item>
+    <item nodeId="node-3377">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">You manage to jump out of the ferry clumsily.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Sisyphus." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3378"></child>
+        </children>
+    </item>
+    <item nodeId="node-3378">
+        <command xml:space="preserve">help</command>
+        <result xml:space="preserve">This is a work of interactive fiction and tries to follow standard ways of existing in a textual world: 
+
+ To look at where you are type LOOK. 
+ To look at something specific type LOOK AT THING or EXAMINE THING. 
+ To pick something up type GET THING or TAKE THING. 
+ To talk to someone type TALK TO PERSON. 
+ To go somewhere type a direction like NORTH or UP.
+
+Generally speaking, look at everything you can and then work out what to do from there.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1238">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">You can't go that way.
@@ -2642,6 +2818,355 @@ All aboard!
     <item nodeId="node-1244">
         <command xml:space="preserve">push boulder up hill</command>
         <result xml:space="preserve">I only understood you as far as wanting to push the worryingly large boulder up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3551">
+        <command xml:space="preserve">pay</command>
+        <result xml:space="preserve">(Charon)
+You've already paid.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3552"></child>
+        </children>
+    </item>
+    <item nodeId="node-3552">
+        <command xml:space="preserve">get in</command>
+        <result xml:space="preserve">Charon takes pains not to help you step into the ferry, but you make it in alright.
+
+Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3553"></child>
+        </children>
+    </item>
+    <item nodeId="node-3553">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3554"></child>
+        </children>
+    </item>
+    <item nodeId="node-3554">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the gritty sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3555"></child>
+        </children>
+    </item>
+    <item nodeId="node-3555">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">You manage to jump out of the ferry clumsily.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Sisyphus." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3556"></child>
+        </children>
+    </item>
+    <item nodeId="node-3556">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3557"></child>
+        </children>
+    </item>
+    <item nodeId="node-3557">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+You can see a swan here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3558"></child>
+        </children>
+    </item>
+    <item nodeId="node-3558">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3559"></child>
+        </children>
+    </item>
+    <item nodeId="node-3559">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+You can see a swan here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3560"></child>
+        </children>
+    </item>
+    <item nodeId="node-3560">
+        <command xml:space="preserve">x swan</command>
+        <result xml:space="preserve">As soon as you look directly at the swan, it's not there anymore. Maybe it was a trick of the light.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3561"></child>
+        </children>
+    </item>
+    <item nodeId="node-3561">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3579"></child>
+        </children>
+    </item>
+    <item nodeId="node-3579">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3580"></child>
+        </children>
+    </item>
+    <item nodeId="node-3580">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+Far enough up the hill to be out of breath if you don't get out much. Like the rest of the hill, this part is made entirely out of dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3581"></child>
+        </children>
+    </item>
+    <item nodeId="node-3581">
+        <command xml:space="preserve">x book</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3582"></child>
+        </children>
+    </item>
+    <item nodeId="node-3582">
+        <command xml:space="preserve">get book</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3583"></child>
+        </children>
+    </item>
+    <item nodeId="node-3583">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3584"></child>
+        </children>
+    </item>
+    <item nodeId="node-3584">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3585"></child>
+        </children>
+    </item>
+    <item nodeId="node-3585">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3586"></child>
+        </children>
+    </item>
+    <item nodeId="node-3586">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3587"></child>
+        </children>
+    </item>
+    <item nodeId="node-3587">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+The post-it note that was attached to the boulder is dislodged and blows away in a sudden gust of wind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3588"></child>
+        </children>
+    </item>
+    <item nodeId="node-3588">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3589"></child>
+        </children>
+    </item>
+    <item nodeId="node-3589">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3590"></child>
+        </children>
+    </item>
+    <item nodeId="node-3590">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the worryingly large boulder)
+You furrow your brow and heave the boulder forward.
+
+Quite Far Up the Hill
+Far enough up the hill to be out of breath if you don't get out much. Like the rest of the hill, this part is made entirely out of dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3591"></child>
+        </children>
+    </item>
+    <item nodeId="node-3591">
+        <command xml:space="preserve">x book</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3592"></child>
+        </children>
+    </item>
+    <item nodeId="node-3592">
+        <command xml:space="preserve">get book</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3624"></child>
+        </children>
+    </item>
+    <item nodeId="node-3624">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Nearly the Top of the Hill
+It's so barren up here you can't even imagine something growing, and you have a pretty good imagination.
+
+Obeying gravity, the boulder rolls calmly down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3625"></child>
+        </children>
+    </item>
+    <item nodeId="node-3625">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+The Top of the Hill
+The view is disappointing, with just the river below and everywhere a thick blanket of fog that prevents you seeing far in any direction. You should really go get the boulder.
+
+You can see a plinth (on which is a book) here.
+
+The boulder rolls down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3626"></child>
+        </children>
+    </item>
+    <item nodeId="node-3626">
+        <command xml:space="preserve">x plinth</command>
+        <result xml:space="preserve">A minimalist marble plinth.
+
+On the plinth is a book.
+
+The boulder rolls down the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3627"></child>
+        </children>
+    </item>
+    <item nodeId="node-3627">
+        <command xml:space="preserve">x book</command>
+        <result xml:space="preserve">It's "The Myth of Sisyphus" by Albert Camus. Apparently you ought to be happy right now. The book is chained to the plinth.
+
+The boulder rolls down the hill.
+
+Below, you see the boulder settle into place at the bottom of the hill.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3628"></child>
+        </children>
+    </item>
+    <item nodeId="node-3628">
+        <command xml:space="preserve">get book</command>
+        <result xml:space="preserve">It's chained to the plinth.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3629"></child>
+        </children>
+    </item>
+    <item nodeId="node-3629">
+        <command xml:space="preserve">read book</command>
+        <result xml:space="preserve">It's "The Myth of Sisyphus" by Albert Camus. Apparently you ought to be happy right now. The book is chained to the plinth.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -2863,6 +3388,577 @@ You can see a worryingly large boulder here.
         <result xml:space="preserve">It's Charon's ferry, not totally unlike a small dinghy. Right now it is pulled up onto the bank of the river, ready to shove off into the river.
 
 In Charon's ferry is Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3458">
+        <command xml:space="preserve">get in</command>
+        <result xml:space="preserve">Charon takes pains not to help you step into the ferry, but you make it in alright.
+
+Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3459"></child>
+        </children>
+    </item>
+    <item nodeId="node-3459">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3517"></child>
+            <child nodeId="node-3460"></child>
+        </children>
+    </item>
+    <item nodeId="node-3460">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the gritty sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3461"></child>
+        </children>
+    </item>
+    <item nodeId="node-3461">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">You manage to jump out of the ferry clumsily.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Sisyphus." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3462"></child>
+        </children>
+    </item>
+    <item nodeId="node-3462">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3463"></child>
+        </children>
+    </item>
+    <item nodeId="node-3463">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3464"></child>
+        </children>
+    </item>
+    <item nodeId="node-3464">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3465"></child>
+        </children>
+    </item>
+    <item nodeId="node-3465">
+        <command xml:space="preserve">x hole</command>
+        <result xml:space="preserve">A small absence of dirt amidst the dirt.
+
+In the hole is a folded note.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3466"></child>
+        </children>
+    </item>
+    <item nodeId="node-3466">
+        <command xml:space="preserve">get note</command>
+        <result xml:space="preserve">(the folded note)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3467"></child>
+        </children>
+    </item>
+    <item nodeId="node-3467">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">(the folded note)
+The note has just one word on it:
+
+xyzzy
+
+The note blows sharply out of your hand and off into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3468"></child>
+        </children>
+    </item>
+    <item nodeId="node-3468">
+        <command xml:space="preserve">xyzzy</command>
+        <result xml:space="preserve">Nothing happens. Magic isn't real. You could swear you can hear Zeus chuckling somewhere just out of view.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3469"></child>
+        </children>
+    </item>
+    <item nodeId="node-3469">
+        <command xml:space="preserve">drop note</command>
+        <result xml:space="preserve">It's too far away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3506"></child>
+        </children>
+    </item>
+    <item nodeId="node-3506">
+        <command xml:space="preserve">x note</command>
+        <result xml:space="preserve">The note just says
+
+Push me.
+
+The post-it note suddenly tears off the boulder in a gust of wind and loops madly away into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3507"></child>
+        </children>
+    </item>
+    <item nodeId="node-3507">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3508"></child>
+        </children>
+    </item>
+    <item nodeId="node-3508">
+        <command xml:space="preserve">x note</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3517">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3518"></child>
+        </children>
+    </item>
+    <item nodeId="node-3518">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the gritty sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3519"></child>
+        </children>
+    </item>
+    <item nodeId="node-3519">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">You manage to jump out of the ferry clumsily.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Sisyphus." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3520"></child>
+        </children>
+    </item>
+    <item nodeId="node-3520">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3642"></child>
+            <child nodeId="node-3521"></child>
+        </children>
+    </item>
+    <item nodeId="node-3521">
+        <command xml:space="preserve">x note</command>
+        <result xml:space="preserve">It's too far away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3522"></child>
+        </children>
+    </item>
+    <item nodeId="node-3522">
+        <command xml:space="preserve">x boulder</command>
+        <result xml:space="preserve">That really is a lot of rock. At least it looks a bit smaller from up here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3537"></child>
+        </children>
+    </item>
+    <item nodeId="node-3537">
+        <command xml:space="preserve">x beach</command>
+        <result xml:space="preserve">Apparently death is a beach, too. Not much of a beach day, though.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3538"></child>
+        </children>
+    </item>
+    <item nodeId="node-3538">
+        <command xml:space="preserve">x river</command>
+        <result xml:space="preserve">The river seems to sneer at you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3539"></child>
+        </children>
+    </item>
+    <item nodeId="node-3539">
+        <command xml:space="preserve">x sneer</command>
+        <result xml:space="preserve">What an unpleasant river.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3540"></child>
+        </children>
+    </item>
+    <item nodeId="node-3540">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">It's too far away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3541"></child>
+        </children>
+    </item>
+    <item nodeId="node-3541">
+        <command xml:space="preserve">get note</command>
+        <result xml:space="preserve">It's too far away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3542"></child>
+        </children>
+    </item>
+    <item nodeId="node-3542">
+        <command xml:space="preserve">get boulder</command>
+        <result xml:space="preserve">It's too far away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3543"></child>
+        </children>
+    </item>
+    <item nodeId="node-3543">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Bottom of the Hill
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3544"></child>
+        </children>
+    </item>
+    <item nodeId="node-3544">
+        <command xml:space="preserve">get boulder</command>
+        <result xml:space="preserve">That would be hilarious, but it's too big, too heavy, and too destined to punish you for that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3642">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+You can see a swan here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3643"></child>
+        </children>
+    </item>
+    <item nodeId="node-3643">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3644"></child>
+        </children>
+    </item>
+    <item nodeId="node-3644">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+Far enough up the hill to be out of breath if you don't get out much. Like the rest of the hill, this part is made entirely out of dirt.
+
+You can see a videogame here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3645"></child>
+        </children>
+    </item>
+    <item nodeId="node-3645">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Nearly the Top of the Hill
+It's so barren up here you can't even imagine something growing, and you have a pretty good imagination. The fog, however, does appear to be coalescing into strange shapes here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3646"></child>
+        </children>
+    </item>
+    <item nodeId="node-3646">
+        <command xml:space="preserve">x fog</command>
+        <result xml:space="preserve">The swirling fog almost looks like a bed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3681"></child>
+        </children>
+    </item>
+    <item nodeId="node-3681">
+        <command xml:space="preserve">x fog</command>
+        <result xml:space="preserve">The swirling fog almost looks like Albert Camus.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3754"></child>
+        </children>
+    </item>
+    <item nodeId="node-3754">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+Like the rest of the hill, this part is made entirely out of dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3755"></child>
+        </children>
+    </item>
+    <item nodeId="node-3755">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3756"></child>
+        </children>
+    </item>
+    <item nodeId="node-3756">
+        <command xml:space="preserve">y</command>
+        <result xml:space="preserve">
+
+
+Let's Play: Ancient Greek Punishment: The Text Adventure
+An Interactive Fiction by Pippin Barr
+Release 1 / Serial number 190620 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+
+Type HELP for help.
+
+The Bank of the River Styx
+Here you are on the gritty beach at the edge of the famous River Styx. The water flows sluggishly by.
+
+You can see Charon's ferry and Charon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3757"></child>
+        </children>
+    </item>
+    <item nodeId="node-3757">
+        <command xml:space="preserve">test sisyphus</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] open mouth
+You open your mouth and neatly catch the small coin that drops out.
+
+&gt;[2] x clipboard
+Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;[3] talk to charon
+Before you can get a word in, Charon monotones, "And you are?"
+
+
+Recalling the list of names on the clipboard, you say:
+
+1) "I'm Sisyphus!"
+
+2) "I'm Tantalus!"
+
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
+&gt;&gt; [4] 1
+Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;[5] pay charon
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. You should probably get in.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] open mouth
+[2] x clipboard
+[3] talk to charon
+[4] 1
+[5] pay charon
+</commentary>
+        <children><child nodeId="node-3763"></child>
+        </children>
+    </item>
+    <item nodeId="node-3763">
+        <command xml:space="preserve">get in</command>
+        <result xml:space="preserve">Charon takes pains not to help you step into the ferry, but you make it in alright.
+
+Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3764"></child>
+        </children>
+    </item>
+    <item nodeId="node-3764">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3765"></child>
+        </children>
+    </item>
+    <item nodeId="node-3765">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the gritty sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3766"></child>
+        </children>
+    </item>
+    <item nodeId="node-3766">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">You manage to jump out of the ferry clumsily.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Sisyphus." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3767"></child>
+        </children>
+    </item>
+    <item nodeId="node-3767">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Little Way Up the Hill
+Just above the beach the grit-sand turns into a packed dirt of the same colour. The occasional sprig of dead grass serves to liven it up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3768"></child>
+        </children>
+    </item>
+    <item nodeId="node-3768">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Partway Up the Hill
+The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.
+
+You can see a swan here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3769"></child>
+        </children>
+    </item>
+    <item nodeId="node-3769">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+A Fair Way Up the Hill
+A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3770"></child>
+        </children>
+    </item>
+    <item nodeId="node-3770">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Quite Far Up the Hill
+Far enough up the hill to be out of breath if you don't get out much. Like the rest of the hill, this part is made entirely out of dirt.
+
+You can see a videogame here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3771"></child>
+        </children>
+    </item>
+    <item nodeId="node-3771">
+        <command xml:space="preserve">x videogame</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3772"></child>
+        </children>
+    </item>
+    <item nodeId="node-3772">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Quite Far Up the Hill
+Far enough up the hill to be out of breath if you don't get out much. Like the rest of the hill, this part is made entirely out of dirt.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -4012,6 +5108,268 @@ A small silver coin imprinted with the blurry image of a sleepy man's face.
     <item nodeId="node-1366">
         <command xml:space="preserve">sleep</command>
         <result xml:space="preserve">But there's so much to do!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3416">
+        <command xml:space="preserve">sit on ferry</command>
+        <result xml:space="preserve">You need to pay Charon before you can get in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3418"></child>
+        </children>
+    </item>
+    <item nodeId="node-3418">
+        <command xml:space="preserve">sit on ground</command>
+        <result xml:space="preserve">No rest for the wicked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3419"></child>
+        </children>
+    </item>
+    <item nodeId="node-3419">
+        <command xml:space="preserve">sit on river</command>
+        <result xml:space="preserve">No rest for the wicked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3420"></child>
+        </children>
+    </item>
+    <item nodeId="node-3420">
+        <command xml:space="preserve">sit on Charon</command>
+        <result xml:space="preserve">No rest for the wicked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3421"></child>
+        </children>
+    </item>
+    <item nodeId="node-3421">
+        <command xml:space="preserve">lie on ferry</command>
+        <result xml:space="preserve">No rest for the wicked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3422"></child>
+        </children>
+    </item>
+    <item nodeId="node-3422">
+        <command xml:space="preserve">lie on river</command>
+        <result xml:space="preserve">No rest for the wicked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3423"></child>
+        </children>
+    </item>
+    <item nodeId="node-3423">
+        <command xml:space="preserve">shove ferry</command>
+        <result xml:space="preserve">Charon will handle all that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3424"></child>
+        </children>
+    </item>
+    <item nodeId="node-3424">
+        <command xml:space="preserve">push ferry</command>
+        <result xml:space="preserve">Charon will handle all that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3433"></child>
+        </children>
+    </item>
+    <item nodeId="node-3433">
+        <command xml:space="preserve">shove ferry</command>
+        <result xml:space="preserve">Charon will handle all that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3443"></child>
+        </children>
+    </item>
+    <item nodeId="node-3443">
+        <command xml:space="preserve">shove off</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3387">
+        <command xml:space="preserve">sit</command>
+        <result xml:space="preserve">What do you want to sit on?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3388"></child>
+            <child nodeId="node-3400"></child>
+        </children>
+    </item>
+    <item nodeId="node-3400">
+        <command xml:space="preserve">sit on the ferry</command>
+        <result xml:space="preserve">You need to pay Charon before you can get in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3401"></child>
+        </children>
+    </item>
+    <item nodeId="node-3401">
+        <command xml:space="preserve">sit on seats</command>
+        <result xml:space="preserve">You need to pay Charon before you can get in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3402"></child>
+        </children>
+    </item>
+    <item nodeId="node-3402">
+        <command xml:space="preserve">sit on charon</command>
+        <result xml:space="preserve">He's not something you can sit down on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3403"></child>
+        </children>
+    </item>
+    <item nodeId="node-3403">
+        <command xml:space="preserve">sit on ground</command>
+        <result xml:space="preserve">That's not something you can sit down on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3409"></child>
+        </children>
+    </item>
+    <item nodeId="node-3409">
+        <command xml:space="preserve">enter ground</command>
+        <result xml:space="preserve">That's not something you can enter.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3388">
+        <command xml:space="preserve">ferry</command>
+        <result xml:space="preserve">You need to pay Charon before you can get in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3389"></child>
+        </children>
+    </item>
+    <item nodeId="node-3389">
+        <command xml:space="preserve">spit</command>
+        <result xml:space="preserve">You spit a small coin into your hand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3390"></child>
+        </children>
+    </item>
+    <item nodeId="node-3390">
+        <command xml:space="preserve">x board</command>
+        <result xml:space="preserve">Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3391"></child>
+        </children>
+    </item>
+    <item nodeId="node-3391">
+        <command xml:space="preserve">pay charon</command>
+        <result xml:space="preserve">Charon looks at you wearily, "No paying until you tell me who you are." (Maybe you should talk to him first.)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3392"></child>
+        </children>
+    </item>
+    <item nodeId="node-3392">
+        <command xml:space="preserve">talk to charon</command>
+        <result xml:space="preserve">Before you can get a word in, Charon monotones, "And you are?"
+
+
+Recalling the list of names on the clipboard, you say:
+
+1) "I'm Sisyphus!"
+
+2) "I'm Tantalus!"
+
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
+&gt;&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3393"></child>
+        </children>
+    </item>
+    <item nodeId="node-3393">
+        <command xml:space="preserve">1</command>
+        <result xml:space="preserve">Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3394"></child>
+        </children>
+    </item>
+    <item nodeId="node-3394">
+        <command xml:space="preserve">pay charon</command>
+        <result xml:space="preserve">You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. You should probably get in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3395"></child>
+        </children>
+    </item>
+    <item nodeId="node-3395">
+        <command xml:space="preserve">sit</command>
+        <result xml:space="preserve">What do you want to sit on?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3396"></child>
+        </children>
+    </item>
+    <item nodeId="node-3396">
+        <command xml:space="preserve">the seats</command>
+        <result xml:space="preserve">That's not something you can sit down on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3397"></child>
+        </children>
+    </item>
+    <item nodeId="node-3397">
+        <command xml:space="preserve">the ferry</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3398"></child>
+        </children>
+    </item>
+    <item nodeId="node-3398">
+        <command xml:space="preserve">sit on ferry</command>
+        <result xml:space="preserve">Charon takes pains not to help you step into the ferry, but you make it in alright.
+
+Charon sets about unmooring the ferry.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -19137,6 +20495,257 @@ Generally speaking, look at everything you can and then work out what to do from
     <item nodeId="node-2630">
         <command xml:space="preserve">tell charon about my name</command>
         <result xml:space="preserve">Charon rolls his eyes. "Who are you, exactly?"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3305">
+        <command xml:space="preserve">get on ferry</command>
+        <result xml:space="preserve">You need to pay Charon before you can get in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3306"></child>
+            <child nodeId="node-3317"></child>
+        </children>
+    </item>
+    <item nodeId="node-3317">
+        <command xml:space="preserve">test sisyphus</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] open mouth
+You open your mouth and neatly catch the small coin that drops out.
+
+&gt;[2] x clipboard
+Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;[3] talk to charon
+Before you can get a word in, Charon monotones, "And you are?"
+
+
+Recalling the list of names on the clipboard, you say:
+
+1) "I'm Sisyphus!"
+
+2) "I'm Tantalus!"
+
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
+&gt;&gt; [4] 1
+Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;[5] pay charon
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. You should probably get in.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] open mouth
+[2] x clipboard
+[3] talk to charon
+[4] 1
+[5] pay charon
+</commentary>
+        <children><child nodeId="node-3323"></child>
+        </children>
+    </item>
+    <item nodeId="node-3323">
+        <command xml:space="preserve">get on ferry</command>
+        <result xml:space="preserve">Charon takes pains not to help you step into the ferry, but you make it in alright.
+
+Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3340"></child>
+        </children>
+    </item>
+    <item nodeId="node-3340">
+        <command xml:space="preserve">get off ferry</command>
+        <result xml:space="preserve">You manage to jump out of the ferry clumsily.
+
+Charon stops you with a look. "There's no undoing down here."
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3350"></child>
+        </children>
+    </item>
+    <item nodeId="node-3350">
+        <command xml:space="preserve">get off ferry</command>
+        <result xml:space="preserve">You manage to jump out of the ferry clumsily.
+
+Charon stops you with a look. "There's no undoing down here."
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3351"></child>
+        </children>
+    </item>
+    <item nodeId="node-3351">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Bottom of the Hill (in Charon's ferry)
+A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.
+
+You can see a worryingly large boulder here.
+
+In Charon's ferry you can see Charon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3352"></child>
+        </children>
+    </item>
+    <item nodeId="node-3352">
+        <command xml:space="preserve">get off</command>
+        <result xml:space="preserve">You manage to jump out of the ferry clumsily.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Sisyphus." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3365"></child>
+        </children>
+    </item>
+    <item nodeId="node-3365">
+        <command xml:space="preserve">leave</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3306">
+        <command xml:space="preserve">get off ferry</command>
+        <result xml:space="preserve">But you aren't on Charon's ferry at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3307"></child>
+        </children>
+    </item>
+    <item nodeId="node-3307">
+        <command xml:space="preserve">open mouth</command>
+        <result xml:space="preserve">You open your mouth and neatly catch the small coin that drops out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3308"></child>
+        </children>
+    </item>
+    <item nodeId="node-3308">
+        <command xml:space="preserve">x board</command>
+        <result xml:space="preserve">Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3309"></child>
+        </children>
+    </item>
+    <item nodeId="node-3309">
+        <command xml:space="preserve">talk to charon</command>
+        <result xml:space="preserve">Before you can get a word in, Charon monotones, "And you are?"
+
+
+Recalling the list of names on the clipboard, you say:
+
+1) "I'm Sisyphus!"
+
+2) "I'm Tantalus!"
+
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
+&gt;&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3310"></child>
+        </children>
+    </item>
+    <item nodeId="node-3310">
+        <command xml:space="preserve">1</command>
+        <result xml:space="preserve">Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3311"></child>
+        </children>
+    </item>
+    <item nodeId="node-3311">
+        <command xml:space="preserve">pay</command>
+        <result xml:space="preserve">(Charon)
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. You should probably get in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3312"></child>
+        </children>
+    </item>
+    <item nodeId="node-3312">
+        <command xml:space="preserve">get in ferry</command>
+        <result xml:space="preserve">Charon sets about unmooring the ferry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3313"></child>
+        </children>
+    </item>
+    <item nodeId="node-3313">
+        <command xml:space="preserve">get off ferry</command>
+        <result xml:space="preserve">But you aren't on Charon's ferry at the moment.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3314"></child>
+        </children>
+    </item>
+    <item nodeId="node-3314">
+        <command xml:space="preserve">get out of ferry</command>
+        <result xml:space="preserve">I only understood you as far as wanting to get outside.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3315"></child>
+        </children>
+    </item>
+    <item nodeId="node-3315">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">Charon stops you with a look. "There's no undoing down here."
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

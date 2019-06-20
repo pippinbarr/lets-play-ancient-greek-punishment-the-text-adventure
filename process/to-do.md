@@ -17,10 +17,9 @@
 - ~~Bold key active nouns~~
 - ~~Suggest key verbs as hints (e.g. talk to charon etc) bolded~~
 - ~~Change it so all activities have notes + a separate lol somehow (at the very least this can communicate the key actions the player needs to perform)~~
+- ~~Go through tester transcripts and find extra verbs to include to help out + bugs~~
 
 - Laws of writing, above
-- Go through tester transcripts and find extra verbs to include to help out + bugs
-
 
 ## Charon
 

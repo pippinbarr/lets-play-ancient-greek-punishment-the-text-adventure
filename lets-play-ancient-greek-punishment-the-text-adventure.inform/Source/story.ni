@@ -7,6 +7,18 @@ Include Simple Chat by Mark Tilford.
 [Include Liquid Handling by Al Golden.]
 [Include Basic Help Menu by Emily Short.]
 
+Part 0 - Tests
+
+Test sisyphus with "open mouth / x clipboard / talk to charon / 1 / pay charon".
+
+Test tantalus with "open mouth / x clipboard / talk to charon / 2 / pay charon".
+
+Test prometheus with "open mouth / x clipboard / talk to charon / 3 / pay charon".
+
+Test danaid with "open mouth / x clipboard / talk to charon / 4 / pay charon".
+
+Test zeno with "open mouth / x clipboard / talk to charon / 5 / pay charon".
+
 Part 1 - Setup
 
 Section 1 - Basic setup
@@ -111,24 +123,43 @@ Part 2 - Charon and the Ferry
 
 Section 1 - The place
 
-The Starting Place is a room. The description is "Here you are at the famous River Styx. The water flows sluggishly by.". The printed name is "The Bank of the River Styx".
+The Starting Place is a room. The description is "Here you are on the gritty beach at the edge of the famous River Styx. The water flows sluggishly by.". The printed name is "The Bank of the River Styx".
 The River Styx is a backdrop. The description is "The river seems to sneer at you.". Understand "water" as the River Styx when the player is in The Starting Place.
 The River Styx is everywhere.
 Instead of taking the river styx, say "It is neither portable nor potable.".
 The sneer is part of the river styx. The description is "What an unpleasant river.".
 Instead of drinking the river styx, say "It's not a nice river.".
 
-Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. [if the ferry is in The Starting Place]Right now it is moored at the bank of the river, ready to shove off.[otherwise]Right now it is grounded on a gritty beach.[end if]".
+The beach is part of the River Styx. The description is "Apparently death is a beach, too. Not much of a beach day, though.". Understand "sand" and "ground" as the beach.
+
+Understand the command "sit" and "lie" as something new.
+Sitting on is an action applying to one thing.
+Understand "sit on [something]" as sitting on.
+Instead of sitting on something, say "No rest for the wicked.".
+
+Lying on is an action applying to one thing.
+Understand "lie on [something]" as lying on.
+Instead of lying on something, say "No rest for the wicked.".
+
+Instead of sitting on the ferry, try entering the ferry.
+
+Charon's ferry is here. The description is "It's Charon's ferry, not totally unlike a small dinghy. [if the ferry is in The Starting Place]Right now it is moored at the bank of the river, its oars lying lengthwise along the bench seats, ready to shove off.[otherwise]Right now it is grounded on a gritty beach.[end if]".
 Charon's ferry is a vehicle.
-Understand "boat" or "dinghy" as the ferry.
-The oars are part of the ferry. The description is "Good, solid oars.".
+Understand "boat" or "ship" or "dinghy" as the ferry.
+The oars are part of the ferry. The description is "Oarn't you glad you looked?".
+The bench seats are part of the ferry. The description is "The seats don't look especially comfortable, but this [italic type]is[r] Hades.". Understand "seat" as the bench seats.
+
+Understand "shove [something]" as pushing.
+Instead of pushing the ferry, say "Charon will handle all that.".
+
+Instead of entering the bench seats, try entering the ferry.
 
 Instead of taking the ferry, say "Good one.".
-Instead of taking the oars, say "Charon throws you a look that very clearly communicates 'do not take those oars.'".
+Instead of taking the oars, say "Charon throws you a look that very clearly communicates 'do not touch those oars.'".
+Instead of touching the oars, say "You think better of it.".
 Instead of going when the player is in the ferry, say "You're still in the ferry. You should [b]get out[r] first.".
 
-The clipboard is an object. The description is "Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:[lb][lb]Sisyphus[lb]Tantalus[lb]Prometheus[lb]Danaids[lb]Zeno";
-
+The clipboard is an object. The description is "Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:[lb][lb]Sisyphus[lb]Tantalus[lb]Prometheus[lb]Danaids[lb]Zeno".
 The clipboard can be secret. The clipboard is secret.
 After examining the clipboard, now the clipboard is not secret.
 Understand "board" as the clipboard.
@@ -142,6 +173,8 @@ Charon's eyes are part of Charon. The description is "Unhappy."
 Charon's hand is part of Charon. The description is "Bony.".
 Charon's arm is part of Charon. The description is "It makes thin arms look fat.".
 Charon's pocket is part of Charon. It is a container. The description is "Looks roomy.".
+Charon's frown is part of Charon. The description is "His most common expression.".
+Charon's face is part of Charon. The description is "Charon's face is only partially visible, but completely disdainful.".
 Instead of searching Charon's pocket, say "Charon's frown is enough to prevent you.".
 Instead of examining Charon's pocket: 
     say "[description of Charon's pocket][lb]";
@@ -154,7 +187,7 @@ Understand "Charon's cowl" as the cowl.
 Section 2 - The obol
 
 The obol is an object. The description is "A small silver coin imprinted with the blurry image of a sleepy man's face."
-The coin face is part of the obol. The description is "He looks like he's been through a lot.". Understand "coin face" and "face" and "sleepy man" and "sleepy man's face" as the coin face.
+The coin face is part of the obol. The description is "He looks like he's been through a lot.". Understand "blurry image" and "coin face" and "face" and "sleepy man" and "sleepy man's face" as the coin face.
 Instead of tasting the obol, say "The obol has spent plenty of time in your mouth already.".
 Instead of eating the obol, say "The obol has spent plenty of time in your mouth already.".
 
@@ -200,7 +233,7 @@ Section 3 - Talking to Charon
 
 Instead of telling Charon about something:
 	if the obol is in your mouth: 
-		say "You start trying to speak, but there's something in your [b]mouth[r]. Perhaps you should [b]spit[r] it out first.";		
+		say "You start trying to speak, but there's something in your mouth. Perhaps you should [b]spit[r] it out first.";		
 	otherwise if the player's name is Nobody:
 		say "Charon rolls his eyes. 'Who are you, exactly?' He glances down at his [b]clipboard[r]. You realise you don't know.";
 	otherwise:
@@ -215,7 +248,7 @@ Instead of asking Charon about something:
 Charon Conversation, My Name Is Sisyphus, My Name Is Tantalus, My Name Is Danaid, My Name Is Prometheus, My Name Is Zeno, Nevermind are chat nodes.
 
 Instead of talking to Charon when the obol is in your mouth:
-	say "You start trying to speak, but there's something in your [b]mouth[r].";		
+	say "You start trying to speak, but there's something in your [b]mouth[r]. Maybe you should [b]spit[r] it out.";		
 
 Instead of talking to Charon when the clipboard is secret:
 		say "Charon rolls his eyes. 'Who are you, exactly?' He glances down at his [b]clipboard[r]. You realise you don't know.";
@@ -287,11 +320,19 @@ Instead of paying Charon:
 	otherwise If the player has the obol:
 		say "You hand over the small coin. Charon drops it into a pocket and gestures at the [b]ferry[r]. You should probably [b]get in[r].";
 		now the obol is in Charon's pocket;
+	otherwise if the obol is in Charon's pocket:
+		say "You've already paid.";
 	otherwise:
 		say "You don't have any money.";
 
 
 Section 5 - The boat
+
+Getting out of is an action applying to one thing.
+Understand "get out of [something]" as getting out of.
+Instead of getting out of the Charon's ferry, try exiting.
+
+Instead of getting off Charon's ferry, try exiting.
 
 Instead of entering the ferry when the player's name is Nobody:
 	say "Charon bars the way with a long, skinny arm. You should probably [b]talk to[r] him before presuming to get into his ferry.";
@@ -299,23 +340,20 @@ Instead of entering the ferry when the player's name is Nobody:
 Instead of entering the ferry when the the obol is not in Charon's pocket:
 	say "You need to [b]pay[r] Charon before you can get in.";
 
-Before entering the ferry when the player's name is not Nobody and Charon has the obol and Charon is not in the ferry:
-	say	"Charon takes pains not to help you step into the ferry."
+Before entering the ferry when the player's name is not Nobody and the obol is in Charon's pocket and Charon is not in the ferry:
+	say	"Charon takes pains not to help you step into the ferry, but you make it in alright."
 	
 After entering the ferry:
 	say "Charon sets about unmooring the ferry.";
 	Charon gets into the ferry in one turn from now;
 	The ferry departs in two turns from now;
 
-Instead of exiting when the player is in the ferry and the ferry is in The The Starting Place:
-	say "Charon stops you with a look. 'There's no undoing down here.'";
-
 At the time when Charon gets into the ferry:
 	say "Charon steps deftly into the ferry and takes up his position at the oars.";
 	Now Charon is in the ferry;
 
 At the time when the ferry departs:
-	say "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.[pb]Charon looks at you implacably. You intuit that it's time for you to [b]get out[r].";
+	say "With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the gritty sand of a beach.[pb]Charon looks at you implacably. You intuit that it's time for you to [b]get out[r].";
 	If the player's name is Sisyphus:
 		Move the ferry to The Bottom of the Hill;
 	otherwise if the player's name is Prometheus:
@@ -327,14 +365,18 @@ At the time when the ferry departs:
 	otherwise if the player's name is Danaid:
 		Move the ferry to DanaidRoom;
 
-	
+Before exiting when the player is in Charon's ferry, say "You manage to jump out of the ferry clumsily.".
+
+Instead of exiting when the player is in the ferry and the ferry is in The The Starting Place:
+	say "Charon stops you with a look. 'Once you're on, you're on.'";
+
 After exiting when the player was in the ferry:
 	If the player's name is Prometheus:
-		say "Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and walks back to the ferry.";
+		say "Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and returns to the ferry.";
 		The player is chained down in zero turns from now;
 		Now Charon is in PrometheusRoom;
 	otherwise if the player's name is Tantalus:
-		say "Charon hops out of the ferry behind you and leads to you the pool a little way up the beach. He points and you find yourself wading into the centre of the pool. Satisfied you're in position, Charon turns and walks back to the ferry.";
+		say "Charon hops out of the ferry behind you and leads to you the pool a little way up the beach. He points and you wade into the centre of the water. Satisfied you're in position, Charon turns and walks back to the ferry.";
 		now the player is in the pool;
 		Now Charon is in TantalusRoom;
 	otherwise if the player's name is Zeno:
@@ -420,11 +462,7 @@ Instead of Xyzzy:
 	say "Nothing happens. Magic isn't real. You could swear you can hear Zeus chuckling somewhere just out of view.";
 
 
-Section 7 - Tests
 
-Test sisyphus with "open mouth / x clipboard / talk to charon / 1 / pay charon / get into boat / z / z / get out".
-
-Test prometheus with "open mouth / x clipboard / talk to charon / 2 / pay charon / get into boat / z / z / get out".
 
 [----------------------------------------------------]
 
@@ -451,8 +489,6 @@ The Hillside is a backdrop in The Whole Hill. The description is "It's a good, s
 The dirt is part of the Hillside. The description is "Not as dirty as you'd have thought.".
 Instead of taking the dirt, say "You're not here to dig holes.".
 
-The beach is a backdrop in The Whole Hill. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
-
 The Bottom of the Hill is a room. The description is "A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.".
 
 The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.[if the location of the player is not the location of the boulder] At least it looks a bit smaller from up here.[otherwise if the post-it note is part of the boulder] There is a [b]grey post-it note[r] stuck to the boulder at eye-level.[end if]".
@@ -460,6 +496,9 @@ Understand "rock" or "stone" as the boulder.
 The boulder is pushable between rooms.
 The boulder can be rolling or stationary. The boulder is stationary.
 The grey post-it note is part of the boulder. The description is "The note just says[pb][f]Push me.[v]".
+Instead of examining the grey post-it note when the location of the player is not the location of the boulder:
+	say "The post-it note on the boulder is too far away.";
+	
 After examining the grey post-it note:
 	say "The post-it note suddenly tears off the boulder in a gust of wind and loops madly away into the distance.";
 	remove the grey post-it note from play;
@@ -472,19 +511,46 @@ Instead of taking the grass, say "Leave it alone, it's been through enough.".
 Instead of pushing the grass, say "Pick on someone your own size.".
 
 Partway Up the Hill is above the A Little Way Up the Hill. The description is "The hill slopes up and down away from you, formidable in its general featurelessness. It looks like you're exactly half-way up. Or down.".
+The imaginary swan is here. The description is "As soon as you look directly at the swan, it's not there anymore. Maybe it was a trick of the light.". The printed name is "swan".
+After examining the imaginary swan, remove the imaginary swan from play.
 
 A Fair Way Up the Hill is above Partway Up the Hill. The printed name is "A Fair Way Up the Hill". The description is "A continuation of this relentless expanse of hillside. There seems to be a small hole in the dirt.".
 The hole is a container in A Fair Way Up the Hill. It is scenery. The description is "A small absence of dirt amidst the dirt.".
+Instead of taking the folded note, try examining the folded note.
+The folded note is in the hole. The description is "The note has just one word on it:[pb][f]xyzzy[r]".
+After examining the folded note:
+	say "Just as you finish reading it, the note blows sharply out of your hand and off into the distance.";
+	remove the folded note from play;
 
 Quite Far Up the Hill is above A Fair Way Up the Hill. The description is "[if the previous location is A Fair Way Up the Hill]Far enough up the hill to be out of breath if you don't get out much. [end if]Like the rest of the hill, this part is made entirely out of dirt.".
+The videogame is here.
 
-Nearly the Top of the Hill is above Quite Far Up the Hill. The description is "It's so barren up here you can't even imagine something growing, and you have a pretty good imagination.".
-[The Note to Sisyphus from Zeus is here. The printed name is "note from Zeus". The description is "The note says[pb][f]lol[pb]Yours sincerely,[lb]Zeus[v]".
-Instead of taking the Note to Sisyphus from Zeus:
-	say "A sudden gust of wind blows it out of your grasp and away into the distance. The wind sounded weirdly like laughter.";
-	remove the Note to Sisyphus from play;]
+Every turn:
+	if the location of the player is the location of the videogame, remove the videogame from play;
+
+Nearly the Top of the Hill is above Quite Far Up the Hill. The description is "It's so barren up here you can't even imagine something growing, and you have a pretty good imagination. The fog, however, does appear to be coalescing into strange shapes here.".
+
+Table of fog shapes
+shape
+"a bed"
+"an exhausted man"
+"Zeus"
+"Albert Camus"
+"a swan"
+"an eagle"
+"a bull"
+
+Instead of examining the fog when the player is in Nearly the Top of the Hill:
+	choose a random row from the table of fog shapes;
+	say "The swirling fog almost looks like [the shape entry].";
+
 	
-The Hilltop is above Nearly the Top of the Hill. The description is "The view is disappointing, with just the river below and everywhere a thick blanket of fog that prevents you seeing far in any direction.[if the location of the boulder is not The Hilltop] You should really go get the boulder.[otherwise] The boulder is here at last![end if]". The printed name is "The Top of the Hill".
+The Hilltop is above Nearly the Top of the Hill. The description is "The view is disappointing.[if the location of the boulder is not The Hilltop] You should really go get the boulder.[otherwise] The boulder is here at last![end if]". The printed name is "The Top of the Hill".
+A plinth is here. The description is "A minimalist marble plinth.".
+The chain is part of the plinth. The description is "A thin-yet-resilient metal chain.".
+A book is on the plinth. The description is "It's 'The Myth of Sisyphus' by Albert Camus. Apparently you ought to be happy right about now.".
+Instead of taking the book, say "It's chained to the plinth.".
+
 
 
 
@@ -508,7 +574,7 @@ Instead of going west from the Whole Hill, say "[the only way is up]".
 
 Before going up with the boulder:
 	if the boulder is rolling:
-		Say "You go to push the boulder, but it's big, heavy, and on the move so you wisely step aside.";
+		Say "You think about pushing the boulder, but it's big, heavy, and on the move so you wisely step aside instead.";
 		Stop the action;
 	otherwise:
 		Say "You furrow your brow and heave the boulder forward.";
@@ -520,7 +586,7 @@ Instead of going down with the boulder:
 		Say "The boulder is rolling downhill just fine without your help.";
 		stop the action;
 	otherwise:
-		Say "For reasons known only to you, you give the boulder a little push downhill.";
+		Say "The boulder doesn't need your help to head down the hill.";
 		stop the action;
 
 After going up with the boulder:
@@ -539,7 +605,7 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 		if the player is in the Hilltop and the boulder is in the Hilltop:
 			increase the points by 1;
 			say "[bracket]Your score has gone up by 1 point.[close bracket][pb]";		
-			say "The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill. The rumbling sounds it makes is suspiciously like Zeus's laughter.";			
+			say "The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill. The rumbling sounds it makes is suspiciously like Zeus's laughter.";						
 		otherwise:	
 			say "Obeying gravity, the boulder rolls calmly down the hill.";
 		now the boulder is rolling;
@@ -568,8 +634,6 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 Part 4 - Tantalus
 
 TantalusRoom is a room. The description is "An apple tree extends its branches above a clear [b]pool of water[r] set back a little way from the river's edge. A single [b]apple[r] hangs from a single branch.". The printed name is "A Desolate Beach".
-
-The beach is a backdrop in TantalusRoom. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
 
 The tree is a supporter in TantalusRoom. The description is "Its bark is worse than its bite.". The tree is scenery.
 
@@ -652,8 +716,6 @@ At the time when the player is chained down:
 
 PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to the rock.[if the yellow post-it note is part of the rock] There is a grey post-it note stuck just next to your head.[end if]". The printed name is "The Rock".
 PrometheusRoom can be nighttime or daytime.
-
-The beach is a backdrop in PrometheusRoom. The description is "Apparently death is a beach too.". Understand "sand" as the beach.
 
 The rock is scenery in PrometheusRoom. The Rock is a supporter. The description is "It's very black and very rocky. A set of chains are firmly attached to the rock. They also happen to be firmly attaching you to it.".
 
@@ -903,8 +965,6 @@ Part 7 - Zeno
 The player has a number called runs. The runs of the player is 0.
 
 ZenoRoom is a room. The description is "The beach extends off into the fog. A straight [b]track[r] of about 100 meters has been sketched into the sand leading [b]north[r] away from the river with the [b]starting line[r] closest to the water. You can see a [b]green flag[r] in the distance at the end of the track. [if the runs of the player < the number of rows in the table of fractional distance descriptions for Zeno][the description corresponding to a depth of the runs of the player in the table of fractional distance descriptions for Zeno].[otherwise][one of]You are extremely close to the flag[or]You are so close the flag you can taste it[or]You are practically standing on the flag, but not quite[or]You have very nearly finished the race[or]You are incredibly close to finishing the race[purely at random].[end if]". The printed name is "A Flat Beach".
-
-The ZenoBeach is a backdrop in ZenoRoom. The description is "Apparently death is a beach too. The running track adds a little something to it, though.". Understand "beach" and "sand" as the beach when the player is in ZenoRoom.
 
 The starting line is a supporter in the ZenoRoom. It is scenery. The description is "A line drawn in the sand.[if the green post-it note is part of the starting line] A [b]green post-it note[r] rests on the sand near the line.[end if]". Understand "start" as the starting line when the player is in ZenoRoom.
 Rule for printing an enclosure preposition when the described enclosure is the player's enclosure and described enclosure is the starting line: say "at ".
