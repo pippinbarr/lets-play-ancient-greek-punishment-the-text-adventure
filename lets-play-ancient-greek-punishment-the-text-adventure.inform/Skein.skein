@@ -92,9 +92,12 @@ You can see Charon's ferry and Charon here.
             <child nodeId="node-1274"></child>
             <child nodeId="node-1273"></child>
             <child nodeId="node-1272"></child>
+            <child nodeId="node-3905"></child>
             <child nodeId="node-1270"></child>
             <child nodeId="node-1264"></child>
             <child nodeId="node-1231"></child>
+            <child nodeId="node-3773"></child>
+            <child nodeId="node-3947"></child>
             <child nodeId="node-1227"></child>
             <child nodeId="node-1206"></child>
             <child nodeId="node-1198"></child>
@@ -2552,6 +2555,595 @@ There is no reply.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-3947">
+        <command xml:space="preserve">test zeno</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] open mouth
+You open your mouth and neatly catch the small coin that drops out.
+
+&gt;[2] x clipboard
+Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;[3] talk to charon
+Before you can get a word in, Charon monotones, "And you are?"
+
+
+Recalling the list of names on the clipboard, you say:
+
+1) "I'm Sisyphus!"
+
+2) "I'm Tantalus!"
+
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
+&gt;&gt; [4] 5
+Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;[5] pay charon
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. You should probably get in.
+
+&gt;[6] get in
+Charon takes pains not to help you step into the ferry, but you make it in alright.
+
+Charon sets about unmooring the ferry.
+
+&gt;[7] z
+Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;[8] z
+Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the gritty sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;[9] get out
+You manage to jump out of the ferry clumsily.
+
+Charon points you toward the starting line drawn in the sand and you walk obediently over to it.
+
+A Flat Beach (at the starting line)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are at the start line.
+
+You can see Charon's ferry (in which is Charon) here.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Zeno." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] open mouth
+[2] x clipboard
+[3] talk to charon
+[4] 5
+[5] pay charon
+[6] get in
+[7] z
+[8] z
+[9] get out
+</commentary>
+        <children><child nodeId="node-3957"></child>
+        </children>
+    </item>
+    <item nodeId="node-3957">
+        <command xml:space="preserve">taste flag</command>
+        <result xml:space="preserve">It probably tastes like victory, but you can't reach it right now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3969"></child>
+        </children>
+    </item>
+    <item nodeId="node-3969">
+        <command xml:space="preserve">x line</command>
+        <result xml:space="preserve">Which do you mean, the starting line or the finish line?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3970"></child>
+        </children>
+    </item>
+    <item nodeId="node-3970">
+        <command xml:space="preserve">starting</command>
+        <result xml:space="preserve">A line drawn in the sand. A green post-it note rests on the sand near the line.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3971"></child>
+        </children>
+    </item>
+    <item nodeId="node-3971">
+        <command xml:space="preserve">read post-it</command>
+        <result xml:space="preserve">The note says
+
+Run.
+
+Just after you finish reading it, a gust of wind blows the post-it note along the beach and cartwheeling into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3972"></child>
+        </children>
+    </item>
+    <item nodeId="node-3972">
+        <command xml:space="preserve">run</command>
+        <result xml:space="preserve">You'll have to say which compass direction to go in.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3973"></child>
+        </children>
+    </item>
+    <item nodeId="node-3973">
+        <command xml:space="preserve">x pole</command>
+        <result xml:space="preserve">A green triangle of fabric attached to a pole jammed into the sand at the northern end of the track. It flaps gently in the wind, making a sound not unlike Archimedes's laughter.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3974"></child>
+        </children>
+    </item>
+    <item nodeId="node-3974">
+        <command xml:space="preserve">listen to pole</command>
+        <result xml:space="preserve">The flag sounds like Archimedes laughing, waggling his eyebrows, and going on about geometric series.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4009"></child>
+        </children>
+    </item>
+    <item nodeId="node-4009">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are half-way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4010"></child>
+        </children>
+    </item>
+    <item nodeId="node-4010">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are three-quarters of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4011"></child>
+        </children>
+    </item>
+    <item nodeId="node-4011">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are seven-eighths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4012"></child>
+        </children>
+    </item>
+    <item nodeId="node-4012">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are fifteen-sixteenths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4013"></child>
+        </children>
+    </item>
+    <item nodeId="node-4013">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are thirty-one thirty-seconds of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4014"></child>
+        </children>
+    </item>
+    <item nodeId="node-4014">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are sixty-three sixty-fourths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4015"></child>
+        </children>
+    </item>
+    <item nodeId="node-4015">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are a hundred and twenty-seven hundred and twenty-eighths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4016"></child>
+        </children>
+    </item>
+    <item nodeId="node-4016">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are a two hundred and fifty-five two hundred and fifty-sixths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4017"></child>
+        </children>
+    </item>
+    <item nodeId="node-4017">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are a five hundred and eleven five hundred and twelfths of the way to the flag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4018"></child>
+        </children>
+    </item>
+    <item nodeId="node-4018">
+        <command xml:space="preserve">north walk</command>
+        <result xml:space="preserve">I only understood you as far as wanting to (go) north.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4019"></child>
+        </children>
+    </item>
+    <item nodeId="node-4019">
+        <command xml:space="preserve">walk north</command>
+        <result xml:space="preserve">Races are for running!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4020"></child>
+        </children>
+    </item>
+    <item nodeId="node-4020">
+        <command xml:space="preserve">run north</command>
+        <result xml:space="preserve">You run furiously and cover half the distance to the flag!
+
+A Flat Beach (on the track)
+The beach extends off into the fog. A straight track of about 100 meters has been sketched into the sand leading north away from the river with the starting line closest to the water. You can see a green flag in the distance at the end of the track. You are practically standing on the flag, but not quite.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3773">
+        <command xml:space="preserve">test tantalus</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] open mouth
+You open your mouth and neatly catch the small coin that drops out.
+
+&gt;[2] x clipboard
+Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;[3] talk to charon
+Before you can get a word in, Charon monotones, "And you are?"
+
+
+Recalling the list of names on the clipboard, you say:
+
+1) "I'm Sisyphus!"
+
+2) "I'm Tantalus!"
+
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
+&gt;&gt; [4] 2
+Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;[5] pay charon
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. You should probably get in.
+
+&gt;[6] get in
+Charon takes pains not to help you step into the ferry, but you make it in alright.
+
+Charon sets about unmooring the ferry.
+
+&gt;[7] z
+Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;[8] z
+Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the gritty sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;[9] get out
+You manage to jump out of the ferry clumsily.
+
+Charon hops out of the ferry behind you and leads to you the pool a little way up the beach. He points and you wade into the centre of the water. Satisfied you're in position, Charon turns and walks back to the ferry.
+
+A Desolate Beach (in the pool)
+An apple tree extends its branches above a clear pool of water set back on the beach from the river's edge. A single apple hangs from a single branch.
+
+You can see Charon's ferry (in which is Charon) here.
+
+You're feeling really thirsty.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Tantalus." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] open mouth
+[2] x clipboard
+[3] talk to charon
+[4] 2
+[5] pay charon
+[6] get in
+[7] z
+[8] z
+[9] get out
+</commentary>
+        <children><child nodeId="node-3783"></child>
+        </children>
+    </item>
+    <item nodeId="node-3783">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">A Desolate Beach (in the pool)
+An apple tree extends its branches above a clear pool of water set back on the beach from the river's edge. A single apple hangs from a single branch.
+
+You're parched.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3784"></child>
+        </children>
+    </item>
+    <item nodeId="node-3784">
+        <command xml:space="preserve">get on tree</command>
+        <result xml:space="preserve">That's not something you can enter.
+
+You're thirsty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3785"></child>
+        </children>
+    </item>
+    <item nodeId="node-3785">
+        <command xml:space="preserve">climb tree</command>
+        <result xml:space="preserve">You recoil from the incredibly sharp bark on the tree.
+
+You're feeling thirsty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3786"></child>
+        </children>
+    </item>
+    <item nodeId="node-3786">
+        <command xml:space="preserve">x tree</command>
+        <result xml:space="preserve">Its bark is worse than its bite.
+
+You need to drink something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3787"></child>
+        </children>
+    </item>
+    <item nodeId="node-3787">
+        <command xml:space="preserve">sit on tree</command>
+        <result xml:space="preserve">No rest for the wicked.
+
+You need to drink something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3803"></child>
+        </children>
+    </item>
+    <item nodeId="node-3803">
+        <command xml:space="preserve">x tree</command>
+        <result xml:space="preserve">Its bark is worse than its bite.
+
+You need to eat something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3804"></child>
+        </children>
+    </item>
+    <item nodeId="node-3804">
+        <command xml:space="preserve">x bark</command>
+        <result xml:space="preserve">It's aggressive.
+
+Your stomach gurgles.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3805"></child>
+        </children>
+    </item>
+    <item nodeId="node-3805">
+        <command xml:space="preserve">x water</command>
+        <result xml:space="preserve">Crystal clear, eminently drinkable water. There is a blue post-it note floating on the surface.
+
+Your mouth is so dry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3806"></child>
+        </children>
+    </item>
+    <item nodeId="node-3806">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">Which do you mean, the red post-it note or the blue post-it note?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3807"></child>
+        </children>
+    </item>
+    <item nodeId="node-3807">
+        <command xml:space="preserve">the blue post-it note</command>
+        <result xml:space="preserve">The note floating in the water says
+
+Drink me.
+
+After you read it, the post-it note is plucked from the water by a gust of wind and flaps wetly into the distance.
+
+You need to eat something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3808"></child>
+        </children>
+    </item>
+    <item nodeId="node-3808">
+        <command xml:space="preserve">eat apple</command>
+        <result xml:space="preserve">You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again. The wind made a sound oddly like Zeus's laughter.
+
+Your mouth is so dry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3809"></child>
+        </children>
+    </item>
+    <item nodeId="node-3809">
+        <command xml:space="preserve">drink water</command>
+        <result xml:space="preserve">You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the pool is completely dry. Upon standing, the water rushes back in up to your waist. The gurgling sound it make sounds oddly like Zeus's laughter.
+
+You're starving.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3810"></child>
+        </children>
+    </item>
+    <item nodeId="node-3810">
+        <command xml:space="preserve">leave</command>
+        <result xml:space="preserve">Somehow that's not an option.
+
+Your stomach hurts with hunger.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3811"></child>
+        </children>
+    </item>
+    <item nodeId="node-3811">
+        <command xml:space="preserve">exit</command>
+        <result xml:space="preserve">Somehow that's not an option.
+
+You wish you had something to eat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3812"></child>
+        </children>
+    </item>
+    <item nodeId="node-3812">
+        <command xml:space="preserve">get out</command>
+        <result xml:space="preserve">Somehow that's not an option.
+
+You're so hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3813"></child>
+        </children>
+    </item>
+    <item nodeId="node-3813">
+        <command xml:space="preserve">x branch</command>
+        <result xml:space="preserve">If a tree branch could be said to eye you shiftily, that is what this tree branch is doing.
+
+You feel terribly dehydrated.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3840"></child>
+        </children>
+    </item>
+    <item nodeId="node-3840">
+        <command xml:space="preserve">x branches</command>
+        <result xml:space="preserve">They're all barren except for the one branch with the apple on it.
+
+You're starving.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3841"></child>
+        </children>
+    </item>
+    <item nodeId="node-3841">
+        <command xml:space="preserve">x apple</command>
+        <result xml:space="preserve">A shiny, delicious apple just begging to be eaten. There is a red post-it note stuck to the apple.
+
+You're feeling hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3842"></child>
+        </children>
+    </item>
+    <item nodeId="node-3842">
+        <command xml:space="preserve">read post-it</command>
+        <result xml:space="preserve">The note on the apple says
+
+Eat me.
+
+Just after you finish reading it, the post-it note blows off the apple and away into the distance.
+
+You wish you had something to drink.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1231">
         <command xml:space="preserve">test sisyphus</command>
         <result xml:space="preserve">(Testing.)
@@ -4149,22 +4741,31 @@ Zeno
 &gt;[3] talk to charon
 Before you can get a word in, Charon monotones, "And you are?"
 
+
 Recalling the list of names on the clipboard, you say:
 
 1) "I'm Sisyphus!"
 
-2) "I'm Prometheus!"
+2) "I'm Tantalus!"
 
-3) "Never mind..." 
-&gt;&gt; [4] 2
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
+&gt;&gt; [4] 3
 Charon looks at you blankly, "Sure. Pay me.". 
 
 He holds out a bony hand.
 
 &gt;[5] pay charon
-You hand over the small coin. Charon drops it into a pocket and gestures at the ferry.
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. You should probably get in.
 
-&gt;[6] get into boat
+&gt;[6] get in
+Charon takes pains not to help you step into the ferry, but you make it in alright.
+
 Charon sets about unmooring the ferry.
 
 &gt;[7] z
@@ -4175,38 +4776,571 @@ Charon steps deftly into the ferry and takes up his position at the oars.
 &gt;[8] z
 Time passes.
 
-With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the rocky sand of a beach.
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the gritty sand of a beach.
+
 
 Charon looks at you implacably. You intuit that it's time for you to get out.
 
 &gt;[9] get out
-Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and walks back to the ferry.
+You manage to jump out of the ferry clumsily.
 
-The Rock (on the Rock)
-A unpleasantly jagged black rock rises from the ash colored sand of the beach.
+Charon jumps lightly out of the ferry behind you and leads to you the imposing black rock embedded in the beach. With his guidance you lie down on top of it and Charon chains you securely in place. This done, he descends from the rock and returns to the ferry.
 
-You can see Charon's ferry (in which is Charon) here.
+The Rock (chained to the rock)
+Beneath what passes for daylight here, an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to the rock. There is a grey post-it note stuck just next to your head.
 
-Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "I am Prometheus." His duty discharged, Charon oars away without giving you a another thought.
+You can see Charon and Charon's ferry here.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Prometheus." His duty discharged, Charon oars away without giving you a another thought.
 
 &gt;</result>
         <commentary xml:space="preserve">[1] open mouth
 [2] x clipboard
 [3] talk to charon
-[4] 2
+[4] 3
 [5] pay charon
-[6] get into boat
+[6] get in
 [7] z
 [8] z
 [9] get out
 </commentary>
         <children><child nodeId="node-1271"></child>
+            <child nodeId="node-3898"></child>
+            <child nodeId="node-3854"></child>
         </children>
+    </item>
+    <item nodeId="node-3854">
+        <command xml:space="preserve">x moon</command>
+        <result xml:space="preserve">You can't see it.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3855"></child>
+        </children>
+    </item>
+    <item nodeId="node-3855">
+        <command xml:space="preserve">x fog</command>
+        <result xml:space="preserve">It makes you feel distinctly less happy.
+
+The eagle is getting close.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3856"></child>
+        </children>
+    </item>
+    <item nodeId="node-3856">
+        <command xml:space="preserve">x sun</command>
+        <result xml:space="preserve">A sun-coloured patch of fog.
+
+The eagle is right above you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3870"></child>
+        </children>
+    </item>
+    <item nodeId="node-3870">
+        <command xml:space="preserve">x chains</command>
+        <result xml:space="preserve">The chains are weirdly yellow in colour. They definitely work though.
+
+The eagle lands heavily beside you. You feel an urge to thrash.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3885"></child>
+        </children>
+    </item>
+    <item nodeId="node-3885">
+        <command xml:space="preserve">thrash</command>
+        <result xml:space="preserve">You twist in place desperately. It's enough to disturb the eagle, which flaps up into the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3886"></child>
+        </children>
+    </item>
+    <item nodeId="node-3886">
+        <command xml:space="preserve">thrash</command>
+        <result xml:space="preserve">You writhe in place desperately. It's enough to disturb the eagle, which flaps up into the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3887"></child>
+        </children>
+    </item>
+    <item nodeId="node-3887">
+        <command xml:space="preserve">get up</command>
+        <result xml:space="preserve">You are tightly chained to the rock, you're not going anywhere. At best you could writhe, struggle, strain, or something like that.
+
+The eagle lands heavily beside you. You feel an urge to struggle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3898">
+        <command xml:space="preserve">writhe</command>
+        <result xml:space="preserve">You twist experimentally. Nothing obvious happens.
+
+An eagle appears on the horizon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3899"></child>
+        </children>
+    </item>
+    <item nodeId="node-3899">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle is getting close.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3900"></child>
+        </children>
+    </item>
+    <item nodeId="node-3900">
+        <command xml:space="preserve">wait</command>
+        <result xml:space="preserve">Time passes.
+
+The eagle is right above you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3901"></child>
+        </children>
+    </item>
+    <item nodeId="node-3901">
+        <command xml:space="preserve">twist</command>
+        <result xml:space="preserve">You thrash in desperately. It's enough to prevent the eagle from landing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3902"></child>
+        </children>
+    </item>
+    <item nodeId="node-3902">
+        <command xml:space="preserve">thrash</command>
+        <result xml:space="preserve">You writhe in desperately. It's enough to prevent the eagle from landing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3903"></child>
+        </children>
+    </item>
+    <item nodeId="node-3903">
+        <command xml:space="preserve">look at eagle</command>
+        <result xml:space="preserve">It looks irritable.
+
+The eagle lands heavily beside you. You feel an urge to struggle.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3904"></child>
+        </children>
+    </item>
+    <item nodeId="node-3904">
+        <command xml:space="preserve">struggle</command>
+        <result xml:space="preserve">You writhe in desperately. It's enough to disturb the eagle, which flaps up into the air.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1271">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">The Rock (on the Rock)
 A unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to said rock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3905">
+        <command xml:space="preserve">test danaid</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] open mouth
+You open your mouth and neatly catch the small coin that drops out.
+
+&gt;[2] x clipboard
+Charon irritably angles the clipboard away from you, but not before you've seen the list of names he's expecting for the trip across the river:
+
+Sisyphus
+Tantalus
+Prometheus
+Danaids
+Zeno
+
+&gt;[3] talk to charon
+Before you can get a word in, Charon monotones, "And you are?"
+
+
+Recalling the list of names on the clipboard, you say:
+
+1) "I'm Sisyphus!"
+
+2) "I'm Tantalus!"
+
+3) "I'm Prometheus!"
+
+4) "I'm a Danaid!"
+
+5) "I'm Zeno!"
+
+6) "Never mind..." 
+&gt;&gt; [4] 4
+Charon looks at you blankly, "Sure. Pay me.". 
+
+He holds out a bony hand.
+
+&gt;[5] pay charon
+You hand over the small coin. Charon drops it into a pocket and gestures at the ferry. You should probably get in.
+
+&gt;[6] get in
+Charon takes pains not to help you step into the ferry, but you make it in alright.
+
+Charon sets about unmooring the ferry.
+
+&gt;[7] z
+Time passes.
+
+Charon steps deftly into the ferry and takes up his position at the oars.
+
+&gt;[8] z
+Time passes.
+
+With a series of surprisingly muscular pulls on the oars, Charon sends the ferry across the river. You barely have time to take in the gloomy fog and lack of scenery before the prow of the boat grinds onto the gritty sand of a beach.
+
+
+Charon looks at you implacably. You intuit that it's time for you to get out.
+
+&gt;[9] get out
+You manage to jump out of the ferry clumsily.
+
+Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying "My name is Danaid." His duty discharged, Charon oars away without giving you a another thought.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] open mouth
+[2] x clipboard
+[3] talk to charon
+[4] 4
+[5] pay charon
+[6] get in
+[7] z
+[8] z
+[9] get out
+</commentary>
+        <children><child nodeId="node-3915"></child>
+        </children>
+    </item>
+    <item nodeId="node-3915">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">An Arid Beach
+The sand here is bone dry. Rising out of the ground is a fountain and a little distance from it is a basin.
+
+You can see a jug here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3916"></child>
+        </children>
+    </item>
+    <item nodeId="node-3916">
+        <command xml:space="preserve">x sand</command>
+        <result xml:space="preserve">(the sand)
+Coulr this be literally crushed up bones?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3917"></child>
+        </children>
+    </item>
+    <item nodeId="node-3917">
+        <command xml:space="preserve">x beach</command>
+        <result xml:space="preserve">Apparently death is a beach, too. Not much of a beach day, though.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3918"></child>
+        </children>
+    </item>
+    <item nodeId="node-3918">
+        <command xml:space="preserve">x fountain</command>
+        <result xml:space="preserve">(the fountain)
+A small fountain perpetually shooting water a short way up into the air before it cascades down into a shallow bowl and drains out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3919"></child>
+        </children>
+    </item>
+    <item nodeId="node-3919">
+        <command xml:space="preserve">x water</command>
+        <result xml:space="preserve">Cool, clear water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3920"></child>
+        </children>
+    </item>
+    <item nodeId="node-3920">
+        <command xml:space="preserve">x jug</command>
+        <result xml:space="preserve">An earthenware jug with a handle. It's empty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3921"></child>
+        </children>
+    </item>
+    <item nodeId="node-3921">
+        <command xml:space="preserve">x handle</command>
+        <result xml:space="preserve">Looks sturdy.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3922"></child>
+        </children>
+    </item>
+    <item nodeId="node-3922">
+        <command xml:space="preserve">x basin</command>
+        <result xml:space="preserve">(the basin)
+A wide basin intended for holding liquid. Let's say water. There is a white post-it note stuck to the rim.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3923"></child>
+        </children>
+    </item>
+    <item nodeId="node-3923">
+        <command xml:space="preserve">read post-it</command>
+        <result xml:space="preserve">The note says
+
+Fill me.
+
+Just after you finish reading it, the post-it note blows off the rim of the basin and away into the distance.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3924"></child>
+        </children>
+    </item>
+    <item nodeId="node-3924">
+        <command xml:space="preserve">get note</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3925"></child>
+        </children>
+    </item>
+    <item nodeId="node-3925">
+        <command xml:space="preserve">x basin</command>
+        <result xml:space="preserve">(the basin)
+A wide basin intended for holding liquid. Let's say water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3926"></child>
+        </children>
+    </item>
+    <item nodeId="node-3926">
+        <command xml:space="preserve">x rim of basin</command>
+        <result xml:space="preserve">That's a quality rim.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3927"></child>
+        </children>
+    </item>
+    <item nodeId="node-3927">
+        <command xml:space="preserve">get jug</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3928"></child>
+        </children>
+    </item>
+    <item nodeId="node-3928">
+        <command xml:space="preserve">fill jug</command>
+        <result xml:space="preserve">You fill the jug with water from the fountain.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3929"></child>
+        </children>
+    </item>
+    <item nodeId="node-3929">
+        <command xml:space="preserve">fill basin</command>
+        <result xml:space="preserve">(the basin)
+You carefully pour the water in the jug into the basin. It streams in nicely, catching what little light there is.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3930"></child>
+        </children>
+    </item>
+    <item nodeId="node-3930">
+        <command xml:space="preserve">x basin</command>
+        <result xml:space="preserve">(the basin)
+A wide basin intended for holding liquid. About a jug's-worth of water is in it right now.
+
+The water in the basin drains out through several holes with a bubbling noise that sounds like Zeus's laughter. The escaped water immediately dissapates into the sand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3931"></child>
+        </children>
+    </item>
+    <item nodeId="node-3931">
+        <command xml:space="preserve">x basin</command>
+        <result xml:space="preserve">(the basin)
+A wide basin intended for holding liquid. Let's say water. There are holes drilled in the bottom.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3932"></child>
+        </children>
+    </item>
+    <item nodeId="node-3932">
+        <command xml:space="preserve">x holes</command>
+        <result xml:space="preserve">A set of neatly drilled holes perforate the lower part of the basin, providing handy drainage of any liquids placed inside it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3933"></child>
+        </children>
+    </item>
+    <item nodeId="node-3933">
+        <command xml:space="preserve">x fountain</command>
+        <result xml:space="preserve">(the fountain)
+A small fountain perpetually shooting water a short way up into the air before it cascades down into a shallow bowl and drains out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3934"></child>
+        </children>
+    </item>
+    <item nodeId="node-3934">
+        <command xml:space="preserve">x bowl</command>
+        <result xml:space="preserve">It is etched with images of frowning faces.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3935"></child>
+        </children>
+    </item>
+    <item nodeId="node-3935">
+        <command xml:space="preserve">x shallow bowl</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3936"></child>
+        </children>
+    </item>
+    <item nodeId="node-3936">
+        <command xml:space="preserve">x frowning faces</command>
+        <result xml:space="preserve">They don't look happy with you. Somehow you know it's you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3937"></child>
+        </children>
+    </item>
+    <item nodeId="node-3937">
+        <command xml:space="preserve">pour jug</command>
+        <result xml:space="preserve">You tip the empty jug and pour pretend water out of it. It's still empty afterwards.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3938"></child>
+        </children>
+    </item>
+    <item nodeId="node-3938">
+        <command xml:space="preserve">put water in basin</command>
+        <result xml:space="preserve">(the basin)
+The jug is empty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3939"></child>
+        </children>
+    </item>
+    <item nodeId="node-3939">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">You fill the jug with water from the fountain.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3940"></child>
+        </children>
+    </item>
+    <item nodeId="node-3940">
+        <command xml:space="preserve">put water in basin</command>
+        <result xml:space="preserve">(the basin)
+You carefully pour the water in the jug into the basin. It streams in nicely, catching what little light there is.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3941"></child>
+        </children>
+    </item>
+    <item nodeId="node-3941">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">You fill the jug with water from the fountain.
+
+The water in the basin drains out through several holes with a bubbling noise that sounds like Zeus's laughter. The escaped water immediately dissapates into the sand.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3942"></child>
+        </children>
+    </item>
+    <item nodeId="node-3942">
+        <command xml:space="preserve">x fountain</command>
+        <result xml:space="preserve">(the fountain)
+A small fountain perpetually shooting water a short way up into the air before it cascades down into a shallow bowl and drains out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3943"></child>
+        </children>
+    </item>
+    <item nodeId="node-3943">
+        <command xml:space="preserve">x jug</command>
+        <result xml:space="preserve">An earthenware jug with a handle. It's filled with water.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3944"></child>
+        </children>
+    </item>
+    <item nodeId="node-3944">
+        <command xml:space="preserve">get water</command>
+        <result xml:space="preserve">There's already water in the jug.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3945"></child>
+        </children>
+    </item>
+    <item nodeId="node-3945">
+        <command xml:space="preserve">fill fountain</command>
+        <result xml:space="preserve">(the fountain)
+You carefully pour the water in the jug into the fountain, thereby achieving slightly less than nothing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3946"></child>
+        </children>
+    </item>
+    <item nodeId="node-3946">
+        <command xml:space="preserve">pour fountain into basin</command>
+        <result xml:space="preserve">(the fountain into the basin)
+You won't be needing to do that.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
