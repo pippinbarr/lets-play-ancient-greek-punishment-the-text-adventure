@@ -447,3 +447,15 @@ In the end I think it feels like this is perhaps closer to finishing than I'd qu
 Have added a bunch of niceties today after a longish feeling gap (actually only two working days, but you know). It's getting close to something that's probably releasable? How will I know when it's done? Remaining things are mostly around making a few things more consistent and generally adding greater depths of description as a way of making the whole thing more "fractal" and thus more sustaining even while the frame is utterly repetitive. If I do a serious push on this tomorrow morning maybe I'll have something I could consider finished? I send it to Simon and my parents again maybe?
 
 I don't know.
+
+---
+
+# Wrapping up (Friday, 21 June 2019, 14:29PM)
+
+Alright well after yet more tweaking and adding of little bits and pieces I've sent the game again to Simon Christiansen in the hopes of getting some solid experienced feedback on the thing as it stands.
+
+There's a tension between trying to make it a "good" IF with lots of descriptions and information and so on - versus keeping it kind of stark and thus more in keeping with the nature of the punishments.
+
+You might think it's obvious that I should be making it as much like IF as possible, and thus full of rich detail. But part of my thinking about this series of games has always been that the play experience should mirror at some significant level the actual punishment itself, and so should be repetitive and ultimately unrewarding. As such, the IF version needs to keep that in mind and so I think I'm kind of walking something of a balance between the two ideas?
+
+I think I'm fairly happy with it. Jim and Mary still get totally lost in it, it's really hard to design an IF that's playable by people who never play IF and don;t play games more generally, but I'm having a go.
