@@ -28,12 +28,14 @@
 - ~~Add spit~~
 - ~~Obol falls out on talking to Charon~~
 - ~~Hint about looking at Charon's clipboard when you try to pay~~
+- ~~Add other skipping commands and frame it as a magical incantation so people might successfully do it by mistake and that's okay.~~
 
 ## Sisyphus
 
 - ~~Add points (with notifications)~~
 - ~~Add post-it to the boulder~~
 - ~~Boulder pushing stuff is broken~~
+- ~~Add "go down" hint when you see the boulder from afar. Maybe also custom "you need to go down the hill" when you try to do anything else to it.~~
 
 ## Prometheus
 

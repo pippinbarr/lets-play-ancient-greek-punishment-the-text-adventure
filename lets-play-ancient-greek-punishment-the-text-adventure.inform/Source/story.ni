@@ -19,6 +19,79 @@ Test danaid with "open mouth / x clipboard / talk to charon / 4 / pay charon / g
 
 Test zeno with "open mouth / x clipboard / talk to charon / 5 / pay charon / get in / z / z / get out".
 
+Part 0.5 - Skip aheads
+
+To say you're stuck:
+	say "That particular magical incantation only works at the start of the game. Now that you're here, you're stuck here. If you want to get out so bad you can always [b]restart[r] or [b]quit[r].";
+
+To say incantation:
+	say "You utter the magical words and the world seems to shudder on its axis, blurring everything for a moment. When you adjust your vision, your surroundings have changed.";
+
+SkipToSisyphus is an action applying to nothing.
+Understand "My name is Sisyphus" and "I'm Sisyphus" and "I am Sisyphus" and "Sisyphus" as SkipToSisyphus.
+Instead of SkipToSisyphus:
+	if the player is in The Starting Place:
+		say "[incantation]";
+		Remove the obol from play;
+		Now the player is in The Bottom of the Hill;
+		Now the player's name is Sisyphus;
+	Otherwise if the player's name is Sisyphus:
+		say "It sure is.";
+	Otherwise:
+		say "[you're stuck]";
+
+SkipToPrometheus is an action applying to nothing.
+Understand "My name is Prometheus" and "I'm Prometheus" and "I am Prometheus" and "Prometheus" as SkipToPrometheus.
+Instead of SkipToPrometheus:
+	if the player is in The Starting Place:
+		say "[incantation]";
+		Now the player's name is Prometheus;
+		Remove the obol from play;
+		The player is chained down in zero turns from now;
+	Otherwise if the player's name is Prometheus:
+		say "It sure is.";
+	Otherwise:
+		say "[you're stuck]";
+
+SkipToDanaid is an action applying to nothing.
+Understand "My name is Danaid" and "I'm a Danaid" and "I'm Danaid" and "I am a Danaid" and "I'm am Danaid" and "Danaid" and "Danaids" as SkipToDanaid.
+Instead of SkipToDanaid:
+	if the player is in The Starting Place:
+		say "[incantation]";
+		Remove the obol from play;
+		Now the player is in DanaidRoom;
+		Now the player's name is Danaid;
+	otherwise if the player's name is Danaid:
+		say "It sure is.";
+	Otherwise:
+		say "[you're stuck]";
+
+SkipToTantalus is an action applying to nothing.
+Understand "My name is Tantalus" and "I'm Tantalus" and "I am Tantalus" and "Tantalus" as SkipToTantalus.
+Instead of SkipToTantalus:
+	if the player is in The Starting Place:
+		say "[incantation]";
+		Remove the obol from play;
+		Now the player is in the pool;
+		Now the player's name is Tantalus;
+	otherwise if the player's name is Tantalus:
+		say "It sure is.";
+	Otherwise:
+		say "[you're stuck]";
+
+SkipToZeno is an action applying to nothing.
+Understand "My name is Zeno" and "I'm Zeno" and "I am Zeno" and "Zeno" as SkipToZeno.
+Instead of SkipToZeno:
+	if the player is in The Starting Place:
+		say "[incantation]";
+		Remove the obol from play;
+		Now the player is on the starting line;
+		Now the player's name is Zeno;
+	otherwise if the player's name is Zeno:
+		say "It sure is.";
+	Otherwise:
+		say "[you're stuck]";
+
 Part 1 - Setup
 
 Section 1 - Basic setup
@@ -66,7 +139,7 @@ Instead of asking for help:
 	say "[basic instructions]";
 	
 After printing the banner text:
-	say "[pb]Type [b]HELP[r] for help.";
+	say "[pb]Type [b]HELP[r] for help.[pb]";
 
 The description of the player is "You look deader than you remember looking.".
 Your hand is part of the player. The description is "Cold. Dead.". Understand "hands" as your hand.
@@ -117,9 +190,12 @@ Instead of pulling something, say "Stop being so pully!".
 
 [----------------------------------------------------]
 
+Part 1.5 - Everywhere
+
+The sky is a backdrop. It is everywhere. The description is "Gloomy and doomy.".
 
 
-Part 2 - Charon and the Ferry
+Part 3 - Charon and the Ferry
 
 Section 1 - The place
 
@@ -127,6 +203,7 @@ The Starting Place is a room. The description is "Here you are on the gritty bea
 The River Styx is a backdrop. The description is "The river seems to sneer at you.". Understand "water" as the River Styx when the player is in The Starting Place.
 The River Styx is everywhere.
 Instead of taking the river styx, say "It is neither portable nor potable.".
+Instead of entering the river styx, say "If you ever knew how to swim, you don't anymore.".
 The sneer is part of the river styx. The description is "What an unpleasant river.".
 Instead of drinking the river styx, say "It's not a nice river.".
 
@@ -187,7 +264,7 @@ Understand "Charon's cowl" as the cowl.
 Section 2 - The obol
 
 The obol is an object. The description is "A small silver coin imprinted with the blurry image of a sleepy man's face."
-The coin face is part of the obol. The description is "He looks like he's been through a lot.". Understand "blurry image" and "coin face" and "face" and "sleepy man" and "sleepy man's face" as the coin face.
+The coin face is part of the obol. The description is "He looks like he's been through a lot.". Understand "blurry image" and "coin face" and "face" and "sleepy man" and "sleepy man's face" and "man's face" as the coin face.
 Instead of tasting the obol, say "The obol has spent plenty of time in your mouth already.".
 Instead of eating the obol, say "The obol has spent plenty of time in your mouth already.".
 
@@ -231,9 +308,12 @@ Instead of showing the obol to Charon:
 
 Section 3 - Talking to Charon
 
+To say spit to speak:
+	say "You start trying to speak, but there's something in your mouth. Perhaps you should [b]spit[r] it out.";
+
 Instead of telling Charon about something:
 	if the obol is in your mouth: 
-		say "You start trying to speak, but there's something in your mouth. Perhaps you should [b]spit[r] it out first.";		
+		say "[spit to speak]";		
 	otherwise if the player's name is Nobody:
 		say "Charon rolls his eyes. 'Who are you, exactly?' He glances down at his [b]clipboard[r]. You realise you don't know.";
 	otherwise:
@@ -241,14 +321,14 @@ Instead of telling Charon about something:
 	
 Instead of asking Charon about something:
 	if the obol is in your mouth:
-		say "You start trying to speak, but there's something in your mouth.";		
+		say "[spit to speak]";		
 	otherwise:
 		say "Charon looks at you with disinterest, then stops looking at you with equal disinterest";
 		
 Charon Conversation, My Name Is Sisyphus, My Name Is Tantalus, My Name Is Danaid, My Name Is Prometheus, My Name Is Zeno, Nevermind are chat nodes.
 
 Instead of talking to Charon when the obol is in your mouth:
-	say "You start trying to speak, but there's something in your [b]mouth[r]. Maybe you should [b]spit[r] it out.";		
+	say "[spit to speak]";		
 
 Instead of talking to Charon when the clipboard is secret:
 		say "Charon rolls his eyes. 'Who are you, exactly?' He glances down at his [b]clipboard[r]. You realise you don't know.";
@@ -385,75 +465,11 @@ After exiting when the player was in the ferry:
 	The ferry vanishes in zero turns from now;
 		
 At the time when the ferry vanishes:
-	say "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying '[b]My name is [player's name][r].' His duty discharged, Charon oars away without giving you a another thought.";
+	say "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying '[b][player's name][r]' or something like that. His duty discharged, Charon oars away without giving you a another thought.";
 	Now Charon is in the ferry;
 	Move the ferry to The Starting Place;
 
 
-Section 6 - Skip aheads
-
-To say you're stuck:
-	say "Charon told you that would only work on arrival at his ferry. You're stuck here. If you want to get out so bad you can always [b]restart[r] or [b]quit[r].";
-
-SkipToSisyphus is an action applying to nothing.
-Understand "My name is Sisyphus" as SkipToSisyphus.
-Instead of SkipToSisyphus:
-	if the player is in The Starting Place:
-		Remove the obol from play;
-		Now the player is in The Bottom of the Hill;
-		Now the player's name is Sisyphus;
-	Otherwise if the player's name is Sisyphus:
-		say "It sure is.";
-	Otherwise:
-		say "[you're stuck]";
-
-SkipToPrometheus is an action applying to nothing.
-Understand "My name is Prometheus" as SkipToPrometheus.
-Instead of SkipToPrometheus:
-	if the player is in The Starting Place:
-		Now the player's name is Prometheus;
-		Remove the obol from play;
-		The player is chained down in zero turns from now;
-	Otherwise if the player's name is Prometheus:
-		say "It sure is.";
-	Otherwise:
-		say "[you're stuck]";
-
-SkipToDanaid is an action applying to nothing.
-Understand "My name is Danaid" as SkipToDanaid.
-Instead of SkipToDanaid:
-	if the player is in The Starting Place:
-		Remove the obol from play;
-		Now the player is in DanaidRoom;
-		Now the player's name is Danaid;
-	otherwise if the player's name is Danaid:
-		say "It sure is.";
-	Otherwise:
-		say "[you're stuck]";
-
-SkipToTantalus is an action applying to nothing.
-Understand "My name is Tantalus" as SkipToTantalus.
-Instead of SkipToTantalus:
-	if the player is in The Starting Place:
-		Remove the obol from play;
-		Now the player is in the pool;
-		Now the player's name is Tantalus;
-	otherwise if the player's name is Tantalus:
-		say "It sure is.";
-	Otherwise:
-		say "[you're stuck]";
-
-SkipToZeno is an action applying to nothing.
-Understand "My name is Zeno" as SkipToZeno.
-Instead of SkipToZeno:
-	if the player is in The Starting Place:
-		Remove the obol from play;
-		Now the player is on the starting line;
-		Now the player's name is Zeno;
-	otherwise if the player's name is Zeno:
-		say "It sure is.";
-	Otherwise:
-		say "[you're stuck]";
 
 
 Xyzzy is an action applying to nothing.
@@ -468,7 +484,7 @@ Instead of Xyzzy:
 
 
 
-Part 3 - Sisyphus
+Part 4 - Sisyphus
 
 Section 1 - the Hill Rooms
 
@@ -480,8 +496,11 @@ After deciding the scope of the player:
     if the location is in The Whole Hill, place the boulder in scope.
 
 Rule for reaching inside a room: 
-    say "It's too far away."; 
-    deny access.
+	if the noun is the boulder:
+		say "You'll need to head back [b]down[r] the hill if you want to do anything with the boulder.";
+	otherwise:
+		say "It's too far away."; 
+	deny access.
 
 The Whole Hill is a region. The Bottom of the Hill, A Little Way Up the Hill, Partway Up the Hill, A Fair Way Up the Hill, Quite Far Up the Hill, Nearly the Top of the Hill, and The Hilltop are in The Whole Hill.
 
@@ -491,7 +510,7 @@ Instead of taking the dirt, say "You're not here to dig holes.".
 
 The Bottom of the Hill is a room. The description is "A grey, gritty beach meets the edge of the river. A low, bare hill rises gently upward.".
 
-The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.[if the location of the player is not the location of the boulder] At least it looks a bit smaller from up here.[otherwise if the post-it note is part of the boulder] There is a [b]grey post-it note[r] stuck to the boulder at eye-level.[end if]".
+The worryingly large boulder is here. It is an object. The description is "That really is a lot of rock.[if the location of the player is not the location of the boulder] At least it looks a bit smaller from up here. You should probably go [b]down[r] and start pushing it up the hill.[otherwise if the post-it note is part of the boulder] There is a [b]grey post-it note[r] stuck to the boulder at eye-level.[end if]".
 Understand "rock" or "stone" as the boulder.
 The boulder is pushable between rooms.
 The boulder can be rolling or stationary. The boulder is stationary.
@@ -631,7 +650,7 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 
 
 
-Part 4 - Tantalus
+Part 5 - Tantalus
 
 TantalusRoom is a room. The description is "An apple tree extends its branches above a clear [b]pool of water[r] set back on the beach from the river's edge. A single [b]apple[r] hangs from a single branch.". The printed name is "A Desolate Beach".
 
@@ -703,7 +722,7 @@ sustenance
 
 
 
-Part 5 - Prometheus
+Part 6 - Prometheus
 
 The liver is part of the player. The description is "[if the percentage of the player's liver is 100]You can't see your liver, your flesh is concealing it in the usual way.[otherwise if the percentage of the player's liver is not 0]Frankly, it's a mess.[otherwise]It's gone.[end if]".
 
@@ -714,7 +733,7 @@ At the time when the player is chained down:
 	Now the player is chained;
 	Now the right hand status line is "Liver: [percentage of the player's liver]%";
 
-PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to the rock.[if the yellow post-it note is part of the rock] There is a grey post-it note stuck just next to your head.[end if]". The printed name is "The Rock".
+PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to the rock.[if the yellow post-it note is part of the rock] There is a yellow post-it note stuck just next to your head.[end if]". The printed name is "The Rock".
 PrometheusRoom can be nighttime or daytime.
 The moon is a backdrop in PrometheusRoom. The description is "[if the location of the player is daytime]You can't see it.[otherwise]It's more of a patch of fog slightly brighter than the rest.[end if]".
 The sun is a backdrop in PrometheusRoom. The description is "[if the location of the player is daytime]A sun-coloured patch of fog.[otherwise]You can't see it.[end if]".
@@ -767,35 +786,43 @@ gone			"It's gone."
 The description of the eagle is "[the reply corresponding to a proximity_entry of the proximity of the eagle in the table of eagle descriptions]".
 The eagle's eye is part of the eagle. The description is "[if the proximity of the eagle is perched]It is staring at your liver.[otherwise]You can't seem to make eye-contact with the eagle from here.[end if]".
 
+To say chained down:
+	say "You do understand you're chained to a rock, right? At best you can [b]struggle[r].";
+	
+Instead of attacking the eagle, say "[chained down]".
+Instead of touching the eagle, say "[chained down]".
+Instead of tasting the eagle, say "[chained down]".
+Instead of smelling the eagle, say "Musty.".
+
 Every turn when the player is on the rock:
 	if the eagle is coming:
 		if the proximity of the eagle is appearing:
 			Now the proximity of the eagle is distant;
-			say "An [b]eagle[r] appears on the horizon.";
+			say "An eagle appears on the horizon.";
 			now the eagle is in PrometheusRoom;
 		otherwise if the proximity of the eagle is distant:
 			Now the proximity of the eagle is approaching;
-			say "The [b]eagle[r] is getting close.";
+			say "The eagle is getting close.";
 		otherwise if the proximity of the eagle is approaching:
 			Now the proximity of the eagle is near;
-			say "The [b]eagle[r] is right above you.";
+			say "The eagle is right above you.";
 		otherwise if the proximity of the eagle is near or the proximity of the eagle is hovering:
 			if the player is not struggling:
 				Now the proximity of the eagle is perched;
 				say "The [b]eagle[r] lands heavily beside you. You feel an urge to [one of][b]writhe[r][or][b]struggle[r][or][b]strain[r][or][b]twist[r][or][b]thrash[r][purely at random].";
 			now the player is not struggling;
 		otherwise if the proximity of the eagle is perched:
-			say "The eagle eats some of your [b]liver[r].";
+			say "The eagle eats some of your liver.";
 			decrease the percentage of the player's liver by 10;
 			if the percentage of the player's liver is 0:
 				now the eagle is departing;
 				remove the liver from play;
 	otherwise if the eagle is departing:
 		if the proximity of the eagle is perched:
-			say "Having eaten your liver, the [b]eagle[r] nonchalantly flaps its wings and takes to the air.";
+			say "Having eaten your liver, the eagle nonchalantly flaps its wings and takes to the air.";
 			now the proximity of the eagle is leaving;
 		otherwise if the proximity of the eagle is leaving:
-			say "The [b]eagle[r] flies off into the distance, emitting a call that sounds like a high-pitched version of Zeus's laughter.";
+			say "The eagle flies off into the distance, emitting a call that sounds like a high-pitched version of Zeus's laughter.";
 			now the proximity of the eagle is gone;
 			now the eagle is nowhere;			
 			Night falls in one turn from now;
@@ -806,7 +833,7 @@ At the time when night falls:
 	Night ends in 1 turn from now;
 	
 At the time when the night ends:
-	say "The night ends abruptly. You feel a brisk tingling sensation where your [b]liver[r] was pecked out by the [b]eagle[r].";
+	say "The night ends abruptly. You feel a brisk tingling sensation where your liver was pecked out by the eagle.";
 	now PrometheusRoom is daytime;
 	Now the liver is part of the player;
 	Now the percentage of the player's liver is 100;
@@ -835,7 +862,7 @@ After writhing:
 
 
 
-Part 6 - Danaid
+Part 7 - Danaid
 
 DanaidRoom is a room. The description is "The sand here is bone dry. Rising out of the ground is a [b]fountain[r] and a little distance from it is a [b]basin[r].". The printed name is "An Arid Beach".
 
@@ -962,7 +989,7 @@ At the time when the basin empties:
 
 
 
-Part 7 - Zeno
+Part 8 - Zeno
 
 The player has a number called runs. The runs of the player is 0.
 
