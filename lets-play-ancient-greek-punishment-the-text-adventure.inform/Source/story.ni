@@ -146,6 +146,11 @@ Your hand is part of the player. The description is "Cold. Dead.". Understand "h
 The fog is a backdrop. It is everywhere. The description is "It makes you feel distinctly less happy.".
 Instead of taking the fog, say "You try to take some and it goes about as well as expected.".
 
+A thing can be seen or unseen.
+
+Carry out examining a thing: 
+    now the noun is seen.
+
 Section 2 - Simple Chat
 
 Talking to is an action applying to one visible thing.
@@ -677,7 +682,29 @@ After examining the blue post-it note:
 	say "After you read it, the post-it note is plucked from the water by a gust of wind and flaps wetly into the distance.";
 	now the blue post-it note is nowhere;
 	
+After examining the pool:
+	now the blue post-it note is seen;
+	
+After examining the apple:
+	now the red post-it note is seen;
+	
+Rule for printing the name of the blue post-it while asking which do you mean:
+	if the blue post-it note is seen:
+		say "[b]blue post-it note[r]";
+	otherwise:
+		say "the [b]blue post-it note[r] floating in the pool";
+
+Rule for printing the name of the red post-it while asking which do you mean:
+	say nothing;
+	if the red post-it note is seen:
+		say "[b]red post-it note[r]";
+	otherwise:
+		say "the [b]red post-it note[r] stuck to the apple";
+
+
 Instead of taking the blue post-it note, say "Maybe you should try to [b]read[r] it instead.".
+
+
 
 Instead of exiting when the player is in the pool:
 	say "Somehow that's not an option.";
@@ -1047,12 +1074,10 @@ depth				description
 8				"You are two hundred and fifty-five two hundred and fifty-sixths of the way to the flag"
 9				"You are five hundred and eleven five hundred and twelfths of the way to the flag"
 
-Before going north when the player  is on the starting line or the player is on the track:
-	increase the runs of the player by 1;
-
 Instead of going north when the player is on the starting line or the player is on the track:
 	if the player's command includes "walk":
 		say "Races are for running![paragraph break]";
 	otherwise:
+		increase the runs of the player by 1;
 		say "You run furiously and cover half the distance to the flag!";
 		now the player is on the track;
