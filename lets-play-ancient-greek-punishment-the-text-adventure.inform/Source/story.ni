@@ -140,7 +140,16 @@ Instead of asking for help:
 	
 After printing the banner text:
 	say "[pb]Type [b]HELP[r] for help.[pb]";
+	
+To say gained a point:
+	say "[bracket]Your score has gone up by 1 point.[close bracket][pb]";
 
+To say lost a point:
+	say "[bracket]Your score has gone down by 1 point.[close bracket][pb]";
+	
+To say gained ten points:
+	say "[bracket]Your score has gone up by 10 points.[close bracket][pb]";
+	
 The description of the player is "You look deader than you remember looking.".
 Your hand is part of the player. The description is "Cold. Dead.". Understand "hands" as your hand.
 The fog is a backdrop. It is everywhere. The description is "It makes you feel distinctly less happy.".
@@ -422,7 +431,7 @@ Instead of getting off Charon's ferry, try exiting.
 Instead of entering the ferry when the player's name is Nobody:
 	say "Charon bars the way with a long, skinny arm. You should probably [b]talk to[r] him before presuming to get into his ferry.";
 
-Instead of entering the ferry when the the obol is not in Charon's pocket:
+Instead of entering the ferry when the obol is not in Charon's pocket:
 	say "You need to [b]pay[r] Charon before you can get in.";
 
 Before entering the ferry when the player's name is not Nobody and the obol is in Charon's pocket and Charon is not in the ferry:
@@ -452,7 +461,7 @@ At the time when the ferry departs:
 
 Before exiting when the player is in Charon's ferry, say "You manage to jump out of the ferry clumsily.".
 
-Instead of exiting when the player is in the ferry and the ferry is in The The Starting Place:
+Instead of exiting when the player is in the ferry and the ferry is in The Starting Place:
 	say "Charon stops you with a look. 'Once you're on, you're on.'";
 
 After exiting when the player was in the ferry:
@@ -470,7 +479,7 @@ After exiting when the player was in the ferry:
 	The ferry vanishes in zero turns from now;
 		
 At the time when the ferry vanishes:
-	say "Before he departs, Charon mentions you can get to your punishment faster by just announcing yourself immediately, such as saying '[b][player's name][r]' or something like that. His duty discharged, Charon oars away without giving you a another thought.";
+	say "Before he departs, Charon tell you that you can skip his ferry in the future by simply announcing yourself immediately, such as by saying '[b][player's name][r]' or similar. His duty discharged, Charon oars away without giving you a another thought.";
 	Now Charon is in the ferry;
 	Move the ferry to The Starting Place;
 
@@ -628,7 +637,7 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 	if the boulder is not rolling:
 		if the player is in the Hilltop and the boulder is in the Hilltop:
 			increase the points by 1;
-			say "[bracket]Your score has gone up by 1 point.[close bracket][pb]";		
+			say "[gained a point]";		
 			say "The boulder slips from your grasp as though it has a mind of its own and starts rolling back down the hill. The rumbling sounds it makes is suspiciously like Zeus's laughter.";						
 		otherwise:	
 			say "Obeying gravity, the boulder rolls calmly down the hill.";
@@ -647,6 +656,8 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 			say "[lb]Below, you see the boulder settle into place at the bottom of the hill.";
 		otherwise:
 			say "[lb]The boulder settles ponderously back at its starting position.";
+		decrease the points by one;
+		say "[lb][lost a point]";
 		now the boulder is stationary;
 
 
@@ -692,14 +703,14 @@ Rule for printing the name of the blue post-it while asking which do you mean:
 	if the blue post-it note is seen:
 		say "[b]blue post-it note[r]";
 	otherwise:
-		say "the [b]blue post-it note[r] floating in the pool";
+		say "[b]blue post-it note[r] floating in the pool";
 
 Rule for printing the name of the red post-it while asking which do you mean:
 	say nothing;
 	if the red post-it note is seen:
 		say "[b]red post-it note[r]";
 	otherwise:
-		say "the [b]red post-it note[r] stuck to the apple";
+		say "[b]red post-it note[r] stuck to the apple";
 
 
 Instead of taking the blue post-it note, say "Maybe you should try to [b]read[r] it instead.".
@@ -709,17 +720,22 @@ Instead of taking the blue post-it note, say "Maybe you should try to [b]read[r]
 Instead of exiting when the player is in the pool:
 	say "Somehow that's not an option.";
 
+
 Instead of drinking the pool:
 	say "You stoop to drink some water, but it recedes as fast as you move toward it until the bottom of the pool is completely dry. Upon standing, the water rushes back in up to your waist. The gurgling sound it make sounds oddly like Zeus's laughter.";
+	say "[lb][bracket]Your score has not changed.[close bracket][pb]";
 	
 Instead of taking the apple:
 	say "You reach up to pluck the apple from its branch, but as you do a gust of wind blows the branch up and away from you. It only resettles when you give up and drop your arm down again. The wind made a sound oddly like Zeus's laughter.";
+	say "[lb][bracket]Your score has not changed.[close bracket][pb]";
 	
 Instead of jumping when the player is in the pool:
 	say "You jump up toward the apple on its branch, but a gust of wind blows it just as far out of reach as always and all you manage to do is make a splash. The wind made a sound oddly like Zeus's laughter.";
+	say "[lb][bracket]Your score has not changed.[close bracket][pb]";
 	
 Instead of taking the pool when the player is in the pool:
 	say "You cup your hands to gather up some water to drink, but the pool quickly drains before you're able to get anything. Your hands somehow remain bone dry and the pool refills once you've given up. The gurgling sound it makes is oddly like Zeus's laughter.";
+	say "[lb][bracket]Your score has not changed.[close bracket][pb]";
 	
 Instead of eating the apple, try taking the apple;
 
@@ -756,9 +772,11 @@ The liver is part of the player. The description is "[if the percentage of the p
 The player's liver has a number called percentage. The percentage of the player's liver is 100.
 
 At the time when the player is chained down:
+	Now the points is 10;
+	say "[gained ten points]";
 	Now the player is on the rock;
 	Now the player is chained;
-	Now the right hand status line is "Liver: [percentage of the player's liver]%";
+	[Now the right hand status line is "Liver: [percentage of the player's liver]%";]
 
 PrometheusRoom is a room. The description is "[if the location of the player is daytime]Beneath what passes for daylight here[otherwise]Dimly lit by what might be a moon somewhere behind the fog[end if], an unpleasantly jagged black rock rises from the ash colored sand of the beach. You are chained to the rock.[if the yellow post-it note is part of the rock] There is a yellow post-it note stuck just next to your head.[end if]". The printed name is "The Rock".
 PrometheusRoom can be nighttime or daytime.
@@ -839,8 +857,10 @@ Every turn when the player is on the rock:
 				say "The [b]eagle[r] lands heavily beside you. You feel an urge to [one of][b]writhe[r][or][b]struggle[r][or][b]strain[r][or][b]twist[r][or][b]thrash[r][purely at random].";
 			now the player is not struggling;
 		otherwise if the proximity of the eagle is perched:
-			say "The eagle eats some of your liver.";
+			say "The eagle [one of]eats[or]tears out[or]rips out[or]swallows[or]gulps down[or]pecks out[purely at random] some of your liver.";
 			decrease the percentage of the player's liver by 10;
+			decrease the points by 1;
+			say "[lb][lost a point]";
 			if the percentage of the player's liver is 0:
 				now the eagle is departing;
 				remove the liver from play;
@@ -864,6 +884,8 @@ At the time when the night ends:
 	now PrometheusRoom is daytime;
 	Now the liver is part of the player;
 	Now the percentage of the player's liver is 100;
+	Now the points is 10;
+	say "[lb][gained ten points]";
 	Now the eagle is coming;
 	Now the proximity of the eagle is appearing;
 		
@@ -979,6 +1001,8 @@ Instead of inserting the fountain water into the basin:
 		say "You carefully pour the water in the jug into the basin. It streams in nicely, catching what little light there is.";
 		now the fountain water is in the basin;
 		the basin empties in 1 turn from now;
+		increase the points by 1;
+		say "[lb][gained a point]";
 	otherwise if the player has the jug:
 		say "The jug is empty.";
 	otherwise:
@@ -1009,6 +1033,8 @@ Instead of pouring the jug into the fountain:
 At the time when the basin empties:
 	say "The water in the basin drains out through several holes with a bubbling noise that sounds like Zeus's laughter. The escaped water immediately dissapates into the sand.";
 	now the holes are revealed;
+	decrease the points by 1;
+	say "[lb][lost a point]";
 	if the fountain water is in the basin:
 		now the fountain water is in the fountain;
 
@@ -1017,6 +1043,8 @@ At the time when the basin empties:
 
 
 Part 8 - Zeno
+
+Zeno points is a text that varies. Zeno points is "0".
 
 The player has a number called runs. The runs of the player is 0.
 
@@ -1074,6 +1102,32 @@ depth				description
 8				"You are two hundred and fifty-five two hundred and fifty-sixths of the way to the flag"
 9				"You are five hundred and eleven five hundred and twelfths of the way to the flag"
 
+Table of fractional point totals for Zeno
+depth			points
+0			"0"
+1			"0.5"
+2			"0.75"
+3			"0.875"
+4			"0.9375"
+5			"0.96875"
+6			"0.984375"
+7			"0.9921875"
+8			"0.99609375"
+9			"0.998046875"
+	
+Table of fractional point gains for Zeno
+depth			points
+1			"0.5"
+2			"0.25"
+3			"0.125"
+4			"0.0625"
+5			"0.03125"
+6			"0.015625"
+7			"0.0078125"
+8			"0.00390625"
+9			"0.001953125"
+10			"0.0009765625"
+	
 Instead of going north when the player is on the starting line or the player is on the track:
 	if the player's command includes "walk":
 		say "Races are for running![paragraph break]";
@@ -1081,3 +1135,14 @@ Instead of going north when the player is on the starting line or the player is 
 		increase the runs of the player by 1;
 		say "You run furiously and cover half the distance to the flag!";
 		now the player is on the track;
+		if the runs of the player < the number of rows in the table of fractional point totals for Zeno:
+			Now the Zeno points is the points corresponding to a depth of the runs of the player in the table of fractional point totals for Zeno;
+			now the right hand status line is "[Zeno points] points";
+			say "[bracket]Your score has gone up by [the points corresponding to a depth of the runs of the player in the table of fractional point gains for Zeno] points.[close bracket][pb]";
+		otherwise:
+			now the right hand status line is "Nearly 1 point";
+			say "[bracket]Your score has gone up by [one of]a truly tiny amount[or]almost nothing[or]a negligible amount[or]very little indeed[or]hardly anything[or]barely anything[or]close to nothing[or]a miniscule amount[or]basically nothing[purely at random].[close bracket][pb]";
+
+
+
+[[if the runs of the player < the number of rows in the table of fractional distance descriptions for Zeno][the description corresponding to a depth of the runs of the player in the table of fractional distance descriptions for Zeno].[otherwise][one of]You are extremely close to the flag[or]You are so close the flag you can taste it[or]You are practically standing on the flag, but not quite[or]You have very nearly finished the race[or]You are incredibly close to finishing the race[purely at random].[end if]]
