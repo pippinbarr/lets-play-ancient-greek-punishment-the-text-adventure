@@ -1,0 +1,86 @@
+# Let's Play: Ancient Greek Punishment: The Text Adventure: The Walkthrough
+
+__Obviously it would be better not to read this before attempting to the play the game as it is.__
+
+## Help?
+
+Well, there is a `help` command in the game that will at least tell you the basics of playing a parser-based text-adventure like this one. It's not much, but it's a starting point.
+
+## Help??
+
+Further, the game is more or less at pains to indicate the important items and actions in any given scene through __bold__ type. This is because it's ultimately aimed at a broad audience, rather than only hard core text adventure players. Sorry if it makes things too easy.
+
+## Help???
+
+Sure. The below will tell you how to get through the different scenes in the game. Like any text adventure there is peripheral stuff going on too, so do look around etc.
+
+Because of the infinite nature of these mythological punishments, you'll have to `restart` the entire game when you want to try out a new one (there's no going back within the frame of the game itself). Charon will tell you a shortcut for getting to different punishments. (It's saying your name directly in the parser, e.g. `I am Sisyphus`).
+
+## The Bank of the River Styx
+
+### Who am I?
+
+- Your objective is to convince Charon that you're one of the people he's waiting to transport across the river.
+- You can't convince him of this unless you know who those people are.
+- He's holding a clipboard.
+- The clipboard has their names on it, so you should probably read it.
+
+### Talking
+
+- You need to talk to Charon in order to cross the river with him
+- But there's something in your mouth
+- So get it out. Spit it out or open your mouth, for instance.
+- How handy, it's a coin!
+- Now you can talk to Charon and tell him who you are.
+
+### Ferrying
+
+- Charon won't let you cross without payment.
+- Lucky you spat out that coin before talking to him?
+- Give him the coin.
+- Get into the ferry.
+- Wait for him to transport you to your destination.
+
+## Sisyphus
+
+- Sisyphus was doomed to push a boulder up a hill only to see it roll back down again.
+- That's you.
+- So you should push the boulder.
+- Keep pushing.
+- Don't stop.
+- Ever.
+
+## Tantalus
+
+- Tantalus was doomed to stand in a pool of water he could not drink and just out of reach of an apple he cannot eat.
+- That's you.
+- You're hungry and you're thirsty.
+- So try to eat the apple and drink the water.
+- Don't stop.
+- Ever.
+
+## Prometheus
+
+- Prometheus was doomed to be chained to a rock and have his liver pecked out by an eagle over and over again.
+- That's you.
+- So just lie there and take it.
+- Forever.
+- Struggle if you must.
+
+## Danaids
+
+- The Danaids were doomed to try to fill a leaky basin with water over and over again.
+- That's you.
+- Fill the jug with water from the fountain.
+- Pour the water into the basin.
+- Watch it leak out.
+- Repeat.
+- Forever.
+
+## Zeno
+
+- Zeno isn't technically a mythological punishment story.
+- But his paradox _is_ very annoying, so here he is in Hades, doomed to run a race he can never finish.
+- That's you.
+- Run down the track and try to reach the flag.
+- Forever.

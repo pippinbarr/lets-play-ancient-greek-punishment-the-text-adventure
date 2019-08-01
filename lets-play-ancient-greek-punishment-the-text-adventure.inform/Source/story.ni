@@ -479,7 +479,7 @@ After exiting when the player was in the ferry:
 	The ferry vanishes in zero turns from now;
 		
 At the time when the ferry vanishes:
-	say "Before he departs, Charon tell you that you can skip his ferry in the future by simply announcing yourself immediately, such as by saying '[b][player's name][r]' or similar. His duty discharged, Charon oars away without giving you a another thought.";
+	say "Before he departs, Charon tells you that you can skip his ferry in the future by simply announcing yourself immediately, such as by saying '[b][player's name][r]' or similar. His duty discharged, Charon oars away without giving you a another thought.";
 	Now Charon is in the ferry;
 	Move the ferry to The Starting Place;
 

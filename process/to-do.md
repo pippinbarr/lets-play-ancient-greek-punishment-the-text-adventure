@@ -20,6 +20,17 @@
 - ~~Go through tester transcripts and find extra verbs to include to help out + bugs~~
 
 - Laws of writing, above
+- Add MORE STUFF to everywhere (perhaps especially Sisyphus) to make it a bit more entertaining to be there?
+- Contemplate randomized stuff? Or what is the point of that?
+- Enable 'look around'? (or just say "you only need to look")
+- Bold the jug (Greg missed it)
+- Make response to command start after a line break?
+- Consider a different way to enable shortcuts? (Maybe tell them they can say "I've been here before" and it'll tell them how to skip to a punishment?)
+- Check looking at start line when you're already running (e.g. get rid of the post it)
+- 'go down the hill'?
+- Which do you mean broken in tantalus has "nothing" injected into it
+- Bowl and basin in Danaids are confusing (different language would make sense, maybe a tap is better? Or a pump?)
+- Should 'what is' be allowed? No I think not...? (Maybe a generic answer to question words? Spare me your questions?)
 
 ## Charon
 
@@ -49,8 +60,6 @@
 - ~~Add nightfall (room description) and liver regen~~
 - ~~Add effective writhing and corresponding eagle dislodging~~
 
-- Add things to look at (more about the eagle, the chains, the rock, the beach, the river, and further orders of nouns so there's a kind of exploration of the eye, graffiti on the rock with a lol?)
-
 ## Tantalus
 
 - ~~Create room (pool and tree up the beach)~~
@@ -61,8 +70,6 @@
 - ~~Replace get and drink etc. for the water and the apple~~
 - ~~Add hunger and thirst system~~
 - ~~Zeus lol?~~
-
-- Add flavour texts
 
 ## Zeno
 
@@ -77,9 +84,6 @@
 - ~~Jumping should have a specific meaning, as should touching, anything that involves (obvious) physical movement~~
 - ~~Archimedes lol?~~
 
-- Flavours
-
-
 ## Danaid
 
 - ~~Create room (just the place as the other elements should be actual objects I think?)~~
@@ -93,5 +97,3 @@
 - ~~Make the basin empty the turn after you fill it~~
 - ~~__NOPE__ Don't bother with incremental filling states? Not that interesting?~~
 - ~~Still some bullshit around having the water show up in the container description...~~
-
-- Plenty of nicenesses to do
