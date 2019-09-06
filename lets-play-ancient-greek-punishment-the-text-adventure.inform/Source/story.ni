@@ -425,6 +425,7 @@ Section 5 - The boat
 Getting out of is an action applying to one thing.
 Understand "get out of [something]" as getting out of.
 Instead of getting out of the Charon's ferry, try exiting.
+Instead of jumping when the player is in the ferry, try exiting.
 
 Instead of getting off Charon's ferry, try exiting.
 
@@ -470,7 +471,7 @@ After exiting when the player was in the ferry:
 		The player is chained down in zero turns from now;
 		Now Charon is in PrometheusRoom;
 	otherwise if the player's name is Tantalus:
-		say "Charon hops out of the ferry behind you and leads to you the pool a little way up the beach. He points and you wade into the centre of the water. Satisfied you're in position, Charon turns and walks back to the ferry.";
+		say "Charon hops out of the ferry behind you and leads to you the pool set into the ground at the top of the slope of the beach. He points and you wade into the centre of the water. Satisfied you're in position, Charon turns and walks back to the ferry.";
 		now the player is in the pool;
 		Now Charon is in TantalusRoom;
 	otherwise if the player's name is Zeno:
@@ -556,10 +557,10 @@ After examining the folded note:
 	remove the folded note from play;
 
 Quite Far Up the Hill is above A Fair Way Up the Hill. The description is "[if the previous location is A Fair Way Up the Hill]Far enough up the hill to be out of breath if you don't get out much. [end if]Like the rest of the hill, this part is made entirely out of dirt.".
-The videogame is here.
+The way out is here. The description is "There is no way out.".
 
-Every turn:
-	if the location of the player is the location of the videogame, remove the videogame from play;
+After examining the way out:
+	Remove the way out from play;
 
 Nearly the Top of the Hill is above Quite Far Up the Hill. The description is "It's so barren up here you can't even imagine something growing, and you have a pretty good imagination. The fog, however, does appear to be coalescing into strange shapes here.".
 
@@ -573,6 +574,7 @@ shape
 "an eagle"
 "a bull"
 
+Understand "strange shapes" and "shapes" and "smoke" as the fog.
 Instead of examining the fog when the player is in Nearly the Top of the Hill:
 	choose a random row from the table of fog shapes;
 	say "The swirling fog almost looks like [the shape entry].";
@@ -581,10 +583,13 @@ Instead of examining the fog when the player is in Nearly the Top of the Hill:
 The Hilltop is above Nearly the Top of the Hill. The description is "The view is disappointing.[if the location of the boulder is not The Hilltop] You should really go get the boulder.[otherwise] The boulder is here at last![end if]". The printed name is "The Top of the Hill".
 A plinth is here. The description is "A minimalist marble plinth.".
 The chain is part of the plinth. The description is "A thin-yet-resilient metal chain.".
-A book is on the plinth. The description is "It's 'The Myth of Sisyphus' by Albert Camus. Apparently you ought to be happy right about now.".
+A book is on the plinth. The description is "It's 'The Myth of Sisyphus' by Albert Camus. Apparently you ought to [b]be happy[r] right about now.".
 Instead of taking the book, say "It's chained to the plinth.".
 
-
+Smiling is an action applying to nothing.
+Understand "smile" and "be happy" and "laugh" and "grin" and "imagine myself happy" as smiling.
+Instead of smiling:
+	say "You try to imagine yourself happy, but it doesn't seem to work. Thanks for nothing, Camus.";
 
 
 Section 2 - Pushing the boulder
@@ -596,6 +601,15 @@ After going up with the boulder when the grey post-it note is part of the boulde
 	say "The post-it note that was attached to the boulder is dislodged and blows away in a sudden gust of wind.";
 	now the grey post-it note is nowhere;
 	now the player props the boulder;
+
+Understand "let go of [something]" and "release [something]" as dropping.
+Instead of dropping something not carried:
+	say "You aren't holding [the noun].";
+Instead of dropping the boulder:
+	if the location of the player is the location of the boulder and the location of the player is not the bottom of the hill:
+		say "You drop your hands from the boulder.";
+	otherwise:
+		say "You aren't pushing on the boulder right now.";
 	
 To say the only way is up:
 	say "The only way is [b]up[r], baby.";
@@ -668,10 +682,13 @@ Every turn when the boulder is not in The Bottom of the Hill and the player does
 
 Part 5 - Tantalus
 
-TantalusRoom is a room. The description is "An apple tree extends its branches above a clear [b]pool of water[r] set back on the beach from the river's edge. A single [b]apple[r] hangs from a single branch.". The printed name is "A Desolate Beach".
+TantalusRoom is a room. The description is "[if the player is not in Charon's ferry]You are standing in a stone-lined pool of [b]water[r] set into the ground up from the beach. An apple tree extends its branches above you. A single [b]apple[r] hangs from a single branch.[otherwise]From the ferry you can see an expanse of grey beach and also, oddly, an apple tree up the beach's slope.[end if]". The printed name is "A Desolate Beach".
+
+Instead of doing anything except looking or exiting when the player is in Charon's ferry and charon's ferry is not in the starting place:
+	say "Charon's face tells you you have no option but to [b]get out[r].";
 
 The tree is a supporter in TantalusRoom. The description is "Its bark is worse than its bite.". The tree is scenery.
-The bark is part of the tree. The description is "It's aggressive.".
+The bark is part of the tree. The description is "It's surprisingly aggressive.".
 The branch is part of the tree. The description is "If a tree branch could be said to eye you shiftily, that is what this tree branch is doing. The [b]apple[r] hangs temptingly close.".
 The branches are part of the tree. The description is "They're all barren except for the one branch with the [b]apple[r] on it.".
 Instead of climbing the tree, say "You recoil from the incredibly sharp bark on the tree."
@@ -924,6 +941,11 @@ The holes can be revealed. The holes are not revealed.
 After examining the holes, now the holes are revealed.
 Instead of taking the basin, say "It's far too heavy.".
 
+Repairing is an action applying to one thing.
+Understand "repair [something]" and "fix [something]" as repairing.
+Instead of repairing something, say "If it ain't broke...".
+Instead of repairing the basin, say "It's meant to be that way.".
+
 The white post-it note is part of the rim of the basin. The description is "The note says[pb][f]Fill me.[v]".
 
 After examining the white post-it note:
@@ -970,8 +992,10 @@ Rule for printing the name of the fountain while not inserting or removing:
     omit contents in listing;
 
 Pouring is an action applying to one visible thing.
-Understand "pour [something]" as pouring.
+Understand "pour [something]" as pouring. 
 Instead of pouring something, say "Don't think you'll be needing to pour that here in Hades.".	
+Instead of emptying the jug:
+	Try pouring the jug;
 Instead of pouring the fountain water:
 	if the fountain water is in the jug:
 		say "You unceremoniously pour the jug of water onto the ground.";
