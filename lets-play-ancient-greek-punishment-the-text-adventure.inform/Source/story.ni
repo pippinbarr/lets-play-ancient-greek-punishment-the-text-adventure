@@ -2,6 +2,8 @@
 
 Include Room Description Headings by Erwin Genstein.
 Include Simple Chat by Mark Tilford.
+Include Glulx Text Effects by Emily Short.
+[Include Basic Screen Effects by Emily Short.]
 [Include Mentioned In Room Description by Ron Newcomb.]
 [Include Supplemental Actions by Al Golden.]
 [Include Liquid Handling by Al Golden.]
@@ -102,7 +104,7 @@ Use the serial comma.
 Use undo prevention.
 Rule for printing room description details: stop.
 The can't push vertically rule is not listed in any rulebook.
-
+		
 To say b:
 	say "[bold type]";
 	
