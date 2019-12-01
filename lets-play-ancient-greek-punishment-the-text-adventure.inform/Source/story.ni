@@ -705,7 +705,7 @@ After examining the red post-it note:
 	
 Instead of taking the red post-it note, say "Maybe you should try to [b]read[r] it instead.".
 
-The pool is a container in TantalusRoom. The description is "Crystal clear, eminently drinkable water. There is a [b]blue post-it note[r] floating on the surface.". Understand "water" as the pool. The pool is scenery. 
+The pool is a container in TantalusRoom. The description is "Crystal clear, eminently drinkable water.[if the blue post-it note is part of the pool]There is a [b]blue post-it note[r] floating on the surface.[end if]". Understand "water" as the pool. The pool is scenery. 
 The blue post-it note is part of the pool. The description is "The note floating in the water says[pb][f]Drink me.[v]".
 
 After examining the blue post-it note:
@@ -725,7 +725,6 @@ Rule for printing the name of the blue post-it while asking which do you mean:
 		say "[b]blue post-it note[r] floating in the pool";
 
 Rule for printing the name of the red post-it while asking which do you mean:
-	say nothing;
 	if the red post-it note is seen:
 		say "[b]red post-it note[r]";
 	otherwise:

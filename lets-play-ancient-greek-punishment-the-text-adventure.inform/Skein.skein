@@ -9,7 +9,7 @@
 
 Let's Play: Ancient Greek Punishment: The Text Adventure
 An Interactive Fiction by Pippin Barr
-Release 1 / Serial number 190916 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 191202 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 
 Type HELP for help.
@@ -15994,10 +15994,12 @@ The beach extends off into the fog. A straight running track of about 100 meters
     </item>
     <item nodeId="node-2447">
         <command xml:space="preserve">my name is tantalus</command>
-        <result xml:space="preserve">A Desolate Beach (in the pool)
-An apple tree extends its branches above a clear pool of water set back a little way from the river's edge. A single apple hangs from a single branch.
+        <result xml:space="preserve">You utter the magical words and the world seems to shudder on its axis, blurring everything for a moment. When you adjust your vision, your surroundings have changed.
 
-Your stomach hurts with hunger.
+A Desolate Beach (in the pool)
+You are standing in a stone-lined pool of water set into the ground up from the beach. An apple tree extends its branches above you. A single apple hangs from a single branch.
+
+You're feeling really hungry.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -16005,7 +16007,87 @@ Your stomach hurts with hunger.
             <child nodeId="node-2474"></child>
             <child nodeId="node-2467"></child>
             <child nodeId="node-2448"></child>
+            <child nodeId="node-3528"></child>
         </children>
+    </item>
+    <item nodeId="node-3528">
+        <command xml:space="preserve">x pool</command>
+        <result xml:space="preserve">Crystal clear, eminently drinkable water.There is a blue post-it note floating on the surface.
+
+You haven't eaten in forever.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3529"></child>
+        </children>
+    </item>
+    <item nodeId="node-3529">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">Which do you mean, the red post-it note stuck to the apple or the blue post-it note?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3530"></child>
+        </children>
+    </item>
+    <item nodeId="node-3530">
+        <command xml:space="preserve">blue</command>
+        <result xml:space="preserve">The note floating in the water says
+
+Drink me.
+
+After you read it, the post-it note is plucked from the water by a gust of wind and flaps wetly into the distance.
+
+You're feeling really hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3531"></child>
+        </children>
+    </item>
+    <item nodeId="node-3531">
+        <command xml:space="preserve">x pool</command>
+        <result xml:space="preserve">Crystal clear, eminently drinkable water.
+
+You need to drink something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3537"></child>
+        </children>
+    </item>
+    <item nodeId="node-3537">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">The note on the apple says
+
+Eat me.
+
+Just after you finish reading it, the post-it note blows off the apple and away into the distance.
+
+Your stomach hurts with hunger.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3538"></child>
+        </children>
+    </item>
+    <item nodeId="node-3538">
+        <command xml:space="preserve">read note</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3539"></child>
+        </children>
+    </item>
+    <item nodeId="node-3539">
+        <command xml:space="preserve">x apple</command>
+        <result xml:space="preserve">A shiny, delicious apple just begging to be eaten.
+
+You're starving.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-2448">
         <command xml:space="preserve">w</command>
