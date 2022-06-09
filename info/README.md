@@ -4,9 +4,11 @@
 > get punishment
 ```
 
+## [Play Let's Play: Ancient Greek Punishment: The Text Adventure in your browser](https://pippinbarr.github.io/lets-play-ancient-greek-punishment-the-text-adventure)
+
+
 ![](images/lets-play-ancient-greek-punishment-the-text-adventure-banner.png)
 
-## [Play Let's Play: Ancient Greek Punishment: The Text Adventure in your browser](https://pippinbarr.github.io/lets-play-ancient-greek-punishment-the-text-adventure)
 
 [Press kit](https://github.com/pippinbarr/lets-play-ancient-greek-punishment-the-text-adventure/tree/master/press) – details about the creation of the game and press information.
 
