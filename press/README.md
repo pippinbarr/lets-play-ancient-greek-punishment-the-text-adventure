@@ -90,10 +90,6 @@ Zeno
 You run furiously and cover half the distance to the flag!
 ```
 
-## Press
-
-- Coming soon?
-
 ## Additional Links
 
 - [Process documentation of _Let's Play: Ancient Greek Punishment: The Text Adventure_](https://github.com/pippinbarr/lets-play-ancient-greek-punishment-the-text-adventure/blob/master/process/README.md)
