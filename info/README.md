@@ -1,4 +1,4 @@
-# Let's Play: Ancient Greek Punishment: The Text Adventure
+# *Let's Play: Ancient Greek Punishment: The Text Adventure*
 
 ![](images/lets-play-ancient-greek-punishment-the-text-adventure-banner.png)
 
